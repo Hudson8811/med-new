@@ -1,0 +1,83 @@
+header.header
+    .container
+        .header__inner
+            .header__top
+                .header__profile
+                    a(href="#")
+                        span Войти
+                        svg
+                            use(xlink:href="img/sprites/sprite.svg#user")
+                ul.header__menu
+                    li
+                        a(href="#") Промо
+                    li
+                        a(href="#") О компании
+                    li
+                        a(href="#") Новости
+                    li
+                        a(href="#") Информационные материалы
+                    li
+                        a(href="#") Контакты
+                    li
+                        a(href="#") Как стать партнером
+                ul.header__top-right
+                    li
+                        a(href="#") Eng
+                    li
+                        a(href="javascript:;")
+                            svg
+                                use(xlink:href="img/sprites/sprite.svg#blind")
+            .header__content
+                .header__logo
+                    svg
+                        use(xlink:href="img/logo.svg#index")
+                ul.header__emails
+                    li
+                        a(href="mailto:") info@medimcom.ru
+                ul.header__phones
+                    li
+                        a(href="tel:") +7 812 334-37-64
+                    li
+                        a(href="tel:") +7 495 900-10-99
+
+                ul.header__social
+                    li
+                        a(href="#" target="_blank")
+                            svg
+                                use(xlink:href="img/sprites/sprite.svg#soc-wa")
+                    li
+                        a(href="#" target="_blank")
+                            svg
+                                use(xlink:href="img/sprites/sprite.svg#soc-vk")
+                    li
+                        a(href="#" target="_blank")
+                            svg
+                                use(xlink:href="img/sprites/sprite.svg#soc-youtube")
+
+                a.header__btn.btn-arrow(href="javascript:;")
+                    span Обратный звонок
+                    svg
+                        use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+                a.header__cart(href="#")
+                    .header__cart-icon
+                        svg
+                            use(xlink:href="img/sprites/sprite.svg#cart")
+                    .header__cart-count 4
+
+            .header__bottom
+                ul.header__bottom-menu
+                    li
+                        a(href="javascript:;")
+                            svg
+                                use(xlink:href="img/sprites/sprite.svg#menu-catalog")
+                            span Каталог
+                    li
+                        a(href="javascript:;")
+                            svg
+                                use(xlink:href="img/sprites/sprite.svg#menu-brands")
+                            span Бренды
+                form.header__bottom-search.search-form(action='/search/index.php')
+                    input.search-form__input(type='text' name='q' placeholder='Поиск среди 4980 товаров')
+                    button.search-form__button(type='submit' name='s')
+                        svg
+                            use(xlink:href="img/sprites/sprite.svg#search")
