@@ -5,6 +5,287 @@ block variables
 	- const title = "Главная"
 
 block content
-	p
+	.main-slider
+		.container
+			.swiper
+				.swiper-wrapper
+					.swiper-slide.m-slide
+						.m-slide__left
+							.m-slide__title
+								span Монитор пациента
+								|  Mindray BeneView T9 OR
+							.m-slide__text.text-style
+								p Монитор пациента Mindray BeneView T9 OR (Operating Room) был разработан специально для операционной. Аппарат оснащен функцией графического представления анестезиологического статуса,1
+							.m-slide__btn
+								a.btn-arrow.btn-arrow--2row(href="#")
+									span
+										span ЗАКАЗАТЬ
+										span каталог / образцы / товары
+									svg
+										use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+						.m-slide__right
+							.m-slide__img
+								img(src="img/banner.png")
+							.m-slide__circle.m-slide__circle--1
+								.m-slide__circle-top
+									span 20
+									|  часов
+								.m-slide__circle-bottom Автономной работы
+							.m-slide__circle.m-slide__circle--2
+								.m-slide__circle-top
+									span 20
+									|  часов
+								.m-slide__circle-bottom Мультиязычный интерфейс
+					.swiper-slide.m-slide
+						.m-slide__left
+							.m-slide__title
+								span Монитор пациента
+								|  Mindray BeneView T9 OR
+							.m-slide__text
+								p Монитор пациента Mindray BeneView T9 OR (Operating Room) был разработан специально для операционной. Аппарат оснащен функцией графического представления анестезиологического статуса,1
+							.m-slide__btn
+								a.btn-arrow.btn-arrow--2row(href="#")
+									span.btn-arrow__label
+										span ЗАКАЗАТЬ
+										span каталог / образцы / товары
+									svg
+										use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+						.m-slide__right
+							.m-slide__img
+								img(src="img/banner.png")
+							.m-slide__circle.m-slide__circle--1
+								.m-slide__circle-top
+									span 20
+									|  часов
+								.m-slide__circle-bottom Автономной работы
+							.m-slide__circle.m-slide__circle--2
+								.m-slide__circle-top
+									span 20
+									|  часов
+								.m-slide__circle-bottom Мультиязычный интерфейс
 
-	
+				.swiper-pagination
+
+
+	.main-adv
+		.container
+			.main-adv__flex
+				.main-adv__item
+					.main-adv__item-top
+						.main-adv__item-icon
+							img(src="img/adv-1.svg" alt="")
+						.main-adv__item-count 01
+					.main-adv__item-bottom Широкий ассортимент и прямые контракты
+				.main-adv__item
+					.main-adv__item-top
+						.main-adv__item-icon
+							img(src="img/adv-2.svg" alt="")
+						.main-adv__item-count 02
+					.main-adv__item-bottom Финансовая стабильность
+				.main-adv__item
+					.main-adv__item-top
+						.main-adv__item-icon
+							img(src="img/adv-3.svg" alt="")
+						.main-adv__item-count 03
+					.main-adv__item-bottom Офисы и логистические центры на территории РФ
+				.main-adv__item
+					.main-adv__item-top
+						.main-adv__item-icon
+							img(src="img/adv-4.svg" alt="")
+						.main-adv__item-count 04
+					.main-adv__item-bottom Комплексный подход под индивидуальный запрос
+				.main-adv__item
+					.main-adv__item-top
+						.main-adv__item-icon
+							img(src="img/adv-5.svg" alt="")
+						.main-adv__item-count 05
+					.main-adv__item-bottom Сопровождение на всех этапах сотрудничества
+
+
+	.main-about
+		img.main-about__img(src="img/about-bg.jpg" alt="")
+		.container
+			.main-about__info.ma-info
+				.ma-info__title О компании
+				.ma-info__right
+					.ma-info__text.text-style
+						p Израильская медицинская компания MEDEREN широко известна во всем мире. Под этим брендом ведется разработка и производство медицинских изделий и расходных материалов для самых разных направлений практической медицины, включая инфузионную терапию, хирургию и анестезиологию, реанимацию, урологию и гинекологию.
+						p В активе производителя свыше 3000 наименований, но разработки и расширение ассортимента неустанно продолжаются.
+						p Ведущая отличительная особенность товаров MEDEREN - высокое качество, подтвержденное многочисленными тестированиями
+					.ma-info__btn
+						a.btn-more.btn-more--light(href="#")
+							span Подробнее
+							span
+								svg
+									use(xlink:href="img/sprites/sprite.svg#arrow-right")
+
+
+
+	.main-partners.section
+		.container
+			.section__title Партнеры
+			.partners
+				.partners__slide
+					img(src="img/partner-1.png" alt="")
+				.partners__slide
+					img(src="img/partner-1.png" alt="")
+				.partners__slide
+					img(src="img/partner-1.png" alt="")
+				.partners__slide
+					img(src="img/partner-1.png" alt="")
+				.partners__slide
+					img(src="img/partner-1.png" alt="")
+
+
+	.main-categories.section.section--white
+		.container
+			.section__title Каталог товаров
+			.categories
+				a.categories__item.c-item
+					.c-item__icon
+						img(src="img/katalog-icon-1.svg" alt="")
+					.c-item__title Анестезиология и реанимация
+					.c-item__arrow
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+				a.categories__item.c-item
+					.c-item__icon
+						img(src="img/katalog-icon-2.svg" alt="")
+					.c-item__title Хирургия
+					.c-item__arrow
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+				a.categories__item.c-item
+					.c-item__icon
+						img(src="img/katalog-icon-1.svg" alt="")
+					.c-item__title Урология
+					.c-item__arrow
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+				a.categories__item.c-item
+					.c-item__icon
+						img(src="img/katalog-icon-6.svg" alt="")
+					.c-item__title Мониторинг пациента
+					.c-item__arrow
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+				a.categories__item.c-item
+					.c-item__icon
+						img(src="img/katalog-icon-3.svg" alt="")
+					.c-item__title Шприцы и иглы
+					.c-item__arrow
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+				a.categories__item.c-item
+					.c-item__icon
+						img(src="img/katalog-icon-4.svg" alt="")
+					.c-item__title Онкология
+					.c-item__arrow
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+				a.categories__item.c-item
+					.c-item__icon
+						img(src="img/katalog-icon-5.svg" alt="")
+					.c-item__title Лабораторная диагностика
+					.c-item__arrow
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+				a.categories__item.c-item
+					.c-item__icon
+						img(src="img/katalog-icon-1.svg" alt="")
+					.c-item__title Медицинское оборудование
+					.c-item__arrow
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+
+			.section__btn
+				a.btn-arrow(href="javascript:;")
+					span Посмотреть все
+					svg
+						use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+
+
+	.main-catalog.section
+		.container
+			.section__title Новинки и&nbsp;спецпредложения
+			.section__slider
+				.swiper
+					.swiper-wrapper
+						- for (var x = 0; x < 4; x++)
+							.swiper-slide.product-preview
+								.product-preview__inner
+									.product-preview__label Новинка
+									a.product-preview__img(href="#")
+										img(src="img/product-img-1.jpg" alt="")
+									.product-preview__bottom
+										a.product-preview__title(href="#") Трубки эндотрахеальные
+										.product-preview__price 138 000 руб
+										.product-preview__text Эндотрахеальные трубки MEDEREN изготовлены из термопластичного ПВХ, способного «подстраиваться» под форму
+										.product-preview__btns
+											a.btn-more(href="#")
+												span Подробнее
+												span
+													svg
+														use(xlink:href="img/sprites/sprite.svg#arrow-right")
+											a.btn-arrow(href="#")
+												span В корзину
+												span
+													svg
+														use(xlink:href="img/sprites/sprite.svg#arrow-right")
+
+
+				.swiper-controll
+					.swiper-button-prev
+						svg
+							use(xlink:href="img/sprites/sprite.svg#arrow-right")
+					.swiper-button-next
+						svg
+							use(xlink:href="img/sprites/sprite.svg#arrow-right")
+			.section__btn
+				a.btn-arrow(href="javascript:;")
+					span Посмотреть все
+					svg
+						use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+
+
+	.main-clients.section.section--white
+		.container
+			.section__title Заказчики
+			a.btn-more(href="#")
+				span Подробнее
+				span
+					svg
+						use(xlink:href="img/sprites/sprite.svg#arrow-right")
+			.section__slider
+				.swiper
+					.swiper-wrapper
+						- for (var x = 0; x < 4; x++)
+							.swiper-slide
+				.swiper-controll
+					.swiper-button-prev
+						svg
+							use(xlink:href="img/sprites/sprite.svg#arrow-right")
+					.swiper-button-next
+						svg
+							use(xlink:href="img/sprites/sprite.svg#arrow-right")
+
+
+	.main-news.section
+		.container
+			.section__title Новости
+			a.btn-more(href="#")
+				span Подробнее
+				span
+					svg
+						use(xlink:href="img/sprites/sprite.svg#arrow-right")
+			.section__slider
+				.swiper
+					.swiper-wrapper
+						.swiper-slide
+				.swiper-controll
+					.swiper-button-prev
+						svg
+							use(xlink:href="img/sprites/sprite.svg#arrow-right")
+					.swiper-button-next
+						svg
+							use(xlink:href="img/sprites/sprite.svg#arrow-right")
