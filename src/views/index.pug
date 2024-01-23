@@ -260,7 +260,13 @@ block content
 				.swiper
 					.swiper-wrapper
 						- for (var x = 0; x < 4; x++)
-							.swiper-slide
+							.swiper-slide.client
+								.client__inner
+									.client__logo
+										img(src="img/client-2-1.png" alt="")
+									.client__img
+										img(src="img/client-2.jpg" alt="")
+									.client__title Городская клиническая больница №1 им. Пирогова
 				.swiper-controll
 					.swiper-button-prev
 						svg
@@ -281,7 +287,13 @@ block content
 			.section__slider
 				.swiper
 					.swiper-wrapper
-						.swiper-slide
+						- for (var x = 0; x < 4; x++)
+							.swiper-slide.news-slide
+								a.news-slide__inner
+									.news-slide__img
+										img(src="img/news-1.jpg" alt="")
+									.news-slide__title Lacinia, diam interdum feugiat suscipit, velit sapien volutpat quam, at elementum lorem dui non sem
+									.news-slide__date 3 января 2023
 				.swiper-controll
 					.swiper-button-prev
 						svg
