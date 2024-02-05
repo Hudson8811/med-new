@@ -19,11 +19,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        transition-duration: .3s    ;
+        transition-duration: .3s;
 
-        @media screen and (max-width: 860px) {
-            padding: 20px 16px 20px 46px;
-        }
 
         .select2-selection__rendered {
             padding: 5px 14px;
@@ -32,16 +29,18 @@
             font-size: 13px;
             line-height: 90%;
             text-align: right;
-            color: #193762;
+            color: $mainColor;
             display: block;
 
         }
     }
 
     .select2-selection__arrow {
-        width: 22px;
-        height: 12px;
-        background: url(https://cdn-icons-png.flaticon.com/512/2722/2722987.png) no-repeat center center;
+        width: 11px;
+        height: 8px;
+
+        margin-right: 12px;
+        background: url(../img/svg/filter-select-arrow.svg) no-repeat center center;
         background-size: contain;
         transition-duration: .3s;
 
@@ -52,11 +51,12 @@
 
     &.select2-container--open {
 
-    .select2-selection--single {
-        border-radius: 16px 16px 0 0;
-    }
+        .select2-selection--single {
+            //border-radius: 16px 16px 0 0;
+        }
+
         .select2-selection__arrow {
-            transform: rotateX(-180deg);
+            transform: rotate(-180deg);
         }
 
         /*.select2-selection--single .select2-selection__rendered {
@@ -73,15 +73,16 @@
 
 .select2-dropdown {
     background: #e8ebef;
-    border-radius: 0 0 16px 16px !important;
+    border-radius: 16px !important;
+    //border-radius: 0 0 16px 16px !important;
     border: none !important;
-    padding: 10px 20px 11px 8px;
-    margin-top: -2px;
+    padding: 5px 14px;
+    margin-top: 2px;
 }
 
 .select2-results__options {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 13px;
     line-height: 26px;
     padding: 0;
 
@@ -187,6 +188,11 @@
         background: #fff;
         width: calc(100% - 364px - 23px);
         padding: 25px 27px 37px;
+
+        @media only screen and (max-width: 1100px) {
+            width: 100%;
+        }
+
     }
 
     &__main-inner {}
@@ -194,6 +200,9 @@
     &_sidebar {
         width: 364px;
 
+        @media only screen and (max-width: 1100px) {
+            display: none;
+        }
     }
 
 
@@ -205,7 +214,7 @@
 
     &__blue {
         border-radius: 21px;
-        background: #193762;
+        background: $mainColor;
         padding: 28px;
         text-decoration: none;
         font-weight: 700;
@@ -233,10 +242,12 @@
         display: block;
         box-sizing: border-box;
         z-index: 1;
-        &:first-child{
+
+        &:first-child {
             margin-top: 13px;
         }
-        &::before{
+
+        &::before {
             content: '';
             display: block;
             position: absolute;
@@ -250,12 +261,15 @@
             opacity: 0;
             transition-duration: .3s;
         }
-        span{
-            position: relative;z-index: 2;
+
+        span {
+            position: relative;
+            z-index: 2;
         }
 
-        &--current, &:hover {
-            &::before{
+        &--current,
+        &:hover {
+            &::before {
                 opacity: 1;
             }
         }
@@ -268,12 +282,21 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
+    @media only screen and (max-width: 1250px) {
+        align-items: center;
+    }
+
+
     &__left {
         margin-right: 20px;
 
         .typical-h1 {
             margin-left: -5px;
+            @media only screen and (max-width: 767px) {
+                margin-left: -2px;
+            }
         }
+
     }
 
     &__right {
@@ -286,18 +309,33 @@
     font-weight: 700;
     font-size: 100px;
     line-height: 72%;
-    color: #193762;
+    color: $mainColor;
+
+
+    @media only screen and (max-width: 1250px) {
+        font-size: 60px;
+    }
+
+    @media only screen and (max-width: 767px) {
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 135%;
+    }
 }
 
 .news-filter {}
 
 .news-list {
-
-    margin-top: 35px;
+    margin-top: 57px;
     display: flex;
     flex-wrap: wrap;
     margin-left: -18px;
     margin-bottom: -18px;
+
+    @media only screen and (max-width: 767px) {
+        margin-top: 30px;
+    }
 }
 
 .news-list-card {
@@ -310,6 +348,19 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    transition-duration: .3s;
+
+    @media only screen and (max-width: 1300px) {
+        width: calc(50% - 18px);
+    }
+
+    @media only screen and (max-width: 540px) {
+        width: calc(100% - 18px);
+    }
+
+    &:hover {
+        opacity: .7;
+    }
 
     &__pic {
         border-radius: 21px;
@@ -323,7 +374,7 @@
         }
     }
 
-    &__main{
+    &__main {
         padding: 7px 15px 18px;
         flex-grow: 1;
         display: flex;
@@ -336,15 +387,27 @@
         line-height: 152%;
         color: #052a44;
         flex-grow: 1;
+
+        @media only screen and (max-width: 767px) {
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.2;
+
+        }
     }
 
     &__date {
         font-weight: 500;
         font-size: 14px;
         line-height: 114%;
-        color: #193762;
+        color: $mainColor;
         margin-top: 49px;
         opacity: 0.2;
+
+        @media only screen and (max-width: 767px) {
+            margin-top: 20px;
+        }
     }
 }
 
@@ -352,21 +415,170 @@
 
 .lwsb-sidebar {}
 
-.long-form-section {}
+.long-form-section {
+    margin-top: 39px;
+    margin-bottom: 94px;
+}
 
-.long-form-wrap {}
+.long-form-wrap {
+    border-radius: 55px;
+    background: #fff;
+    //width: calc(100% - 364px - 23px);
+    padding: 40px 27px 60px;
+}
 
 .long-form {}
 
-.long-form-title {}
+.long-form-title {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 97%;
+    color: $mainColor;
 
-.long-form-inputs {}
 
-.long-form-inp {}
+    @media only screen and (max-width: 767px) {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    @media only screen and (max-width: 560px) {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+}
+
+.long-form-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -18px;
+    margin-bottom: -15px;
+    margin-top: 84px;
+
+    @media only screen and (max-width: 767px) {
+        margin-top: 40px;
+    }
+}
+
+.long-form-inp {
+    width: calc(33.33% - 18px);
+    margin-left: 18px;
+    margin-bottom: 15px;
+
+    @media only screen and (max-width: 1000px) {
+        width: calc(50% - 18px);
+    }
+
+    @media only screen and (max-width: 767px) {
+        width: calc(100% - 18px);
+    }
+}
+
+.simple-input {
+    display: block;
+    width: 100%;
+    border-radius: 69px;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 90%;
+    color: $mainColor;
+    background: #e8ebf0;
+    padding: 21px 35px;
+    box-sizing: border-box;
+
+
+    @media only screen and (max-width: 767px) {
+        /*font-size: 16px;
+        line-height: 1.2;*/
+
+        padding: 10px 20px;
+    }
+
+    &::placeholder {
+        color: inherit;
+    }
+
+}
+
+.long-form-bottom {
+    margin-top: 51px;
+
+    @media only screen and (max-width: 767px) {
+        margin-top: 30px;
+    }
+}
 
 .simple-small-btn {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 90%;
+    color: $mainColor;
 
     &__icon {}
 }
 
-.long-form-bottom {}
+.long-form-acceptance {
+    width: 1152px;
+    max-width: 100%;
+
+    &+.long-form-acceptance {
+        margin-top: 24px;
+    }
+
+}
+
+.simple-acceptance {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+
+    &__input {
+        display: none;
+
+        &:checked~.simple-acceptance__pseudo {
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__pseudo {
+        margin-top: 6px;
+        display: block;
+        min-width: 22px;
+        width: 22px;
+        height: 22px;
+        border-radius: 4px;
+        background: $orange;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            background: #fff;
+            left: 6px;
+            top: 6px;
+            border-radius: 4px;
+            width: 10px;
+            height: 10px;
+            opacity: 0;
+            transition-duration: .3s;
+        }
+    }
+
+    &__text {
+        margin-left: 24px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+        color: #052a44;
+        opacity: 0.3;
+
+        @media only screen and (max-width: 767px) {
+            font-size: 16px;
+            line-height: 1.2;
+        }
+    }
+}

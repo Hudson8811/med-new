@@ -53,8 +53,8 @@ block content
 
 
 						.news-loadmore-wrap
-							.section__btn.section__btn--grey
-								a.btn-arrow(href="javascript:;")
+							.section__btn
+								a.btn-arrow.btn-arrow--grey(href="javascript:;")
 									span Показать еще
 
 				.layout-wsb_sidebar
@@ -84,18 +84,30 @@ block content
 					.long-form-title  Получайте актуальную информацию о новых<br> продуктах и акциях
 					.long-form-inputs
 						.long-form-inp
-							input(type="text" placeholder="Ваше имя")
+							input.simple-input(type="text" placeholder="Ваше имя")
 						.long-form-inp
-							input(type="text" placeholder="Телефон")
+							input.simple-input(type="text" placeholder="Телефон")
 						.long-form-inp
-							input(type="text" placeholder="E-mail")
+							input.simple-input(type="text" placeholder="E-mail")
 						.long-form-inp
-							input(type="text" placeholder="Название организации")
+							input.simple-input(type="text" placeholder="Название организации")
 						.long-form-inp
-							input(type="text" placeholder="Город")
+							input.simple-input(type="text" placeholder="Город")
 						.long-form-inp
-							button.simple-small-btn(type="submit") Отправить
-								.simple-small-btn__icon
-									img(src="/img/svg/submit-btn-arrow.svg", alt="")
+							button.btn-arrow.btn-arrow--size-for-form(type="submit")
+								span Отправить
+								//img(src="/img/svg/submit-btn-arrow.svg", alt="")
+								svg
+									use(xlink:href="img/sprites/sprite.svg#submit-btn-arrow")
 
 					.long-form-bottom
+						.long-form-acceptance
+							label.simple-acceptance
+								input.simple-acceptance__input(type="checkbox" checked)
+								.simple-acceptance__pseudo
+								.simple-acceptance__text Я подтверждаю, что ознакомлен(а) с Политикой конфиденциальности Медимком и Пользовательским соглашением, и даю согласие на обработку и передачу своих персональных данных, для получения информационной рассылки на указанный адрес электронной почты.
+						.long-form-acceptance
+							label.simple-acceptance
+								input.simple-acceptance__input(type="checkbox")
+								.simple-acceptance__pseudo
+								.simple-acceptance__text Я подтверждаю, что перечисленные персональные данные, относящиеся ко мне, предоставлены мной в адрес ООО «МЕДИМКОМ» добровольно и являются достоверными.
