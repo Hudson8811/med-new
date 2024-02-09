@@ -1,0 +1,102 @@
+extends ../layouts/default
+
+block variables
+	- const title = "New Page";
+
+block content
+	.md-pagination
+		.container
+			.md-pagination-flex
+				a.md-pagination-item(href="")  Главная
+				a.md-pagination-item(href="")  Вакансии
+				.md-pagination-item Менеджер по продажам медицинского оборудования
+
+	section.layout-wsb-section
+		.container
+			.layout-wsb
+				.layout-wsb__main
+					.layout-wsb__main-inner
+						h1.typical-h1.typical-h1--small Менеджер по продажам медицинского оборудования
+						.vacancy-single-salary 70&nbsp;000  — 50&nbsp;000 руб.
+
+						.vacancy-single-top-flex
+							.vacancy-single-top-flex__left
+								.vacancy-card-requirements.vacancy-card-requirements--large
+									.vacancy-card-requirement.vacancy-card-requirement--large
+										.vacancy-card-requirement__name Город
+										.vacancy-card-requirement__bottom
+											.vacancy-card-requirement__icon
+												svg
+													use(xlink:href="img/sprites/sprite.svg#icon-location")
+											.vacancy-card-requirement__val Москва
+									.vacancy-card-requirement.vacancy-card-requirement--large
+										.vacancy-card-requirement__name Опыт
+										.vacancy-card-requirement__bottom
+											.vacancy-card-requirement__icon
+												svg
+													use(xlink:href="img/sprites/sprite.svg#icon-clock")
+											.vacancy-card-requirement__val от 2-ух лет
+
+							.vacancy-single-top-flex__right
+								a.btn-circle.btn-circle--small-h32.btn-circle--orange(href="")
+									| Откликнуться
+									.btn-circle__icon
+
+						.vacancy-single-text.vacancy-single-text-style
+							h2 Описание вакансии
+							p Достижение плановых показателей и обеспечение роста объемов продаж. Мониторинг рынка медицинского оборудования, анализ деятельности конкурентов. Участие в выставках и других мероприятиях в идеале в сфере поставки медицинского оборудования ...
+							h2 Обязанности:
+							ul
+								li Активные продажи: постоянный Поиск Новых клиентов, «холодные» звонки.
+								li Поддержка, обновление и развитие имеющейся клиентской базы.
+								li Ведение переговоров и презентаций, выезды к заказчикам.
+								li Контроль продаж на всех этапах внешнего и внутреннего согласования и исполнения;
+								li Постоянное планирование и организация индивидуальной работы, анализ и отчёты о проделанной работе;
+								li Командировки по закрепленной территории;
+								li Достижение плановых показателей и обеспечение роста объёмов продаж;
+								li Мониторинг рынка медицинского оборудования, анализ деятельности конкурентов
+								li Участие в выставках и других маркетинговых мероприятиях.
+							h2 Обязанности:
+							ul
+								li Активные продажи: постоянный Поиск Новых клиентов, «холодные» звонки.
+								li Поддержка, обновление и развитие имеющейся клиентской базы.
+								li Ведение переговоров и презентаций, выезды к заказчикам.
+								li Контроль продаж на всех этапах внешнего и внутреннего согласования и исполнения;
+								li Постоянное планирование и организация индивидуальной работы, анализ и отчёты о проделанной работе;
+								li Командировки по закрепленной территории;
+								li Достижение плановых показателей и обеспечение роста объёмов продаж;
+								li Мониторинг рынка медицинского оборудования, анализ деятельности конкурентов
+								li Участие в выставках и других маркетинговых мероприятиях.
+
+						.simple-shares
+							.simple-shares__title Поделиться вакансией:
+							.simple-shares__flex
+								a.vacancy-single-share(href="")
+									svg
+										use(xlink:href="img/sprites/sprite.svg#social-blue-vk")
+								a.vacancy-single-share(href="")
+									svg
+										use(xlink:href="img/sprites/sprite.svg#social-blue-tg")
+								a.vacancy-single-share(href="")
+									svg
+										use(xlink:href="img/sprites/sprite.svg#social-blue-ok")
+
+				.layout-wsb_sidebar
+					.lwsb-sidebar
+						a.lwsb-sidebar__blue(href="") Компания
+							//является ссылкой на текущий раздел сайта второго уровня
+						.lwsb-sidebar__body
+							a.lwsb-sidebar__item(href="")
+								span О компании
+							a.lwsb-sidebar__item(href="")
+								span Новости
+							a.lwsb-sidebar__item(href="")
+								span Персонал
+							a.lwsb-sidebar__item(href="")
+								span Каталоги
+							a.lwsb-sidebar__item.lwsb-sidebar__item--current(href="")
+								span Вакансии
+							a.lwsb-sidebar__item(href="")
+								span Партнеры
+							a.lwsb-sidebar__item(href="")
+								span Контакты

@@ -213,9 +213,18 @@
         width: calc(100% - 364px - 23px);
         padding: 25px 27px 37px;
 
+
         @media only screen and (max-width: 1100px) {
+            border-radius: 25px;
             width: 100%;
             padding: 25px 15px 15px;
+        }
+
+        &--single-vac-pading{
+            padding-bottom: 32px;
+            @media only screen and (max-width: 1100px) {
+                padding-bottom: 25px;
+            }
         }
 
     }
@@ -347,9 +356,27 @@
 
     @media only screen and (max-width: 767px) {
         font-size: 40px;
-        font-style: normal;
-        font-weight: 700;
         line-height: 135%;
+    }
+
+    &--small{
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 97%;
+
+        @media only screen and (max-width: 1250px) {
+            font-size: 40px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            font-size: 28px;
+            line-height: 1.2;
+        }
+
+        @media only screen and (max-width: 560px) {
+            font-size: 24px;
+            line-height: 1.2;
+        }
     }
 }
 
