@@ -8,85 +8,77 @@ block content
 		.container
 			.md-pagination-flex
 				a.md-pagination-item(href="")  Главная
-				a.md-pagination-item(href="")  Вакансии
-				.md-pagination-item Менеджер по продажам медицинского оборудования
+				.md-pagination-item О компании
 
 	section.layout-wsb-section
 		.container
 			.layout-wsb
-				.layout-wsb__main
+				.layout-wsb__main.layout-wsb__main--about-pading
 					.layout-wsb__main-inner
-						h1.typical-h1.typical-h1--small Менеджер по продажам медицинского оборудования
-						.vacancy-single-salary 70&nbsp;000  — 50&nbsp;000 руб.
+						.news-main-top
+							.news-main-top__left
+								h1.typical-h1 О компании
 
-						.vacancy-single-top-flex
-							.vacancy-single-top-flex__left
-								.vacancy-card-requirements.vacancy-card-requirements--large
-									.vacancy-card-requirement.vacancy-card-requirement--large
-										.vacancy-card-requirement__name Город
-										.vacancy-card-requirement__bottom
-											.vacancy-card-requirement__icon
-												svg
-													use(xlink:href="img/sprites/sprite.svg#icon-location")
-											.vacancy-card-requirement__val Москва
-									.vacancy-card-requirement.vacancy-card-requirement--large
-										.vacancy-card-requirement__name Опыт
-										.vacancy-card-requirement__bottom
-											.vacancy-card-requirement__icon
-												svg
-													use(xlink:href="img/sprites/sprite.svg#icon-clock")
-											.vacancy-card-requirement__val от 2-ух лет
 
-							.vacancy-single-top-flex__right
-								a.btn-circle.btn-circle--small-h32.btn-circle--orange(href="")
-									| Откликнуться
-									.btn-circle__icon
+						.archive-description.archive-description-text-style
+							b ООО «МЕДИМКОМ»
+							|  - один из крупнейших дистрибьюторов в области оснащения медицинских учреждений страны оборудованием и медицинскими изделиями высокого качества для отделений анестезиологии и реанимации, хирургии, онкологии, урологии, клинико-диагностических и микробиологических лабораторий, отделений функциональной диагностики, эндоскопии, скорой помощи на всей территории РФ. Мы предлагаем широкий ассортимент продукции для наиболее полного обеспечения потребности отделений и имеем прямые контракты с ведущими мировыми производителями.
 
-						.vacancy-single-text.vacancy-single-text-style
-							h2 Описание вакансии
-							p Достижение плановых показателей и обеспечение роста объемов продаж. Мониторинг рынка медицинского оборудования, анализ деятельности конкурентов. Участие в выставках и других мероприятиях в идеале в сфере поставки медицинского оборудования ...
-							h2 Обязанности:
+						.lslider.js-lslider-with-thumbs
+							.laslider-main.swiper.js-lslider-main
+								.laslider-main-buttons
+									.laslider-main-button.laslider-main-button--prev.js-lslider-main-prev
+									.laslider-main-button.laslider-main-button--next.js-lslider-main-next
+
+								.laslider-main-wrapper.swiper-wrapper
+									each val in [1,2,3,4,5,6,7]
+										.lslider-main-slide.swiper-slide
+											img(src="img/news/meditsinskaya-klinika7.jpg", alt="")
+							.lslider-thumbs.swiper.js-lslider-thumbs
+								.lslider-thumbs-wrapper.swiper-wrapper
+									each val in [1,2,3,4,5,6,7]
+										.lslider-thumbs-slide.swiper-slide
+											img(src="img/news/meditsinskaya-klinika7.jpg", alt="")
+
+						.about-single-text.about-single-text-style
+							h2 Наша миссия
+							p Оснащать медицинские учреждения страны высокотехнологичным оборудованием и расходными материалами высшего качества, выполняя задачу по соответствию медицинской помощи страны мировому уровню
+
+							h3 Наши ценности
+							h4 Забота о пациентах
+							p Конечной целью нашей деятельности являются пациенты. Мы стремимся поставлять продукцию, улучшающую их качество жизни и оказание медицинской помощи
+							hr
+							h4 Командный дух
+							p Мы уважаем, вдохновляем и поддерживаем друг друга, у нас есть общие цели и интересы, нам нравится вместе расти и развиваться
+							hr
+							h4 Открытость и честность
+							p Мы гордимся делом, в которое вовлечены, открыто делимся знаниями и честны с партнерами
+							hr
+							h4 Стремление к инновациям
+							p Мы стремимся постоянно улучшать свои сервисы и продукты, поставлять самые современные решения. Мы живем и работаем в ногу со временем
+							hr
+							h4 Проактивность
+							p Мы смело предлагаем решение сложных вопросов, берем на себя инициативу и несем ответственность
+							hr
+							h4 Оптимизм
+							p Чтобы ни случилось, мы всегда сохраняем позитивный взгляд на мир и делимся им с нашими партнерами
+
+							h3 Наши преимущества:
 							ul
-								li Активные продажи: постоянный Поиск Новых клиентов, «холодные» звонки.
-								li Поддержка, обновление и развитие имеющейся клиентской базы.
-								li Ведение переговоров и презентаций, выезды к заказчикам.
-								li Контроль продаж на всех этапах внешнего и внутреннего согласования и исполнения;
-								li Постоянное планирование и организация индивидуальной работы, анализ и отчёты о проделанной работе;
-								li Командировки по закрепленной территории;
-								li Достижение плановых показателей и обеспечение роста объёмов продаж;
-								li Мониторинг рынка медицинского оборудования, анализ деятельности конкурентов
-								li Участие в выставках и других маркетинговых мероприятиях.
-							h2 Обязанности:
-							ul
-								li Активные продажи: постоянный Поиск Новых клиентов, «холодные» звонки.
-								li Поддержка, обновление и развитие имеющейся клиентской базы.
-								li Ведение переговоров и презентаций, выезды к заказчикам.
-								li Контроль продаж на всех этапах внешнего и внутреннего согласования и исполнения;
-								li Постоянное планирование и организация индивидуальной работы, анализ и отчёты о проделанной работе;
-								li Командировки по закрепленной территории;
-								li Достижение плановых показателей и обеспечение роста объёмов продаж;
-								li Мониторинг рынка медицинского оборудования, анализ деятельности конкурентов
-								li Участие в выставках и других маркетинговых мероприятиях.
-
-						.simple-shares
-							.simple-shares__title Поделиться вакансией:
-							.simple-shares__flex
-								a.vacancy-single-share(href="")
-									svg
-										use(xlink:href="img/sprites/sprite.svg#social-blue-vk")
-								a.vacancy-single-share(href="")
-									svg
-										use(xlink:href="img/sprites/sprite.svg#social-blue-tg")
-								a.vacancy-single-share(href="")
-									svg
-										use(xlink:href="img/sprites/sprite.svg#social-blue-ok")
+								li Надежность. 20 лет на рынке медицинских изделий
+								li Соответствие запросам страны. ТОП 100 поставщиков рынка Госзаказа
+								li Доверие. Доверие ведущих клиник страны
+								li Скорость. Прямые контракты с ведущими производителями
+								li Масштабность. 4 представительства с логистическими центрами.
+								li Индивидуальный подход. Индивидуальный подход к каждому лечебному учреждению
+								li Экспертность. Экспертная поддержка на всех этапах сотрудничества
 
 				.layout-wsb_sidebar
 					.lwsb-sidebar
 						a.lwsb-sidebar__blue(href="") Компания
 							//является ссылкой на текущий раздел сайта второго уровня
 						.lwsb-sidebar__body
-							a.lwsb-sidebar__item(href="")
+							a.lwsb-sidebar__item.lwsb-sidebar__item--current(href="")
 								span О компании
 							a.lwsb-sidebar__item(href="")
 								span Новости
@@ -94,9 +86,11 @@ block content
 								span Персонал
 							a.lwsb-sidebar__item(href="")
 								span Каталоги
-							a.lwsb-sidebar__item.lwsb-sidebar__item--current(href="")
+							a.lwsb-sidebar__item(href="")
 								span Вакансии
 							a.lwsb-sidebar__item(href="")
 								span Партнеры
 							a.lwsb-sidebar__item(href="")
 								span Контакты
+
+	section.long-form-section

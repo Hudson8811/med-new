@@ -324,6 +324,7 @@
     font-size: 20px;
     line-height: 152%;
     color: $mainColor;
+
     @media only screen and (max-width: 767px) {
         font-size: 16px;
         line-height: 1.2;
@@ -332,7 +333,8 @@
     &>*+ {
         h2 {
             margin-top: 46px;
-            @media only screen and (max-width: 767px){
+
+            @media only screen and (max-width: 767px) {
                 margin-top: 24px;
             }
         }
@@ -344,7 +346,8 @@
 
         ul {
             margin-top: 26px;
-            @media only screen and (max-width: 767px){
+
+            @media only screen and (max-width: 767px) {
                 margin-top: 19px;
             }
         }
@@ -354,7 +357,8 @@
         font-weight: 700;
         font-size: 24px;
         line-height: 120%;
-        @media only screen and (max-width: 767px){
+
+        @media only screen and (max-width: 767px) {
             font-size: 20px;
         }
     }
@@ -369,7 +373,7 @@
             text-transform: none;
             padding-left: 30px;
 
-            @media only screen and (max-width: 767px){
+            @media only screen and (max-width: 767px) {
                 padding-left: 18px;
             }
 
@@ -383,9 +387,10 @@
                 position: absolute;
                 left: 12px;
                 top: 12px;
-                @media only screen and (max-width: 767px){
-                   left: 0;
-                   top: 8px;
+
+                @media only screen and (max-width: 767px) {
+                    left: 0;
+                    top: 8px;
                 }
             }
 
@@ -399,7 +404,7 @@
 .simple-shares {
     margin-top: 56px;
 
-    @media only screen and (max-width: 767px){
+    @media only screen and (max-width: 767px) {
         margin-top: 24px;
     }
 
@@ -408,7 +413,8 @@
         font-weight: 700;
         font-size: 24px;
         line-height: 120%;
-        @media only screen and (max-width: 767px){
+
+        @media only screen and (max-width: 767px) {
             font-size: 20px;
         }
     }
@@ -419,7 +425,8 @@
         margin-top: 26px;
         margin-left: -24px;
         margin-bottom: -10px;
-        @media only screen and (max-width: 767px){
+
+        @media only screen and (max-width: 767px) {
             margin-left: -12px;
         }
     }
@@ -437,7 +444,8 @@
     align-items: center;
     justify-content: center;
     transition-duration: .3s;
-    @media only screen and (max-width: 767px){
+
+    @media only screen and (max-width: 767px) {
         width: 45px;
         height: 45px;
         margin-left: 12px;
@@ -449,7 +457,8 @@
         height: 28px;
         object-fit: contain;
         object-position: center center;
-        @media only screen and (max-width: 767px){
+
+        @media only screen and (max-width: 767px) {
             width: 22px;
             height: 22px;
         }

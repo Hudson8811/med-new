@@ -78,4 +78,73 @@ jQuery(function ($) {
 		$(this).siblings('.simple-input-file__text').removeClass('simple-input-file__text--preview').html(fname);
 	});
 
+
+
+
+    $('.js-lslider-with-thumbs').each(function(){
+        var main_slider=$(this).find('.js-lslider-main');
+        var thumbs_slider=$(this).find('.js-lslider-thumbs');
+        var prevArrow=$(this).find('.js-lslider-main-prev');
+        var nextArrow=$(this).find('.js-lslider-main-next');
+
+        let thumbsSlider = new Swiper(thumbs_slider[0], {
+			spaceBetween: 10,
+			slidesPerView: 3,
+			watchSlidesProgress: true,
+            navigation: false,
+            pagination: false,
+			breakpoints: {
+			  480: {
+				slidesPerView: 3,
+				spaceBetween: 10,
+			  },
+			  640: {
+				slidesPerView: 4,
+				spaceBetween: 10,
+			  },
+			  768: {
+				slidesPerView: 5,
+				spaceBetween: 19,
+			  }
+			}
+        });
+
+        let mainSlider = new Swiper(main_slider[0], {
+			spaceBetween: 10,
+			thumbs: {
+			  swiper: thumbsSlider,
+			},
+            navigation: {
+                nextEl: nextArrow[0],
+                prevEl: prevArrow[0]
+            },
+            pagination: false
+        });
+    })
+    $('.js-lslider-no-thumbs').each(function(){
+        var main_slider=$(this).find('.js-lslider-main');
+        var prevArrow=$(this).find('.js-lslider-main-prev');
+        var nextArrow=$(this).find('.js-lslider-main-next');
+
+        let mainSlider = new Swiper(main_slider[0], {
+			spaceBetween: 10,
+			thumbs: {
+			  swiper: thumbsSlider,
+			},
+            navigation: {
+                nextEl: nextArrow[0],
+                prevEl: prevArrow[0]
+            },
+            pagination: false
+        });
+    })
+
+
+
+
+
+
+
+
+
 });
