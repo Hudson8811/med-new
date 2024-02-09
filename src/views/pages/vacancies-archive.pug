@@ -1,0 +1,136 @@
+extends ../layouts/default
+
+block variables
+	- const title = "New Page";
+
+block content
+	.md-pagination
+		.container
+			.md-pagination-flex
+				a.md-pagination-item(href="")  Главная
+				a.md-pagination-item(href="")  Компания
+				.md-pagination-item Новости
+
+	section.layout-wsb-section
+		.container
+			.layout-wsb
+				.layout-wsb__main
+					.layout-wsb__main-inner
+						.news-main-top
+							.news-main-top__left
+								h1.typical-h1 Вакансии
+							.vacancies-top-right
+								a.btn-arrow.btn-arrow--size-small-d-h32(href="#")
+									span Хочу у вас работать
+									//img(src="/img/svg/submit-btn-arrow.svg", alt="")
+									svg
+										use(xlink:href="img/sprites/sprite.svg#submit-btn-arrow")
+								.news-filter
+									.simple-select2-wrap.simple-select2-wrap--city-select
+										select.js-simple-select2
+											//(data-placeholder="Плейсходер")
+											//option(selected)
+											option(selected value="1") Москва
+											option(value="2") Санкт-Петербург
+											option(value="2") Санкт-Петербург 2
+											option(value="2") Санкт-Петербург 3
+											option(value="2") Санкт-Петербург 4
+											option(value="2") Санкт-Петербург 5
+										.simple-select2-items-wrapper
+
+						.archive-description.archive-description-text-style
+							b ООО «МЕДИМКОМ»
+							|  - один из крупнейших дистрибьюторов в области оснащения медицинских учреждений страны оборудованием и медицинскими изделиями высокого качества для отделений анестезиологии и реанимации, хирургии, онкологии, урологии, клинико-диагностических и микробиологических лабораторий, отделений функциональной диагностики, эндоскопии, скорой помощи на всей территории РФ. Мы предлагаем широкий ассортимент продукции для наиболее полного обеспечения потребности отделений и имеем прямые контракты с ведущими мировыми производителями.
+
+						.vacancies-list
+							each val in [1, 2, 3]
+								.vacancy-card
+									.vacancy-card__pic
+										img(src="/img/news/card.jpg", alt="")
+									.vacancy-card__main
+										.vacancy-card__top
+											.vacancy-card__title Менеджер по продажам медицинского оборудования
+											.vacancy-card__salary  70 000 — 500 000 руб.
+										.vacancy-card-requirements
+											.vacancy-card-requirement
+												.vacancy-card-requirement__name Город
+												.vacancy-card-requirement__bottom
+													.vacancy-card-requirement__icon
+														svg
+															use(xlink:href="img/sprites/sprite.svg#icon-location")
+													.vacancy-card-requirement__val Москва
+											.vacancy-card-requirement
+												.vacancy-card-requirement__name Опыт
+												.vacancy-card-requirement__bottom
+													.vacancy-card-requirement__icon
+														svg
+															use(xlink:href="img/sprites/sprite.svg#icon-clock")
+													.vacancy-card-requirement__val от 2-ух лет
+
+										.vacancy-card__text Достижение плановых показателей и обеспечение роста объемов продаж. Мониторинг рынка медицинского оборудования, анализ деятельности конкурентов. Участие в выставках и других мероприятиях
+
+										.vacancy-card__bottom
+
+											a.vacancy-card__bottom-btn.btn-circle.btn-circle--small-h32.btn-circle--orange(href="")
+												| Откликнуться
+												.btn-circle__icon
+											a.vacancy-card__bottom-btn.btn-circle.btn-circle--small-h32.btn-circle--blue
+												| Подробнее
+												.btn-circle__icon
+
+
+
+
+						.news-loadmore-wrap
+							.section__btn
+								a.btn-arrow.btn-arrow--grey(href="javascript:;")
+									span Показать еще
+
+				.layout-wsb_sidebar
+					.lwsb-sidebar
+						a.lwsb-sidebar__blue(href="") Компания
+							//является ссылкой на текущий раздел сайта второго уровня
+						.lwsb-sidebar__body
+							a.lwsb-sidebar__item(href="")
+								span О компании
+							a.lwsb-sidebar__item(href="")
+								span Новости
+							a.lwsb-sidebar__item(href="")
+								span Персонал
+							a.lwsb-sidebar__item(href="")
+								span Каталоги
+							a.lwsb-sidebar__item.lwsb-sidebar__item--current(href="")
+								span Вакансии
+							a.lwsb-sidebar__item(href="")
+								span Партнеры
+							a.lwsb-sidebar__item(href="")
+								span Контакты
+
+	section.long-form-section
+		.container
+			.long-form-wrap
+				.long-form
+					.long-form-title  Не нашли подходящую вакансию?<br>Отправьте нам Ваше резюме
+					.long-form-inputs.long-form-inputs--smaller-mt
+						.long-form-inp.long-form-inp--d-25.long-form-inp--1350-w33
+							input.simple-input(type="text" placeholder="Ваше имя")
+						.long-form-inp.long-form-inp--d-25.long-form-inp--1350-w33
+							input.simple-input(type="text" placeholder="Электронный адрес")
+						.long-form-inp.long-form-inp--d-25.long-form-inp--1350-w33
+							input.simple-input(type="text" placeholder="Телефон")
+						.long-form-inp.long-form-inp--d-25.long-form-inp--1350-w33
+							label.simple-input.simple-input-file.js-simple-input-file
+								input(type="file", name="")
+								.simple-input-file__text.simple-input-file__text--preview Прикрепить резюме
+								.simple-input-file__icon
+									svg
+										use(xlink:href="img/sprites/sprite.svg#file-inp-clip")
+						.long-form-inp.long-form-inp--d-25.long-form-inp--1350-w33
+							button.btn-arrow.btn-arrow--size-for-form(type="submit")
+								span Отправить
+								//img(src="/img/svg/submit-btn-arrow.svg", alt="")
+								svg
+									use(xlink:href="img/sprites/sprite.svg#submit-btn-arrow")
+
+						.long-form-inp.long-form-inp--d-25.long-form-inp--1350-w33.long-form-inp--fg1.long-form-inp--aic
+							.long-form-side-acceptance.long-form-side-acceptance--ml7 Заполняя данную форму вы даете согласие <br> на обработку своих персональных данных.

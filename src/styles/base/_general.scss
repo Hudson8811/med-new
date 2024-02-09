@@ -1,14 +1,20 @@
-h1, h2, h3, h4, h5, h6, ul {
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+	margin: 0;
+	padding: 0;
 }
 
-body{
+body {
 	background: #E8EBEF;
 	font-family: 'Gilroy', sans-serif;
 }
 
-.container{
+.container {
 	width: 100%;
 	max-width: 1480px;
 	padding: 0 20px;
@@ -17,20 +23,24 @@ body{
 }
 
 
-.fs20{
+.fs20 {
 	font-size: 20px;
 	font-style: normal;
 	line-height: 1.2;
 }
-.link{
+
+.link {
 	color: $mainColor;
 	text-decoration: none;
-	&:hover{
+
+	&:hover {
 		color: $orange;
 	}
 }
-
-.btn-orange{
+label{
+	cursor: pointer;
+}
+.btn-orange {
 	border-radius: 1000px;
 	background: $orange;
 	color: #FFF;
@@ -45,7 +55,8 @@ body{
 	z-index: 3;
 	transition: transform 0.2s;
 	cursor: pointer;
-	&::before{
+
+	&::before {
 		content: "";
 		display: block;
 		width: 100%;
@@ -61,7 +72,8 @@ body{
 		z-index: -2;
 		transition: transform 0.2s;
 	}
-	&::after{
+
+	&::after {
 		content: "";
 		display: block;
 		width: 100%;
@@ -73,23 +85,29 @@ body{
 		left: 0;
 		z-index: -1;
 	}
-	&:hover{
-		&::before{
+
+	&:hover {
+		&::before {
 			transform: translateY(10px);
 		}
 	}
-	&:active{
+
+	&:active {
 		transform: translateY(10px);
-		&::before{
+
+		&::before {
 			transform: translateY(0);
 		}
 	}
 }
-.btn-arrow{
+
+.btn-arrow {
 	@extend .btn-orange;
 	display: flex;
 	align-items: center;
-	svg, img{
+
+	svg,
+	img {
 		width: 14px;
 		height: 14px;
 		object-fit: contain;
@@ -97,41 +115,82 @@ body{
 		flex-shrink: 0;
 		margin-left: 12px;
 	}
-	&--2row{
+
+	&--2row {
 		padding-left: 40px;
 		padding-right: 40px;
-		> span{
+
+		>span {
 			display: block;
 			text-align: left;
 			min-width: 247px;
-			> span{
+
+			>span {
 				display: block;
-				&:last-child:not(:first-child){
+
+				&:last-child:not(:first-child) {
 					font-size: 16px;
 					margin-top: 2px;
 				}
 			}
 		}
 	}
-	&--grey{
+
+	&--grey {
 		background: #E3E7EC;
 		color: $mainColor;
-		&::after{
+
+		&::after {
 			background: #E3E7EC;
 
 		}
 	}
 
-	&--size-for-form{
+	&--size-for-form {
 		padding: 23px 34px;
 		width: 100%;
 		justify-content: center;
 		border: none;
 		outline: none;
 	}
+	&--w100{
+		width: 100%;
+	}
+	&--size-small-d-h32 {
+		padding: 9px 11px 9px 18px;
+		justify-content: center;
+		border: none;
+		outline: none;
+
+
+		letter-spacing: 0.15px;
+		font-weight: 700;
+		font-size: 13px;
+		line-height: 90%;
+
+		svg,
+		img {
+			width: 11px;
+			margin-left: 5px;
+		}
+
+		&:hover {
+			&::before {
+				transform: translateY(5px);
+			}
+		}
+
+		&:active {
+			transform: translateY(5px);
+
+			&::before {
+				transform: translateY(0);
+			}
+		}
+	}
 }
 
-.btn-more{
+.btn-more {
 	font-size: 20px;
 	font-style: normal;
 	font-weight: 700;
@@ -142,8 +201,9 @@ body{
 	display: flex;
 	align-items: center;
 	color: $mainColor;
-	span{
-		&:last-child:not(:first-child){
+
+	span {
+		&:last-child:not(:first-child) {
 			width: 44px;
 			height: 44px;
 			display: flex;
@@ -155,45 +215,230 @@ body{
 			border-radius: 50%;
 		}
 	}
-	svg, img{
+
+	svg,
+	img {
 		width: 14px;
 		height: 14px;
 		object-fit: contain;
 		display: block;
 		flex-shrink: 0;
 	}
-	&--light{
+
+	&--light {
 		color: #ffffff;
-		span{
-			&:last-child:not(:first-child){
+
+		span {
+			&:last-child:not(:first-child) {
 				background: rgba(255, 255, 255, 0.2);
 			}
 		}
 	}
 }
 
-.section{
+.section {
 	position: relative;
 	padding: 60px 0 113px;
-	&__title{
+
+	&__title {
 		color: #193762;
 		font-size: 100px;
 		font-weight: 700;
 		line-height: 72%;
 		margin-bottom: 60px;
 	}
-	&__btn{
+
+	&__btn {
 		margin-top: 26px;
-		.btn-arrow{
+
+		.btn-arrow {
 			justify-content: center;
 		}
 	}
-	&--white{
+
+	&--white {
 		background: #ffffff;
 	}
 }
 
 
-.text-style{
+.text-style {
 	@extend .fs20;
+}
+
+
+.btn-circle {
+	position: relative;
+	align-items: center;
+
+	text-decoration: none;
+	cursor: pointer;
+	background: $orange;
+	border-radius: 1000px;
+	transition: all 0.3s;
+	border: 0;
+
+	min-height: 45px;
+	display: flex;
+	justify-content: center;
+	color: #FFF;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 18px;
+	background: transparent;
+	padding-left: 0;
+	padding-right: 0;
+	transition: all 0.3s;
+
+	/*&::after {
+		position: relative;
+		display: block;
+		margin-left: 12px;
+		padding-top: 5px;
+		content: url(../img/svg/small-circle-btn-arrow.svg);
+	}*/
+
+	@media only screen and (max-width: 1300px) {
+		font-size: 20px;
+		font-style: normal;
+		line-height: 135%;
+		letter-spacing: 0.36px;
+		min-height: 45px;
+	}
+
+
+	@media only screen and (max-width: 767px) {
+		font-size: 14px;
+		font-style: normal;
+		line-height: 135%;
+		letter-spacing: 0.36px;
+		min-height: 34px;
+	}
+
+
+	&--blue {}
+
+	&--orange {}
+
+	&__icon {
+		transition: all 0.3s;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 0;
+		width: 45px;
+		height: 45px;
+		margin-left: 11px;
+		border-radius: 50%;
+
+		&::after {
+			content: '';
+			display: block;
+			width: 11px;
+			height: 8px;
+			background: url(../img/svg/small-circle-btn-arrow.svg) no-repeat center center;
+			background-size: contain
+			//position: absolute;
+			//top: 50%;
+			//transform: translateY(-50%);
+		}
+
+		@media only screen and (max-width: 1300px) {
+			width: 30px;
+			height: 30px;
+			margin-left: 8px;
+		}
+	}
+
+	&::after {
+		display: none;
+	}
+
+	@media only screen and (min-width: 768px) {
+		&:hover {
+			transition: all 0.3s;
+			background: rgba(255, 255, 255, 0.2);
+			padding-left: 20px;
+
+			.btn-circle__icon {
+				transition: all 0.3s;
+			}
+		}
+	}
+
+	&--white {
+		.btn-circle__icon {
+			background: rgba(255, 255, 255, 0.2);
+		}
+	}
+
+	&--blue {
+		color: #1b316d;
+
+		@media only screen and (min-width: 768px) {
+			&:hover {
+				background: #1b316d;
+				color: #FFF;
+			}
+		}
+
+		.btn-circle__icon {
+			background: #1b316d;
+		}
+	}
+
+	&--orange {
+		color: $orange;
+
+		@media only screen and (min-width: 768px) {
+			&:hover {
+				background: $orange;
+				color: #FFF;
+			}
+		}
+
+		.btn-circle__icon {
+			background: $orange;
+		}
+	}
+
+	&--small-h32{
+		min-height: 32px;
+		font-size: 13px;
+		line-height: 90%;
+		font-weight: 700;
+
+		@media only screen and (max-width: 1300px) {
+			min-height: 32px;
+			font-size: 13px;
+			line-height: 90%;
+		}
+
+
+		@media only screen and (max-width: 767px) {
+			min-height: 32px;
+			font-size: 13px;
+			line-height: 90%;
+		}
+
+
+
+
+		.btn-circle__icon{
+			width: 32px;
+			height: 32px;
+			&::after {
+			}
+		}
+		@media only screen and (min-width: 768px) {
+			&:hover {
+				padding-left: 16px;
+				.btn-circle__icon{
+					//margin-left: 0px;
+				}
+			}
+		}
+	}
 }

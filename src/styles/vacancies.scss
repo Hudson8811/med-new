@@ -1,0 +1,209 @@
+.vacancies-top-right {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 4px;
+    margin-bottom: 20px;
+    @media only screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: -15px;
+        &>*{
+            margin-left: 15px;
+            margin-bottom: 10px;
+        }
+
+    }
+
+    &>*+* {
+        margin-left: 15px;
+        @media only screen and (max-width: 767px) {
+        }
+    }
+}
+
+.archive-description {
+    margin-top: 41px;
+}
+
+.archive-description-text-style {
+    font-weight: 400;
+    color: #1b316d;
+    font-size: 20px;
+    line-height: 164%;
+
+    @media only screen and (max-width: 767px) {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.2;
+    }
+
+    b {
+        font-weight: 600;
+        color: $orange;
+    }
+}
+
+.vacancies-list {
+    margin-top: 92px;
+}
+
+.vacancy-card {
+    border-radius: 21px;
+    background: #e8ebf0;
+    overflow: hidden;
+    display: flex;
+    text-decoration: none;
+    align-items: stretch;
+
+    &__pic {
+        border-radius: 0 18px 18px 0;
+        overflow: hidden;
+        width: 239px;
+        flex-shrink: 0;
+
+        position: relative;
+
+		@media only screen and (max-width: 767px) {
+            display: none;
+		}
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
+
+    &__main {
+        flex-grow: 1;
+        padding: 17px 19px 18px 23px;
+        width: calc(100% - 239px);
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        @media only screen and (max-width: 1490px) {
+           flex-wrap: wrap;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 99%;
+        color: #1b316d;
+        flex-shrink: 9999999;
+
+        @media only screen and (max-width: 767px) {
+            font-size: 28px;
+            line-height: 1.2;
+        }
+
+        @media only screen and (max-width: 560px) {
+            font-size: 24px;
+            line-height: 1.2;
+        }
+
+    }
+
+    &__salary {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+        color: #052a44;
+        flex-shrink: 1;
+        margin-left: 15px;
+
+        @media only screen and (max-width: 1490px) {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 15px;
+        }
+
+        @media only screen and (max-width: 767px) {
+            font-size: 16px;
+            line-height: 1.2;
+        }
+    }
+
+    &__text {
+        margin-top: 14px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 119%;
+        color: #193762;
+        width: 631px;
+        max-width: 100%;
+    }
+
+    &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -30px;
+        margin-bottom: -15px;
+        margin-top: 22px;
+
+		@media only screen and (max-width: 767px) {
+            flex-direction: column;
+            align-items: center;
+		}
+    }
+
+    &__bottom-btn {
+        margin-left: 30px;
+        margin-bottom: 15px;
+
+    }
+
+    &+.vacancy-card {
+        margin-top: 26px;
+    }
+}
+.vacancy-card-requirements{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -62px;
+    margin-bottom: -15px;
+    margin-top: 16px;
+}
+
+.vacancy-card-requirement {
+    margin-left: 62px;
+    margin-bottom: 15px;
+
+    &__name {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 119%;
+        color: #193762;
+        opacity: 0.2;
+    }
+
+    &__bottom {
+        display: flex;
+        margin-top: 6px;
+    }
+
+    &__icon {
+        margin-right: 10px;
+        img,svg{
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+            object-position: center left;
+        }
+    }
+
+    &__val {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 119%;
+        color: #193762;
+    }
+}

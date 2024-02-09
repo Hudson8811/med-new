@@ -3,11 +3,7 @@
         padding-left: 6px;
     }
 
-    .select2.select2-container--custom-theme .select2-selection__arrow {
-        background-size: 22px auto;
-    }
 }
-
 .select2.select2-container--custom-theme {
     text-transform: none;
 
@@ -36,16 +32,18 @@
     }
 
     .select2-selection__arrow {
-        width: 11px;
-        height: 8px;
+        width: 11px !important;
+        min-width: 11px;
+        height: 8px !important;
 
         margin-right: 12px;
-        background: url(../img/svg/filter-select-arrow.svg) no-repeat center center;
-        background-size: contain;
-        transition-duration: .3s;
+        background: url(../img/svg/filter-select-arrow.svg) no-repeat center center !important;
+        background-size:contain !important;
+        transition: transform .3s;
+        transform-origin: center center;
 
         b {
-            display: none;
+            display: none !important;
         }
     }
 
@@ -129,6 +127,32 @@
     }
 }
 
+
+
+.simple-select2-wrap--city-select{
+    width: 174px;
+    .select2.select2-container--custom-theme .select2-selection--single .select2-selection__rendered {
+        padding-left: 31px;
+
+    }
+    .select2-selection--single{
+        &::before{
+            content: '';
+            pointer-events:none;
+            display: block;
+            background: url(../img/svg/icon-location.svg) no-repeat center center;
+            background-size: contain;
+            width: 10px;
+            height: 12px;
+            position: absolute;
+            left: 11px;
+            top: 10px;
+
+        }
+    }
+}
+
+
 .md-pagination {
     margin-top: 9px;
 }
@@ -191,6 +215,7 @@
 
         @media only screen and (max-width: 1100px) {
             width: 100%;
+            padding: 25px 15px 15px;
         }
 
     }
@@ -281,6 +306,8 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: -20px;
+
 
     @media only screen and (max-width: 1250px) {
         align-items: center;
@@ -289,6 +316,7 @@
 
     &__left {
         margin-right: 20px;
+        margin-bottom: 20px;
 
         .typical-h1 {
             margin-left: -5px;
@@ -301,6 +329,7 @@
 
     &__right {
         width: 174px;
+        margin-bottom: 20px;
 
     }
 }
@@ -425,6 +454,10 @@
     background: #fff;
     //width: calc(100% - 364px - 23px);
     padding: 40px 27px 60px;
+    @media only screen and (max-width: 1100px) {
+        width: 100%;
+        padding: 25px 15px;
+    }
 }
 
 .long-form {}
@@ -457,6 +490,12 @@
     @media only screen and (max-width: 767px) {
         margin-top: 40px;
     }
+    &--smaller-mt{
+        margin-top: 72px;
+        @media only screen and (max-width: 767px) {
+            margin-top: 40px;
+        }
+    }
 }
 
 .long-form-inp {
@@ -464,6 +503,23 @@
     margin-left: 18px;
     margin-bottom: 15px;
 
+    &--d-25{
+        width: calc(25% - 18px);
+    }
+    &--1350-w33{
+        @media only screen and (max-width: 1350px) {
+            width: calc(33.33% - 18px);
+        }
+
+    }
+    &--fg1{
+        flex-grow: 1;
+    }
+
+    &--aic{
+        display: flex;
+        align-items: center;
+    }
     @media only screen and (max-width: 1000px) {
         width: calc(50% - 18px);
     }
@@ -471,6 +527,7 @@
     @media only screen and (max-width: 767px) {
         width: calc(100% - 18px);
     }
+
 }
 
 .simple-input {
@@ -501,6 +558,39 @@
 
 }
 
+.simple-input-file{
+    @extend .simple-input;
+    padding: 21px 27px 21px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: 767px) {
+        padding: 10px 20px;
+    }
+
+    &__text{
+        color: $orange;
+        word-break: break-all;
+
+        &--preview{
+            word-break: normal;
+        }
+    }
+    &__icon{
+        margin-left: 10px;
+        flex-shrink: 0;
+        img,svg{
+            width: 22px;
+            height: 23px;
+        }
+    }
+    input{
+        display: none !important;
+    }
+}
+
+
 .long-form-bottom {
     margin-top: 51px;
 
@@ -525,7 +615,6 @@
     &+.long-form-acceptance {
         margin-top: 24px;
     }
-
 }
 
 .simple-acceptance {
@@ -580,5 +669,27 @@
             font-size: 16px;
             line-height: 1.2;
         }
+    }
+}
+
+.long-form-side-acceptance{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: #052a44;
+    opacity: 0.3;
+
+    @media only screen and (max-width: 767px) {
+        font-size: 16px;
+        line-height: 1.2;
+    }
+    &--ml7{
+        margin-left: 7px;
+    }
+    br{
+
+    @media only screen and (max-width: 767px) {
+     display: none;
+    }
     }
 }

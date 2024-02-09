@@ -26,13 +26,22 @@ jQuery(function ($) {
 		}
 		var select = $(this);
 
+		var ddautowidth=false;
+		if($(this).attr("data-dd-autowidth")===true){
+			ddautowidth=true;
+		}
+		var selectautowidth=false;
+		if($(this).attr("data-select-autowidth")===true){
+			selectautowidth=true;
+		}
+
 		$(this)
 			.select2({
 				language: "ru",
 				theme: "custom-theme",
 				minimumResultsForSearch: Infinity,
-				width: '100%',
-				dropdownAutoWidth: true,
+				width: selectautowidth?"auto" : '100%',
+				dropdownAutoWidth: ddautowidth,
 				//width: "auto",
 				templateResult: sel2WithIconsTheme,
 				templateSelection: sel2WithIconsTheme,
@@ -62,4 +71,11 @@ jQuery(function ($) {
 				$(this).removeClass("simple-select2--placeholder-selected");
 			});
 	});
+
+
+	$('.js-simple-input-file input').on('change', function(){
+		var fname=$(this)[0].files[0].name;
+		$(this).siblings('.simple-input-file__text').removeClass('simple-input-file__text--preview').html(fname);
+	});
+
 });
