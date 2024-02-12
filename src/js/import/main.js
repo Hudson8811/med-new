@@ -4,13 +4,13 @@ jQuery(function ($) {
 			return state.text;
 		}
 		var imgSrc = $(state.element).attr("data-img-src");
-		if (typeof imgSrc !== "undefined" && imgSrc.length>0) {
+		if (typeof imgSrc !== "undefined" && imgSrc.length > 0) {
 			var $state = $(
 				'<span><img src="' +
-					$(state.element).attr("data-img-src") +
-					'" class="select-item-img-icon" />' +
-					state.text +
-					"</span>"
+				$(state.element).attr("data-img-src") +
+				'" class="select-item-img-icon" />' +
+				state.text +
+				"</span>"
 			);
 		} else {
 			var $state = $("<span>" + state.text + "</span>");
@@ -26,13 +26,13 @@ jQuery(function ($) {
 		}
 		var select = $(this);
 
-		var ddautowidth=false;
-		if($(this).attr("data-dd-autowidth")===true){
-			ddautowidth=true;
+		var ddautowidth = false;
+		if ($(this).attr("data-dd-autowidth") === true) {
+			ddautowidth = true;
 		}
-		var selectautowidth=false;
-		if($(this).attr("data-select-autowidth")===true){
-			selectautowidth=true;
+		var selectautowidth = false;
+		if ($(this).attr("data-select-autowidth") === true) {
+			selectautowidth = true;
 		}
 
 		$(this)
@@ -40,7 +40,7 @@ jQuery(function ($) {
 				language: "ru",
 				theme: "custom-theme",
 				minimumResultsForSearch: Infinity,
-				width: selectautowidth?"auto" : '100%',
+				width: selectautowidth ? "auto" : '100%',
 				dropdownAutoWidth: ddautowidth,
 				//width: "auto",
 				templateResult: sel2WithIconsTheme,
@@ -73,105 +73,115 @@ jQuery(function ($) {
 	});
 
 
-	$('.js-simple-input-file input').on('change', function(){
-		var fname=$(this)[0].files[0].name;
+	$('.js-simple-input-file input').on('change', function () {
+		var fname = $(this)[0].files[0].name;
 		$(this).siblings('.simple-input-file__text').removeClass('simple-input-file__text--preview').html(fname);
 	});
 
 
 
 
-    $('.js-lslider-with-thumbs').each(function(){
-        var main_slider=$(this).find('.js-lslider-main');
-        var thumbs_slider=$(this).find('.js-lslider-thumbs');
-        var prevArrow=$(this).find('.js-lslider-main-prev');
-        var nextArrow=$(this).find('.js-lslider-main-next');
+	$('.js-lslider-with-thumbs').each(function () {
+		var main_slider = $(this).find('.js-lslider-main');
+		var thumbs_slider = $(this).find('.js-lslider-thumbs');
+		var prevArrow = $(this).find('.js-lslider-main-prev');
+		var nextArrow = $(this).find('.js-lslider-main-next');
 
-        let thumbsSlider = new Swiper(thumbs_slider[0], {
+		let thumbsSlider = new Swiper(thumbs_slider[0], {
 			spaceBetween: 10,
 			slidesPerView: 3,
 			watchSlidesProgress: true,
-            navigation: false,
-            pagination: false,
+			navigation: false,
+			pagination: false,
 			breakpoints: {
-			  480: {
-				slidesPerView: 3,
-				spaceBetween: 10,
-			  },
-			  640: {
-				slidesPerView: 4,
-				spaceBetween: 10,
-			  },
-			  768: {
-				slidesPerView: 5,
-				spaceBetween: 19,
-			  }
+				480: {
+					slidesPerView: 3,
+					spaceBetween: 10,
+				},
+				640: {
+					slidesPerView: 4,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 5,
+					spaceBetween: 19,
+				}
 			}
-        });
+		});
 
-        let mainSlider = new Swiper(main_slider[0], {
+		let mainSlider = new Swiper(main_slider[0], {
 			spaceBetween: 10,
+			slidesPerView: 1.1,
 			thumbs: {
-			  swiper: thumbsSlider,
+				swiper: thumbsSlider,
 			},
-            navigation: {
-                nextEl: nextArrow[0],
-                prevEl: prevArrow[0]
-            },
-            pagination: false
-        });
-    })
-    $('.js-lslider-no-thumbs').each(function(){
-        var main_slider=$(this).find('.js-lslider-main');
-        var prevArrow=$(this).find('.js-lslider-main-prev');
-        var nextArrow=$(this).find('.js-lslider-main-next');
+			navigation: {
+				nextEl: nextArrow[0],
+				prevEl: prevArrow[0]
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 1,
+				}
+			},
+			pagination: false
+		});
+	})
 
-        let mainSlider = new Swiper(main_slider[0], {
+	$('.js-lslider-no-thumbs').each(function () {
+		var main_slider = $(this).find('.js-lslider-main');
+		var prevArrow = $(this).find('.js-lslider-main-prev');
+		var nextArrow = $(this).find('.js-lslider-main-next');
+
+		let mainSlider = new Swiper(main_slider[0], {
 			spaceBetween: 10,
-			thumbs: {
-			  swiper: thumbsSlider,
+			slidesPerView: 1.1,
+			navigation: {
+				nextEl: nextArrow[0],
+				prevEl: prevArrow[0]
 			},
-            navigation: {
-                nextEl: nextArrow[0],
-                prevEl: prevArrow[0]
-            },
-            pagination: false
-        });
-    })
+			breakpoints: {
+				768: {
+					slidesPerView: 1,
+				}
+			},
+			pagination: false
+		});
+	})
 
 
 
-    $('.js-cards-slider').each(function(){
-        var slider=$(this);
-        var prevArrow=$(this).find('.js-cards-slider-prev');
-        var nextArrow=$(this).find('.js-cards-slider-next');
+	$('.js-cards-slider').each(function () {
+		var slider = $(this);
+		var prevArrow = $(this).find('.js-cards-slider-prev');
+		var nextArrow = $(this).find('.js-cards-slider-next');
 
-        let mainSlider = new Swiper(slider[0], {
+		let mainSlider = new Swiper(slider[0], {
 			spaceBetween: 19,
 			slidesPerView: 1.5,
 			watchSlidesProgress: true,
-            navigation: false,
-            pagination: false,
-            navigation: {
-                nextEl: nextArrow[0],
-                prevEl: prevArrow[0]
-            },
+			navigation: false,
+			pagination: false,
+			navigation: {
+				nextEl: nextArrow[0],
+				prevEl: prevArrow[0]
+			},
 			breakpoints: {
-			  480: {
-				slidesPerView: 1.5,
-				spaceBetween: 10,
-			  },
-			  640: {
-				slidesPerView: 2,
-				spaceBetween: 10,
-			  },
-			  768: {
-				slidesPerView: 3,
-				spaceBetween: 19,
-			  }
+				480: {
+					slidesPerView: 1.5,
+					spaceBetween: 10,
+				},
+				640: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 19,
+				}
 			}
-        });
-    })
+		});
+	})
 
 
 

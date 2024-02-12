@@ -1,0 +1,117 @@
+
+.employees-list {
+	margin-top: 57px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -18px;
+	margin-bottom: -18px;
+
+	@media only screen and (max-width: 767px) {
+		margin-top: 30px;
+	}
+}
+
+.employees-list-card {
+	margin-left: 18px;
+	margin-bottom: 18px;
+	width: calc(33.33% - 18px);
+	text-decoration: none;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 21px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	transition-duration: .3s;
+
+	@media only screen and (max-width: 1300px) {
+		width: calc(50% - 18px);
+	}
+
+	@media only screen and (max-width: 540px) {
+		width: calc(100% - 18px);
+	}
+
+	&--for-slider {
+		width: 100% !important;
+		margin: 0;
+		background: #fff;
+	}
+
+	&:hover {
+		opacity: .7;
+	}
+
+	&__pic {
+		border-radius: 21px;
+		overflow: hidden;
+		position: relative;
+
+		&::before{
+			content: '';
+			display: block;
+			padding-top: 64.375%;
+		}
+
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center center;
+		}
+
+		&--partner-logo{
+
+			img {
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: auto;
+				height: auto;
+				max-width: 90%;
+				max-height: 90%;
+				object-fit: contain;
+
+			}
+
+		}
+	}
+
+	&__main {
+		padding: 12px 15px 18px;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__name {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 90%;
+		color: $mainColor;
+
+		@media only screen and (max-width: 767px) {
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 1.2;
+
+		}
+	}
+
+	&__info {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 119%;
+		color: $mainColor;
+		margin-top: 30px;
+		@media only screen and (max-width: 767px) {
+			font-size: 14px;
+			line-height: 1.2;
+
+		}
+	}
+
+}

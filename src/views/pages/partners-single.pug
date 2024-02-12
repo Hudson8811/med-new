@@ -1,0 +1,116 @@
+extends ../layouts/default
+
+block variables
+	- const title = "New Page";
+
+block content
+	.md-pagination
+		.container
+			.md-pagination-flex
+				a.md-pagination-item(href="")  Главная
+				a.md-pagination-item(href="") Партнёры
+				.md-pagination-item Becton Dickinson
+
+	section.layout-wsb-section
+		.container
+			.layout-wsb
+				.layout-wsb__main
+					.layout-wsb__main-inner
+						.partners-single-top
+							.partners-single-top__title
+								h1.typical-h1.typical-h1--small Becton Dickinson
+							.partners-single-top__logo
+								img(src="img/partners/Becton_Dickinson_logo.svg", alt="")
+
+
+
+						.partners-single-top-hr
+
+						.partners-single-text.vacancy-single-text-style
+							h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu nibh, sm, eu auctor lorem. Ut sollicitudin sollicitudin commodo. Fusce vehicula orci posuere, auctor turpis et, lacinia libero. In hac habitasse platea dictumst. Maecenas bibendum pulvinar tempor. Mauris eu egestas lectus. Cras cursus, ipsum a tristique tempus, ipsum mauris finibus magna, vitae aliquam diam justo quis augue.
+
+
+
+						.lslider.lslider--partners.js-lslider-no-thumbs
+							.laslider-main.swiper.js-lslider-main
+								.laslider-main-buttons
+									.laslider-main-button.laslider-main-button--prev.js-lslider-main-prev
+									.laslider-main-button.laslider-main-button--next.js-lslider-main-next
+
+								.laslider-main-wrapper.swiper-wrapper
+									each val in [1,2,3,4,5,6,7]
+										.lslider-main-slide.swiper-slide
+											img(src="img/partners/partners_single_pic.jpg", alt="")
+
+					.cards-slider.swiper.js-cards-slider
+						.cards-slider-top
+							.cards-slider-top__title.typical-h1--small Можешь допилить или заменить. Это набросок на базе блока из news-single.html
+							.cards-slider-top__buttons.cards-slider-top__buttons--no-mt.cards-slider-buttons
+									.laslider-main-button.laslider-main-button--prev.js-cards-slider-prev
+									.laslider-main-button.laslider-main-button--next.js-cards-slider-next
+						.cards-slider-wrapper.swiper-wrapper
+							each val in [1,2,3]
+								.cards-slider-slide.swiper-slide
+									a.news-list-card.news-list-card--for-slider(href="")
+										.news-list-card__pic
+											img(src="/img/news/card.jpg", alt="")
+										.news-list-card__main
+											.news-list-card__text Lacinia, diam interdum feugiat suscipit, velit sapien volutpat quam, at elementum lorem dui non sem
+											.news-list-card__date 3 января 2023
+								.cards-slider-slide.swiper-slide
+									a.news-list-card.news-list-card--for-slider(href="")
+										.news-list-card__pic
+											img(src="/img/news/card.jpg", alt="")
+										.news-list-card__main
+											.news-list-card__text Lacinia
+											.news-list-card__date 3 января 2023
+
+
+					.cards-slider.swiper.js-cards-slider
+						.cards-slider-top
+							.cards-slider-top__title.typical-h1--small Можешь допилить или заменить. Это набросок на базе блока из news-single.html
+							.cards-slider-top__buttons.cards-slider-top__buttons--no-mt.cards-slider-buttons
+									.laslider-main-button.laslider-main-button--prev.js-cards-slider-prev
+									.laslider-main-button.laslider-main-button--next.js-cards-slider-next
+						.cards-slider-wrapper.swiper-wrapper
+							each val in [1,2,3]
+								.cards-slider-slide.swiper-slide
+									a.news-list-card.news-list-card--for-slider(href="")
+										.news-list-card__pic
+											img(src="/img/news/card.jpg", alt="")
+										.news-list-card__main
+											.news-list-card__text Lacinia, diam interdum feugiat suscipit, velit sapien volutpat quam, at elementum lorem dui non sem
+											.news-list-card__date 3 января 2023
+								.cards-slider-slide.swiper-slide
+									a.news-list-card.news-list-card--for-slider(href="")
+										.news-list-card__pic
+											img(src="/img/news/card.jpg", alt="")
+										.news-list-card__main
+											.news-list-card__text Lacinia
+											.news-list-card__date 3 января 2023
+
+
+
+				.layout-wsb_sidebar
+					.lwsb-sidebar
+						a.lwsb-sidebar__blue(href="") Компания
+							//является ссылкой на текущий раздел сайта второго уровня
+						.lwsb-sidebar__body
+							a.lwsb-sidebar__item(href="")
+								span О компании
+							a.lwsb-sidebar__item.lwsb-sidebar__item--current(href="")
+								span Новости
+							a.lwsb-sidebar__item(href="")
+								span Персонал
+							a.lwsb-sidebar__item(href="")
+								span Каталоги
+							a.lwsb-sidebar__item(href="")
+								span Вакансии
+							a.lwsb-sidebar__item(href="")
+								span Партнеры
+							a.lwsb-sidebar__item(href="")
+								span Контакты
+
+
+	.simple-padding-before-footer

@@ -1,0 +1,71 @@
+extends ../layouts/default
+
+block variables
+	- const title = "New Page";
+
+block content
+	.md-pagination
+		.container
+			.md-pagination-flex
+				a.md-pagination-item(href="")  Главная
+				.md-pagination-item Персонал
+
+	section.layout-wsb-section
+		.container
+			.layout-wsb
+				.layout-wsb__main
+					.layout-wsb__main-inner
+						.news-main-top
+							.news-main-top__left
+								h1.typical-h1 Персонал
+
+
+						.employees-list
+							each val in [1, 2, 3, 4]
+								a.employees-list-card(href="")
+									.employees-list-card__pic
+										img(src="/img/news/card.jpg", alt="")
+									.employees-list-card__main
+										.employees-list-card__name Гуськова Анастасия Андреевна
+										.employees-list-card__info Lorem ipsum dolor sit amet, arcu nibh, consequat et sem vitae, sed nibh auctor
+								a.employees-list-card(href="")
+									.employees-list-card__pic
+										img(src="/img/news/card.jpg", alt="")
+									.employees-list-card__main
+										.employees-list-card__name Гуськова Анастасия Андреевна
+										.employees-list-card__info Lorem ipsum dolor sit amet, arcu nibh, consequat et sem vitae, sed nibh auctorLorem ipsum dolor sit amet, arcu nibh, consequat et sem vitae, sed nibh auctorLorem ipsum dolor sit amet, arcu nibh, consequat et sem vitae, sed nibh auctor
+								a.employees-list-card(href="")
+									.employees-list-card__pic
+										img(src="/img/news/card.jpg", alt="")
+									.employees-list-card__main
+										.employees-list-card__name Гуськова Анастасия Андреевна
+										.employees-list-card__info Lorem ipsum dolor sit amet, arcu nibh, consequat et sem vitae, sed nibh auctor
+
+
+						.news-loadmore-wrap
+							.section__btn
+								a.btn-arrow.btn-arrow--grey(href="javascript:;")
+									span Показать еще
+
+				.layout-wsb_sidebar
+					.lwsb-sidebar
+						a.lwsb-sidebar__blue(href="") Компания
+							//является ссылкой на текущий раздел сайта второго уровня
+						.lwsb-sidebar__body
+							a.lwsb-sidebar__item(href="")
+								span О компании
+							a.lwsb-sidebar__item.lwsb-sidebar__item--current(href="")
+								span Новости
+							a.lwsb-sidebar__item(href="")
+								span Персонал
+							a.lwsb-sidebar__item(href="")
+								span Каталоги
+							a.lwsb-sidebar__item(href="")
+								span Вакансии
+							a.lwsb-sidebar__item(href="")
+								span Партнеры
+							a.lwsb-sidebar__item(href="")
+								span Контакты
+
+
+	.simple-padding-before-footer
