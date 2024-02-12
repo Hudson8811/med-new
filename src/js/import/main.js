@@ -141,6 +141,39 @@ jQuery(function ($) {
 
 
 
+    $('.js-cards-slider').each(function(){
+        var slider=$(this);
+        var prevArrow=$(this).find('.js-cards-slider-prev');
+        var nextArrow=$(this).find('.js-cards-slider-next');
+
+        let mainSlider = new Swiper(slider[0], {
+			spaceBetween: 19,
+			slidesPerView: 1.5,
+			watchSlidesProgress: true,
+            navigation: false,
+            pagination: false,
+            navigation: {
+                nextEl: nextArrow[0],
+                prevEl: prevArrow[0]
+            },
+			breakpoints: {
+			  480: {
+				slidesPerView: 1.5,
+				spaceBetween: 10,
+			  },
+			  640: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			  },
+			  768: {
+				slidesPerView: 3,
+				spaceBetween: 19,
+			  }
+			}
+        });
+    })
+
+
 
 
 

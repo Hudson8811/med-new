@@ -351,6 +351,24 @@
                 margin-top: 19px;
             }
         }
+        img{
+            margin-top: 20px;
+            &+p{
+                margin-top: 20px;
+            }
+        }
+    }
+    img{
+        display: block;
+        max-width: 100%;
+        height: auto;
+        border-radius: 66px;
+        @media only screen and (max-width: 1250px) {
+            border-radius: 35px;
+        }
+        @media only screen and (max-width: 767px) {
+            border-radius: 25px;
+        }
     }
 
     h2 {

@@ -1,0 +1,110 @@
+extends ../layouts/default
+
+block variables
+	- const title = "New Page";
+
+block content
+	.md-pagination
+		.container
+			.md-pagination-flex
+				a.md-pagination-item(href="")  Главная
+				.md-pagination-item Новости
+
+	section.layout-wsb-section
+		.container
+			.layout-wsb
+				.layout-wsb__main
+					.layout-wsb__main-inner.layout-wsb__main-inner--news-single-pading
+						h1.typical-h1.typical-h1--small Aenean ornare quis neque sit<br> amet laoreet.
+						.news-single-top
+							.news-single-date.news-single-top__date 3 января 2023
+							.news-single-top__tags
+								.simple-tags
+									a.simple-tag(href="") #обзоры
+
+						.news-single-text.vacancy-single-text-style
+							img(src="img/news/news-single-pic.jpg", alt="")
+							h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu nibh, consequat et sem vitae, sollicitudin viverra leo. Quisque vestibulum feugiat orci id rutrum. Donec quis volutpat tellus. Vestibulum ac dictum tortor. In viverra convallis iaculis. Vivamus quis augue sed nibh auctor luctus. Morbi ut posuere diam, eu auctor lorem. Ut sollicitudin sollicitudin commodo. Fusce vehicula orci posuere, auctor turpis et, lacinia libero. In hac habitasse platea dictumst. Maecenas bibendum pulvinar tempor. Mauris eu egestas lectus. Cras cursus, ipsum a tristique tempus, ipsum mauris finibus magna, vitae aliquam diam justo quis augue. Aliquam sed risus non mauris fringilla egestas
+							h2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu nibh, consequat et sem vitae, sollicitudin viverra leo. Quisque vestibulum feugiat orci id rutrum. Donec quis volutpat tellus. Vestibulum ac dictum tortor. In viverra convallis iaculis. Vivamus quis augue sed nibh auctor luctus. Morbi ut posuere diam, eu auctor lorem. Ut sollicitudin sollicitudin commodo. Fusce vehicula orci posuere, auctor turpis et, lacinia libero. In hac habitasse platea dictumst. Maecenas bibendum pulvinar tempor. Mauris eu egestas lectus. Cras cursus, ipsum a tristique tempus, ipsum mauris finibus magna, vitae aliquam diam justo quis augue. Aliquam sed risus non mauris fringilla egestas
+
+					.cards-slider.swiper.js-cards-slider
+						.cards-slider-top
+							.cards-slider-top__title.typical-h2 Похожие новости
+							.cards-slider-top__buttons.cards-slider-buttons
+									.laslider-main-button.laslider-main-button--prev.js-cards-slider-prev
+									.laslider-main-button.laslider-main-button--next.js-cards-slider-next
+						.cards-slider-wrapper.swiper-wrapper
+							each val in [1,2,3]
+								.cards-slider-slide.swiper-slide
+									a.news-list-card.news-list-card--for-slider(href="")
+										.news-list-card__pic
+											img(src="/img/news/card.jpg", alt="")
+										.news-list-card__main
+											.news-list-card__text Lacinia, diam interdum feugiat suscipit, velit sapien volutpat quam, at elementum lorem dui non sem
+											.news-list-card__date 3 января 2023
+								.cards-slider-slide.swiper-slide
+									a.news-list-card.news-list-card--for-slider(href="")
+										.news-list-card__pic
+											img(src="/img/news/card.jpg", alt="")
+										.news-list-card__main
+											.news-list-card__text Lacinia
+											.news-list-card__date 3 января 2023
+
+
+
+				.layout-wsb_sidebar
+					.lwsb-sidebar
+						a.lwsb-sidebar__blue(href="") Компания
+							//является ссылкой на текущий раздел сайта второго уровня
+						.lwsb-sidebar__body
+							a.lwsb-sidebar__item(href="")
+								span О компании
+							a.lwsb-sidebar__item.lwsb-sidebar__item--current(href="")
+								span Новости
+							a.lwsb-sidebar__item(href="")
+								span Персонал
+							a.lwsb-sidebar__item(href="")
+								span Каталоги
+							a.lwsb-sidebar__item(href="")
+								span Вакансии
+							a.lwsb-sidebar__item(href="")
+								span Партнеры
+							a.lwsb-sidebar__item(href="")
+								span Контакты
+
+	section.long-form-section.long-form-section--mt-60
+		.container
+			.long-form-wrap
+				.long-form
+					.long-form-title  Получайте актуальную информацию о новых<br> продуктах и акциях
+					.long-form-inputs
+						.long-form-inp
+							input.simple-input(type="text" placeholder="Ваше имя")
+						.long-form-inp
+							input.simple-input(type="text" placeholder="Телефон")
+						.long-form-inp
+							input.simple-input(type="text" placeholder="E-mail")
+						.long-form-inp
+							input.simple-input(type="text" placeholder="Название организации")
+						.long-form-inp
+							input.simple-input(type="text" placeholder="Город")
+						.long-form-inp
+							button.btn-arrow.btn-arrow--size-for-form(type="submit")
+								span Отправить
+								//img(src="/img/svg/submit-btn-arrow.svg", alt="")
+								svg
+									use(xlink:href="img/sprites/sprite.svg#submit-btn-arrow")
+
+					.long-form-bottom
+						.long-form-acceptance
+							label.simple-acceptance
+								input.simple-acceptance__input(type="checkbox" checked)
+								.simple-acceptance__pseudo
+								.simple-acceptance__text Я подтверждаю, что ознакомлен(а) с Политикой конфиденциальности Медимком и Пользовательским соглашением, и даю согласие на обработку и передачу своих персональных данных, для получения информационной рассылки на указанный адрес электронной почты.
+						.long-form-acceptance
+							label.simple-acceptance
+								input.simple-acceptance__input(type="checkbox")
+								.simple-acceptance__pseudo
+								.simple-acceptance__text Я подтверждаю, что перечисленные персональные данные, относящиеся ко мне, предоставлены мной в адрес ООО «МЕДИМКОМ» добровольно и являются достоверными.
