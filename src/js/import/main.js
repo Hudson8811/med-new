@@ -183,7 +183,12 @@ jQuery(function ($) {
 		});
 	})
 
+	$('.js-init-simplebar').each(function(){
+		new SimpleBar($(this)[0], {
 
+			autoHide: false
+		 });
+	});
 
 
 

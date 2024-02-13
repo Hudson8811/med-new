@@ -1,0 +1,120 @@
+extends ../layouts/default
+
+block variables
+	- const title = "New Page";
+
+block content
+	.md-pagination
+		.container
+			.md-pagination-flex
+				a.md-pagination-item(href="")  Главная
+				.md-pagination-item Информационные материалы
+
+
+	section.infomat-section
+		.container
+			h1.typical-h1.infomat-h1 Информационные материалы
+			.infomat-section__main
+				.infomat-tags
+					a.infomat-tags__tag.infomat-tags__tag--active(href="#") #Каталоги
+					a.infomat-tags__tag(href="#") #Презентации
+					a.infomat-tags__tag(href="#") #Буклеты и брошюры
+					a.infomat-tags__tag(href="#") #Обучающие материалы
+					a.infomat-tags__tag(href="#") #Документы
+				.infomat-section__table-wrap
+					.materials-table-container
+						.materials-table-scroll.js-init-simplebar
+							.materials-table
+								.materials-table__label-row
+									.materials-table__label
+										a(href=""  ) Название
+											.materials-table__label-arrows.materials-table__label-arrows--asc
+									.materials-table__label
+										a(href=""  ) Категория
+											.materials-table__label-arrows.materials-table__label-arrows--desc
+									.materials-table__label
+										a(href=""  ) Опубликован
+											.materials-table__label-arrows
+									.materials-table__label
+										a(href=""  ) Размер
+											.materials-table__label-arrows
+								.materials-table__row
+									.materials-table__col
+										.materials-table__name.materials-table__name--back
+											.materials-table__name-icon
+												a(href="" )
+													// <img src="/local/templates/medimcom/img/back.png" alt="">
+													svg(ca='' xmlns='http://www.w3.org/2000/svg' width='37' height='37' version='1.0' viewBox='0 0 718 1280')
+														path(fill='#007aff' d='M614.7 19.1c-8.1.9-19.3 4.2-25.9 7.5-2.6 1.3-10.9 8.1-18.5 15.1C554 56.6 135.7 474.3 65.6 545.5c-31.4 32-49.1 50.7-50.9 53.9-7.2 13-10.4 29.2-9.4 47.6.9 15.6 4.6 27 12 36.7 7.8 10.4 86.2 89.5 322.3 325.4l239.9 239.6 9.5 4.6c12.1 5.9 21 7.7 38 7.7 26.3 0 40.1-5.9 58.6-25.2 13.5-14.1 19.2-25.9 21.4-44.5 2-16.7-.5-34.3-6.9-47.6-2.4-5-7.2-10.8-23.8-28.2-11.4-12.1-122.7-124-247.2-248.7L202.7 640l226.4-226.8c124.5-124.7 235.7-236.6 247.2-248.6 21.3-22.6 23.2-25.2 27.9-38.5 2.5-7.4 3.8-23.7 2.8-36.4-1.6-19.3-8.7-33.4-24.7-48.8C667.8 27 655.3 21 636.8 19c-10.4-1.1-12.4-1.1-22.1.1z')
+											.materials-table__name-txt
+												a.materials-table__name-link(href="") Назад
+									.materials-table__col
+									.materials-table__col
+									.materials-table__col
+								.materials-table__row
+									.materials-table__col
+										.materials-table__name
+											.materials-table__name-icon
+												a(href="" download='' target='_blank')
+													img(src='img/svg/files/folder.svg' alt='File')
+											.materials-table__name-txt
+												a.materials-table__name-link(href="" target='_blank') Medtronic
+									.materials-table__col
+
+									.materials-table__col
+
+									.materials-table__col
+
+								.materials-table__row
+									.materials-table__col
+										.materials-table__name
+											.materials-table__name-icon
+												a(href="" download='' target='_blank')
+													img(src='img/svg/files/folder.svg' alt='File')
+											.materials-table__name-txt
+												a.materials-table__name-link(href="" target='_blank') Beckton Dickinson_BD
+									.materials-table__col
+
+									.materials-table__col
+
+									.materials-table__col
+
+								.materials-table__row
+									.materials-table__col
+										.materials-table__name
+											.materials-table__name-icon
+												a(href="" download='' target='_blank')
+													img(src='img/svg/files/docx.svg' alt='File')
+											.materials-table__name-txt
+												a.materials-table__name-link(href="" target='_blank') example
+									.materials-table__col
+										.materials-table__tags
+											.materials-table__tags-item
+												a(href="" ) #Каталоги,
+											.materials-table__tags-item
+												a(href="" )  #Обучающие материалы
+									.materials-table__col
+										.materials-table__date 20.06.2023 19:39
+									.materials-table__col
+										.materials-table__size 4.6 КБ
+								.materials-table__row
+									.materials-table__col
+										.materials-table__name
+											.materials-table__name-icon
+												a(href="" download='' target='_blank')
+													img(src='img/svg/files/xlsx.svg' alt='File')
+											.materials-table__name-txt
+												a.materials-table__name-link(href="" target='_blank') example example example example example example example example example example example example example example example example example example example example example example example example example example example example example example example example example
+									.materials-table__col
+										.materials-table__tags
+											.materials-table__tags-item
+												a(href="" ) #Каталоги,
+											.materials-table__tags-item
+												a(href="" )  #Обучающие материалы
+									.materials-table__col
+										.materials-table__date 20.06.2023 19:39
+									.materials-table__col
+										.materials-table__size 4.6 КБ
+
+
+	.simple-padding-before-footer

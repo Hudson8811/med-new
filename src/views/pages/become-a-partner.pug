@@ -16,11 +16,62 @@ block content
 			.layout-wsb
 				.layout-wsb__main
 					.layout-wsb__main-inner
-						h1.typical-h1.typical-h1--small Как стать партнером
+						h1.typical-h1.typical-h1--medium Как стать партнером
 
 						.becpartner
 							.becpartner__left
+								form.becpartner-form
+									.becpartner-form__flex
+										.becpartner-form__top
+											.becpartner-form__row
+												input.simple-input(type="text" placeholder="Ваше имя")
+											.becpartner-form__row
+												input.simple-input(type="text" placeholder="Название организации")
+											.becpartner-form__row
+												input.simple-input(type="text" placeholder="Электронный адрес")
+											.becpartner-form__row
+												input.simple-input(type="text" placeholder="Телефон")
+										.becpartner-form__bottom
+											.becpartner-h2.becpartner-form__title Вы являетесь физ.<br> или юр. лицом?
+											.becpartner-form__row
+												.simple-select2-wrap.simple-select2-wrap--style-simple-input
+													select.js-simple-select2
+														//(data-placeholder="Плейсходер")
+														//option(selected)
+														option(selected value="физ лицо") Я физ. лицо
+														option(value="юр лицо") Я юр. лицо
+													.simple-select2-items-wrapper
+											.becpartner-form__row
+												button.btn-arrow.btn-arrow--size-for-form(type="submit")
+													span Отправить
+													//img(src="/img/svg/submit-btn-arrow.svg", alt="")
+													svg
+														use(xlink:href="img/sprites/sprite.svg#submit-btn-arrow")
+											.becpartner-form__row
+												.long-form-side-acceptance.long-form-side-acceptance--tac Заполняя данную форму вы даете согласие <br> на обработку своих персональных данных.
 							.becpartner__right
+								.becpartner__right-top
+									.vacancy-single-text-style
+										p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu nibh, consequat et sem vitae, sollicitudin viverra leo. Quisque vestibulum feugiat orci id rutrum. Donec quis tellus. Vestibulum ac dictum tortor. In viverra convallis iaculis. Vivamus quis augue sed nibh auctor luctus. Morbi ut posuere diam, eu auctor lorem. Ut sollicitudin sollicitudin commodo sollicitudin commodo. Fusce vehicula orci posuere, auctor turpis et, lacinia libero. In hac habitasse platea dictumst. Maecenas bibendum
+
+								.becpartner__right-bottom
+									.becpartner-h2 Получить подробную информацию по вопросам сотрудничества с нашей организацией
+									.simple-contacts
+										a.simple-contacts-item(href="")
+											.simple-contacts-item__icon
+												img(src="img/svg/icon-orange-phone.svg", alt="")
+											.simple-contacts-item__text +7 812 334-37-64
+										a.simple-contacts-item(href="")
+											.simple-contacts-item__icon
+												img(src="img/svg/icon-orange-phone.svg", alt="")
+											.simple-contacts-item__text +7 495 900-10-99
+										a.simple-contacts-item(href="")
+											.simple-contacts-item__icon
+												img(src="img/svg/icon-orange-email.svg", alt="")
+											.simple-contacts-item__text info@medimcom.ru
+
+
+
 
 
 				.layout-wsb_sidebar

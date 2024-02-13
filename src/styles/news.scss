@@ -4,7 +4,6 @@
 	}
 
 }
-
 .select2.select2-container--custom-theme {
 	text-transform: none;
 
@@ -153,6 +152,68 @@
 
 		}
 	}
+}
+
+.simple-select2-wrap--style-simple-input{
+	.select2.select2-container--custom-theme .select2-selection--single {
+		border-radius: 69px;
+		padding: 33px 0;
+		color: $mainColor;
+		background: #e8ebf0;
+
+		@media only screen and (max-width: 767px){
+			padding: 22px 0;
+		}
+	}
+	.select2.select2-container--custom-theme .select2-selection--single .select2-selection__rendered{
+
+		padding: 5px 0 5px 35px;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 90%;
+		color: $mainColor;
+		@media only screen and (max-width: 767px){
+
+			padding: 5px 0 5px 20px;
+		}
+	}
+	.select2.select2-container--custom-theme  .select2-selection__arrow {
+		width: 14px !important;
+		min-width: 14px;
+		height: 9px !important;
+		margin-right: 26px;
+		background: url(../img/svg/large-select-arrow.svg) no-repeat center center !important;
+		background-size: contain !important;
+
+	}
+	.select2-dropdown {
+		background: #e8ebf0;
+		border-radius: 33px !important;
+		line-height: 1.2;
+		margin-top: 3px;
+		padding: 15px 35px;
+
+		@media only screen and (max-width: 767px){
+			padding: 15px 20px;
+			border-radius: 22px !important;
+		}
+	}
+	.select2-results__options {
+		font-weight: 400;
+		font-size: 20px;
+	}
+	/*display: block;
+	width: 100%;
+	border: none;
+	outline: none;
+	padding: 21px 35px;
+	box-sizing: border-box;
+
+
+	@media only screen and (max-width: 767px) {
+		padding: 10px 20px;
+	}*/
+
 }
 
 
@@ -383,6 +444,25 @@
 		font-weight: 700;
 		font-size: 40px;
 		line-height: 97%;
+
+		@media only screen and (max-width: 1250px) {
+			font-size: 40px;
+		}
+
+		@media only screen and (max-width: 767px) {
+			font-size: 28px;
+			line-height: 1.2;
+		}
+
+		@media only screen and (max-width: 560px) {
+			font-size: 24px;
+			line-height: 1.2;
+		}
+	}
+	&--medium {
+		font-weight: 700;
+		font-size: 60px;
+		line-height: 120%;
 
 		@media only screen and (max-width: 1250px) {
 			font-size: 40px;
@@ -784,6 +864,9 @@
 
 	&--ml7 {
 		margin-left: 7px;
+	}
+	&--tac{
+		text-align: center;
 	}
 
 	br {
