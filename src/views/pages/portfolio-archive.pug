@@ -1,0 +1,72 @@
+extends ../layouts/default
+
+block variables
+	- const title = "New Page";
+
+block content
+	.md-pagination
+		.container
+			.md-pagination-flex
+				a.md-pagination-item(href="")  Главная
+				.md-pagination-item Портфолио
+
+	section.layout-wsb-section
+		.container
+			.layout-wsb
+				.layout-wsb__main
+					.layout-wsb__main-inner
+						.news-main-top
+							.news-main-top__left
+								h1.typical-h1 Портфолио
+
+
+
+						.vacancies-list.vacancies-list--portfolio
+							each val in [1, 2, 3]
+								.vacancy-card.vacancy-card--portfolio
+									.vacancy-card__pic
+										img(src="/img/news/card.jpg", alt="")
+									.vacancy-card__main
+										.vacancy-card__top
+											.vacancy-card__logo
+												img(src="img/partners/portfolio-logo-icon.svg", alt="")
+											.vacancy-card__title ФБГУ «НМИЦ эндокринологии» Минздрава России
+										.vacancy-card__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu nibh, consequat et sem vitae, sollicitudin viverra leo. Quisque vestibulum feugiat orci id rutrum. Donec quis volutpat tellus.
+
+										.vacancy-card__bottom
+
+
+											a.vacancy-card__bottom-btn.btn-circle.btn-circle--blue
+												| Посмотреть отзыв
+												.btn-circle__icon.btn-circle__icon--custom-image
+													svg
+														use(xlink:href="img/sprites/sprite.svg#comments-icon")
+
+						.news-loadmore-wrap
+							.section__btn
+								a.btn-arrow.btn-arrow--grey(href="javascript:;")
+									span Показать еще
+
+				.layout-wsb_sidebar
+					.lwsb-sidebar
+						a.lwsb-sidebar__blue(href="") Компания
+
+						.lwsb-sidebar__body
+							a.lwsb-sidebar__item(href="")
+								span О компании
+							a.lwsb-sidebar__item(href="")
+								span Новости
+							a.lwsb-sidebar__item(href="")
+								span Персонал
+							a.lwsb-sidebar__item(href="")
+								span Каталоги
+							a.lwsb-sidebar__item.lwsb-sidebar__item--current(href="")
+								span Вакансии
+							a.lwsb-sidebar__item(href="")
+								span Партнеры
+							a.lwsb-sidebar__item(href="")
+								span Контакты
+
+
+
+	.simple-padding-before-footer

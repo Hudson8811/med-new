@@ -111,7 +111,7 @@ jQuery(function ($) {
 
 		let mainSlider = new Swiper(main_slider[0], {
 			spaceBetween: 10,
-			slidesPerView: 1.1,
+			slidesPerView: 1,
 			thumbs: {
 				swiper: thumbsSlider,
 			},

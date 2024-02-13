@@ -330,7 +330,8 @@ label{
 		margin-right: 0;
 		width: 45px;
 		height: 45px;
-		margin-left: 11px;
+		margin-left: 18px;
+		margin-top: 0px;
 		border-radius: 50%;
 
 		&::after {
@@ -349,6 +350,30 @@ label{
 			width: 30px;
 			height: 30px;
 			margin-left: 8px;
+		}
+		&--custom-image{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@media only screen and (max-width: 1300px){
+			width: 35px;
+			height: 35px;
+
+			img,svg{
+				width: 60%;
+				height: 60%;
+			}
+
+			}
+			&::after{
+				display: none;
+			}
+			img,svg{
+				width: 22px;
+				height: 23px;
+				object-fit: contain;
+				object-position: center center;
+			}
 		}
 	}
 
@@ -429,6 +454,8 @@ label{
 		.btn-circle__icon{
 			width: 32px;
 			height: 32px;
+			margin-left: 11px;
+			margin-top: 0;
 			&::after {
 			}
 		}

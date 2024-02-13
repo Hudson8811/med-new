@@ -1,0 +1,88 @@
+extends ../layouts/default
+
+block variables
+	- const title = "New Page";
+
+block content
+	.md-pagination
+		.container
+			.md-pagination-flex
+				a.md-pagination-item(href="")  Главная
+				a.md-pagination-item(href="")  Портфолио
+				.md-pagination-item ФБГУ «НМИЦ эндокринологии» Минздрава России
+
+
+	section.layout-wsb-section
+		.container
+			.layout-wsb
+				.layout-wsb__main
+					.layout-wsb__main-inner
+						.partners-single-top.partners-single-top--portfolio
+							.partners-single-top__title
+								h1.typical-h1.typical-h1--small ФБГУ «НМИЦ эндокринологии» Минздрава России
+							.partners-single-top__logo
+								img(src="img/firmennyj-znak-enc.svg", alt="")
+
+						.portfolio-single-top2
+							.portfolio-single-top2__btn
+								a.btn-arrow.btn-arrow--size-small-d-h32(href="#")
+									span Заказать похожий проект
+									//img(src="/img/svg/submit-btn-arrow.svg", alt="")
+									svg
+										use(xlink:href="img/sprites/sprite.svg#submit-btn-arrow")
+
+							.portfolio-single-top2__pagi-arrows
+								a.laslider-main-button.laslider-main-button--grey.laslider-main-button--prev(href="/prev-page-link")
+								a.laslider-main-button.laslider-main-button--grey.laslider-main-button--next(href="/next-page-link")
+
+
+						.partners-single-top-hr
+						.portfolio-single-main
+							.portfolio-single-main__text.vacancy-single-text-style
+								h2 Описание оказанных услуг и / или выполненных работ
+								p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu nibh, sm, eu auctor lorem. Ut sollicitudin sollicitudin commodo. Fusce vehicula orci posuere, auctor turpis et, lacinia libero. In hac habitasse platea dictumst. Maecenas bibendum pulvinar tempor. Mauris eu egestas lectus. Cras cursus, ipsum a tristique tempus, ipsum mauris finibus magna, vitae aliquam diam justo quis augue.
+
+							a.portfolio-single-main__pic(href="img/doc.jpg" data-fancybox)
+								img(src="img/doc.jpg", alt="")
+
+						.lslider.lslider--portfolio-single.js-lslider-with-thumbs
+							.laslider-main.swiper.js-lslider-main
+								.laslider-main-buttons
+									.laslider-main-button.laslider-main-button--prev.js-lslider-main-prev
+									.laslider-main-button.laslider-main-button--next.js-lslider-main-next
+
+								.laslider-main-wrapper.swiper-wrapper
+									each val in [1,2,3,4,5,6,7]
+										.lslider-main-slide.swiper-slide
+											img(src="img/news/meditsinskaya-klinika7.jpg", alt="")
+							.lslider-thumbs.swiper.js-lslider-thumbs
+								.lslider-thumbs-wrapper.swiper-wrapper
+									each val in [1,2,3,4,5,6,7]
+										.lslider-thumbs-slide.swiper-slide
+											img(src="img/news/meditsinskaya-klinika7.jpg", alt="")
+
+
+
+
+				.layout-wsb_sidebar
+					.lwsb-sidebar
+						a.lwsb-sidebar__blue(href="") Компания
+
+						.lwsb-sidebar__body
+							a.lwsb-sidebar__item(href="")
+								span О компании
+							a.lwsb-sidebar__item.lwsb-sidebar__item--current(href="")
+								span Новости
+							a.lwsb-sidebar__item(href="")
+								span Персонал
+							a.lwsb-sidebar__item(href="")
+								span Каталоги
+							a.lwsb-sidebar__item(href="")
+								span Вакансии
+							a.lwsb-sidebar__item(href="")
+								span Партнеры
+							a.lwsb-sidebar__item(href="")
+								span Контакты
+
+
+	.simple-padding-before-footer

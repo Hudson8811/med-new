@@ -1,0 +1,47 @@
+extends ../layouts/default
+
+block variables
+	- const title = "New Page";
+
+block content
+	.md-pagination
+		.container
+			.md-pagination-flex
+				a.md-pagination-item(href="")  Главная
+				.md-pagination-item Как стать партнером
+
+
+	section.layout-wsb-section
+		.container
+			.layout-wsb
+				.layout-wsb__main
+					.layout-wsb__main-inner
+						h1.typical-h1.typical-h1--small Как стать партнером
+
+						.becpartner
+							.becpartner__left
+							.becpartner__right
+
+
+				.layout-wsb_sidebar
+					.lwsb-sidebar
+						a.lwsb-sidebar__blue(href="") Компания
+
+						.lwsb-sidebar__body
+							a.lwsb-sidebar__item(href="")
+								span О компании
+							a.lwsb-sidebar__item.lwsb-sidebar__item--current(href="")
+								span Новости
+							a.lwsb-sidebar__item(href="")
+								span Персонал
+							a.lwsb-sidebar__item(href="")
+								span Каталоги
+							a.lwsb-sidebar__item(href="")
+								span Вакансии
+							a.lwsb-sidebar__item(href="")
+								span Партнеры
+							a.lwsb-sidebar__item(href="")
+								span Контакты
+
+
+	.simple-padding-before-footer
