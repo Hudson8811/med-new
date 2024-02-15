@@ -1,0 +1,231 @@
+extends ../layouts/default
+
+block variables
+	- const title = "New Page";
+
+block content
+	.md-pagination
+		.container
+			.md-pagination-flex
+				a.md-pagination-item(href="")  Главная
+				a.md-pagination-item(href="")  Каталог
+				a.md-pagination-item(href="")  Анастезиология и реанимация
+				.md-pagination-item Анастезиология и реанимация
+
+
+	section.layout-catalog-section
+		.container
+			.layout-catalog
+				.layout-catalog__sidebar
+					.filters-sb-top
+						a.filters-sb-top__btn.btn-arrow.btn-arrow--centred.btn-arrow--dark-grey.btn-arrow--icon-cross.js-trigger-filters-screen(href="javascript:;")
+							//span Сбросить все
+							svg
+								use(xlink:href="img/sprites/sprite.svg#filters-cross")
+					a.catalog-link-on-top-of-sidebar.header__btn.btn-arrow.btn-arrow--right.btn-arrow--centred(href="javascript:;")
+						span Аксессуары для аир
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow-right")
+					.filter-accordions
+						- for (var x = 0; x < 1; x++)
+							.filter-accordion.js-filter-accordion.filter-accordion--active
+								.filter-accordion__head
+									.filter-accordion__head-title Тип товаров
+								.filter-accordion__body(style="display:block")
+									.filter-accordion__body-inner
+										label.simple-checkbox.simple-checkbox--filter.simple-checkbox--small-text
+											input.simple-checkbox__input(type="checkbox")
+											.simple-checkbox__text Новинки
+											.simple-checkbox__pseudo
+										label.simple-checkbox.simple-checkbox--filter.simple-checkbox--small-text
+											input.simple-checkbox__input(type="checkbox")
+											.simple-checkbox__text Акционные
+											.simple-checkbox__pseudo
+										label.simple-checkbox.simple-checkbox--filter.simple-checkbox--small-text
+											input.simple-checkbox__input(type="checkbox")
+											.simple-checkbox__text Спецпредложения
+											.simple-checkbox__pseudo
+
+
+							.filter-accordion.js-filter-accordion.filter-accordion--active
+								.filter-accordion__head
+									.filter-accordion__head-title Наличие
+								.filter-accordion__body(style="display:block")
+									.filter-accordion__body-inner
+										label.simple-checkbox.simple-checkbox--filter
+											input.simple-checkbox__input(type="checkbox")
+											.simple-checkbox__text Есть в наличии
+											.simple-checkbox__pseudo
+										label.simple-checkbox.simple-checkbox--filter
+											input.simple-checkbox__input(type="checkbox")
+											.simple-checkbox__text Под заказ
+											.simple-checkbox__pseudo
+							.filter-accordion.js-filter-accordion.filter-accordion--active
+								.filter-accordion__head
+									.filter-accordion__head-title Бренд
+								.filter-accordion__body(style="display:block")
+									.filter-accordion__body-inner
+										label.simple-checkbox.simple-checkbox--filter
+											input.simple-checkbox__input(type="checkbox")
+											.simple-checkbox__text Есть в наличии
+											.simple-checkbox__pseudo
+										label.simple-checkbox.simple-checkbox--filter
+											input.simple-checkbox__input(type="checkbox")
+											.simple-checkbox__text Под заказ
+											.simple-checkbox__pseudo
+										label.simple-checkbox.simple-checkbox--filter
+											input.simple-checkbox__input(type="checkbox")
+											.simple-checkbox__text Под заказ
+											.simple-checkbox__pseudo
+										label.simple-checkbox.simple-checkbox--filter
+											input.simple-checkbox__input(type="checkbox")
+											.simple-checkbox__text Под заказ
+											.simple-checkbox__pseudo
+							.filter-accordion.js-filter-accordion.filter-accordion--active
+								.filter-accordion__head
+									.filter-accordion__head-title Материал изготовления
+								.filter-accordion__body(style="display:block")
+									.filter-accordion__body-inner
+										label.simple-checkbox.simple-checkbox--filter
+											input.simple-checkbox__input(type="checkbox")
+											.simple-checkbox__text ПВХ
+											.simple-checkbox__pseudo
+										label.simple-checkbox.simple-checkbox--filter
+											input.simple-checkbox__input(type="checkbox")
+											.simple-checkbox__text ПВХ и полиэтилен
+											.simple-checkbox__pseudo
+
+							.filter-accordion.js-filter-accordion.filter-accordion--active
+								.filter-accordion__head
+									.filter-accordion__head-title Тип набора
+								.filter-accordion__body(style="display:block")
+									.filter-accordion__body-inner
+										label.simple-checkbox.simple-checkbox--filter
+											input.simple-checkbox__input(type="checkbox")
+											.simple-checkbox__text Гравитационный
+											.simple-checkbox__pseudo
+										label.simple-checkbox.simple-checkbox--filter
+											input.simple-checkbox__input(type="checkbox")
+											.simple-checkbox__text Насосный
+											.simple-checkbox__pseudo
+
+							.filter-accordion.js-filter-accordion.filter-accordion--active
+								.filter-accordion__head
+									.filter-accordion__head-title Объем резервуара, мл
+								.filter-accordion__body(style="display:block")
+									.filter-accordion__body-inner
+										.rs-block.custom-style-rs.js-range-slider(data-min="0" data-max="500" data-format="int" data-step="1"/* data-start-left data-start-right*/)
+											.rs-block__top
+												input.rs-block__inp.rs-block__inp-left.js-range-slider__inp-left(type="text")
+												input.rs-block__inp.rs-block__inp-right.js-range-slider__inp-right(type="text")
+											.rs-block__bottom
+												.rs-block__rs.js-range-slider__range
+
+							.filter-accordion.js-filter-accordion.filter-accordion--active
+								.filter-accordion__head
+									.filter-accordion__head-title Роликовый зажим
+								.filter-accordion__body(style="display:block")
+									.filter-accordion__body-inner
+										label.simple-checkbox.simple-checkbox--filter
+											input.simple-checkbox__input(type="checkbox")
+											.simple-checkbox__text Да
+											.simple-checkbox__pseudo
+										label.simple-checkbox.simple-checkbox--filter
+											input.simple-checkbox__input(type="checkbox")
+											.simple-checkbox__text Нет
+											.simple-checkbox__pseudo
+
+					.filters-reset-btn-wrap
+						a.header__btn.btn-arrow.btn-arrow--right.btn-arrow--centred(href="javascript:;")
+							span Применить
+
+					.filters-reset-btn-wrap
+						a.btn-arrow.btn-arrow--centred.btn-arrow--dark-grey.btn-arrow--icon-cross(href="javascript:;")
+							span Сбросить все
+							svg
+								use(xlink:href="img/sprites/sprite.svg#filters-cross")
+
+
+
+
+				.layout-catalog__main
+					.catalog-top
+						.catalog-mob-filter-btn-wrap
+							a.btn-arrow.catalog-mob-filter-btn.js-trigger-filters-screen(href="#")
+								span Фильтры
+								svg
+									use(xlink:href="img/sprites/sprite.svg#catalog-filters-icon")
+
+						.catalog-type-switch-wrap
+							.catalog-type-switch
+								a.catalog-type-switch__type.catalog-type-switch__type--active(href="")
+									//img(src="img/svg/catlog-switch-grid.svg", alt="")
+									svg
+										use(xlink:href="img/sprites/sprite.svg#catlog-switch-grid")
+								a.catalog-type-switch__type(href="")
+									//img(src="img/svg/catlog-switch-list.svg", alt="")
+									svg
+										use(xlink:href="img/sprites/sprite.svg#catlog-switch-list")
+					.catalog-cards
+						- for (var x = 0; x < 12 ; x++)
+							.catalog-card.product-preview
+								.product-preview__inner
+									.product-preview__label Новинка
+									a.product-preview__img(href="#")
+										img(src="img/product-img-1.jpg" alt="")
+									.product-preview__bottom
+										a.product-preview__title(href="#") Трубки эндотрахеальные
+										.product-preview__price 138 000 руб
+										.product-preview__text Эндотрахеальные трубки MEDEREN изготовлены из термопластичного ПВХ, способного «подстраиваться» под форму
+										.product-preview__btns
+											a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--blue
+												| Подробнее
+												.btn-circle__icon
+											a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--orange(href="")
+												| В корзину
+												.btn-circle__icon
+
+
+					.pagination-wrap.pagination-wrap--catalog
+						.pagination
+							a.pagination-item.pagination-item--prev(href="")
+								svg
+									use(xlink:href="img/sprites/sprite.svg#pagination-next")
+							a.pagination-item(href="")
+								span 1
+							a.pagination-item.pagination-item--active(href="")
+								span 2
+							a.pagination-item(href="")
+								span 3
+							a.pagination-item(href="")
+								span 4
+							a.pagination-item.pagination-item--next(href="")
+								svg
+									use(xlink:href="img/sprites/sprite.svg#pagination-next")
+					.pagination-wrap.pagination-wrap--catalog
+						.pagination
+							a.pagination-item.pagination-item--prev(href="")
+								svg
+									use(xlink:href="img/sprites/sprite.svg#pagination-next")
+							a.pagination-item(href="")
+								span 1
+							a.pagination-item.pagination-item--dots(href="")
+								span ...
+							a.pagination-item.pagination-item--digit-prev(href="")
+								span 3
+							a.pagination-item.pagination-item--active(href="")
+								span 4
+							a.pagination-item.pagination-item--digit-next(href="")
+								span 5
+							a.pagination-item.pagination-item--dots(href="")
+								span ...
+							a.pagination-item(href="")
+								span 99
+							a.pagination-item.pagination-item--next(href="")
+								svg
+									use(xlink:href="img/sprites/sprite.svg#pagination-next")
+
+
+
+
+	.simple-padding-before-footer

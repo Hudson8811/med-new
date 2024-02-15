@@ -222,16 +222,12 @@ block content
 										.product-preview__price 138 000 руб
 										.product-preview__text Эндотрахеальные трубки MEDEREN изготовлены из термопластичного ПВХ, способного «подстраиваться» под форму
 										.product-preview__btns
-											a.btn-more(href="#")
-												span Подробнее
-												span
-													svg
-														use(xlink:href="img/sprites/sprite.svg#arrow-right")
-											a.btn-more(href="#")
-												span В корзину
-												span
-													svg
-														use(xlink:href="img/sprites/sprite.svg#arrow-right")
+											a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--blue
+												| Подробнее
+												.btn-circle__icon
+											a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--orange(href="")
+												| В корзину
+												.btn-circle__icon
 
 
 				.swiper-controll

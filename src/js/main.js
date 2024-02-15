@@ -4,6 +4,8 @@
 @@include("./libs/select2.full.min.js")
 @@include("./libs/jquery.fancybox.min.js")
 @@include("./libs/simplebar.min.js")
+@@include("./libs/nouislider.min.js")
+@@include("./libs/wNumb.min.js")
 
 //my files
 @@include("./import/main.js")

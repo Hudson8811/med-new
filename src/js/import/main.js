@@ -190,9 +190,117 @@ jQuery(function ($) {
 		 });
 	});
 
+	$('.js-range-slider').each(function(){
+		var rs=$(this);
+		var rs_inp_l=rs.find('.js-range-slider__inp-left');
+		var rs_inp_r=rs.find('.js-range-slider__inp-right');
+		var rs_range=rs.find('.js-range-slider__range');
+
+		var start_l=parseFloat(rs.attr('data-start-left'));
+		var start_r=parseFloat(rs.attr('data-start-right'));
+		var min=parseFloat(rs.attr('data-min'));
+		var max=parseFloat(rs.attr('data-max'));
+		var format=rs.attr('data-format');
+		var step=rs.attr('data-step');
+
+		if(isNaN(min)){
+			min=0;
+		}
+		if(isNaN(max)){
+			max=100;
+		}
+		if(isNaN(start_l)){
+			start_l=min;
+		}
+		if(isNaN(start_r)){
+			start_r=max;
+		}
+		if(typeof(format)==='undefined'){
+			format='int';
+		}
+		if(typeof(step)==='undefined'){
+			step='1';
+		}
+
+		var slider_params={
+			start: [start_l, start_r],
+			connect: true,
+			range: {
+				'min': min,
+				'max': max
+			},
+
+
+			pips: {
+				mode: 'count',
+				values: 2,
+				density: -1
+			}
+		};
+
+		if(format==='int'){
+			slider_params.step=parseInt(step);
+			slider_params.format= wNumb({
+				decimals: 0
+			});
+		}
+		else if(format==='float'){
+			slider_params.step=parseFloat(step);
+		}
+
+
+		var slider=noUiSlider.create(rs_range[0], slider_params);
+
+		slider.on('update', function (values, handle) {
+
+			var value = values[handle];
+
+			if (handle===0) {
+				rs_inp_l[0].value = value;
+			}
+			else if (handle===1) {
+				rs_inp_r[0].value = value;
+			}
+		});
+		rs_inp_l[0].addEventListener('change', function () {
+			slider.set([this.value, null]);
+		});
+		rs_inp_r[0].addEventListener('change', function () {
+			slider.set([null, this.value]);
+		});
+	});
 
 
 
+	$('.js-filter-accordion').each(function(){
+		var acc=$(this);
+		var head=acc.find('.filter-accordion__head');
+		var body=acc.find('.filter-accordion__body');
+		head.on('click',function(){
+			if(acc.hasClass('filter-accordion--active')){
+				acc.removeClass('filter-accordion--active');
+				body.stop(true).slideUp(300);
+			}
+			else{
+				acc.addClass('filter-accordion--active');
+				body.stop(true).slideDown(300);
 
+			}
+
+		});
+	});
+
+	$('.js-trigger-filters-screen').on('click', function () {
+		var sbar=$('.layout-catalog__sidebar');
+		if(sbar.hasClass('layout-catalog__sidebar--active')){
+			$('body').removeClass('scroll-locked')
+			sbar.removeClass('layout-catalog__sidebar--active');
+		}else{
+			$('body').addClass('scroll-locked')
+			sbar.addClass('layout-catalog__sidebar--active');
+		}
+
+
+	});
 
 });

@@ -146,6 +146,25 @@ label{
 		}
 	}
 
+	&--dark-grey{
+		background: #BFC7D3;
+		color: $mainColor;
+		&::after {
+			background: #BFC7D3;
+		}
+	}
+
+	&--centred{
+		justify-content: center;
+	}
+
+	&--icon-cross{
+		img,svg{
+			margin-left: 8px;
+			margin-bottom: -2px;
+		}
+	}
+
 	&--size-for-form {
 		padding: 23px 34px;
 		width: 100%;
@@ -187,6 +206,15 @@ label{
 				transform: translateY(0);
 			}
 		}
+	}
+	&--right{
+		svg,
+		img {
+			margin-left: 6px;
+			margin-top: 3px;
+			width: 16px;
+		}
+
 	}
 }
 
@@ -497,4 +525,8 @@ label{
 		top: 0px;
 		bottom: 4px;
 	}
+}
+
+.scroll-locked{
+	overflow: hidden;
 }
