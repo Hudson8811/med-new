@@ -236,6 +236,9 @@
 	text-decoration: none;
 	transition-duration: .3s;
 
+	@media only screen and (max-width: 767px) {
+		font-size: 14px;
+	}
 	&:hover {
 		opacity: .7;
 	}
@@ -250,6 +253,9 @@
 		right: -15px;
 		top: 10px;
 		position: absolute;
+		@media only screen and (max-width: 767px) {
+			top: 4px;
+		}
 	}
 
 	&:last-child {
