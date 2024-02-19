@@ -7,10 +7,17 @@ block content
 	.md-pagination
 		.container
 			.md-pagination-flex
-				a.md-pagination-item(href="")  Главная
-				a.md-pagination-item(href="")  Каталог
-				a.md-pagination-item(href="")  Анастезиология и реанимация
-				.md-pagination-item Анастезиология и реанимация
+				.md-pagination-item
+					a(href="")
+						span  Главная
+				.md-pagination-item
+					a(href="")
+						span  Каталог
+				.md-pagination-item
+					a(href="")
+						span  Анастезиология и реанимация
+				.md-pagination-item
+					span Анастезиология и реанимация
 
 
 	section.layout-catalog-section
@@ -224,6 +231,7 @@ block content
 							a.pagination-item.pagination-item--next(href="")
 								svg
 									use(xlink:href="img/sprites/sprite.svg#pagination-next")
+
 
 
 
