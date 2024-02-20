@@ -5,33 +5,82 @@
 	color: #ffffff;
 	padding: 40px 0;
 	width: 100%;
+	justify-self: flex-end;
 	&__top{
 		display: flex;
 		justify-content: space-between;
+		@include max(md){
+			flex-direction: column;
+		}
 	}
 	&__bottom{
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
-		margin-top: 15px;
+		margin-top: 20px;
+		@include max(md){
+			flex-direction: column-reverse;
+			align-items: flex-start;
+		}
+		@include max(sm){
+			margin-top: 25px;
+		}
 	}
 	&__col{
-		&:first-child{
-			width: 336px;
+		&--info{
+			width: 100%;
+			@include min(md){
+				width: 336px;
+			}
 		}
-		&:last-child{
-			width: 336px;
+		&--copyright{
+			@include max(md){
+				width: 100%;
+				margin-top: 25px;
+				padding-top: 25px;
+				border-top: 1px solid rgba(#ffffff, 0.3);
+			}
 		}
-
-
+		&--contacts,
+		&--social{
+			width: 336px;
+			@include max(xl){
+				width: 270px;
+			}
+			@include max(lg){
+				width: 340px;
+			}
+			@include max(md){
+				width: 100%;
+			}
+		}
+		&--social{
+			@include max(md){
+				display: flex;
+				align-items: center;
+				> * {
+					width: 50%;
+				}
+			}
+		}
+		&--menu{
+			@include max(lg){
+				display: none;
+			}
+		}
 		&-title{
 			text-transform: uppercase;
+			margin-bottom: 30px;
 		}
 	}
 	&__logo{
 		width: 324px;
 		height: 60px;
 		max-width: 100%;
+		@include max(sm){
+			width: 270px;
+			height: 50px;
+		}
 		img, svg{
 			width: 100%;
 			height: 100%;
@@ -43,12 +92,21 @@
 	&__info{
 		&:not(:first-child){
 			margin-top: 50px;
+			@include max(md){
+				margin-top: 30px;
+			}
 		}
 	}
 
 	&__menu{
 		list-style: none;
+		&--top{
+			max-width: 240px;
+		}
 		li{
+			&:not(:first-child){
+				margin-top: 14px;
+			}
 			a{
 				@extend .link;
 				color: rgba(255, 255, 255, 0.3);
@@ -62,20 +120,95 @@
 
 	&__social{
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		list-style: none;
 		margin-left: -4px;
 		margin-right: -4px;
+		@include max(sm){
+			margin-left: -10px;
+			margin-right: -10px;
+		}
+		&:not(:first-child){
+			@include min(md){
+				margin-top: 16px;
+			}
+		}
 		li{
 			margin: 0 4px;
+			@include max(sm){
+				margin: 0 10px;
+			}
 			a{
 				color: #E8EBEF;
+				background: rgba(255, 255, 255, 0.2);
+				border-radius: 50%;
+				overflow: hidden;
+				width: 70px;
+				height: 70px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				@include max(sm){
+					width: auto;
+					height: auto;
+					background: transparent;
+					border-radius: 0;
+				}
 				svg, img{
 					width: 24px;
 					height: 24px;
 					object-fit: contain;
 					display: block;
 				}
+				&:hover{
+					color: $orange;
+					background-color: rgba($orange, 0.1);
+				}
+			}
+		}
+	}
+}
+
+.footer-contact{
+	@include max(md){
+		display: flex;
+		width: 100%;
+	}
+	& + &{
+		margin-top: 2em;
+	}
+	&__name{
+		color: #FFFFFF;
+		@include max(md){
+			width: 50%;
+		}
+	}
+	&__info{
+		color: rgba(255, 255, 255, 0.3);
+		@include max(md){
+			width: 50%;
+		}
+		&:not(:first-child){
+			@include min(md){
+				margin-top: 10px;
+			}
+		}
+		> a {
+			@extend .link;
+			color: rgba(255, 255, 255, 0.3);
+			display: inline-block;
+		}
+	}
+	&__link{
+		a{
+			text-decoration: none;
+			color: $orange;
+			position: relative;
+			display: inline-block;
+			border-bottom: 1px solid currentColor;
+			&:hover{
+				border-color: transparent;
 			}
 		}
 	}
