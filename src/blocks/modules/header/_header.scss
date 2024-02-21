@@ -21,6 +21,9 @@
 					@extend .fs20;
 					@extend .link;
 					color: #9BA3A8;
+					@include max(cnt){
+						font-size: 16px;
+					}
 					svg, img{
 						width: 36px;
 						height: 36px;
@@ -42,6 +45,9 @@
 			align-items: center;
 			@extend .fs20;
 			@extend .link;
+			@include max(cnt){
+				font-size: 16px;
+			}
 			svg, img{
 				width: 18px;
 				height: 18px;
@@ -65,6 +71,9 @@
 			a{
 				@extend .fs20;
 				@extend .link;
+				@include max(cnt){
+					font-size: 16px;
+				}
 			}
 		}
 	}

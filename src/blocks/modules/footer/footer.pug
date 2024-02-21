@@ -2,48 +2,83 @@ footer.footer
     .container
         .footer__inner
             .footer__top
-                .footer__col
+                .footer__col.footer__col--info
                     .footer__logo
                         svg
                             use(xlink:href="img/logo.svg#index")
                     .footer__info
                         | ООО «Медимком» – поставщик расходных материалов и оборудования для отделений анестезиологии и реанимации.
-                .footer__col
+                .footer__col.footer__col--menu
                     .footer__col-title Каталог
-                    ul.footer__menu
+                    ul.footer__menu.footer__menu--top
                         li
-                            a(href="#")
+                            a(href="#") Анастезиология и реанимация
                         li
-                            a(href="#")
+                            a(href="#") Хирургия
                         li
-                            a(href="#")
+                            a(href="#") Урология
                         li
-                            a(href="#")
-                .footer__col
+                            a(href="#") Мониторинг пациента
+                        li
+                            a(href="#") Шприцы и иглы
+                        li
+                            a(href="#") Онкология
+                        li
+                            a(href="#") Лабораторная диагностика
+                        li
+                            a(href="#") Медицинское оборудование
+                .footer__col.footer__col--menu
                     .footer__col-title Разделы
-                    ul.footer__menu
+                    ul.footer__menu.footer__menu--top
                         li
-                            a(href="#")
+                            a(href="#") О компании
                         li
-                            a(href="#")
+                            a(href="#") Новости
                         li
-                            a(href="#")
+                            a(href="#") Частным лицам
                         li
-                            a(href="#")
-                .footer__col
+                            a(href="#") Инф. материалы
+                        li
+                            a(href="#") Контакты
+                        li
+                            a(href="#") Регистрация
+
+                .footer__col.footer__col--contacts
                     .footer__col-title Контакты
+                    .footer__contact.footer-contact
+                        .footer-contact__name Генеральное представительство
+                        .footer-contact__info
+                            p Москва 119619, Солнцево, ул. 2-я Карпатская, вл. 4
+                            br
+                            .footer-contact__link
+                                a(href="#") Адреса филиалов
+
+                    .footer__contact.footer-contact
+                        .footer-contact__name Отдел продаж
+                        .footer-contact__info
+                            a(href="tel:+78123343764") +7 812 334-37-64
+                            br
+                            a(href="tel:+74959001099") +7 495 900-10-99
+                            br
+                            br
+                            .footer-contact__link
+                                a(href="#") Заказать звонок
+                            br
+                            a(href="mailto:info@medimcom.ru") info@medimcom.ru
+
             .footer__bottom
-                .footer__col
+                .footer__col.footer__col--copyright
                     ul.footer__menu
                         li
                             a(href="#") Политика конфиденциальности
                     .footer__copyright © Медимком, 2021
-                .footer__col
+                .footer__col.footer__col--social
+                    .footer__text Мы в соцсетях
                     ul.footer__social
                         li
                             a(href="#" target="_blank")
                                 svg
-                                    use(xlink:href="img/sprites/sprite.svg#soc-wa")
+                                    use(xlink:href="img/sprites/sprite.svg#soc-wa-f")
                         li
                             a(href="#" target="_blank")
                                 svg
@@ -51,4 +86,4 @@ footer.footer
                         li
                             a(href="#" target="_blank")
                                 svg
-                                    use(xlink:href="img/sprites/sprite.svg#soc-youtube")
+                                    use(xlink:href="img/sprites/sprite.svg#soc-youtube-f")
