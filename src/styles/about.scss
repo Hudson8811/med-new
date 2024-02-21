@@ -40,6 +40,7 @@
     cursor: pointer;
     transition-duration: .3s;
 
+
     &::before {
         content: '';
         display: block;
@@ -68,6 +69,10 @@
 
     &:hover{
         opacity: .8;
+    }
+    &.swiper-button-disabled{
+        opacity: 0;
+        pointer-events: none;
     }
 
 }
