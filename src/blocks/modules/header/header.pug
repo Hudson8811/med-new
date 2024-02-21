@@ -7,6 +7,9 @@ header.header
                         span Войти
                         svg
                             use(xlink:href="img/sprites/sprite.svg#user")
+                .header__burger
+                    .header__burger-inner.js-open-main-menu
+                        span
                 ul.header__menu
                     li
                         a(href="#") Промо
@@ -53,7 +56,9 @@ header.header
                         a(href="#" target="_blank")
                             svg
                                 use(xlink:href="img/sprites/sprite.svg#soc-youtube")
-
+                a.header__callback-mob(href="javascript:;")
+                    svg
+                        use(xlink:href="img/sprites/sprite.svg#call")
                 a.header__btn.btn-arrow(href="javascript:;")
                     span Обратный звонок
                     svg
@@ -81,3 +86,22 @@ header.header
                     button.search-form__button(type='submit' name='s')
                         svg
                             use(xlink:href="img/sprites/sprite.svg#search")
+.menu-overlay
+.header-mob-menu
+    .header-mob-menu__inner.js-init-simplebar
+        ul.header-mob-menu__menu
+            li
+                a(href="#") Промо
+            li
+                a(href="#") О компании
+            li
+                a(href="#") Новости
+            li
+                a(href="#") Информационные материалы
+            li
+                a(href="#") Контакты
+            li
+                a(href="#") Как стать партнером
+
+
+

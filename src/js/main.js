@@ -7,5 +7,8 @@
 @@include("./libs/nouislider.min.js")
 @@include("./libs/wNumb.min.js")
 
+//modules
+@@include("./import/modules.js")
+
 //my files
 @@include("./import/main.js")
