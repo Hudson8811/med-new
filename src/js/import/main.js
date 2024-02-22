@@ -303,4 +303,36 @@ jQuery(function ($) {
 
 	});
 
+
+	$('.main-catalog').each(function () {
+		let slider = $(this).find('.swiper');
+		if (slider.length > 0){
+			let prevArrow = $(this).find('.swiper-button-prev');
+			let nextArrow = $(this).find('.swiper-button-next');
+
+			let mainSlider = new Swiper(slider[0], {
+				slidesPerView: 1,
+				spaceBetween: 26,
+				watchSlidesProgress: true,
+				pagination: false,
+				loop: true,
+				navigation: {
+					nextEl: nextArrow[0],
+					prevEl: prevArrow[0]
+				},
+				breakpoints: {
+					768: {
+						slidesPerView: 2,
+					},
+					1100: {
+						slidesPerView: 3,
+					},
+					1440: {
+						slidesPerView: 4,
+					}
+				}
+			});
+		}
+	})
+
 });
