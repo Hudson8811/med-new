@@ -42,7 +42,7 @@ body {
 .link {
 	color: $mainColor;
 	text-decoration: none;
-
+	cursor: pointer;
 	&:hover {
 		color: $orange;
 	}

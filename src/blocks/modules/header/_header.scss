@@ -116,6 +116,15 @@
 					margin-top: 8px;
 				}
 			}
+			&:hover{
+				span{
+					&,
+					&::before,
+					&::after {
+						background-color: $orange;
+					}
+				}
+			}
 		}
 	}
 	&__menu{
@@ -124,6 +133,8 @@
 		display: flex;
 		align-items: center;
 		padding: 10px 30px;
+		white-space: nowrap;
+		overflow: hidden;
 		@include max(lg){
 			display: none;
 		}
@@ -152,6 +163,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		overflow: hidden;
 		@include max(lg){
 			padding: 15px 30px 15px;
 		}
@@ -356,6 +368,7 @@
 		z-index: 1;
 		display: flex;
 		justify-content: space-between;
+		overflow: hidden;
 		@include max(1100){
 			border-radius: 0 0 25px 25px;
 		}
@@ -489,6 +502,233 @@
 		}
 		&:hover{
 			color: $orange;
+		}
+	}
+}
+
+
+.menu-overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #193762;
+	z-index: 9999;
+	opacity: 0.7;
+	pointer-events: none;
+	display: none;
+	&._active{
+		pointer-events: auto;
+	}
+}
+.header-mob-menu{
+	$self: &;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	background: #FFFFFF;
+	transform: translateX(-100%);
+	width: 468px;
+	max-width: calc(100% - 81px);
+	z-index: 10000;
+	transition: transform 0.3s linear;
+	border-radius: 0 42px 42px 0;
+	@include min(lg){
+		display: none;
+	}
+	@include max(md){
+		border-radius: 0 25px 25px 0;
+		width: 400px;
+	}
+	@include max(sm){
+		max-width: calc(100% - 50px);
+	}
+	&__close{
+		@extend .link;
+		position: absolute;
+		right: 0;
+		top: 22px;
+		width: 58px;
+		height: 58px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		overflow: hidden;
+		background: #FFFFFF;
+		transition: right 0.2s linear;
+		@include max(sm){
+			top: 10px;
+			width: 40px;
+			height: 40px;
+		}
+		svg, img{
+			display: block;
+			width: 12px;
+			height: 12px;
+			object-fit: contain;
+		}
+	}
+	&._active{
+		transform: translateX(0);
+		#{$self}__close{
+			right: -81px;
+			@include max(sm){
+				right: -45px;
+			}
+		}
+	}
+	&__inner{
+		overflow: auto;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		padding: 32px 15px;
+		@include max(sm){
+			padding: 20px 10px;
+		}
+	}
+	&__menu{
+		li{
+			a{
+				@extend .fs20;
+				font-weight: 500;
+				color: $mainColor;
+				text-decoration: none;
+				padding: 20px;
+				display: block;
+				border-radius: 21px;
+				overflow: hidden;
+				@include max(sm){
+					padding: 12px;
+					border-radius: 12px;
+				}
+				&:hover{
+					background: rgba($mainColor, 0.1);
+				}
+			}
+		}
+	}
+	&__contacts{
+		&:not(:first-child){
+			margin-top: 20px;
+			padding-top: 20px;
+			border-top: 1px solid #EAEFF1;
+			@include max(sm){
+				margin-top: 15px;
+				padding-top: 15px;
+			}
+		}
+	}
+	&__profile{
+		display: flex;
+		align-items: center;
+		&:not(:last-child){
+			margin-bottom: 10px;
+		}
+		a{
+			@extend .fs20;
+			display: flex;
+			align-items: center;
+			text-decoration: none;
+			color: $mainColor;
+			border-radius: 21px;
+			overflow: hidden;
+			padding: 20px;
+			width: 100%;
+			@include max(sm){
+				padding: 12px;
+				border-radius: 12px;
+			}
+			&:hover{
+				background: rgba($mainColor, 0.1);
+			}
+			svg, img{
+				width: 18px;
+				height: 18px;
+				display: block;
+				object-fit: contain;
+				margin-right: 15px;
+				flex-shrink: 0;
+			}
+		}
+	}
+	&__emails,
+	&__phones{
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		padding-left: 56px;
+		@include max(sm){
+			padding-left: 46px;
+		}
+		&:not(:first-child){
+			margin-top: 20px;
+		}
+		&::before{
+			content: "";
+			display: block;
+			width: 26px;
+			height: 26px;
+			position: absolute;
+			left: 20px;
+			top: 0;
+			background-position: center center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			@include max(md){
+				top: -0.2em;
+			}
+			@include max(sm){
+				left: 12px;
+				width: 20px;
+				height: 20px;
+				top: 0;
+			}
+		}
+		li {
+			@extend .fs20;
+			&:not(:first-child){
+				margin-top: 10px;
+			}
+			a{
+				@extend .link;
+			}
+		}
+	}
+	&__emails{
+		&::before{
+			background-image: url("../img/sprites/sprite.svg#sms");
+		}
+	}
+	&__phones{
+		white-space: nowrap;
+		&::before{
+			background-image: url("../img/sprites/sprite.svg#call");
+		}
+	}
+	&__social{
+		display: flex;
+		align-items: center;
+		list-style: none;
+		flex-wrap: wrap;
+		&:not(:first-child){
+			margin-top: 30px;
+		}
+		li{
+			margin: 0 20px;
+			a{
+				@extend .link;
+				svg, img{
+					width: 40px;
+					height: 40px;
+					object-fit: contain;
+					display: block;
+				}
+			}
 		}
 	}
 }

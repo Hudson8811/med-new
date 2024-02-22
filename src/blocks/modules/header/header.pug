@@ -36,12 +36,12 @@ header.header
                         use(xlink:href="img/logo.svg#index")
                 ul.header__emails
                     li
-                        a(href="mailto:") info@medimcom.ru
+                        a(href="mailto:info@medimcom.ru") info@medimcom.ru
                 ul.header__phones
                     li
-                        a(href="tel:") +7 812 334-37-64
+                        a(href="tel:+78123343764") +7 812 334-37-64
                     li
-                        a(href="tel:") +7 495 900-10-99
+                        a(href="tel:+74959001099") +7 495 900-10-99
 
                 ul.header__social
                     li
@@ -88,6 +88,9 @@ header.header
                             use(xlink:href="img/sprites/sprite.svg#search")
 .menu-overlay
 .header-mob-menu
+    .header-mob-menu__close.js-close-main-menu
+        svg
+            use(xlink:href="img/sprites/sprite.svg#filters-cross")
     .header-mob-menu__inner.js-init-simplebar
         ul.header-mob-menu__menu
             li
@@ -102,6 +105,32 @@ header.header
                 a(href="#") Контакты
             li
                 a(href="#") Как стать партнером
-
+        .header-mob-menu__contacts
+            .header-mob-menu__profile
+                a(href="#")
+                    svg
+                        use(xlink:href="img/sprites/sprite.svg#user")
+                    span Войти
+            ul.header-mob-menu__emails
+                li
+                    a(href="mailto:info@medimcom.ru") info@medimcom.ru
+            ul.header-mob-menu__phones
+                li
+                    a(href="tel:+78123343764") +7 812 334-37-64
+                li
+                    a(href="tel:+74959001099") +7 495 900-10-99
+            ul.header-mob-menu__social
+                li
+                    a(href="#" target="_blank")
+                        svg
+                            use(xlink:href="img/sprites/sprite.svg#soc-wa")
+                li
+                    a(href="#" target="_blank")
+                        svg
+                            use(xlink:href="img/sprites/sprite.svg#soc-vk")
+                li
+                    a(href="#" target="_blank")
+                        svg
+                            use(xlink:href="img/sprites/sprite.svg#soc-youtube")
 
 
