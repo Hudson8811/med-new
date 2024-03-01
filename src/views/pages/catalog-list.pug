@@ -165,32 +165,65 @@ block content
 
 						.catalog-type-switch-wrap
 							.catalog-type-switch
-								a.catalog-type-switch__type.catalog-type-switch__type--active(href="")
+								a.catalog-type-switch__type(href="")
 									//img(src="img/svg/catlog-switch-grid.svg", alt="")
 									svg
 										use(xlink:href="img/sprites/sprite.svg#catlog-switch-grid")
-								a.catalog-type-switch__type(href="")
+								a.catalog-type-switch__type.catalog-type-switch__type--active(href="")
 									//img(src="img/svg/catlog-switch-list.svg", alt="")
 									svg
 										use(xlink:href="img/sprites/sprite.svg#catlog-switch-list")
-					.catalog-cards
+					.catalog-cards.catalog-cards__view-list
 						- for (var x = 0; x < 12 ; x++)
-							.catalog-card.product-preview
-								.product-preview__inner
-									.product-preview__label Новинка
-									a.product-preview__img(href="#")
-										img(src="img/product-img-1.jpg" alt="")
-									.product-preview__bottom
-										a.product-preview__title(href="#") Трубки эндотрахеальные
-										.product-preview__price 138 000 руб
-										.product-preview__text Эндотрахеальные трубки MEDEREN изготовлены из термопластичного ПВХ, способного «подстраиваться» под форму
-										.product-preview__btns
-											a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--blue
-												| Подробнее
-												.btn-circle__icon
-											a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--orange(href="")
-												| В корзину
-												.btn-circle__icon
+							.catalog-list.product-list
+								.product-list__inner
+									.product-list__left
+										.product-list__label Новинка
+										a.product-list__img(href="#")
+											img(src="img/product-img-1.jpg" alt="")
+									.product-list__middle
+										.product-list__middle-info
+											a.product-list__title(href="#") Трубки эндотрахеальные
+											.product-list__artnumber
+												span Артикул:
+												span 213123131
+										.product-list__middle-props
+											.product-list__props-item
+												span.prop-name Материал:
+												span.prop-value сталь
+											.product-list__props-item
+												span.prop-name Цвет:
+												span.prop-value серый
+											.product-list__props-item
+												span.prop-name Диаметр проводника, мм:
+												span.prop-value 0.5
+											.product-list__props-item
+												span.prop-name Длина рабочей части, мм:
+												span.prop-value 12
+											.product-list__props-item
+												span.prop-name Длина рабочей части, мм:
+												span.prop-value 12
+											.product-list__props-item
+												span.prop-name Длина рабочей части, мм:
+												span.prop-value 12
+									.product-list__right
+										.product-list__price 138 000 руб
+										.product-list__right-buy
+											.product-list__counter
+												button.product-list__counter-minus
+													svg
+														use(xlink:href="img/sprites/sprite.svg#catalog-cart-minus")
+												input(type="string" value='01' readonly).product-list__counter-input
+												button.product-list__counter-plus
+													svg
+														use(xlink:href="img/sprites/sprite.svg#catalog-cart-plus")
+											.product-list__btns
+												a.product-list__btn.btn-circle.btn-circle--small-h32.btn-circle--blue
+													| Запросить кп
+													.btn-circle__icon
+												a.product-list__btn.btn-circle.btn-circle--small-h32.btn-circle--orange(href="")
+													| В корзину
+													.btn-circle__icon
 
 
 					.pagination-wrap.pagination-wrap--catalog
@@ -264,6 +297,7 @@ block content
 										span Как стать партнером
 									svg
 										use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+							 
 
 
 

@@ -335,4 +335,26 @@ jQuery(function ($) {
 		}
 	})
 
+	$('.catalog-partners').each(function () {
+		let slider = $(this).find('.swiper');
+		if (slider.length > 0){
+
+			let mainSlider = new Swiper(slider[0], {
+				spaceBetween: 30,
+				loop: true,
+				breakpoints: {
+					878: {
+						slidesPerView: 4,
+					},
+					1100: {
+						slidesPerView: 5,
+					},
+					1440: {
+						slidesPerView: 5,
+					}
+				}
+			});
+		}
+	})
+
 });
