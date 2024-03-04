@@ -177,13 +177,15 @@ block content
 						- for (var x = 0; x < 12 ; x++)
 							.catalog-card.product-preview
 								.product-preview__inner
-									.product-preview__label Новинка
-									a.product-preview__img(href="#")
-										img(src="img/product-img-1.jpg" alt="")
-									.product-preview__bottom
+									.product-preview__top
+										.product-preview__label Новинка
+										a.product-preview__img(href="#")
+											img(src="img/product-img-1.jpg" alt="")
+										
 										a.product-preview__title(href="#") Трубки эндотрахеальные
 										.product-preview__price 138 000 руб
 										.product-preview__text Эндотрахеальные трубки MEDEREN изготовлены из термопластичного ПВХ, способного «подстраиваться» под форму
+									.product-preview__bottom
 										.product-preview__btns
 											a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--blue
 												| Подробнее
@@ -231,6 +233,10 @@ block content
 							a.pagination-item.pagination-item--next(href="")
 								svg
 									use(xlink:href="img/sprites/sprite.svg#pagination-next")
+					
+			.layout-catalog
+				.layout-catalog__sidebar
+				.layout-catalog__main
 					.catalog-partners.section
 						.section__title Партнеры
 						a.btn-more(href="#")
@@ -238,7 +244,7 @@ block content
 							span
 								svg
 									use(xlink:href="img/sprites/sprite.svg#arrow-right")
-						.partners
+						//.partners
 							.swiper
 								.swiper-wrapper
 									.swiper-slide.partners__slide
@@ -264,8 +270,6 @@ block content
 										span Как стать партнером
 									svg
 										use(xlink:href="img/sprites/sprite.svg#btn-arrow")
-
-
 
 
 	.simple-padding-before-footer

@@ -1,0 +1,81 @@
+extends ../layouts/default
+
+block variables
+	- const title = "Catalog";
+
+block content
+	.md-pagination
+		.container
+			.md-pagination-flex
+				.md-pagination-item
+					a(href="")
+						span  Главная
+				.md-pagination-item
+					a(href="")
+						span  Каталог
+				.md-pagination-item
+					a(href="")
+						span  Анастезиология и реанимация
+				.md-pagination-item
+					span Анастезиология и реанимация
+
+	.main-categories.section.main-categories--catalog
+		.container
+			.section__title Каталог товаров
+			.categories
+				a.categories__item.c-item.c-item--catalog
+					.c-item__icon
+						img(src="img/katalog-icon-1.svg" alt="")
+					.c-item__title Анестезиология и реанимация
+					.c-item__arrow
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+				a.categories__item.c-item.c-item--catalog
+					.c-item__icon
+						img(src="img/katalog-icon-2.svg" alt="")
+					.c-item__title Хирургия
+					.c-item__arrow
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+				a.categories__item.c-item.c-item--catalog
+					.c-item__icon
+						img(src="img/katalog-icon-1.svg" alt="")
+					.c-item__title Урология
+					.c-item__arrow
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+				a.categories__item.c-item.c-item--catalog
+					.c-item__icon
+						img(src="img/katalog-icon-6.svg" alt="")
+					.c-item__title Мониторинг пациента
+					.c-item__arrow
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+				a.categories__item.c-item.c-item--catalog
+					.c-item__icon
+						img(src="img/katalog-icon-3.svg" alt="")
+					.c-item__title Шприцы и иглы
+					.c-item__arrow
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+				a.categories__item.c-item.c-item--catalog
+					.c-item__icon
+						img(src="img/katalog-icon-4.svg" alt="")
+					.c-item__title Онкология
+					.c-item__arrow
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+				a.categories__item.c-item.c-item--catalog
+					.c-item__icon
+						img(src="img/katalog-icon-5.svg" alt="")
+					.c-item__title Лабораторная диагностика
+					.c-item__arrow
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+				a.categories__item.c-item.c-item--catalog
+					.c-item__icon
+						img(src="img/katalog-icon-1.svg" alt="")
+					.c-item__title Медицинское оборудование
+					.c-item__arrow
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
