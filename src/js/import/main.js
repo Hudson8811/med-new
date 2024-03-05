@@ -357,4 +357,83 @@ jQuery(function ($) {
 		}
 	})
 
+	$('.js-catalog-detail').each(function () {
+		var main_slider = $(this).find('.js-catalog-detail-main');
+		var thumbs_slider = $(this).find('.js-catalog-detail-thumbs');
+		var prevArrow = $(this).find('.js-catalog-detail-main-prev');
+		var nextArrow = $(this).find('.js-catalog-detail-main-next');
+
+		let thumbsSlider = new Swiper(thumbs_slider[0], {
+			spaceBetween: 10,
+			slidesPerView: 3,
+			watchSlidesProgress: true,
+			navigation: false,
+			pagination: false,
+			breakpoints: {
+				480: {
+					slidesPerView: 3,
+					spaceBetween: 10,
+				},
+				640: {
+					slidesPerView: 4,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 5,
+					spaceBetween: 19,
+				}
+			}
+		});
+
+		let mainSlider = new Swiper(main_slider[0], {
+			spaceBetween: 10,
+			slidesPerView: 1,
+			autoHeight: true,
+			thumbs: {
+				swiper: thumbsSlider,
+			},
+			navigation: {
+				nextEl: nextArrow[0],
+				prevEl: prevArrow[0]
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 1,
+				}
+			},
+			pagination: false
+		});
+	})
+
+	$('.js-product-slider').each(function () {
+		let slider = $(this).find('.swiper');
+		if (slider.length > 0){
+			let prevArrow = $(this).find('.js-products-slider-prev');
+			let nextArrow = $(this).find('.js-products-slider-next');
+
+			let mainSlider = new Swiper(slider[0], {
+				slidesPerView: 1,
+				spaceBetween: 14,
+				watchSlidesProgress: true,
+				pagination: false,
+				loop: true,
+				navigation: {
+					nextEl: nextArrow[0],
+					prevEl: prevArrow[0]
+				},
+				breakpoints: {
+					768: {
+						slidesPerView: 2,
+					},
+					1100: {
+						slidesPerView: 3,
+					},
+					1440: {
+						slidesPerView: 4,
+					}
+				}
+			});
+		}
+	})
+
 });

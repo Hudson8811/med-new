@@ -1,0 +1,189 @@
+extends ../layouts/default
+
+block variables
+	- const title = "New Page";
+
+block content
+	.md-pagination
+		.container
+			.md-pagination-flex
+				.md-pagination-item
+					a(href="")
+						span  Главная
+				.md-pagination-item
+					a(href="")
+						span  Каталог
+				.md-pagination-item
+					a(href="")
+						span  Мониторинг пациента
+				.md-pagination-item
+					span Ультразвуковой сканер Samsung Medison HS40 Ультразвуковой сканер Samsung Medison HS40
+
+
+	section.layout-catalog-detail-section
+		.container
+			.layout-catalog-detail
+				.layout-catalog-detail__main
+					.layout-catalog-detail__top
+						h1.catalog-detail__title Ультразвуковой сканер Samsung Medison HS40 Ультразвуковой сканер Samsung Medison HS40
+						.catalog-detail-information
+							.catalog-detail-information__item
+								span Артикул:
+								span 003279
+							.catalog-detail-information__item
+								span Наличие:
+								span под заказ
+						.catalog-detail-properties
+							.catalog-detail-properties__top
+								a.catalog-detail-properties__btn(href="#")
+									span Характеристики
+									svg(width="14px" height="14px")
+										use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+								a.catalog-detail-properties__btn(href="#")
+									svg(width="18px" height="18px")
+										use(xlink:href="img/sprites/sprite.svg#catalog-detail-description")
+									span Описание товара
+								
+							.catalog-detail-properties__wrapper
+								.catalog-detail-property
+									.catalog-detail-property__name Материал
+									.catalog-detail-property__value 003279
+								.catalog-detail-property
+									.catalog-detail-property__name Цвет
+									.catalog-detail-property__value Серый
+								.catalog-detail-property
+									.catalog-detail-property__name Диаметр проводника, мм: 
+									.catalog-detail-property__value 0,5
+								.catalog-detail-property
+									.catalog-detail-property__name Длина рабочей части, мм:
+									.catalog-detail-property__value 15
+
+					.layout-catalog-detail__bottom
+						.catalog-detail__price
+							span Цена
+							span.catalog-detail__price-value
+								span По запросу
+								svg(width="12px" height="12px")
+									use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+						.catalog-detail__btns
+							a.btn-arrow.btn-arrow--catalog-detail(href="#")
+								span
+									span Добавить в корзину
+								svg
+									use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+							a.btn-arrow.btn-arrow--blue.btn-arrow--orange-svg.btn-arrow--catalog-detail(href="#")
+								span
+									span Заказать звонок
+								svg
+									use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+							a.btn-arrow.btn-arrow--dark-grey.btn-arrow--orange-svg.btn-arrow--catalog-detail(href="#")
+								span
+									span Запросить КП
+								svg
+									use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+
+
+				.layout-catalog-detail__slider
+					.catalog-detail-slider.js-catalog-detail
+						.catalog-detail-slider__main.swiper.js-catalog-detail-main
+							.catalog-detail-slider__wrapper.swiper-wrapper
+								each val in ['catalog-detail-1.png','catalog-detail-2.jpg','catalog-detail-2.png','catalog-detail-4.png','catalog-detail-1.png','catalog-detail-2.jpg']
+									.catalog-detail-slider__slide.swiper-slide
+										img(src="img/catalog/" + val, alt="")
+						.catalog-detail-slider__thumbs.swiper.js-catalog-detail-thumbs
+							.catalog-detail-slider__thumbs-wrapper.swiper-wrapper
+								each val in ['catalog-detail-1.png','catalog-detail-2.jpg','catalog-detail-2.png','catalog-detail-4.png','catalog-detail-1.png','catalog-detail-2.jpg']
+									.catalog-detail-slider__thumbs-slide.swiper-slide
+										img(src="img/catalog/" + val, alt="")
+			.consultation-banner
+				.consultation-banner__title Бесплатная консультация по подбору оборудования 
+				.consultation-banner__btn
+					a.btn-arrow(href="#")
+						span
+							span Получить консультацию
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+
+			.detail-tabs
+				.detail-tabs__head
+					.detail-tabs__head-item Описание
+					.detail-tabs__head-item Характеристики
+					.detail-tabs__head-item Таблица размеров
+					.detail-tabs__head-item Документы
+				.detail-tabs__body
+
+			.products-slider.catalog-detail__similar-products.js-product-slider
+				.products-slider__top
+					.products-slider__title Похожие товары
+					.products-slider__navigation
+						.products-slider__nav.products-slider__nav--prev.js-products-slider-prev
+						.products-slider__nav.products-slider__nav--next.js-products-slider-next
+				.products-slider__wrapper
+					.swiper
+						.swiper-wrapper
+							- for (var x = 0; x < 5; x++)
+								.swiper-slide.product-preview
+									.product-preview__inner
+										.product-preview__label Новинка
+										a.product-preview__img(href="#")
+											img(src="img/product-img-1.jpg" alt="")
+										.product-preview__bottom
+											a.product-preview__title(href="#") Трубки эндотрахеальные
+											.product-preview__price 138 000 руб
+											.product-preview__text Эндотрахеальные трубки MEDEREN изготовлены из термопластичного ПВХ, способного «подстраиваться» под форму
+											.product-preview__btns
+												a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--blue
+													| Подробнее
+													.btn-circle__icon
+												a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--orange(href="")
+													| В корзину
+													.btn-circle__icon
+
+				.products-slider__btn
+					a.btn-arrow(href="javascript:;")
+						span Посмотреть все
+						svg
+							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+
+			.similar-form
+				.similar-form__title Не нашли подходящий товар? Поможем подобрать аналог
+				.similar-form__wrapper
+					.similar-form__input
+						input.simple-input.simple-input--similar-form(type="text" placeholder="Ваше имя")
+					.similar-form__input
+						input.simple-input.simple-input--similar-form(type="text" placeholder="Электронный адрес")
+					.similar-form__input
+						input.simple-input.simple-input--similar-form(type="text" placeholder="Номер телефона")
+					.similar-form__input
+						button.btn-arrow.btn-arrow--size-for-form(type="submit")
+							span Отправить
+							svg
+								use(xlink:href="img/sprites/sprite.svg#submit-btn-arrow")
+									
+			.products-slider.catalog-detail__viewed-products.js-product-slider
+				.products-slider__top
+					.products-slider__title Просмотренные товары
+					.products-slider__navigation
+						.products-slider__nav.products-slider__nav--prev.js-products-slider-prev
+						.products-slider__nav.products-slider__nav--next.js-products-slider-next
+				.products-slider__wrapper
+					.swiper
+						.swiper-wrapper
+							- for (var x = 0; x < 5; x++)
+								.swiper-slide.product-preview
+									.product-preview__inner
+										.product-preview__label Новинка
+										a.product-preview__img(href="#")
+											img(src="img/product-img-1.jpg" alt="")
+										.product-preview__bottom
+											a.product-preview__title(href="#") Трубки эндотрахеальные
+											.product-preview__price 138 000 руб
+											.product-preview__text Эндотрахеальные трубки MEDEREN изготовлены из термопластичного ПВХ, способного «подстраиваться» под форму
+											.product-preview__btns
+												a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--blue
+													| Подробнее
+													.btn-circle__icon
+												a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--orange(href="")
+													| В корзину
+													.btn-circle__icon
+

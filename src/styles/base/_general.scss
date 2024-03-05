@@ -153,11 +153,24 @@ label{
 		}
 	}
 
-	&--dark-grey{
+	&--dark-grey {
 		background: #BFC7D3;
 		color: $mainColor;
 		&::after {
 			background: #BFC7D3;
+		}
+	}
+
+	&--blue {
+		background: $mainColor;
+		&::after {
+			background: $mainColor;
+		}
+	}
+
+	&--orange-svg {
+	 	svg {
+			color: $orange;
 		}
 	}
 
