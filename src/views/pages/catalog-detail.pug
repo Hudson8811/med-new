@@ -104,13 +104,99 @@ block content
 						svg
 							use(xlink:href="img/sprites/sprite.svg#btn-arrow")
 
-			.detail-tabs
+			.detail-tabs.js-detail-tabs
 				.detail-tabs__head
-					.detail-tabs__head-item Описание
-					.detail-tabs__head-item Характеристики
-					.detail-tabs__head-item Таблица размеров
-					.detail-tabs__head-item Документы
+					.detail-tabs__head-item(data-container-id="text")
+						span Описание
+					.detail-tabs__head-item(data-container-id="proprties").detail-tabs__head-item--active
+						span Характеристики
+					.detail-tabs__head-item(data-container-id="table-size")
+						span Таблица размеров
+					.detail-tabs__head-item(data-container-id="documents")
+						span Документы
 				.detail-tabs__body
+					.detail-tabs__tab(data-container="text")
+						.tab-text
+							.tab-text__wrapper
+								p Text
+					.detail-tabs__tab.detail-tabs__tab--active(data-container="proprties")
+						.tab-proprties
+							.tab-proprties__title Технические характеристики
+							.tab-proprties__wrapper
+								- for (var x = 0; x < 4; x++)
+									.tab-proprties__item
+										.tab-proprties__item-name
+											span Материал:
+											span
+										.tab-proprties__item-value Материал изготовления иглы и стилета: нержавеющая сталь
+									.tab-proprties__item
+										.tab-proprties__item-name
+											span Материал:
+											span
+										.tab-proprties__item-value
+											span Материал изготовления павильона: прозрачный АБС- пластик
+									.tab-proprties__item
+										.tab-proprties__item-name
+											span Диаметры:
+											span
+										.tab-proprties__item-value
+											span 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 29G
+									.tab-proprties__item
+										.tab-proprties__item-name
+											span Длины рабочей части иглы:
+											span
+										.tab-proprties__item-value 0, 75, 90, 103, 120 мм
+
+					.detail-tabs__tab(data-container="table-size")
+						.tab-table-size
+							.tab-table-size__head
+								.tab-table-size__head-item Кат. №
+								.tab-table-size__head-item Размер, G
+								.tab-table-size__head-item Ø, мм
+								.tab-table-size__head-item Длина, мм
+								.tab-table-size__head-item Длина, дюймы
+								.tab-table-size__head-item Цветокодировка
+								.tab-table-size__head-item Заказать в кол-ве
+							.tab-table-size__wrapper
+								- for (var x = 0; x < 6; x++)
+									.tab-table-size__item
+										.tab-table-size__col 003279
+										.tab-table-size__col 18G
+										.tab-table-size__col 1.25
+										.tab-table-size__col 75
+										.tab-table-size__col 3°
+										.tab-table-size__col Розовый
+										.tab-table-size__counter
+											button.tab-table-size__counter-minus
+												svg
+													use(xlink:href="img/sprites/sprite.svg#catalog-cart-minus")
+											.tab-table-size__counter-input-wrap
+												input(type="string" value='01' readonly).tab-table-size__counter-input
+											button.tab-table-size__counter-plus
+												svg
+													use(xlink:href="img/sprites/sprite.svg#catalog-cart-plus")
+
+					.detail-tabs__tab(data-container="documents")
+						.tab-documents
+							.tab-documents__head
+								.tab-documents__head-item Название
+								.tab-documents__head-item Размер
+								.tab-documents__head-item
+							.tab-documents__wrapper
+								- for (var x = 0; x < 7; x++)
+									.tab-documents__item
+										.tab-documents__col
+											.tab-documents__icon
+												svg(width="61px" height="61px")
+													use(xlink:href="img/sprites/sprite.svg#catalog-file-pdf")
+											.tab-documents__title Voluptas sit aspernatur aut odit aut fugit
+										.tab-documents__col
+											.tab-documents__size 3,5 Мб
+										.tab-documents__col
+											a.tab-documents__link(href="#")
+												span Скачать
+												svg(width="10px" height="12px")
+													use(xlink:href="img/sprites/sprite.svg#catalog-file-download")
 
 			.products-slider.catalog-detail__similar-products.js-product-slider
 				.products-slider__top
@@ -159,7 +245,7 @@ block content
 							span Отправить
 							svg
 								use(xlink:href="img/sprites/sprite.svg#submit-btn-arrow")
-									
+
 			.products-slider.catalog-detail__viewed-products.js-product-slider
 				.products-slider__top
 					.products-slider__title Просмотренные товары
