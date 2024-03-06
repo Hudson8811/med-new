@@ -1,0 +1,160 @@
+extends ../layouts/default
+
+block variables
+	- const title = "New Page";
+
+block content
+	.md-pagination
+		.container
+			.md-pagination-flex
+				.md-pagination-item
+					a(href="")
+						span  Главная
+				.md-pagination-item
+					span Корзина
+
+
+	section.layout-wsb-section.basket-section
+		.container
+			h1.typical-h1.typical-h1--basket Корзина
+			.layout-wsb
+				.layout-wsb__main
+					.basket-section__wrapper
+						- for (var x = 0; x < 4 ; x++)
+							.basket-item
+								.basket-item__left
+									.basket-item__img(href="#")
+										img(src="img/product-img-1.jpg" alt="")
+									.basket-item__info
+										.basket-item__label Новинка
+										.basket-item__title Наркозно-дыхательный аппарат высокого классаPractice 3100
+								.basket-item__right
+									.basket-item__counter
+										button.basket-item__counter-minus
+											svg
+												use(xlink:href="img/sprites/sprite.svg#catalog-cart-minus")
+										input(type="string" value='01' readonly).basket-item__counter-input
+										button.basket-item__counter-plus
+											svg
+												use(xlink:href="img/sprites/sprite.svg#catalog-cart-plus")
+									.basket-item__sum
+										span 1 600 000 руб
+									.basket-item__btn
+										button.basket-item__remove
+											svg
+												use(xlink:href="img/sprites/sprite.svg#catalog-cart-plus")
+
+
+					.products-slider.basket-section__slider-products.js-product-basket-slider
+						.products-slider__top
+							.products-slider__title
+								| Вам может быть 
+								br
+								| интересно
+							.products-slider__navigation
+								.products-slider__nav.products-slider__nav--prev.js-products-slider-prev
+								.products-slider__nav.products-slider__nav--next.js-products-slider-next
+						.products-slider__wrapper
+							.swiper
+								.swiper-wrapper
+									- for (var x = 0; x < 5; x++)
+										.swiper-slide.product-preview
+											.product-preview__inner
+												.product-preview__label Новинка
+												a.product-preview__img(href="#")
+													img(src="img/product-img-1.jpg" alt="")
+												.product-preview__bottom
+													a.product-preview__title(href="#") Трубки эндотрахеальные
+													.product-preview__price 138 000 руб
+													.product-preview__text Эндотрахеальные трубки MEDEREN изготовлены из термопластичного ПВХ, способного «подстраиваться» под форму
+													.product-preview__btns
+														a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--blue
+															| Подробнее
+															.btn-circle__icon
+														a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--orange(href="")
+															| В корзину
+															.btn-circle__icon
+
+						.products-slider__btn
+							a.btn-arrow(href="javascript:;")
+								span Посмотреть все
+								svg
+									use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+
+					.products-slider.basket-section__slider-products.js-product-basket-slider
+						.products-slider__top
+							.products-slider__title Акции
+							.products-slider__navigation
+								.products-slider__nav.products-slider__nav--prev.js-products-slider-prev
+								.products-slider__nav.products-slider__nav--next.js-products-slider-next
+						.products-slider__wrapper
+							.swiper
+								.swiper-wrapper
+									- for (var x = 0; x < 5; x++)
+										.swiper-slide.product-preview
+											.product-preview__inner
+												.product-preview__label Новинка
+												a.product-preview__img(href="#")
+													img(src="img/product-img-1.jpg" alt="")
+												.product-preview__bottom
+													a.product-preview__title(href="#") Трубки эндотрахеальные
+													.product-preview__price 138 000 руб
+													.product-preview__text Эндотрахеальные трубки MEDEREN изготовлены из термопластичного ПВХ, способного «подстраиваться» под форму
+													.product-preview__btns
+														a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--blue
+															| Подробнее
+															.btn-circle__icon
+														a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--orange(href="")
+															| В корзину
+															.btn-circle__icon
+
+						.products-slider__btn
+							a.btn-arrow(href="javascript:;")
+								span Посмотреть все
+								svg
+									use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+
+					.products-slider.basket-section__slider-products.js-product-basket-slider
+						.products-slider__top
+							.products-slider__title Новинки и спецпредложения
+							.products-slider__navigation
+								.products-slider__nav.products-slider__nav--prev.js-products-slider-prev
+								.products-slider__nav.products-slider__nav--next.js-products-slider-next
+						.products-slider__wrapper
+							.swiper
+								.swiper-wrapper
+									- for (var x = 0; x < 5; x++)
+										.swiper-slide.product-preview
+											.product-preview__inner
+												.product-preview__label Новинка
+												a.product-preview__img(href="#")
+													img(src="img/product-img-1.jpg" alt="")
+												.product-preview__bottom
+													a.product-preview__title(href="#") Трубки эндотрахеальные
+													.product-preview__price 138 000 руб
+													.product-preview__text Эндотрахеальные трубки MEDEREN изготовлены из термопластичного ПВХ, способного «подстраиваться» под форму
+													.product-preview__btns
+														a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--blue
+															| Подробнее
+															.btn-circle__icon
+														a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--orange(href="")
+															| В корзину
+															.btn-circle__icon
+
+						.products-slider__btn
+							a.btn-arrow(href="javascript:;")
+								span Посмотреть все
+								svg
+									use(xlink:href="img/sprites/sprite.svg#btn-arrow")
+
+
+				.layout-wsb_sidebar
+					.lwsb-sidebar
+						.basket-section__order
+							.basket-section__order-title Итого:
+							.basket-section__order-sum
+								span 1 600 000 руб
+							a.btn-arrow.btn-arrow--order(href="javascript:;")
+								span Оформить заказ
+								svg
+									use(xlink:href="img/sprites/sprite.svg#small-circle-btn-arrow")
