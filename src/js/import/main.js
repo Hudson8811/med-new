@@ -303,12 +303,37 @@ jQuery(function ($) {
 
 	});
 
-
-	$('.main-catalog').each(function () {
+	$('.js-home-partners-slider').each(function () {
 		let slider = $(this).find('.swiper');
 		if (slider.length > 0){
-			let prevArrow = $(this).find('.swiper-button-prev');
-			let nextArrow = $(this).find('.swiper-button-next');
+
+			let mainSlider = new Swiper(slider[0], {
+				slidesPerView: 1,
+				spaceBetween: 30,
+				watchSlidesProgress: true,
+				pagination: false,
+				loop: true,
+				breakpoints: {
+					768: {
+						slidesPerView: 3,
+					},
+					1100: {
+						slidesPerView: 5,
+					},
+					1440: {
+						slidesPerView: 6,
+					}
+				}
+			});
+		}
+	})
+
+
+	$('.js-home-product-slider').each(function () {
+		let slider = $(this).find('.swiper');
+		if (slider.length > 0){
+			let prevArrow = $(this).find('.section__slider-nav--prev');
+			let nextArrow = $(this).find('.section__slider-nav--next');
 
 			let mainSlider = new Swiper(slider[0], {
 				slidesPerView: 1,
@@ -329,6 +354,68 @@ jQuery(function ($) {
 					},
 					1440: {
 						slidesPerView: 4,
+					}
+				}
+			});
+		}
+	})
+
+	$('.js-home-clients-slider').each(function () {
+		let slider = $(this).find('.swiper');
+		if (slider.length > 0){
+			let prevArrow = $(this).find('.section__slider-nav--prev');
+			let nextArrow = $(this).find('.section__slider-nav--next');
+
+			let mainSlider = new Swiper(slider[0], {
+				slidesPerView: 1,
+				spaceBetween: 26,
+				watchSlidesProgress: true,
+				pagination: false,
+				loop: true,
+				navigation: {
+					nextEl: nextArrow[0],
+					prevEl: prevArrow[0]
+				},
+				breakpoints: {
+					768: {
+						slidesPerView: 2,
+					},
+					1100: {
+						slidesPerView: 3,
+					},
+					1440: {
+						slidesPerView: 4,
+					}
+				}
+			});
+		}
+	})
+
+	$('.js-home-news-slider').each(function () {
+		let slider = $(this).find('.swiper');
+		if (slider.length > 0){
+			let prevArrow = $(this).find('.section__slider-nav--prev');
+			let nextArrow = $(this).find('.section__slider-nav--next');
+
+			let mainSlider = new Swiper(slider[0], {
+				slidesPerView: 1,
+				spaceBetween: 20,
+				watchSlidesProgress: true,
+				pagination: false,
+				loop: true,
+				navigation: {
+					nextEl: nextArrow[0],
+					prevEl: prevArrow[0]
+				},
+				breakpoints: {
+					768: {
+						slidesPerView: 2,
+					},
+					1100: {
+						slidesPerView: 3,
+					},
+					1440: {
+						slidesPerView: 3,
 					}
 				}
 			});
