@@ -203,6 +203,7 @@ jQuery(function ($) {
 		var format=rs.attr('data-format');
 		var step=rs.attr('data-step');
 
+
 		if(isNaN(min)){
 			min=0;
 		}
@@ -251,15 +252,28 @@ jQuery(function ($) {
 
 		var slider=noUiSlider.create(rs_range[0], slider_params);
 
+		var timer;
+		var delay = 100;
+
 		slider.on('update', function (values, handle) {
 
 			var value = values[handle];
 
 			if (handle===0) {
 				rs_inp_l[0].value = value;
+
+				window.clearTimeout(timer);
+				timer = window.setTimeout(function(){
+					$(rs_inp_l[0]).trigger( 'change' );	
+				}, delay);
 			}
 			else if (handle===1) {
 				rs_inp_r[0].value = value;
+				
+				window.clearTimeout(timer);
+				timer = window.setTimeout(function(){
+					$(rs_inp_r[0]).trigger( 'change' );
+				}, delay);
 			}
 		});
 		rs_inp_l[0].addEventListener('change', function () {
