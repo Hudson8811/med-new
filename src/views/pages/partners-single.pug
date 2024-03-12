@@ -48,52 +48,37 @@ block content
 										.lslider-main-slide.swiper-slide
 											img(src="img/partners/partners_single_pic.jpg", alt="")
 
-					.cards-slider.swiper.js-cards-slider
-						.cards-slider-top
-							.cards-slider-top__title.typical-h1--small Можешь допилить или заменить. Это набросок на базе блока из news-single.html
-							.cards-slider-top__buttons.cards-slider-top__buttons--no-mt.cards-slider-buttons
-									.laslider-main-button.laslider-main-button--prev.js-cards-slider-prev
-									.laslider-main-button.laslider-main-button--next.js-cards-slider-next
-						.cards-slider-wrapper.swiper-wrapper
-							each val in [1,2,3]
-								.cards-slider-slide.swiper-slide
-									a.news-list-card.news-list-card--for-slider(href="")
-										.news-list-card__pic
-											img(src="/img/news/card.jpg", alt="")
-										.news-list-card__main
-											.news-list-card__text Lacinia, diam interdum feugiat suscipit, velit sapien volutpat quam, at elementum lorem dui non sem
-											.news-list-card__date 3 января 2023
-								.cards-slider-slide.swiper-slide
-									a.news-list-card.news-list-card--for-slider(href="")
-										.news-list-card__pic
-											img(src="/img/news/card.jpg", alt="")
-										.news-list-card__main
-											.news-list-card__text Lacinia
-											.news-list-card__date 3 января 2023
 
 
-					.cards-slider.swiper.js-cards-slider
-						.cards-slider-top
-							.cards-slider-top__title.typical-h1--small Можешь допилить или заменить. Это набросок на базе блока из news-single.html
-							.cards-slider-top__buttons.cards-slider-top__buttons--no-mt.cards-slider-buttons
-									.laslider-main-button.laslider-main-button--prev.js-cards-slider-prev
-									.laslider-main-button.laslider-main-button--next.js-cards-slider-next
-						.cards-slider-wrapper.swiper-wrapper
-							each val in [1,2,3]
-								.cards-slider-slide.swiper-slide
-									a.news-list-card.news-list-card--for-slider(href="")
-										.news-list-card__pic
-											img(src="/img/news/card.jpg", alt="")
-										.news-list-card__main
-											.news-list-card__text Lacinia, diam interdum feugiat suscipit, velit sapien volutpat quam, at elementum lorem dui non sem
-											.news-list-card__date 3 января 2023
-								.cards-slider-slide.swiper-slide
-									a.news-list-card.news-list-card--for-slider(href="")
-										.news-list-card__pic
-											img(src="/img/news/card.jpg", alt="")
-										.news-list-card__main
-											.news-list-card__text Lacinia
-											.news-list-card__date 3 января 2023
+
+					each val in ['Анестезиология и реанимация','Хирургия','Becton Dickinson','Becton Dickinson','Becton Dickinson']
+						.products-slider.partners__slider-products.js-product-partners-slider
+							.products-slider__top
+								.products-slider__title.products-slider__title--partners= val
+								.products-slider__navigation
+									.products-slider__nav.products-slider__nav--prev.js-products-slider-prev
+									.products-slider__nav.products-slider__nav--next.js-products-slider-next
+							.products-slider__wrapper
+								.swiper
+									.swiper-wrapper
+										- for (var x = 0; x < 5; x++)
+											.swiper-slide.product-preview
+												.product-preview__inner
+													.product-preview__top
+														.product-preview__label Новинка
+														a.product-preview__img(href="#")
+															img(src="img/product-img-1.jpg" alt="")
+														a.product-preview__title(href="#") Трубки эндотрахеальные
+														.product-preview__price 138 000 руб
+														.product-preview__text Эндотрахеальные трубки MEDEREN изготовлены из термопластичного ПВХ, способного «подстраиваться» под форму
+													.product-preview__bottom
+														.product-preview__btns
+															a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--blue
+																| Подробнее
+																.btn-circle__icon
+															a.product-preview__btn.btn-circle.btn-circle--small-h32.btn-circle--orange(href="")
+																| В корзину
+																.btn-circle__icon
 
 
 

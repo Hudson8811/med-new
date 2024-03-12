@@ -18,8 +18,60 @@ block content
 		.container
 			.layout-wsb
 				.layout-wsb__main
-					h1.typical-h1 Контакты
+					.contacts
+						h1.typical-h1 Контакты
+						.contacts__map
+							.contacts__map-wrapper
+						.contacts-offices
+							.contacts-offices__item.contacts-offices__item--active(data-coords='59.992339, 30.278166')
+								.contacts-offices__icon
+									svg
+										use(xlink:href="img/sprites/sprite.svg#contacts-map")
+								.contacts-offices__adress 
+									span Главный офис: г. Санкт-Петербург, ул. Полевая Сабировская, д 43, лит.Б
+							.contacts-offices__item(data-coords='55.735241, 37.626861')
+								.contacts-offices__icon
+									svg
+										use(xlink:href="img/sprites/sprite.svg#contacts-map")
+								.contacts-offices__adress 
+									span Генеральное представительство, Москва, ул. Пятницкая 50с 5
+							.contacts-offices__item(data-coords='56.819971, 60.554517')
+								.contacts-offices__icon
+									svg
+										use(xlink:href="img/sprites/sprite.svg#contacts-map")
+								.contacts-offices__adress 
+									span г. Екатеринбург, ул. Начдива Васильева, 3, оф.204
+							.contacts-offices__item(data-coords='45.052282, 38.988454')
+								.contacts-offices__icon
+									svg
+										use(xlink:href="img/sprites/sprite.svg#contacts-map")
+								.contacts-offices__adress 
+									span г. Краснодар, ул. Колхозная, д. 53/2
+							.contacts-offices__item(data-coords='53.1982769, 50.1535825,21')
+								.contacts-offices__icon
+									svg
+										use(xlink:href="img/sprites/sprite.svg#contacts-map")
+								.contacts-offices__adress 
+									span г. Самара , пр-т Карла Маркса 59А
 
+						.contacts-form
+							.contacts-form__title Заказать звонок
+							form.contacts-form__wrapper
+								.contacts-form__top
+									.contacts-form__input
+										input.simple-input.simple-input--similar-form(type="text" placeholder="Ваше имя")
+									.contacts-form__input
+										input.simple-input.simple-input--similar-form(type="text" placeholder="Электронный адрес")
+									.contacts-form__input
+										input.simple-input.simple-input--similar-form(type="text" placeholder="Телефон")
+								.contacts-form__bottom
+									.contacts-form__btn
+										button.btn-arrow.btn-arrow--size-for-form(type="submit")
+											span Отправить
+											svg
+												use(xlink:href="img/sprites/sprite.svg#submit-btn-arrow")
+									.contacts-form__text
+										span Заполняя данную форму вы даете согласие на обработку своих персональных данных.
 
 
 				.layout-wsb_sidebar

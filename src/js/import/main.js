@@ -585,4 +585,35 @@ jQuery(function ($) {
 			});
 		}
 	})
+
+	$('.js-product-partners-slider').each(function () {
+		let slider = $(this).find('.swiper');
+		if (slider.length > 0){
+			let prevArrow = $(this).find('.js-products-slider-prev');
+			let nextArrow = $(this).find('.js-products-slider-next');
+
+			let mainSlider = new Swiper(slider[0], {
+				slidesPerView: 1,
+				spaceBetween: 14,
+				watchSlidesProgress: true,
+				pagination: false,
+				loop: false,
+				navigation: {
+					nextEl: nextArrow[0],
+					prevEl: prevArrow[0]
+				},
+				breakpoints: {
+					768: {
+						slidesPerView: 2,
+					},
+					1100: {
+						slidesPerView: 3,
+					},
+					1440: {
+						slidesPerView: 3,
+					}
+				}
+			});
+		}
+	})
 });

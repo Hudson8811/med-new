@@ -1223,6 +1223,11 @@
 		font-size: 60px;
 		font-weight: 700;
 		line-height: 72%;
+
+		&--partners {
+			font-size: 40px;
+			line-height: 40px;
+		}
 	}
 	&__navigation {
 		display: flex;
@@ -1273,7 +1278,7 @@
 			opacity: .8;
 		}
 		&.swiper-button-disabled{
-			opacity: 0;
+			opacity: 20%;
 			pointer-events: none;
 		}
 	}

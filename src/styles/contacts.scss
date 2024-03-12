@@ -1,0 +1,120 @@
+.contacts {
+    &__map {
+        margin-top: 56px;
+        height: 740px;
+        border-radius: 48px;
+        background: #FF6A3D;
+        overflow: hidden;
+
+        &-wrapper {
+        }
+    }
+    &-offices {
+        max-width: 992px;
+        margin: 0 auto;
+        margin-top: -174px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        padding: 20px;
+		border-radius: 42px;
+		background: #FFF;
+		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08), 0 0 4px 0 rgba(0, 0, 0, 0.04);
+
+        &__item {
+            border-radius: 30px;
+            background: #E8EBEF;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 254px;
+            flex: 1 1 calc(30% - 10px);
+            box-sizing: border-box;
+            padding: 16px 22px 24px 22px ;
+            transition: all 0.2s;
+            cursor: pointer;
+            user-select: none;
+    
+            &--active,
+            &:hover {
+                background: #FF6A3D;
+
+                & span {
+                    color: white;
+                }
+            }
+            &--active {
+                cursor: default;
+            }
+        }
+
+        &__icon {
+            width: 75px;
+			height: 75px;
+			box-sizing: border-box;
+			border-radius: 50%;
+			background: #ffffff;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			img, svg{
+				max-width: 30px;
+				max-height: 30px;
+				display: block;
+				object-fit: contain;
+			}
+        }
+        &__adress {
+            max-width: 230px;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+			color: $mainColor;
+        }
+    }
+    &-form {
+        max-width: 992px;
+        margin: 26px auto 0 auto;
+        background: #193762;
+        border-radius: 55px;
+        padding: 28px 32px 54px 32px;
+
+        &__title {
+            color: white;
+            font-weight: 700;
+            font-size: 50px;
+            line-height: 47px;
+
+            max-width: 931px;
+            margin-bottom: 46px;
+        }
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 47px;
+        }
+        &__top {
+            display: flex;
+            gap: 14px;
+        }
+        &__bottom {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+        &__input {
+            width: 100%;
+        }
+        &__btn {
+            width: 452px;
+        }
+        &__text {
+            width: 234px;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 18px;
+            text-align: left;
+            color: white;
+        }
+    }
+}

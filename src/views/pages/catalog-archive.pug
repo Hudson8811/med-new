@@ -123,8 +123,8 @@ block content
 									.filter-accordion__body-inner
 										.rs-block.custom-style-rs.js-range-slider(data-min="0" data-max="500" data-format="int" data-step="1"/* data-start-left data-start-right*/)
 											.rs-block__top
-												input.rs-block__inp.rs-block__inp-left.js-range-slider__inp-left(type="text")
-												input.rs-block__inp.rs-block__inp-right.js-range-slider__inp-right(type="text")
+												input.rs-block__inp.rs-block__inp-left.js-range-slider__inp-left(type="text" onchange="console.log('change min')")
+												input.rs-block__inp.rs-block__inp-right.js-range-slider__inp-right(type="text" onchange="console.log('change max')")
 											.rs-block__bottom
 												.rs-block__rs.js-range-slider__range
 
