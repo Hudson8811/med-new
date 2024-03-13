@@ -322,22 +322,20 @@ jQuery(function ($) {
 		if (slider.length > 0){
 
 			let mainSlider = new Swiper(slider[0], {
-				slidesPerView: 1,
 				spaceBetween: 30,
-				watchSlidesProgress: true,
-				pagination: false,
+				speed: 2000,
+				freeMode: true,
 				loop: true,
-				breakpoints: {
-					768: {
-						slidesPerView: 3,
-					},
-					1100: {
-						slidesPerView: 5,
-					},
-					1440: {
-						slidesPerView: 6,
-					}
-				}
+				pagination: false,
+				// centeredSlides: true,
+				slidesPerView: 'auto',
+				// setWrapperSize: true,
+				allowTouchMove: false,
+				autoplay: {
+					delay: 0,
+					// reverseDirection: true,
+					disableOnInteraction: false,
+				},
 			});
 		}
 	})
