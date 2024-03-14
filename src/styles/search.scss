@@ -144,7 +144,28 @@
         flex-direction: column;
         justify-content: space-between;
     }
-    &__info-top {}
+	&__breadcrumbs {
+		display: flex;
+		gap: 0.2083333333vw;
+		margin-bottom: 6px;
+
+		&-item {
+			font-size: .625vw;
+			line-height: 1.225;
+			font-weight: 600;
+			text-transform: uppercase;
+			color: $mainColor;
+			
+			& a {
+				color: $mainColor;
+				text-decoration: none;
+			}
+
+			&--current {
+				opacity: .16;
+			}
+		}
+	}
     &__title {
         color: $mainColor;
 		font-size: 24px;
@@ -170,6 +191,7 @@
 		}
     }
     &__text {
+		margin-top: 22px;
         color: $mainColor;
         font-size: 16px;
         font-weight: 500;
