@@ -142,7 +142,6 @@
         max-width: 900px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
     }
 	&__breadcrumbs {
 		display: flex;
@@ -184,7 +183,8 @@
     &__prop {
         color: $propColor;
 		font-size: 14px;
-
+		margin-bottom: 2px;
+		
 		span:first-child {
 			padding-right: 6px;
 			opacity: 20%;
