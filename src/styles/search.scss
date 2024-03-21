@@ -100,15 +100,29 @@
 		width: 100%;
 		padding: 20px 20px 20px 24px;
 		position: relative;
+
+		@media only screen and (max-width: 800px) {
+			flex-direction: column;
+			gap: 34px;
+		}
     }
     &__left {
         display: flex;
+
+		@media only screen and (max-width: 500px) {
+			flex-direction: column;
+		}
     }
     &__img-wrapper {
         width: 145px;
-		flex-basis: 145px;
+		min-width: 145px;
 		margin-top: 18px;
         margin-right: 36px;
+
+		@media only screen and (max-width: 500px) {
+			width: 160px;
+			margin: 0 auto;
+		}
     }
     &__category {
         color: $orange;
@@ -137,6 +151,10 @@
 			height: 100%;
 			object-fit: contain;
 		}
+
+		@media only screen and (max-width: 500px) {
+			height: 170px;
+		}
     }
     &__info {
         max-width: 900px;
@@ -144,16 +162,17 @@
         flex-direction: column;
     }
 	&__breadcrumbs {
-		display: flex;
-		gap: 0.2083333333vw;
+		display: block;
 		margin-bottom: 6px;
 
 		&-item {
-			font-size: .625vw;
+			font-size: 11px;
 			line-height: 1.225;
 			font-weight: 600;
 			text-transform: uppercase;
 			color: $mainColor;
+			display: inline-block;
+			margin-right: 2px;
 			
 			& a {
 				color: $mainColor;
@@ -201,6 +220,13 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+		@media only screen and (max-width: 800px) {
+			gap: 18px;
+		}
+		@media only screen and (max-width: 500px) {
+			gap: 26px;
+		}
     }
     &__price {
         color: $orange;
@@ -209,20 +235,31 @@
 		line-height: 1;
 		margin-top: 6px;
 		text-align: right;
+		min-width: 206px;
 
 		@media only screen and (max-width: 767px) {
 			font-size: 20px;
 		}
-		@media screen and (max-width:666px) {
+		@media only screen and (max-width: 500px) {
 			text-align: left;
-			margin-bottom: 34px;
 		}
+		
     }
     &__btns {
         display: flex;
         flex-direction: column;
 		align-items: flex-end;
         gap: 20px;
+
+		@media only screen and (max-width: 800px) {
+			flex-direction: row;
+			justify-content: flex-end;
+		}
+
+		@media only screen and (max-width: 500px) {
+			flex-direction: column;
+			gap: 10px;
+		}
     }
     &__btn {
 

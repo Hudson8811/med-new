@@ -8,6 +8,13 @@
 
         &-wrapper {
         }
+
+        @media only screen and (max-width: 750px) {
+            height: 660px;
+        }
+        @media only screen and (max-width: 500px) {
+            height: 550px;
+        }
     }
     &-offices {
         max-width: 992px;
@@ -22,6 +29,12 @@
 		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08), 0 0 4px 0 rgba(0, 0, 0, 0.04);
         position: relative;
         z-index: 100;
+
+        @media only screen and (max-width: 560px) {
+            flex-wrap: nowrap;
+            overflow: hidden;
+            overflow-x: auto;
+        }
 
         &__item {
             border-radius: 30px;
@@ -48,6 +61,11 @@
             &--active {
                 cursor: default;
             }
+
+            @media only screen and (max-width: 1200px) {
+                flex: 1 1 calc(40% - 10px);
+                min-width: 240px;
+            }
         }
 
         &__icon {
@@ -65,6 +83,10 @@
 				display: block;
 				object-fit: contain;
 			}
+
+            @media only screen and (max-width: 560px) {
+                margin-bottom: 20px;
+            }
         }
         &__adress {
             max-width: 230px;
@@ -72,6 +94,10 @@
             font-weight: 500;
             line-height: 24px;
 			color: $mainColor;
+
+            @media only screen and (max-width: 600px) {
+                font-size: 16px;
+            }
         }
     }
     &-form {
@@ -89,6 +115,11 @@
 
             max-width: 931px;
             margin-bottom: 46px;
+        
+            @media only screen and (max-width: 767px) {
+                font-size: 36px;
+                width: 100%;
+            }
         }
         &__wrapper {
             display: flex;
@@ -98,17 +129,36 @@
         &__top {
             display: flex;
             gap: 14px;
+
+            @media only screen and (max-width: 900px) {
+                flex-direction: column;
+            }
         }
         &__bottom {
             display: flex;
             align-items: center;
             gap: 28px;
+
+            @media only screen and (max-width: 600px) {
+                flex-direction: column;
+            }
         }
         &__input {
             width: 100%;
+
+            & input {
+                @media only screen and (max-width: 767px) {
+                    font-size: 16px;
+                    padding: 16px 20px;
+                }
+            }
         }
         &__btn {
             width: 452px;
+
+            @media only screen and (max-width: 600px) {
+                width: 100%;
+            }
         }
         &__text {
             width: 234px;
@@ -117,6 +167,10 @@
             line-height: 18px;
             text-align: left;
             color: white;
+
+            @media only screen and (max-width: 600px) {
+                width: 100%;
+            }
         }
     }
 }
