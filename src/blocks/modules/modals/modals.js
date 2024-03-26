@@ -1,3 +1,4 @@
+
 window.addEventListener('DOMContentLoaded', () => {
 	//Catalog Show
 	let catalogModalShow = document.querySelectorAll('.js-catalog-modal--show');
@@ -18,6 +19,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 			let modal = document.querySelector('.js-catalog-modal');
 			let allActive = modal.querySelectorAll('.active');
+			let mobileSections = modal.querySelectorAll('.hide');
+			if( mobileSections )
+				mobileSections.forEach(e => e.classList.remove('hide'));
 
 			modal.classList.remove("active");
 			allActive.forEach(e => e.classList.remove("active"));
@@ -75,6 +79,50 @@ window.addEventListener('DOMContentLoaded', () => {
 				detailWrapper.classList.remove("active");
 			}
 			
+		});
+	});
+
+	//Catalog Mobile Sections
+	let catalogMobileModalSection = document.querySelectorAll('.js-catalog-mobile--section');
+	Array.from(catalogMobileModalSection).forEach(item => {
+		item.addEventListener('click', (e) => {
+			let target = e.target;
+			let modalContainer = target.closest('.js-catalog-modal');
+			let mobileSections = modalContainer.querySelector('.js-catalog-mobile--sections');
+
+			//Button and section Active
+			while (target.nodeName !== "BUTTON" && e.target.parentNode !== null) target = e.target.parentNode;
+
+			let sectionId = parseInt(target.dataset.section);	
+			let activeProducts = modalContainer.querySelector('.js-catalog-mobile--products.active');
+			if( activeProducts )
+				activeProducts.classList.remove("active");		
+
+			if( sectionId )
+				productsContainer = modalContainer.querySelector('.js-catalog-mobile--products[data-products="' + sectionId + '"]');
+
+			if( productsContainer ){
+
+				mobileSections.classList.add("hide");
+				productsContainer.classList.add("active");
+			}
+		});
+	});
+
+	
+	//Catalog Mobile Sections Back
+	let catalogMobileBack = document.querySelectorAll('.js-catalog-mobile--back');
+	Array.from(catalogMobileBack).forEach(item => {
+		item.addEventListener('click', (e) => {
+			let target = e.target;
+			let modalContainer = target.closest('.js-catalog-modal');
+			let mobileSections = modalContainer.querySelector('.js-catalog-mobile--sections');	
+			let activeProducts = modalContainer.querySelector('.js-catalog-mobile--products.active');
+
+			if( activeProducts )
+				activeProducts.classList.remove("active");		
+
+			mobileSections.classList.remove("hide");
 		});
 	});
 
@@ -139,6 +187,9 @@ window.addEventListener('DOMContentLoaded', () => {
 			
 			let modal = document.querySelector('.js-brands-modal');
 			let allActive = modal.querySelectorAll('.active');
+			let mobileSections = modal.querySelectorAll('.hide');
+			if( mobileSections )
+				mobileSections.forEach(e => e.classList.remove('hide'));
 
 			modal.classList.remove("active");
 			allActive.forEach(e => e.classList.remove("active"));
@@ -204,6 +255,50 @@ window.addEventListener('DOMContentLoaded', () => {
 			} else {
 				detailWrapper.classList.remove("active");
 			}
+		});
+	});
+
+	//Brands Mobile Sections
+	let brandsMobileModalSection = document.querySelectorAll('.js-brands-mobile--section');
+	Array.from(brandsMobileModalSection).forEach(item => {
+		item.addEventListener('click', (e) => {
+			let target = e.target;
+			let modalContainer = target.closest('.js-brands-modal');
+			let mobileSections = modalContainer.querySelector('.js-brands-mobile--sections');
+
+			//Button and section Active
+			while (target.nodeName !== "BUTTON" && e.target.parentNode !== null) target = e.target.parentNode;
+
+			let sectionId = parseInt(target.dataset.section);	
+			let activeProducts = modalContainer.querySelector('.js-brands-mobile--products.active');
+			if( activeProducts )
+				activeProducts.classList.remove("active");		
+
+			if( sectionId )
+				productsContainer = modalContainer.querySelector('.js-brands-mobile--products[data-products="' + sectionId + '"]');
+
+			if( productsContainer ){
+
+				mobileSections.classList.add("hide");
+				productsContainer.classList.add("active");
+			}
+		});
+	});
+
+	
+	//Catalog Mobile Sections Back
+	let brandsMobileBack = document.querySelectorAll('.js-brands-mobile--back');
+	Array.from(brandsMobileBack).forEach(item => {
+		item.addEventListener('click', (e) => {
+			let target = e.target;
+			let modalContainer = target.closest('.js-brands-modal');
+			let mobileSections = modalContainer.querySelector('.js-brands-mobile--sections');	
+			let activeProducts = modalContainer.querySelector('.js-brands-mobile--products.active');
+
+			if( activeProducts )
+				activeProducts.classList.remove("active");		
+
+			mobileSections.classList.remove("hide");
 		});
 	});
 });

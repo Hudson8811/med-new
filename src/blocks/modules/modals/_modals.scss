@@ -23,9 +23,6 @@
     }
 
     &__close {
-        margin-left: 22px;
-        margin-top: 22px;
-
         width: 58px;
         height: 58px;
         border-radius: 50%;
@@ -36,6 +33,10 @@
         cursor: pointer;
         z-index: 100;
 
+        position: absolute;
+        top: 22px;
+        right: 20px;
+
         & svg {
             width: 18px;
             height: 18px;
@@ -45,6 +46,14 @@
     &__wrapper {
         display: flex;
         flex-direction: row;
+        position: relative;
+
+        @media only screen and (max-width: 1620px) {
+            width: max-content;
+        }
+        @media only screen and (max-width: 460px) {
+            width: 100%;
+        }
     }
     &__title {
         max-width: 255px;
@@ -104,12 +113,21 @@
             &::-webkit-scrollbar-thumb:hover {
                 background: #d3d4dd;
             }
+
+            @media only screen and (max-width: 1620px) {
+                display: none;
+            }
         }
 
         &.active {
             .modal-menu__section span{
                 opacity: 20%;
             }
+        }
+
+        @media only screen and (max-width: 460px) {
+            border-radius: unset;
+            padding: 18px 0px 20px 0px;
         }
     }
     &__section {
@@ -194,6 +212,10 @@
                 display: flex;
             }
         }
+
+        @media only screen and (max-width: 1620px) {
+            display: none;
+        }
     }
 
     &__item {
@@ -236,6 +258,10 @@
 
         &.active {
             opacity : 1;
+        }
+
+        @media only screen and (max-width: 1620px) {
+            display: none;
         }
     }
 
@@ -304,6 +330,78 @@
         &.active {
             display: flex;
             flex-direction: column;
+        }
+    }
+
+    &__mobile {
+        overflow-y: auto;
+        height: 100%;
+        width: 380px;
+
+        
+        @media only screen and (max-width: 460px) {
+            width: 100%;
+        }
+
+        &-sections {
+            display: flex;
+            flex-direction: column;
+
+            &.hide {
+                display: none;
+            }
+
+            @media only screen and (min-width: 1620px) {
+                display: none;
+            }
+        }
+        &-products {
+            display: none;
+            flex-direction: column;
+
+            &.active {
+                display: flex;
+            }
+        }
+        &-item {
+            width: 100%;
+            border: none;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24px;
+            color: #d2d7df;
+            padding: 18px 22px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            border-radius: 21px;
+            cursor: pointer;
+            background: none;
+            box-sizing: border-box;
+            text-align: left;
+            gap: 10px;
+
+            & span {
+                user-select: none;
+            }
+            & svg {
+                user-select: none;
+                min-width: 6px;
+                width: 6px;
+                min-height: 10px;
+                height: 10px;
+            }
+
+            &--back {
+                width: auto;
+                justify-content: flex-start;
+                gap: 10px;
+
+                & svg {
+                    rotate: 180deg;
+                }
+            }
         }
     }
 }

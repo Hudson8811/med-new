@@ -305,7 +305,7 @@ jQuery(function ($) {
 	});
 
 	$('.js-trigger-filters-screen').on('click', function () {
-		var sbar=$('.layout-catalog__sidebar');
+		var sbar=$('.js-filter-block');
 		if(sbar.hasClass('layout-catalog__sidebar--active')){
 			$('body').removeClass('scroll-locked')
 			sbar.removeClass('layout-catalog__sidebar--active');
@@ -464,12 +464,16 @@ jQuery(function ($) {
 
 		let thumbsSlider = new Swiper(thumbs_slider[0], {
 			spaceBetween: 10,
-			slidesPerView: 3,
+			slidesPerView: 2,
 			watchSlidesProgress: true,
 			navigation: false,
 			pagination: false,
 			breakpoints: {
-				480: {
+				400: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+				520: {
 					slidesPerView: 3,
 					spaceBetween: 10,
 				},
@@ -478,6 +482,10 @@ jQuery(function ($) {
 					spaceBetween: 10,
 				},
 				768: {
+					slidesPerView: 5,
+					spaceBetween: 19,
+				},
+				3000: {
 					slidesPerView: 5,
 					spaceBetween: 19,
 				}
