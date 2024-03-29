@@ -622,4 +622,24 @@ jQuery(function ($) {
 			});
 		}
 	})
+
+	$(document).on('click', '.js-catalog-detail-proprties--scroll', function (event) {
+		event.preventDefault();
+
+		$('[data-container-id="proprties"]').trigger('click');
+
+		$('html, body').animate({
+			scrollTop: $('[data-container-id="proprties"]').offset().top
+		}, 500);
+	});
+
+	$(document).on('click', '.js-catalog-detail-text--scroll', function (event) {
+		event.preventDefault();
+
+		$('[data-container-id="text"]').trigger('click');
+
+		$('html, body').animate({
+			scrollTop: $('[data-container-id="text"]').offset().top
+		}, 500);
+	});
 });

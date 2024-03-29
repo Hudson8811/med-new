@@ -343,15 +343,15 @@
             width: 100%;
         }
 
+        @media only screen and (min-width: 1620px) {
+            display: none;
+        }
+
         &-sections {
             display: flex;
             flex-direction: column;
 
             &.hide {
-                display: none;
-            }
-
-            @media only screen and (min-width: 1620px) {
                 display: none;
             }
         }

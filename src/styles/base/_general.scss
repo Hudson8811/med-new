@@ -353,23 +353,25 @@ label{
 	}
 	&__title {
 		color: #193762;
-		font-size: 100px;
+		font-size: 72px;
 		font-weight: 700;
 		line-height: 72%;
 		margin-bottom: 60px;
-		word-wrap: break-word;
 
 		&--slider {
 			margin-bottom: 36px;
 		}
 
 		@media only screen and (max-width: 1250px) {
-			font-size: 70px;
+			font-size: 60px;
 		}
 	
 		@media only screen and (max-width: 767px) {
 			font-size: 50px;
 			width: 100%;
+		}
+		@media only screen and (max-width: 480px) {
+			font-size: 36px;
 		}
 	}
 

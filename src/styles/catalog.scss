@@ -52,7 +52,7 @@
 		margin-bottom: 20px;
 	}
 	&__btn{
-		padding: 16px 25px;
+		padding: 16px 16px;
 		 img,  svg {
 			width: 14px;
 			height: 14px;
@@ -91,6 +91,10 @@
 	padding-right: 14px;
 	@media only screen and (max-width: 767px) {
 		padding-right: 0;
+	}
+
+	@media only screen and (max-width: 668px) {
+		display: none;
 	}
 }
 
@@ -416,7 +420,7 @@
 	margin-top: 21px;
 	display: flex;
 	flex-wrap: wrap;
-	margin-left: -14px;
+	justify-content: flex-start;
 	margin-bottom: -20px;
 
 	&__view-list {
@@ -428,23 +432,39 @@
 }
 
 .catalog-card {
-	margin-left: 14px;
-	margin-bottom: 20px;
+	margin-bottom: 24px;
 	width: calc(33.33% - 14px);
+	margin-right: 21px;
+
+	&:nth-child(3n) {
+		margin-right: 0;
+	}
 
 	@media screen and (max-width:1433px) {
 		width: calc(50% - 14px);
+
+		&:nth-child(3n) {
+			margin-right: 20px;
+		}
+
+		&:nth-child(even) {
+			margin-right: 0;
+		}
 	}
 
 	@media only screen and (max-width: 767px) {
-		width: calc(100% - 14px);
+		width: calc(100%);
+		margin-right: 0;
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
 	}
 }
 
 .catalog-list {
-	margin-left: 14px;
 	margin-bottom: 20px;
-	width: calc(100% - 14px);
+	width: 100%;
 
 	@media screen and (max-width:666px) {
 		width: 298px;
@@ -485,7 +505,7 @@
     	justify-content: space-between;
 
 		padding-left: 25px;
-		padding-right: 68px;
+		padding-right: 60px;
 		flex-basis: calc(100% - (145px + 274px));
 
 		&-info {
@@ -1160,6 +1180,8 @@
 		color: $propColor;
 		font-weight: 500;
 		font-size: 20px;
+		background: unset;
+		border: unset;
 
 		text-decoration: none;
     	cursor: pointer;
@@ -1525,6 +1547,10 @@
 .simple-input--similar-form {
 	background: #ffffff33;
     color: white;
+
+	&::placeholder {
+		color: #c1c1c1;
+	}
 
 	@media only screen and (max-width: 767px) {
 		font-size: 16px;

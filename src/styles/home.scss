@@ -38,6 +38,9 @@
 		@media only screen and (max-width: 767px) {
 			font-size: 50px;
 		}
+		@media only screen and (max-width: 480px) {
+			font-size: 36px;
+		}
 	}
 	&__text{
 		color: $mainColor;
@@ -300,6 +303,9 @@
 			font-size: 50px;
 			line-height: 135%;
 		}
+		@media only screen and (max-width: 480px) {
+			font-size: 36px;
+		}
 	}
 	&__right{
 		flex-shrink: 0;
@@ -405,6 +411,10 @@
 		padding-right: 30px;
 		padding-left: 15px;
 		margin-top: 15px;
+
+		@media only screen and (max-width: 480px) {
+			font-size: 26px;
+		}
 	}
 	&__arrow{
 		position: absolute;
