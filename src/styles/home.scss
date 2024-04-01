@@ -23,7 +23,7 @@
 	}
 	&__title{
 		color: $mainColor;
-		font-size: 72px;
+		font-size: 50px;
 		font-style: normal;
 		font-weight: 700;
 		line-height: 89%;
@@ -31,13 +31,6 @@
 			opacity: 0.26;
 		}
 
-		@media only screen and (max-width: 1250px) {
-			font-size: 60px;
-		}
-	
-		@media only screen and (max-width: 767px) {
-			font-size: 50px;
-		}
 		@media only screen and (max-width: 480px) {
 			font-size: 36px;
 		}
@@ -286,7 +279,7 @@
 	}
 	&__title{
 		color: #FFF;
-		font-size: 72px;
+		font-size: 50px;
 		font-style: normal;
 		font-weight: 700;
 		line-height: 1;
@@ -405,7 +398,7 @@
 		}
 	}
 	&__title{
-		font-size: 32px;
+		font-size: 22px;
 		font-weight: 700;
 		line-height: 1;
 		padding-right: 30px;
@@ -483,7 +476,7 @@
 	&__bottom{}
 	&__title{
 		color: $mainColor;
-		font-size: 32px;
+		font-size: 22px;
 		font-weight: 700;
 		line-height: 0.95;
 		text-decoration: none;
@@ -498,7 +491,7 @@
 	}
 	&__price{
 		color: $orange;
-		font-size: 28px;
+		font-size: 22px;
 		font-weight: 700;
 		line-height: 1;
 		margin-bottom: 14px;
