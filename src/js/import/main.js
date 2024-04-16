@@ -457,48 +457,54 @@ jQuery(function ($) {
 	})
 
 	$('.js-catalog-detail').each(function () {
+		
+		var thumbs = {};
 		var main_slider = $(this).find('.js-catalog-detail-main');
 		var thumbs_slider = $(this).find('.js-catalog-detail-thumbs');
 		var prevArrow = $(this).find('.js-catalog-detail-main-prev');
 		var nextArrow = $(this).find('.js-catalog-detail-main-next');
 
-		let thumbsSlider = new Swiper(thumbs_slider[0], {
-			spaceBetween: 10,
-			slidesPerView: 2,
-			watchSlidesProgress: true,
-			navigation: false,
-			pagination: false,
-			breakpoints: {
-				400: {
-					slidesPerView: 2,
-					spaceBetween: 10,
-				},
-				520: {
-					slidesPerView: 3,
-					spaceBetween: 10,
-				},
-				640: {
-					slidesPerView: 4,
-					spaceBetween: 10,
-				},
-				768: {
-					slidesPerView: 5,
-					spaceBetween: 19,
-				},
-				3000: {
-					slidesPerView: 5,
-					spaceBetween: 19,
+		if (thumbs_slider.length > 0){
+			let thumbsSlider = new Swiper(thumbs_slider[0], {
+				spaceBetween: 10,
+				slidesPerView: 2,
+				watchSlidesProgress: true,
+				navigation: false,
+				pagination: false,
+				breakpoints: {
+					400: {
+						slidesPerView: 2,
+						spaceBetween: 10,
+					},
+					520: {
+						slidesPerView: 3,
+						spaceBetween: 10,
+					},
+					640: {
+						slidesPerView: 4,
+						spaceBetween: 10,
+					},
+					768: {
+						slidesPerView: 5,
+						spaceBetween: 19,
+					},
+					3000: {
+						slidesPerView: 5,
+						spaceBetween: 19,
+					}
 				}
-			}
-		});
+			});
+
+			thumbs = {
+				swiper: thumbsSlider
+			};
+		}
 
 		let mainSlider = new Swiper(main_slider[0], {
 			spaceBetween: 10,
 			slidesPerView: 1,
 			autoHeight: true,
-			thumbs: {
-				swiper: thumbsSlider,
-			},
+			thumbs: thumbs,
 			navigation: {
 				nextEl: nextArrow[0],
 				prevEl: prevArrow[0]
