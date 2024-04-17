@@ -5,7 +5,9 @@
 	justify-content: space-between;
 	padding: 55px 75px 40px 0;
 	box-sizing: border-box;
-
+	@include minmax(xl, dsk) {
+		padding: vw(55) vw(75) vw(40) 0;
+	}
 	@media only screen and (max-width: 1180px) {
 		flex-direction: column-reverse;
 		padding-right: 0;
@@ -16,7 +18,9 @@
 		flex-direction: column;
 		align-items: flex-start;
 		width: calc(100% - 660px);
-
+		@include minmax(xl, dsk) {
+			width: calc(100% - vw(660));
+		}
 		@media only screen and (max-width: 1180px) {
 			width: 100%;
 		}
@@ -27,6 +31,9 @@
 		font-style: normal;
 		font-weight: 700;
 		line-height: 89%;
+		@include minmax(xl, dsk) {
+			font-size: vw(50);
+		}
 		span{
 			opacity: 0.26;
 		}
@@ -39,13 +46,19 @@
 		color: $mainColor;
 		margin-top: 18px;
 		max-width: 610px;
-
+		@include minmax(xl, dsk) {
+			margin-top: vw(18);
+			max-width: vw(610);
+		}
 		@media only screen and (max-width: 1180px) {
 			max-width: 100%;
 		}
 	}
 	&__btn{
 		margin-top: 29px;
+		@include minmax(xl, dsk) {
+			margin-top: 29px;
+		}
 
 		@media only screen and (max-width: 767px) {
 			& .btn-arrow {
@@ -73,7 +86,10 @@
 		max-height: 420px;
 		flex-shrink: 0;
 		position: relative;
-
+		@include minmax(xl, dsk) {
+			width: vw(645);
+			max-height: vw(420);
+		}
 		@media only screen and (max-width: 1250px) {
 			width: 600px;
 			max-height: 460px;
@@ -133,6 +149,13 @@
 		font-size: 20px;
 		line-height: 90%;
 
+		@include minmax(xl, dsk) {
+			width: vw(194);
+			height: vw(194);
+			padding: vw(10);	
+			font-size: vw(20);
+		}
+
 		@media only screen and (max-width: 450px) {
 			background: none;
 			position: unset;
@@ -146,11 +169,11 @@
 			left: -82px;
 			bottom: 0;
 
-			@media only screen and (max-width: 1410px) {
-				left: -11px;
+			@include minmax(xl, dsk) {
+				left: vw(-82);
 			}
 
-			@media only screen and (max-width: 1340px) {
+			@media only screen and (max-width: 1299px) {
 				left: 3px;
 			}
 
@@ -162,6 +185,10 @@
 		&--2{
 			right: 18px;
 			top: 22px;
+			@include minmax(xl, dsk) {
+				right: vw(18);
+				top: vw(22);
+			}
 		}
 
 
@@ -171,6 +198,9 @@
 		&-bottom{
 			&:not(:first-child){
 				margin-top: 8px;
+				@include minmax(xl, dsk) {
+					margin-top: vw(8);
+				}
 			}
 		}
 		span{
@@ -191,6 +221,12 @@
 		border-radius: 42px;
 		background: #FFF;
 		box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08), 0 0 4px 0 rgba(0, 0, 0, 0.04);
+		@include minmax(xl, dsk) {
+			gap: vw(10);
+			padding: vw(15) vw(17);
+			border-radius: vw(42);
+			box-shadow: 0 vw(8) vw(16) 0 rgba(0, 0, 0, 0.08), 0 0 4px 0 rgba(0, 0, 0, 0.04);
+		}
 	}
 	&__item{
 		border-radius: 30px;
@@ -202,6 +238,12 @@
 		flex: 1 1 calc(20% - 10px);
 		box-sizing: border-box;
 		padding: 15px 17px;
+		@include minmax(xl, dsk) {
+			border-radius: vw(30);
+			min-height: vw(250);
+			flex: 1 1 calc(20% - vw(10));
+			padding: vw(15) vw(17);
+		}
 		&-top{
 			display: flex;
 			justify-content: space-between;
@@ -215,11 +257,19 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			@include minmax(xl, dsk) {
+				width: vw(75);
+				height: vw(75);
+			}
 			img, svg{
 				max-width: 30px;
 				max-height: 30px;
 				display: block;
 				object-fit: contain;
+				@include minmax(xl, dsk) {
+					max-width: vw(30);
+					max-height: vw(30);
+				}
 			}
 		}
 		&-count{
@@ -230,11 +280,19 @@
 			line-height: 1;
 			letter-spacing: 1.4px;
 			margin: 12px 12px 0 0;
+			@include minmax(xl, dsk) {
+				font-size: vw(14);
+				letter-spacing: vw(1.4);
+				margin: vw(12) vw(12) 0 0;
+			}
 		}
 		&-bottom{
 			@extend .fs20;
 			color: $mainColor;
 			padding-right: 30px;
+			@include minmax(xl, dsk) {
+				padding-right: vw(30);
+			}
 		}
 
 		@media only screen and (max-width: 1201px) {
@@ -252,6 +310,11 @@
 	position: relative;
 	z-index: 1;
 	padding-bottom: 40px;
+	@include minmax(xl, dsk) {
+		padding-top: vw(171);
+		margin-top: vw(-171);
+		padding-bottom: vw(40);
+	}
 	&__img{
 		width: 100%;
 		height: 100%;
@@ -273,8 +336,13 @@
 	background: $mainColor;
 	border-radius: 42px;
 	margin-top: 492px;
+	@include minmax(xl, dsk) {
+		padding: vw(33);
+		border-radius: vw(42);
+		margin-top: vw(492);
+	}
 
-	@media only screen and (max-width: 1450px) {
+	@media only screen and (max-width: 1300px) {
 		flex-direction: column;
 	}
 	&__title{
@@ -284,8 +352,11 @@
 		font-weight: 700;
 		line-height: 1;
 		flex-grow: 1;
+		@include minmax(xl, dsk) {
+			font-size: vw(50);
+		}
 
-		@media only screen and (max-width: 1450px) {
+		@media only screen and (max-width: 1300px) {
 			margin-bottom: 20px;
 		}
 		@media only screen and (max-width: 1250px) {
@@ -303,8 +374,11 @@
 	&__right{
 		flex-shrink: 0;
 		width: 880px;
+		@include minmax(xl, dsk) {
+			width: vw(880);
+		}
 
-		@media only screen and (max-width: 1450px) {
+		@media only screen and (max-width: 1300px) {
 			width: 100%;
 		}
 	}
@@ -312,8 +386,11 @@
 		color: #ffffff;
 		column-count: 2;
 		column-gap: 40px;
+		@include minmax(xl, dsk) {
+			column-gap: vw(40);
+		}
 
-		@media only screen and (max-width: 1450px) {
+		@media only screen and (max-width: 1300px) {
 			margin-bottom: 12px;
 		}
 
@@ -348,6 +425,11 @@
 		align-items: center;
 		justify-content: center;
 		//margin-right: 15px;
+		@include minmax(xl, dsk) {
+			width: vw(194);
+			height: vw(141);
+			border-radius: vw(32);
+		}
 		img{
 			max-height: 80%;
 			max-width: 80%;
@@ -363,8 +445,14 @@
 	justify-content: space-between;
 	gap: 15px;
 	flex-wrap: wrap;
+	@include minmax(xl, dsk) {
+		gap: vw(15);
+	}
 	&__item{
 		flex: 1 1 calc(25% - 15px);
+		@include minmax(xl, dsk) {
+			flex: 1 1 calc(25% - vw(15));
+		}
 	}
 }
 
@@ -381,6 +469,11 @@
 	padding: 18px 20px 24px 15px;
 	position: relative;
 	color: $mainColor;
+	@include minmax(xl, dsk) {
+		border-radius: vw(43);
+		min-height: vw(322);
+		padding: vw(18) vw(20) vw(24) vw(15);
+	}
 	&__icon{
 		width: 130px;
 		height: 130px;
@@ -390,11 +483,19 @@
 		justify-content: center;
 		background: #ffffff;
 		border-radius: 50%;
+		@include minmax(xl, dsk) {
+			width: vw(130);
+			height: vw(130);
+		}
 		img, svg{
 			max-width: 70px;
 			max-height: 70px;
 			display: block;
 			object-fit: contain;
+			@include minmax(xl, dsk) {
+				max-width: vw(70);
+				max-height: vw(70);
+			}
 		}
 	}
 	&__title{
@@ -404,7 +505,12 @@
 		padding-right: 30px;
 		padding-left: 15px;
 		margin-top: 15px;
-
+		@include minmax(xl, dsk) {
+			font-size: vw(22);
+			padding-right: vw(30);
+			padding-left: vw(15);
+			margin-top: vw(15);
+		}
 		@media only screen and (max-width: 480px) {
 			font-size: 26px;
 		}
@@ -415,6 +521,12 @@
 		bottom: 25px;
 		width: 22px;
 		height: 22px;
+		@include minmax(xl, dsk) {
+			right: vw(20);
+			bottom: vw(25);
+			width: vw(22);
+			height: vw(22);
+		}
 		img, svg{
 			width: 100%;
 			height: 100%;
@@ -440,11 +552,14 @@
 		width: 100%;
 		padding: 19px 22px;
 		position: relative;
-
 		display: flex;
 		flex-direction: column;
 		height: 100%;
 		justify-content: space-between;
+		@include minmax(xl, dsk) {
+			border-radius: vw(21);
+			padding: vw(19) vw(22);
+		}
 	}
 	&__label{
 		color: $orange;
@@ -459,12 +574,24 @@
 		position: absolute;
 		top: 19px;
 		left: 19px;
+		@include minmax(xl, dsk) {
+			font-size: vw(17);
+			padding: vw(6) vw(14);
+			max-width: calc(80% - vw(50));
+			border-radius: vw(6);
+			top: vw(19);
+			left: vw(19);
+		}
 	}
 	&__img{
 		display: block;
 		height: 180px;
 		width: 100%;
 		margin-bottom: 25px;
+		@include minmax(xl, dsk) {
+			height: vw(180);
+			margin-bottom: vw(25);
+		}
 		img{
 			display: block;
 			width: 100%;
@@ -484,6 +611,11 @@
 		display: block;
 		word-wrap: break-word;
 
+		@include minmax(xl, dsk) {
+			font-size: vw(22);
+			margin-bottom: vw(12);
+		}
+
 		@media only screen and (max-width: 767px) {
 			font-size: 20px;
 		}
@@ -495,6 +627,10 @@
 		font-weight: 700;
 		line-height: 1;
 		margin-bottom: 14px;
+		@include minmax(xl, dsk) {
+			font-size: vw(22);
+			margin-bottom: vw(14);
+		}
 		@media only screen and (max-width: 767px) {
 			font-size: 18px;
 		}
@@ -504,6 +640,9 @@
 		font-size: 16px;
 		font-weight: 500;
 		line-height: 1.2;
+		@include minmax(xl, dsk) {
+			font-size: vw(16);
+		}
 		@media only screen and (max-width: 767px) {
 			font-size: 14px;
 		}
@@ -512,6 +651,9 @@
 		margin-top: 14px;
 		display: flex;
 		justify-content: space-between;
+		@include minmax(xl, dsk) {
+			margin-top: vw(14);
+		}
 		.btn-more{}
 		.btn-arrow{}
 	}
@@ -526,6 +668,9 @@
 		background: #E8EBEF;
 		overflow: hidden;
 		display: block;
+		@include minmax(xl, dsk) {
+			border-radius: vw(32);
+		}
 	}
 	&__logo{
 		position: absolute;
@@ -541,6 +686,14 @@
 		background: #fff;
 		border-radius: 23px;
 		z-index: 5;
+		@include minmax(xl, dsk) {
+			top: vw(22);
+			right: vw(22);
+			max-height: vw(103);
+			height: vw(103);
+			padding: vw(30);
+			border-radius: vw(23);
+		}
 		img, svg{
 			display: block;
 			max-height: 100%;
@@ -553,6 +706,10 @@
 		overflow: hidden;
 		width: 100%;
 		height: 316px;
+		@include minmax(xl, dsk) {
+			border-radius: vw(36);
+			height: vw(316);
+		}
 		img{
 			width: 100%;
 			height: 100%;
@@ -569,6 +726,10 @@
 		box-sizing: border-box;
 		padding: 23px 15px 23px;
 		min-height: 126px;
+		@include minmax(xl, dsk) {
+			padding: vw(23) vw(15) vw(23);
+			min-height: vw(126);
+		}
 	}
 }
 
@@ -581,11 +742,17 @@
 		overflow: hidden;
 		background: white;
 		text-decoration: none;
+		@include minmax(xl, dsk) {
+			border-radius: vw(25);
+		}
 	}
 	&__img {
 		border-radius: 25px;
 		overflow: hidden;
 		position: relative;
+		@include minmax(xl, dsk) {
+			border-radius: vw(25);
+		}
 
 		&::before {
 			content: "";
@@ -609,6 +776,10 @@
 		flex-direction: column;
 		justify-content: space-between;
 		min-height: 180px;
+		@include minmax(xl, dsk) {
+			padding: vw(15) vw(24);
+			min-height: vw(180);
+		}
 	}
 	&__title,
 	&__date {
@@ -616,6 +787,10 @@
 		font-weight: 500;
 		line-height: 24px;
 		color: $mainColor;
+		@include minmax(xl, dsk) {
+			font-size: vw(20);
+			line-height: vw(24);
+		}
 	}
 	&__date {
 		opacity: 20%;

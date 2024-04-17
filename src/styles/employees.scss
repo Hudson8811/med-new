@@ -5,6 +5,12 @@
 	flex-wrap: wrap;
 	margin-left: -18px;
 	margin-bottom: -18px;
+	
+	@include minmax(xl, dsk) {
+		margin-top: vw(57);
+		margin-left: vw(-18);
+		margin-bottom: vw(-18);
+	}
 
 	@media only screen and (max-width: 767px) {
 		margin-top: 30px;
@@ -22,6 +28,13 @@
 	display: flex;
 	flex-direction: column;
 	transition-duration: .3s;
+
+	@include minmax(xl, dsk) {
+		margin-left: vw(18);
+		margin-bottom: vw(18);
+		width: calc(33.33% - vw(18));
+		border-radius: vw(21);
+	}
 
 	@media only screen and (max-width: 1300px) {
 		width: calc(50% - 18px);
@@ -45,6 +58,9 @@
 		border-radius: 21px;
 		overflow: hidden;
 		position: relative;
+		@include minmax(xl, dsk) {
+			border-radius: vw(21);
+		}
 
 		&::before{
 			content: '';
@@ -84,6 +100,10 @@
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
+
+		@include minmax(xl, dsk) {
+			padding: vw(12) vw(15) vw(18);
+		}
 	}
 
 	&__name {
@@ -91,6 +111,9 @@
 		font-size: 20px;
 		line-height: 90%;
 		color: $mainColor;
+		@include minmax(xl, dsk) {
+			font-size: vw(20);
+		}
 
 		@media only screen and (max-width: 767px) {
 			font-size: 16px;
@@ -107,6 +130,10 @@
 		line-height: 119%;
 		color: $mainColor;
 		margin-top: 30px;
+		@include minmax(xl, dsk) {
+			font-size: vw(16);
+			margin-top: vw(30);
+		}
 		@media only screen and (max-width: 767px) {
 			font-size: 14px;
 			line-height: 1.2;

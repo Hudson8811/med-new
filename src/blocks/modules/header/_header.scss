@@ -1,5 +1,8 @@
 .header{
 	padding-top: 38px;
+	@include minmax(xl, dsk) {
+		padding-top: vw(38);
+	}
 	@include max(md){
 		padding-top: 20px;
 	}
@@ -21,6 +24,9 @@
 		position: relative;
 		z-index: 3;
 		display: flex;
+		@include minmax(xl, dsk) {
+			border-radius: vw(32) vw(32) 0 0;
+		}
 		@include max(1100){
 			border-radius: 25px 25px 0 0;
 		}
@@ -36,11 +42,14 @@
 				align-content: center;
 				align-items: center;
 				border-left: 1px solid #EAEFF1;
+				@include minmax(xl, dsk) {
+					padding: vw(10) vw(18);
+				}
 				a{
 					@extend .fs20;
 					@extend .link;
 					color: #9BA3A8;
-					@include max(cnt){
+					@include max(xl){
 						font-size: 16px;
 					}
 					svg, img{
@@ -49,6 +58,10 @@
 						display: block;
 						object-fit: contain;
 						flex-shrink: 0;
+						@include minmax(xl, dsk) {
+							width: vw(36);
+							height: vw(36);
+						}
 					}
 				}
 			}
@@ -59,6 +72,9 @@
 		border-right: 1px solid #EAEFF1;
 		display: flex;
 		align-items: center;
+		@include minmax(xl, dsk) {
+			padding: vw(10) vw(27) vw(10) vw(30);
+		}
 		@include max(lg){
 			padding: 10px 18px 10px 30px
 		}
@@ -70,7 +86,7 @@
 			align-items: center;
 			@extend .fs20;
 			@extend .link;
-			@include max(cnt){
+			@include max(xl){
 				font-size: 16px;
 			}
 			svg, img{
@@ -80,6 +96,11 @@
 				object-fit: contain;
 				margin-left: 15px;
 				flex-shrink: 0;
+				@include minmax(xl, dsk) {
+					width: vw(18);
+					height: vw(18);
+					margin-left: vw(15);
+				}
 			}
 		}
 	}
@@ -95,6 +116,9 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			@include minmax(xl, dsk) {
+				width: vw(70);
+			}
 			span{
 				&,
 				&::before,
@@ -106,16 +130,27 @@
 					width: 30px;
 					transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
 					border-radius: 2px;
+					@include minmax(xl, dsk) {
+						height: vw(4);
+						width: vw(30);
+						border-radius: vw(2);
+					}
 				}
 
 				&::before {
 					content: '';
 					margin-top: -8px;
+					@include minmax(xl, dsk) {
+						margin-top: vw(-8);
+					}
 				}
 
 				&::after {
 					content: '';
 					margin-top: 8px;
+					@include minmax(xl, dsk) {
+						margin-top: vw(8);
+					}
 				}
 			}
 			&:hover{
@@ -137,20 +172,26 @@
 		padding: 10px 30px;
 		white-space: nowrap;
 		overflow: hidden;
+		@include minmax(xl, dsk) {
+			padding: vw(10) vw(30);
+		}
 		@include max(lg){
 			display: none;
 		}
 		li{
 			+ li {
 				margin-left: 34px;
-				@include max(cnt){
+				@include minmax(xl, dsk) {
+					margin-left: vw(34);
+				}
+				@include max(xl){
 					margin-left: 24px;
 				}
 			}
 			a{
 				@extend .fs20;
 				@extend .link;
-				@include max(cnt){
+				@include max(xl){
 					font-size: 16px;
 				}
 			}
@@ -166,6 +207,10 @@
 		align-items: center;
 		justify-content: space-between;
 		overflow: hidden;
+		@include minmax(xl, dsk) {
+			border-radius: 0 0 vw(32) vw(32);
+			padding: vw(23) vw(30) vw(41);
+		}
 		@include max(lg){
 			padding: 15px 30px 15px;
 		}
@@ -182,7 +227,11 @@
 		height: 60px;
 		flex-shrink: 0;
 		color: $mainColor;
-		@include max(cnt){
+		@include minmax(xl, dsk) {
+			width: vw(330);
+			height: vw(60);
+		}
+		@include max(xl){
 			width: 270px;
 			height: 50px;
 		}
@@ -206,6 +255,10 @@
 		padding-left: 37px;
 		position: relative;
 		margin: 0 10px;
+		@include minmax(xl, dsk) {
+			padding-left: vw(37);
+			margin: 0 vw(10);
+		}
 		@include max(lg){
 			display: none;
 		}
@@ -221,10 +274,14 @@
 			background-position: center center;
 			background-size: contain;
 			background-repeat: no-repeat;
+			@include minmax(xl, dsk) {
+				width: vw(26);
+				height: vw(26);
+			}
 		}
 		li {
 			@extend .fs20;
-			@include max(cnt){
+			@include max(xl){
 				font-size: 16px;
 			}
 			a{
@@ -254,7 +311,10 @@
 		}
 		li{
 			margin: 0 10px;
-			@include max(cnt){
+			@include minmax(xl, dsk) {
+				margin: 0 vw(10);
+			}
+			@include max(xl){
 				margin: 0 7px;
 			}
 			a{
@@ -265,6 +325,10 @@
 					height: 26px;
 					object-fit: contain;
 					display: block;
+					@include minmax(xl, dsk) {
+						width: vw(25);
+						height: vw(26);
+					}
 				}
 			}
 		}
@@ -278,6 +342,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		@include minmax(xl, dsk) {
+			width: vw(50);
+			height: vw(50);
+			margin-right: vw(20);
+		}
 		@include min(md){
 			display: none;
 		}
@@ -292,7 +361,7 @@
 		}
 	}
 	&__btn{
-		@include max(cnt){
+		@include max(xl){
 			padding: 14px 17px;
 			font-size: 18px;
 		}
@@ -319,6 +388,10 @@
 		height: 66px;
 		transition: background-color 0.2s;
 		flex-shrink: 0;
+		@include minmax(xl, dsk) {
+			width: vw(66);
+			height: vw(66);
+		}
 		@include max(md){
 			width: 50px;
 			height: 50px;
@@ -330,6 +403,10 @@
 				height: 25px;
 				display: block;
 				object-fit: contain;
+				@include minmax(xl, dsk) {
+					width: vw(25);
+					height: vw(25);
+				}
 				@include max(md){
 					width: 18px;
 					height: 18px;
@@ -354,6 +431,12 @@
 			top: 0;
 			transition: color 0.2s;
 			box-sizing: border-box;
+			@include minmax(xl, dsk) {
+				border: vw(2) solid #ffffff;
+				min-width: vw(22);
+				height: vw(22);
+				font-size: vw(11);
+			}
 		}
 		&:hover{
 			background: $mainColor;
@@ -370,6 +453,9 @@
 		z-index: 1;
 		display: flex;
 		justify-content: space-between;
+		@include minmax(xl, dsk) {
+			border-radius: 0 0 vw(32) vw(32);
+		}
 		@include max(1100){
 			border-radius: 0 0 25px 25px;
 		}
@@ -382,14 +468,23 @@
 			bottom: 100%;
 			left: 0;
 			background: #193762;
+			@include minmax(xl, dsk) {
+				height: vw(50);
+			}
 		}
 		&-menu{
 			display: flex;
 			list-style: none;
 			padding: 4px;
+			@include minmax(xl, dsk) {
+				padding: vw(4);
+			}
 			li{
 				padding: 5px;
 				display: flex;
+				@include minmax(xl, dsk) {
+					padding: vw(5);
+				}
 				a{
 					@extend .fs20;
 					background: rgba(255, 255, 255, 0.1);
@@ -403,6 +498,12 @@
 					box-sizing: border-box;
 					border-radius: 21px;
 					transition: background-color 0.2s;
+					@include minmax(xl, dsk) {
+						padding: vw(10) vw(20);
+						min-width: vw(181);
+						min-height: vw(70);
+						border-radius: vw(21);
+					}
 					@include max(md){
 						min-width: 40px;
 						min-height: 40px;
@@ -422,6 +523,11 @@
 						color: $orange;
 						transition: color 0.2s;
 						flex-shrink: 0;
+						@include minmax(xl, dsk) {
+							width: vw(32);
+							height: vw(32);
+							margin-right: vw(18);
+						}
 						@include max(md){
 							margin-right: 0;
 						}
@@ -464,6 +570,9 @@
 		flex-grow: 1;
 		text-indent: 15px;
 		color: #ffffff;
+		@include minmax(xl, dsk) {
+			text-indent: vw(15);
+		}
 		&::placeholder{
 			color: rgba(255, 255, 255, 0.2);
 		}
@@ -488,6 +597,9 @@
 		color: #ffffff;
 		transition: color 0.2s;
 		padding: 10px 32px 15px;
+		@include minmax(xl, dsk) {
+			padding: vw(10) vw(32) vw(15);
+		}
 		@include max(md){
 			padding: 10px 23px 15px;
 		}
@@ -500,6 +612,10 @@
 			display: block;
 			object-fit: contain;
 			flex-shrink: 0;
+			@include minmax(xl, dsk) {
+				width: vw(22);
+				height: vw(22);
+			}
 		}
 		&:hover{
 			color: $orange;
@@ -536,6 +652,11 @@
 	z-index: 10000;
 	transition: transform 0.3s linear;
 	border-radius: 0 42px 42px 0;
+	@include minmax(xl, dsk) {
+		width: vw(468);
+		max-width: calc(100% - vw(81));
+		border-radius: 0 vw(42) vw(42) 0;
+	}
 	@include min(lg){
 		display: none;
 	}
@@ -560,6 +681,11 @@
 		overflow: hidden;
 		background: #FFFFFF;
 		transition: right 0.2s linear;
+		@include minmax(xl, dsk) {
+			top: vw(22);
+			width: vw(58);
+			height: vw(58);
+		}
 		@include max(sm){
 			top: 10px;
 			width: 40px;
@@ -570,6 +696,10 @@
 			width: 12px;
 			height: 12px;
 			object-fit: contain;
+			@include minmax(xl, dsk) {
+				width: vw(12);
+				height: vw(12);
+			}
 		}
 	}
 	&._active{
@@ -587,6 +717,9 @@
 		height: 100%;
 		box-sizing: border-box;
 		padding: 32px 15px;
+		@include minmax(xl, dsk) {
+			padding: vw(32) vw(15);
+		}
 		@include max(sm){
 			padding: 20px 10px;
 		}
@@ -602,6 +735,10 @@
 				display: block;
 				border-radius: 21px;
 				overflow: hidden;
+				@include minmax(xl, dsk) {
+					padding: vw(20);
+					border-radius: vw(21);
+				}
 				@include max(sm){
 					padding: 12px;
 					border-radius: 12px;
@@ -617,6 +754,10 @@
 			margin-top: 20px;
 			padding-top: 20px;
 			border-top: 1px solid #EAEFF1;
+			@include minmax(xl, dsk) {
+				margin-top: vw(20);
+				padding-top: vw(20);
+			}
 			@include max(sm){
 				margin-top: 15px;
 				padding-top: 15px;
@@ -628,6 +769,9 @@
 		align-items: center;
 		&:not(:last-child){
 			margin-bottom: 10px;
+			@include minmax(xl, dsk) {
+				margin-bottom: vw(10);
+			}
 		}
 		a{
 			@extend .fs20;
@@ -639,6 +783,10 @@
 			overflow: hidden;
 			padding: 20px;
 			width: 100%;
+			@include minmax(xl, dsk) {
+				border-radius: vw(21);
+				padding: vw(20);
+			}
 			@include max(sm){
 				padding: 12px;
 				border-radius: 12px;
@@ -653,6 +801,11 @@
 				object-fit: contain;
 				margin-right: 15px;
 				flex-shrink: 0;
+				@include minmax(xl, dsk) {
+					width: vw(18);
+					height: vw(18);
+					margin-right: vw(15);
+				}
 			}
 		}
 	}
@@ -663,11 +816,17 @@
 		flex-direction: column;
 		position: relative;
 		padding-left: 56px;
+		@include minmax(xl, dsk) {
+			padding-left: vw(56);
+		}
 		@include max(sm){
 			padding-left: 46px;
 		}
 		&:not(:first-child){
 			margin-top: 20px;
+			@include minmax(xl, dsk) {
+				margin-top: vw(20);
+			}
 		}
 		&::before{
 			content: "";
@@ -680,6 +839,11 @@
 			background-position: center center;
 			background-size: contain;
 			background-repeat: no-repeat;
+			@include minmax(xl, dsk) {
+				width: vw(26);
+				height: vw(26);
+				left: vw(20);
+			}
 			@include max(md){
 				top: -0.2em;
 			}
@@ -694,6 +858,9 @@
 			@extend .fs20;
 			&:not(:first-child){
 				margin-top: 10px;
+				@include minmax(xl, dsk) {
+					margin-top: vw(10);
+				}
 			}
 			a{
 				@extend .link;
@@ -718,9 +885,15 @@
 		flex-wrap: wrap;
 		&:not(:first-child){
 			margin-top: 30px;
+			@include minmax(xl, dsk) {
+				margin-top: vw(30);
+			}
 		}
 		li{
 			margin: 0 20px;
+			@include minmax(xl, dsk) {
+				margin: 0 vw(20);
+			}
 			a{
 				@extend .link;
 				svg, img{
@@ -728,6 +901,10 @@
 					height: 40px;
 					object-fit: contain;
 					display: block;
+					@include minmax(xl, dsk) {
+						width: vw(40);
+						height: vw(40);
+					}
 				}
 			}
 		}

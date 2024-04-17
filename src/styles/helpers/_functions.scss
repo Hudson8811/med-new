@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 @function _get-media-width($width, $maxmin) {
 	@if map-get($media-list, $width) {
 		$width: map-get($media-list, $width);
@@ -10,4 +12,9 @@
 	} @else {
 		@return $width;
 	}
+}
+
+@function vw($px, $resolutiond: 1920) {
+	$temp: #{math.div($px, $resolutiond) * 100};
+	@return $temp +'vw';
 }

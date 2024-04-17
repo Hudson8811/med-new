@@ -1,7 +1,10 @@
 .becpartner {
 	display: flex;
 	margin-top: 46px;
-	@media only screen and (max-width: 1500px) {
+	@include minmax(xl, dsk) {
+		margin-top: vw(46);
+	}
+	@media only screen and (max-width: 1300px) {
 		flex-direction: column-reverse;
 	}
 	@media only screen and (max-width: 767px) {}
@@ -13,7 +16,12 @@
 		margin-right: 40px;
 		flex-shrink: 0;
 		padding-top: 8px;
-		@media only screen and (max-width: 1500px) {
+		@include minmax(xl, dsk) {
+			width: vw(451);
+			margin-right: vw(40);
+			padding-top: vw(8);
+        }
+		@media only screen and (max-width: 1300px) {
 			width: 550px;
 
 		}
@@ -36,7 +44,11 @@
 	&__right-bottom {
 		margin-top: 51px;
 		padding-bottom: 50px;
-		@media only screen and (max-width: 1500px) {
+		@include minmax(xl, dsk) {
+			margin-top: vw(51);
+			padding-bottom: vw(50);
+        }
+		@media only screen and (max-width: 1300px) {
 			margin-top: 30px;
 		}
 	}
@@ -63,16 +75,26 @@
 	&__row {
 		&+.becpartner-form__row {
 			margin-top: 15px;
+			@include minmax(xl, dsk) {
+				margin-top: vw(15);
+			}
 		}
 	}
 
 	&__bottom {
 		margin-top: 20px;
+		@include minmax(xl, dsk) {
+			margin-top: vw(20);
+		}
+		
 	}
 
 	&__title {
 		&+*{
 			margin-top: 30px;
+			@include minmax(xl, dsk) {
+				margin-top: vw(30);
+			}
 		}
 	}
 }
@@ -82,6 +104,9 @@
 	font-size: 32px;
 	line-height: 111%;
 	color: #193762;
+	@include minmax(xl, dsk) {
+		font-size: vw(32);
+	}
 
 	@media only screen and (max-width: 767px) {
 		font-size: 24px;
@@ -98,6 +123,9 @@
 
 .simple-contacts {
     margin-top: 39px;
+	@include minmax(xl, dsk) {
+		margin-top: vw(39);
+	}
 }
 
 .simple-contacts-item {
@@ -117,6 +145,14 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		@include minmax(xl, dsk) {
+			margin-right: vw(19);
+			width: vw(35);
+			min-height: vw(35);
+			min-width: vw(36);
+			border-radius: vw(3);
+			padding: vw(5);
+		}
 
 		img,
 		svg {
@@ -132,9 +168,15 @@
 		font-size: 20px;
 		line-height: 120%;
 		color: #052a44;
+		@include minmax(xl, dsk) {
+			font-size: vw(20);
+		}
 	}
 
 	&+.simple-contacts-item {
 		margin-top: 24px;
+		@include minmax(xl, dsk) {
+			margin-top: vw(24);
+		}
 	}
 }

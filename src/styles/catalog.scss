@@ -1,5 +1,8 @@
 .layout-catalog-section {
 	margin-top: 38px;
+	@include minmax(xl, dsk) {
+		margin-top: vw(38);
+	}
 }
 
 .layout-catalog {
@@ -10,6 +13,11 @@
 		flex-shrink: 0;
 		margin-right: 27px;
 		margin-top: 87px;
+		@include minmax(xl, dsk) {
+			width: vw(362);
+			margin-right: vw(27);
+			margin-top: vw(87);
+		}
 
 		@media screen and (max-width:1200px) {
 			background: #fff;
@@ -53,11 +61,18 @@
 	}
 	&__btn{
 		padding: 16px 16px;
+		@include minmax(xl, dsk) {
+			padding: vw(16) vw(16);
+		}
 		 img,  svg {
 			width: 14px;
 			height: 14px;
 			margin-left: 0;
 			margin-bottom: 0;
+			@include minmax(xl, dsk) {
+				width: vw(14);
+				height: vw(14);
+			}
 		}
 	}
 }
@@ -89,6 +104,9 @@
 	display: flex;
 	justify-content: flex-end;
 	padding-right: 14px;
+	@include minmax(xl, dsk) {
+		padding-right: vw(14);
+	}
 	@media only screen and (max-width: 767px) {
 		padding-right: 0;
 	}
@@ -111,6 +129,13 @@
 		margin-left: 3px;
 		transition-duration: .3s;
 
+		@include minmax(xl, dsk) {
+			border-radius: vw(21);
+			width: vw(70);
+			height: vw(70);
+			margin-left: vw(3);
+		}
+
 		@media only screen and (max-width: 767px) {
 			width: 45px;
 			height: 45px;
@@ -120,6 +145,10 @@
 		svg {
 			width: 38px;
 			height: 38px;
+			@include minmax(xl, dsk) {
+				width: vw(38);
+				height: vw(38);
+			}
 			@media only screen and (max-width: 767px) {
 				width: 25px;
 				height: 25px;
@@ -154,6 +183,10 @@
 			svg {
 				width: 32px;
 				height: 32px;
+				@include minmax(xl, dsk) {
+					width: vw(32);
+					height: vw(32);
+				}
 			}
 		}
 	}
@@ -167,6 +200,10 @@
 
 .filter-accordions {
 	margin-top: 32px;
+
+	@include minmax(xl, dsk) {
+		margin-top: vw(32);
+	}
 
 	@media screen and (max-width:1200px) {
 		display: flex;
@@ -351,7 +388,13 @@
 		position: relative;
 		transition-duration: .3s;
 		margin-right: 10px;
-
+		@include minmax(xl, dsk) {
+			min-width: vw(22);
+			width: vw(22);
+			height: vw(22);
+			border-radius: vw(4);
+			margin-right: vw(10);
+		}
 		&::before {
 			content: '';
 			display: block;
@@ -363,6 +406,13 @@
 			width: 10px;
 			height: 10px;
 			opacity: 0;
+			@include minmax(xl, dsk) {
+				left: vw(6);
+				top: vw(6);
+				border-radius: vw(4);
+				width: vw(10);
+				height: vw(10);
+			}
 		}
 	}
 
@@ -371,7 +421,9 @@
 		font-size: 20px;
 		line-height: 120%;
 		color: #052a44;
-
+		@include minmax(xl, dsk) {
+			font-size: vw(20);
+		}
 		@media only screen and (max-width: 767px) {
 			font-size: 16px;
 			line-height: 1.2;
@@ -387,10 +439,17 @@
 		margin-left: 10px;
 		margin-right: 0;
 		margin-top: -2px;
+		@include minmax(xl, dsk) {
+			margin-left: vw(10);
+			margin-top: vw(-2);
+		}
 	}
 
 	&+.simple-checkbox--filter {
 		margin-top: 17px;
+		@include minmax(xl, dsk) {
+			margin-top: vw(17);
+		}
 
 		@media only screen and (max-width: 767px) {
 			margin-top: 8px;
@@ -423,6 +482,11 @@
 	justify-content: flex-start;
 	margin-bottom: -20px;
 
+	@include minmax(xl, dsk) {
+		margin-top: vw(21);
+		margin-bottom: vw(-20);
+	}
+
 	&__view-list {
 		flex-direction: column;
 	}
@@ -435,6 +499,12 @@
 	margin-bottom: 24px;
 	width: calc(33.33% - 14px);
 	margin-right: 21px;
+
+	@include minmax(xl, dsk) {
+		margin-bottom: vw(24);
+		width: calc(33.33% - vw(14));
+		margin-right: vw(21);
+	}
 
 	&:nth-child(3n) {
 		margin-right: 0;
@@ -466,6 +536,11 @@
 	margin-bottom: 20px;
 	width: 100%;
 
+	
+	@include minmax(xl, dsk) {
+		margin-bottom: vw(20);
+	}
+
 	@media screen and (max-width:666px) {
 		width: 298px;
 	}
@@ -474,13 +549,17 @@
 .product-list{
 	&__inner{
 		display: flex;
-
 		border-radius: 21px;
 		background: #FFF;
 		box-sizing: border-box;
 		width: 100%;
 		padding: 19px 20px 28px 24px;
 		position: relative;
+		
+		@include minmax(xl, dsk) {
+			border-radius: vw(21);
+			padding: vw(19) vw(20) vw(28) vw(24);
+		}
 
 		@media screen and (max-width:806px) {
 			justify-content: space-between;
@@ -494,6 +573,12 @@
 		width: 145px;
 		flex-basis: 145px;
 		margin-top: 18px;
+		@include minmax(xl, dsk) {
+			width: vw(145);
+			flex-basis: vw(145);
+			margin-top: vw(18);
+		}
+
 
 		@media screen and (max-width:666px) {
 			width: 100%;
@@ -508,13 +593,25 @@
 		padding-right: 60px;
 		flex-basis: calc(100% - (145px + 274px));
 
+		@include minmax(xl, dsk) {
+			padding-left: vw(25);
+			padding-right: vw(60);
+			flex-basis: calc(100% - (vw(145) + vw(274)));
+		}
+
+
 		&-info {
 			width: 280px;
+			@include minmax(xl, dsk) {
+				width: vw(280);
+			}
 		}
 		&-props {
 			width: 223px;
-
-			@media screen and (min-width: 1200px) and (max-width:1490px) {
+			@include minmax(xl, dsk) {
+				width: vw(223);
+			}
+			@media screen and (min-width: 1200px) and (max-width:1300px) {
 				display: none;
 			}
 			@media screen and (max-width:1100px) {
@@ -522,7 +619,7 @@
 			}
 		}
 
-		@media screen and (min-width: 1200px) and (max-width:1490px) {
+		@media screen and (min-width: 1200px) and (max-width:1300px) {
 			padding-right: 20px;
 		}
 		@media screen and (max-width:1100px) {
@@ -535,7 +632,9 @@
 	&__right {
 		width: 274px;
 		align-items: flex-end;
-
+		@include minmax(xl, dsk) {
+			width: vw(274);
+		}
 		&-buy {
 			display: flex;
 			flex-direction: row;
@@ -573,12 +672,24 @@
 		position: absolute;
 		top: 26px;
 		left: 24px;
+		@include minmax(xl, dsk) {
+			font-size: vw(17);
+			padding: vw(6) vw(14);
+			max-width: calc(80% - vw(50));
+			border-radius: vw(6);
+			top: vw(26);
+			left: vw(24);
+		}
 	}
 	&__img{
 		display: block;
 		height: 118px;
 		width: 100%;
 		margin-bottom: 25px;
+		@include minmax(xl, dsk) {
+			height: vw(118);
+			margin-bottom: vw(25);
+		}
 		img{
 			display: block;
 			width: 100%;
@@ -601,6 +712,12 @@
 		word-wrap: break-word;
 		padding-right: 20px;
 
+		@include minmax(xl, dsk) {
+			font-size: vw(24);
+			margin-bottom: vw(12);
+			padding-right: vw(20);
+		}
+
 		@media only screen and (max-width: 767px) {
 			font-size: 20px;
 		}
@@ -609,10 +726,15 @@
 	&__artnumber {
 		color: #052A44;
 		font-size: 14px;
-
+		@include minmax(xl, dsk) {
+			font-size: vw(14);
+		}
 		span:first-child {
 			padding-right: 6px;
 			opacity: 20%;
+			@include minmax(xl, dsk) {
+				padding-right: vw(6);
+			}
 		}
 
 		@media screen and (max-width:666px) {
@@ -627,6 +749,10 @@
 		grid-template-areas: "chapter page";
 		grid-template-columns: auto max-content;
 		margin-bottom: 14px;
+		@include minmax(xl, dsk) {
+			font-size: vw(14);
+			margin-bottom: vw(14);
+		}
 
 		&:last-child {
 			margin-bottom: 0px;
@@ -656,6 +782,12 @@
 		margin-bottom: 45px;
 		text-align: right;
 
+		@include minmax(xl, dsk) {
+			font-size: vw(28);
+			margin-top: vw(6);
+			margin-bottom: vw(45);
+		}
+
 		@media only screen and (max-width: 767px) {
 			font-size: 20px;
 		}
@@ -669,6 +801,9 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		@include minmax(xl, dsk) {
+			width: vw(98);
+		}
 
 		&-minus,
 		&-plus {
@@ -678,15 +813,23 @@
 			background: #E8EAF0;
 			border-radius: 50%;
 			cursor: pointer;
-
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			text-align: center;
 
+			@include minmax(xl, dsk) {
+				width: vw(32);
+				height: vw(32);
+			}
+
 			svg {
 				width: 8px;
 				height: 3px;
+				@include minmax(xl, dsk) {
+					width: vw(8);
+					height: vw(3);
+				}
 			}
 		}
 		&-input {
@@ -697,7 +840,10 @@
 			font-size: 14px;
 			font-weight: 700;
 			background: none;
-
+			@include minmax(xl, dsk) {
+				width: vw(16);
+				font-size: vw(14);
+			}
 			&:focus {
 				outline: none;
 			}
@@ -705,6 +851,10 @@
 		&-plus svg {
 			width: 9px;
 			height: 9px;
+			@include minmax(xl, dsk) {
+				width: vw(9);
+				height: vw(9);
+			}
 		}
 
 		@media screen and (max-width:806px) {
@@ -723,6 +873,10 @@
 		.btn-more{}
 		.btn-arrow{}
 
+		@include minmax(xl, dsk) {
+			gap: vw(15);
+		}
+
 		@media screen and (max-width:806px) {
 			flex-direction: column-reverse;
 		}
@@ -736,12 +890,18 @@
 
 .filters-reset-btn-wrap {
 	margin-top: 24px;
+	@include minmax(xl, dsk) {
+		margin-top: vw(24);
+	}
 }
 
 
 .rs-block {
 	padding-bottom: 36px;
-
+	@include minmax(xl, dsk) {
+		padding-bottom: vw(36);
+	}
+	
 	&__top {
 		display: flex;
 		justify-content: space-between;
@@ -755,13 +915,20 @@
 		width: calc(50% - 3px);
 		outline: none !important;
 		border: none !important;
-
 		padding: 2px 8px;
 		font-weight: 500;
 		font-size: 20px;
 		line-height: 120%;
 		box-sizing: border-box;
 		color: #052a44;
+
+		@include minmax(xl, dsk) {
+			border-radius: vw(4);
+			height: vw(36);
+			width: calc(50% - vw(3));
+			padding: vw(2) vw(8);
+			font-size: vw(20);
+		}
 
 	}
 
@@ -772,7 +939,10 @@
 	&__bottom {
 		margin-top: 27px;
 		padding: 0 11px;
-
+		@include minmax(xl, dsk) {
+			margin-top: vw(27);
+			padding: 0 vw(11);
+		}
 	}
 
 	&__rs {}
@@ -786,6 +956,10 @@
 		width: 22px;
 		height: 22px;
 		background: $orange;
+		@include minmax(xl, dsk) {
+			width: vw(22);
+			height: vw(22);
+		}
 	}
 
 	.noUi-horizontal {
@@ -793,12 +967,22 @@
 		background: #d3d9e1;
 		border: none;
 
+		@include minmax(xl, dsk) {
+			height: vw(2);
+		}
+
 		.noUi-handle {
 			width: 22px;
 			height: 22px;
 			right: -11px;
 			top: -11px;
 			cursor: pointer;
+			@include minmax(xl, dsk) {
+				width: vw(22);
+				height: vw(22);
+				right: vw(-11);
+				top: vw(-11);
+			}
 
 			&::before {
 				display: none;
@@ -811,6 +995,13 @@
 				height: 6px;
 				background: #fff;
 				border-radius: 50%;
+
+				@include minmax(xl, dsk) {
+					left: vw(8);
+					top: vw(8);
+					width: vw(6);
+					height: vw(6);
+				}
 
 			}
 		}
@@ -830,6 +1021,9 @@
 		font-size: 20px;
 		line-height: 120%;
 		color: #052a44;
+		@include minmax(xl, dsk) {
+			font-size: vw(20);
+		}
 	}
 
 	.noUi-pips-horizontal {
@@ -839,11 +1033,16 @@
 	.noUi-value-horizontal {
 		transform: translate(0, 50%);
 		left: -11px !important;
+		@include minmax(xl, dsk) {
+			left: vw(-11) !important;
+		}
 
 		&~.noUi-value-horizontal {
 			left: auto !important;
 			right: -11px;
-
+			@include minmax(xl, dsk) {
+				right: vw(-11) !important;
+			}
 
 		}
 	}
@@ -854,6 +1053,9 @@
 .pagination-wrap {
 	&--catalog {
 		margin-top: 32px;
+		@include minmax(xl, dsk) {
+			margin-top: vw(32);
+		}
 	}
 
 }
@@ -864,6 +1066,10 @@
 	flex-wrap: wrap;
 	margin-left: -14px;
 	margin-bottom: -10px;
+	@include minmax(xl, dsk) {
+		margin-left: vw(-14);
+		margin-bottom: vw(-10);
+	}
 
 	@media screen and (max-width:900px) {
 		margin-left: -8px;
@@ -889,6 +1095,14 @@
 	text-align: center;
 	transition-duration: .3s;
 
+	@include minmax(xl, dsk) {
+		margin-left: vw(14);
+		margin-bottom: vw(10);
+		width: vw(60);
+		height: vw(60);
+		font-size: vw(20);
+	}
+
 	@media screen and (max-width:900px) {
 		width: 30px;
 		height: 30px;
@@ -900,6 +1114,9 @@
 
 	svg {
 		width: 14px;
+		@include minmax(xl, dsk) {
+			width: vw(14);
+		}
 
 		&,
 		* {
@@ -956,7 +1173,9 @@
 .catalog-partners {
 	padding-top: 120px;
 	padding-bottom: 0;
-
+	@include minmax(xl, dsk) {
+		padding-top: vw(120);
+	}
 	&-form {
 		width: 100%;
 		display: flex;
@@ -970,11 +1189,22 @@
 		padding-right: 24px;
 		border-radius: 55px;
 		background: #193762;
+		@include minmax(xl, dsk) {
+			margin-top: vw(100);
+			padding-top: vw(60);
+			padding-bottom: vw(70);
+			padding-left: vw(24);
+			padding-right: vw(24);
+			border-radius: vw(55);
+		}
 
 		&__title {
 			font-size: 60px;
 			font-weight: 700;
 			color: #FFFFFF;
+			@include minmax(xl, dsk) {
+				font-size: vw(60);
+			}
 
 			span {
 				color: #FF6A3D;
@@ -987,12 +1217,19 @@
 		&__btn {
 			margin-top: 48px;
 			max-width: 345px;
+			@include minmax(xl, dsk) {
+				margin-top: vw(48);
+				max-width: vw(345);
+			}
 		}
 	}
 }
 
 .section__title--catalog-partners{
 	margin-bottom: 30px;
+	@include minmax(xl, dsk) {
+		margin-bottom: vw(30);
+	}
 
 	@media screen and (max-width:900px) {
 		font-size: 60px;
@@ -1000,19 +1237,31 @@
 }
 .partners--catalog {
 	margin-top: 43px;
+	@include minmax(xl, dsk) {
+		margin-top: vw(43);
+	}
 
 	.swiper {
 		width: 1066px;
+		@include minmax(xl, dsk) {
+			width: vw(1066px);
+		}
 	}
 
 }
 
 .partners__slide--catalog {
 	margin-right: 17px;
+	@include minmax(xl, dsk) {
+		margin-right: vw(17);
+	}
 }
 
 .main-categories--catalog {
 	padding-top: 94px;
+	@include minmax(xl, dsk) {
+		padding-top: vw(94);
+	}
 }
 
 .c-item--catalog {
@@ -1033,6 +1282,10 @@
     flex-direction: row;
 	gap: 30px;
 	margin-bottom: 45px;
+	@include minmax(xl, dsk) {
+		gap: vw(30);
+		margin-bottom: vw(45);
+	}
 
 	&__main {
 		display: flex;
@@ -1041,9 +1294,12 @@
 	}
 	&__slider {
 		margin-top: 10px;
+		@include minmax(xl, dsk) {
+			margin-top: vw(10);
+		}
 	}
 
-	@media only screen and (max-width: 1400px) {
+	@media only screen and (max-width: 1300px) {
 		flex-direction: column-reverse;
 	}
 	
@@ -1053,6 +1309,11 @@
 		margin-top: 32px;
 		margin-bottom: 19px;
 		display: flex;
+
+		@include minmax(xl, dsk) {
+			margin-top: vw(32);
+			margin-bottom: vw(19);
+		}
 
 		@media only screen and (max-width: 480px) {
 			flex-direction: column-reverse;
@@ -1068,7 +1329,14 @@
 		padding: 10px;
 		height: 100%;
 
-		@media only screen and (max-width: 1400px) {
+		@include minmax(xl, dsk) {
+			margin-top: vw(10);
+			border-radius: vw(20);
+			padding: vw(10);
+		}
+
+
+		@media only screen and (max-width: 1300px) {
 			margin-left: 20px;
 		}
 
@@ -1081,6 +1349,9 @@
 		font-weight: 700;
 		font-size: 40px;
 		line-height: 98%;
+		@include minmax(xl, dsk) {
+			font-size: vw(40);
+		}
 
 		@media only screen and (max-width: 767px) {
 			font-size: 36px;
@@ -1090,18 +1361,25 @@
 		font-size: 32px;
 		font-weight: 700;
 		color: $mainColor;
-
 		display: flex;
 		gap: 28px;
-
 		margin-bottom: 86px;
+
+		@include minmax(xl, dsk) {
+			font-size: vw(32);
+			gap: vw(28);
+			margin-bottom: vw(86);
+		}
 
 		&-value {
 			color: $orange;
-
 			display: flex;
 			gap: 6px;
     		align-items: center;
+
+			@include minmax(xl, dsk) {
+				gap: vw(6);
+			}
 		}
 
 		@media only screen and (max-width: 767px) {
@@ -1111,6 +1389,10 @@
 	&__btns {
 		display: flex;
 		gap: 13px;
+
+		@include minmax(xl, dsk) {
+			gap: vw(13);
+		}
 
 		@media only screen and (max-width: 650px) {
 			gap: 12px;
@@ -1126,29 +1408,48 @@
 
 	&__similar-products {
 		margin-bottom: 82px;
+		@include minmax(xl, dsk) {
+			margin-bottom: vw(82);
+		}
 	}
 	&__viewed-products {
 		margin-bottom: 94px;
+		@include minmax(xl, dsk) {
+			margin-bottom: vw(94);
+		}
 	}
 }
 
 .btn-arrow--catalog-detail {
 	text-align: left;
 	padding: 20px 30px 20px 34px;
+	@include minmax(xl, dsk) {
+		padding: vw(20) vw(30) vw(20) vw(34);
+	}
 }
 
 .catalog-detail-information {
 	display: flex;
 	gap: 56px;
 	margin-bottom: 40px;
+	@include minmax(xl, dsk) {
+		gap: vw(56);
+		margin-bottom: vw(40);
+	}
 
 	&__item {
 		color: $propColor;
 		font-size: 20px;
+		@include minmax(xl, dsk) {
+			font-size: vw(20);
+		}
 
 		& span:first-child {
 			padding-right: 6px;
 			opacity: 20%;
+			@include minmax(xl, dsk) {
+				padding-right: vw(6);
+			}
 		}
 
 		@media only screen and (max-width: 767px) {
@@ -1167,9 +1468,17 @@
 	margin-right: 50px;
 	margin-bottom: 28px;
 
+	@include minmax(xl, dsk) {
+		margin-right: vw(50);
+		margin-bottom: vw(28);
+	}
+
 	&__top {
 		display: flex;
 		gap: 57px;
+		@include minmax(xl, dsk) {
+			gap: vw(57);
+		}
 
 		@media only screen and (max-width: 480px) {
 			gap: 0;
@@ -1182,19 +1491,25 @@
 		font-size: 20px;
 		background: unset;
 		border: unset;
-
 		text-decoration: none;
     	cursor: pointer;
-
 		display: flex;
 		align-items: center;
 		gap: 4px;
-
 		margin-bottom: 25px;
+
+		@include minmax(xl, dsk) {
+			font-size: vw(20);
+			gap: vw(4);
+			margin-bottom: vw(25);
+		}
 
 		&:first-child svg {
 			margin-bottom: -3px;
 			color: $orange;
+			@include minmax(xl, dsk) {
+				margin-bottom: vw(-3);
+			}
 		}
 
 		@media only screen and (max-width: 767px) {
@@ -1223,8 +1538,12 @@
 	grid-template-areas: "chapter page";
 	grid-template-columns: auto max-content;
 	margin-bottom: 15px;
-
 	font-size: 20px;
+
+	@include minmax(xl, dsk) {
+		margin-bottom: vw(15);
+		font-size: vw(20);
+	}
 
 	&:last-child {
 		margin-bottom: 0px;
@@ -1255,15 +1574,23 @@
 .catalog-detail-slider {
 	width: 742px;
 
+	@include minmax(xl, dsk) {
+		width: vw(742);
+	}
+
 	&__main {
 		position: relative;
 		z-index: 1;
-
 		background: white;
 		height: 570px;
 		border-radius: 41px;
 
-		@media only screen and (max-width: 1400px) {
+		@include minmax(xl, dsk) {
+			height: vw(570);
+			border-radius: vw(41);
+		}
+
+		@media only screen and (max-width: 1300px) {
 			height: auto;
 		}
 	}
@@ -1272,7 +1599,9 @@
 		position: relative;
 		border-radius: 33px;
 		overflow: hidden;
-
+		@include minmax(xl, dsk) {
+			border-radius: vw(33);
+		}
 		& img {
 			//position: absolute;
 			//left: 0;
@@ -1287,8 +1616,12 @@
 		margin-top: 24px;
 		padding-left: 12px;
 		padding-right: 12px;
-
-		@media only screen and (max-width: 1400px) {
+		@include minmax(xl, dsk) {
+			margin-top: vw(24);
+			padding-left: vw(12);
+			padding-right: vw(12);
+		}
+		@media only screen and (max-width: 1300px) {
 			margin-top: 10px;
 			padding: 0;
 		}
@@ -1305,6 +1638,12 @@
 		display: flex;
 		align-items: center;
 
+		@include minmax(xl, dsk) {
+			width: vw(121);
+			height: vw(121);
+			border-radius: vw(20);
+		}
+
 		& img {
 			width: 100%;
     		opacity: 0.3;
@@ -1316,7 +1655,7 @@
 			opacity: 1;
 		}
 
-		@media only screen and (max-width: 1400px) {
+		@media only screen and (max-width: 1300px) {
 			height: 200px;
 		}
 
@@ -1325,7 +1664,7 @@
 		}
 	}
 
-	@media only screen and (max-width: 1400px) {
+	@media only screen and (max-width: 1300px) {
 		margin-top: 20px;
 		width: 100%;
 	}
@@ -1339,16 +1678,26 @@
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 30px;
+		@include minmax(xl, dsk) {
+			margin-bottom: vw(30);
+		}
 	}
 	&__title {
 		color: #193762;
 		font-size: 60px;
 		font-weight: 700;
 		line-height: 72%;
+		@include minmax(xl, dsk) {
+			font-size: vw(60);
+		}
 
 		&--partners {
 			font-size: 40px;
 			line-height: 40px;
+			@include minmax(xl, dsk) {
+				font-size: vw(40);
+				line-height: vw(40);
+			}
 		}
 
 		@media only screen and (max-width: 1250px) {
@@ -1382,6 +1731,11 @@
 		cursor: pointer;
 		transition-duration: .3s;
 
+		@include minmax(xl, dsk) {
+			width: vw(44);
+			height: vw(44);
+			margin-left: vw(12);
+		}
 
 		&::before {
 			content: '';
@@ -1390,6 +1744,10 @@
 			background-size: contain;
 			width: 13px;
 			height: 11px;
+			@include minmax(xl, dsk) {
+				width: vw(13);
+				height: vw(11);
+			}
 		}
 
 		&--prev {
@@ -1419,6 +1777,9 @@
 	}
 	&__btn {
 		margin-top: 23px;
+		@include minmax(xl, dsk) {
+			margin-top: vw(23);
+		}
 
 		& .btn-arrow {
 			justify-content: center;
@@ -1436,8 +1797,13 @@
 	overflow: hidden;
 	background: $mainColor;
 	padding: 45px 33px 56px 37px;
-
 	margin-bottom: 116px;
+
+	@include minmax(xl, dsk) {
+		border-radius: vw(31);
+		padding: vw(45) vw(33) vw(56) vw(37);
+		margin-bottom: vw(116);
+	}
 
 	&::before,
 	&::after {
@@ -1449,23 +1815,39 @@
 		height: 517px;
 		border-radius: 50%;
 		position: absolute;
+
+		@include minmax(xl, dsk) {
+			width: vw(517);
+			height: vw(517);
+		}
 		
 	}
 	&::before {
 		left: 237px;
 		bottom: 38px;
+		@include minmax(xl, dsk) {
+			left: vw(237);
+			bottom: vw(38);
+		}
 	}
 	&::after {
 		top: 45px;
 		left: 492px;
+		@include minmax(xl, dsk) {
+			top: vw(45);
+			left: vw(492);
+		}
 	}
 
 	&__title {
 		color: white;
 		font-size: 41px;
 		font-weight: 700;
-
 		max-width: 966px;
+		@include minmax(xl, dsk) {
+			font-size: vw(41);
+			max-width: vw(966);
+		}
 
 		@media only screen and (max-width: 767px) {
 			font-size: 36px;
@@ -1494,15 +1876,24 @@
 	border-radius: 55px;
 	padding: 38px 30px 41px 30px;
 	margin-bottom: 67px;
-
+	@include minmax(xl, dsk) {
+		border-radius: vw(55);
+		padding: vw(38) vw(30) vw(41) vw(30);
+		margin-bottom: vw(67);
+	}
 	&__title {
 		color: white;
 		font-weight: 700;
 		font-size: 40px;
 		line-height: 47px;
-
 		max-width: 931px;
 		margin-bottom: 46px;
+		@include minmax(xl, dsk) {
+			font-size: vw(40);
+			line-height: vw(47);
+			max-width: vw(931);
+			margin-bottom: vw(46);
+		}
 
 		@media only screen and (max-width: 767px) {
 			font-size: 36px;
@@ -1512,7 +1903,9 @@
 	&__wrapper {
 		display: flex;
 		gap: 16px;
-
+		@include minmax(xl, dsk) {
+			gap: vw(16);
+		}
 		@media only screen and (max-width: 1200px) {
 			flex-direction: column;
 		}
@@ -1522,7 +1915,9 @@
 
 		&:last-child {
 			margin-left: 10px;
-
+			@include minmax(xl, dsk) {
+				margin-left: vw(10);
+			}
 			@media only screen and (max-width: 1200px) {
 				margin-left: 0px;
 			}
@@ -1563,7 +1958,10 @@
 	border-radius: 42px;
 	overflow: hidden;
 	margin-bottom: 48px;
-
+	@include minmax(xl, dsk) {
+		border-radius: vw(42);
+		margin-bottom: vw(48);
+	}
 	&__head {
 		background: $mainColor;
 		display: flex;
@@ -1571,7 +1969,11 @@
 		justify-content: space-between;
 		padding: 24px 18px 40px 18px;
 		margin-bottom: -40px;
-
+		@include minmax(xl, dsk) {
+			height: vw(178);
+			padding: vw(24) vw(18) vw(40) vw(18);
+			margin-bottom: vw(-40);
+		}
 		@media only screen and (max-width: 1206px) {
 			flex-direction: column;
 			height: auto;
@@ -1586,7 +1988,11 @@
 		padding: 26px 50px 48px 50px;
 		position: relative;
 		cursor: pointer;
-
+		@include minmax(xl, dsk) {
+			font-size: vw(32);
+			border-radius: vw(42) vw(42) 0 0;
+			padding: vw(26) vw(50) vw(48) vw(50);
+		}
 		span {
 			user-select: none;
 		}
@@ -1604,9 +2010,12 @@
 				border-radius: 50%;
 				background: $mainColor;
 				z-index: 3;
-
 				position: absolute;
     			bottom: 0;
+				@include minmax(xl, dsk) {
+					width: vw(53);
+					height: vw(53);
+				}
 
 				@media only screen and (max-width: 1206px) {
 					display: none;
@@ -1615,10 +2024,16 @@
 
 			&:before {
 				left: -53px;
+				@include minmax(xl, dsk) {
+					left: vw(-53);
+				}
 			}
 
 			&:after {
 				right: -53px;
+				@include minmax(xl, dsk) {
+					right: vw(-53);
+				}
 			}
 
 			& span {
@@ -1630,9 +2045,14 @@
 					border-radius: 50%;
 					background: white;
 					z-index: 2;
-
 					position: absolute;
     				bottom: -5px;
+
+					@include minmax(xl, dsk) {
+						width: vw(38);
+						height: vw(38);
+						bottom: vw(-5);
+					}
 
 					@media only screen and (max-width: 1206px) {
 						display: none;
@@ -1641,10 +2061,16 @@
 
 				&:before {
 					left: -30px;
+					@include minmax(xl, dsk) {
+						left: vw(-30);
+					}
 				}
 	
 				&:after {
 					right: -30px;
+					@include minmax(xl, dsk) {
+						right: vw(-30);
+					}
 				}
 			}
 		}
@@ -1652,11 +2078,18 @@
 		&:first-child {
 			&:before {
 				bottom: -22px;
+				@include minmax(xl, dsk) {
+					left: vw(-30);
+				}
 			}
 			& span {
 				&:before {
 					left: -9px;
 					bottom: -30px;
+					@include minmax(xl, dsk) {
+						left: vw(-9);
+						bottom: vw(-30);
+					}
 				}
 			}
 		}
@@ -1664,11 +2097,18 @@
 		&:last-child {
 			&:after {
 				bottom: -22px;
+				@include minmax(xl, dsk) {
+					bottom: vw(-22);
+				}
 			}
 			& span {
 				&:after {
 					right: -9px;
 					bottom: -30px;
+					@include minmax(xl, dsk) {
+						left: vw(-9);
+						bottom: vw(-30);
+					}
 				}
 			}
 
@@ -1690,6 +2130,9 @@
 	&__body {
 		border-radius: 42px;
 		background: white;
+		@include minmax(xl, dsk) {
+			border-radius: vw(42);
+		}
 	}
 
 	&__tab {
@@ -1707,11 +2150,18 @@
 	&__wrapper {
 		height: 600px;
 		padding: 38px 68px 36px 48px;
+		@include minmax(xl, dsk) {
+			height: vw(600);
+			padding: vw(38) vw(68) vw(36) vw(48);
+		}
 	}
 }
 
 .tab-proprties {
 	padding: 48px 38px 52px 38px;
+	@include minmax(xl, dsk) {
+		padding: vvw(48) vw(38) vw(52) vw(38);
+	}
 
 	&__title {
 		font-size: 72px;
@@ -1720,6 +2170,13 @@
 		color: $mainColor;
 		max-width: 825px;
 		margin-bottom: 38px;
+
+		@include minmax(xl, dsk) {
+			font-size: vw(72);
+			line-height: vw(60);
+			max-width: vw(825);
+			margin-bottom: vw(38);
+		}
 
 		@media only screen and (max-width: 1206px) {
 			text-align: center;
@@ -1733,12 +2190,18 @@
 		background: #E8EBEF;
 		border-radius: 20px;
 		padding: 32px 24px;
+		@include minmax(xl, dsk) {
+			border-radius: vw(20);
+			padding: vw(32) vw(24);
+		}
 	}
 	&__item {
 		display: flex;
 		margin-bottom: 15px;
 		color: $propColor;
-
+		@include minmax(xl, dsk) {
+			margin-bottom: vw(15);
+		}
 		&-name {
 			width: 494px;
 			opacity: 30%;
@@ -1747,7 +2210,9 @@
 			align-items: center;
 			flex-wrap: wrap;
 			justify-content: flex-start;
-
+			@include minmax(xl, dsk) {
+				width: vw(494);
+			}
 			& span {
 				&:first-child {
 					background: #E8EBEF;
@@ -1760,7 +2225,11 @@
 					background-size: 7px 1px;
 					background-repeat: repeat-x;
 					margin-top: -4px;
-
+					@include minmax(xl, dsk) {
+						height: vw(4);
+						background-size: vw(7) vw(1);
+						margin-top: vw(-4);
+					}
 					@media only screen and (max-width: 1206px) {
 						display: none;
 					}
@@ -1773,6 +2242,9 @@
 		}
 		&-value {
 			padding-left: 6px;
+			@include minmax(xl, dsk) {
+				padding-left: vw(6);
+			}
 
 			@media only screen and (max-width: 1206px) {
 				padding-left: 8px;
@@ -1806,6 +2278,9 @@
 
 .tab-table-size {
 	padding-top: 32px;
+	@include minmax(xl, dsk) {
+		padding-top: vw(32);
+	}
 
 	@media only screen and (max-width: 1206px) {
 		width: 100%;
@@ -1819,11 +2294,17 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-
+		@include minmax(xl, dsk) {
+			border-radius: vw(42) vw(42) 0 0;
+			padding: vw(56) vw(46) vw(78) vw(46);
+		}
 		&-item {
 			color: white;
 			font-size: 20px;
 			font-weight: 500;
+			@include minmax(xl, dsk) {
+				font-size: vw(20);
+			}
 
 			@media only screen and (max-width: 1206px) {
 				font-size: 16px;
@@ -1846,7 +2327,12 @@
 		display: flex;
     	flex-direction: column;
 		gap: 18px;
-
+		@include minmax(xl, dsk) {
+			border-radius: vw(34);
+			padding: vw(26) vw(19) vw(38) vw(19);
+			margin-top: vw(-32);
+			gap: vw(18);
+		}
 		@media only screen and (max-width: 1206px) {
 			min-width: 1166px;
 			width: 100%;
@@ -1863,6 +2349,11 @@
 		justify-content: space-between;
 		padding: 20px 22px 20px 26px;
 
+		@include minmax(xl, dsk) {
+			border-radius: vw(42);
+			padding: vw(20) vw(22) vw(20) vw(26);
+		}
+
 		@media only screen and (max-width: 1206px) {
 			padding: 12px 22px 12px 26px;
 		}
@@ -1871,6 +2362,10 @@
 		font-size: 20px;
 		color: $mainColor;
 
+		@include minmax(xl, dsk) {
+			font-size: vw(20);
+		}
+
 		@media only screen and (max-width: 1206px) {
 			font-size: 16px;
 		}
@@ -1878,7 +2373,9 @@
 	&__counter {
 		display: flex;
 		gap: 4px;
-
+		@include minmax(xl, dsk) {
+			gap: vw(4);
+		}
 		&-minus,
 		&-plus {
 			width: 58px;
@@ -1893,6 +2390,11 @@
 			text-align: center;
 			color: $mainColor;
 
+			@include minmax(xl, dsk) {
+				width: vw(58);
+				height: vw(58);
+			}
+
 			@media only screen and (max-width: 1206px) {
 				width: 40px;
 				height: 40px;
@@ -1902,6 +2404,11 @@
 			& svg {
 				width: 13px;
 				height: 2px;
+
+				@include minmax(xl, dsk) {
+					width: vw(13);
+					height: vw(2);
+				}
 
 				@media only screen and (max-width: 1206px) {
 					width: 10px;
@@ -1921,6 +2428,11 @@
 			align-items: center;
 			text-align: center;
 
+			@include minmax(xl, dsk) {
+				width: vw(58);
+				height: vw(58);
+			}
+
 			@media only screen and (max-width: 1206px) {
 				width: 40px;
 				height: 40px;
@@ -1936,6 +2448,12 @@
 			font-size: 20px;
 			font-weight: 500;
 
+			@include minmax(xl, dsk) {
+				width: vw(34);
+				line-height: vw(24);
+				font-size: vw(20);
+			}
+
 			@media only screen and (max-width: 1206px) {
 				font-size: 16px;
 			}
@@ -1944,6 +2462,11 @@
 			& svg {
 				width: 13px;
     			height: 13px;
+
+				@include minmax(xl, dsk) {
+					width: vw(13);
+					height: vw(13);
+				}
 
 				@media only screen and (max-width: 1206px) {
 					width: 10px;
@@ -1959,21 +2482,39 @@
 
 		&:nth-child(1) {
 			width: 110px;
+				@include minmax(xl, dsk) {
+					width: vw(110);
+				}
 		}
 		&:nth-child(2) {
 			width: 110px;
+				@include minmax(xl, dsk) {
+					width: vw(110);
+				}
 		}
 		&:nth-child(3) {
 			width: 70px;
+				@include minmax(xl, dsk) {
+					width: vw(70);
+				}
 		}
 		&:nth-child(4) {
 			width: 100px;
+				@include minmax(xl, dsk) {
+					width: vw(100);
+				}
 		}
 		&:nth-child(5) {
 			width: 140px;
+				@include minmax(xl, dsk) {
+					width: vw(140);
+				}
 		}
 		&:nth-child(6) {
 			width: 168px;
+				@include minmax(xl, dsk) {
+					width: vw(168);
+				}
 		}
 	}
 }
@@ -1984,7 +2525,9 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-
+		@include minmax(xl, dsk) {
+			padding: vw(40) vw(88) vw(35) vw(50);
+		}
 		@media only screen and (max-width: 560px) {
 			display: none;
 		}
@@ -1994,6 +2537,9 @@
 		color: $mainColor;
 		font-weight: 500;
 		font-size: 20px;
+		@include minmax(xl, dsk) {
+			font-size: vw(20);
+		}
 
 		@media only screen and (max-width: 1206px) {
 			font-size: 16px;
@@ -2005,7 +2551,10 @@
 		flex-direction: column;
 		gap: 18px;
 		padding: 0 23px 28px 23px;
-
+		@include minmax(xl, dsk) {
+			gap: vw(18);
+			padding: 0 vw(23) vw(28) vw(23);
+		}
 		@media only screen and (max-width: 1206px) {
 			gap: 12px;	
 		}
@@ -2028,6 +2577,12 @@
 		font-weight: 500;
 		font-size: 20px;
 
+		@include minmax(xl, dsk) {
+			border-radius: vw(42);
+			padding: vw(20) vw(66) vw(20) vw(26);
+			font-size: vw(20);
+		}
+
 		@media only screen and (max-width: 1206px) {
 			font-size: 16px;
 			padding: 20px 26px;
@@ -2049,6 +2604,10 @@
 
 	&__icon {
 		margin-right: 54px;
+
+		@include minmax(xl, dsk) {
+			margin-right: vw(54);
+		}
 
 		& svg {
 			@media only screen and (max-width: 1206px) {
@@ -2075,9 +2634,15 @@
 		font-weight: 500;
 		font-size: 20px;
 		text-decoration: none;
+		@include minmax(xl, dsk) {
+			font-size: vw(20);
+		}
 
 		& span {
 			margin-right: 2px;
+			@include minmax(xl, dsk) {
+				margin-right: vw(2);
+			}
 		}
 
 		@media only screen and (max-width: 1206px) {
@@ -2095,6 +2660,10 @@
 		&:nth-child(1) {
 			width: 622px;
 
+			@include minmax(xl, dsk) {
+				width: vw(622);
+			}
+
 			@media only screen and (max-width: 1206px) {
 				width: 410px;
 			}
@@ -2104,6 +2673,10 @@
 		}
 		&:nth-child(2) {
 			width: 100px;
+
+			@include minmax(xl, dsk) {
+				width: vw(100);
+			}
 
 			@media only screen and (max-width: 1206px) {
 				width: 60px;
@@ -2115,6 +2688,9 @@
 		&:nth-child(3) {
 			width: 100px;
 			text-align: right;
+			@include minmax(xl, dsk) {
+				width: vw(100);
+			}
 
 			@media only screen and (max-width: 1206px) {
 				width: 80px;

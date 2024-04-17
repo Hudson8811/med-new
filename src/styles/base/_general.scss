@@ -23,7 +23,8 @@ body {
 
 .container {
 	width: 100%;
-	max-width: 1480px;
+	//max-width: 1480px;
+	max-width: 1920px;
 	padding: 0 20px;
 	margin: 0 auto;
 	box-sizing: border-box;
@@ -34,6 +35,9 @@ body {
 	font-size: 20px;
 	font-style: normal;
 	line-height: 1.2;
+	@include minmax(xl, dsk) {
+		font-size: vw(20);
+	}
 	@include max(md){
 		font-size: 16px;
 	}
@@ -65,6 +69,10 @@ label{
 	z-index: 3;
 	transition: transform 0.2s;
 	cursor: pointer;
+	@include minmax(xl, dsk) {
+		padding: vw(24) vw(34);
+		font-size: vw(20);
+	}
 
 	&::before {
 		content: "";
@@ -96,12 +104,17 @@ label{
 	&:hover {
 		&::before {
 			transform: translateY(10px);
+			@include minmax(xl, dsk) {
+				transform: translateY(vw(10));
+			}
 		}
 	}
 
 	&:active {
 		transform: translateY(10px);
-
+		@include minmax(xl, dsk) {
+			transform: translateY(vw(10));
+		}
 		&::before {
 			transform: translateY(0);
 		}
@@ -121,16 +134,28 @@ label{
 		display: block;
 		flex-shrink: 0;
 		margin-left: 12px;
+		@include minmax(xl, dsk) {
+			width: vw(14);
+			height: vw(14);
+			margin-left: vw(12);
+		}
 	}
 
 	&--2row {
 		padding-left: 40px;
 		padding-right: 40px;
+		@include minmax(xl, dsk) {
+			padding-left: vw(40);
+			padding-right: vw(40);
+		}
 
 		>span {
 			display: block;
 			text-align: left;
 			min-width: 247px;
+			@include minmax(xl, dsk) {
+				min-width: vw(247);
+			}
 
 			>span {
 				display: block;
@@ -138,6 +163,10 @@ label{
 				&:last-child:not(:first-child) {
 					font-size: 16px;
 					margin-top: 2px;
+					@include minmax(xl, dsk) {
+						font-size: vw(16);
+						margin-top: vw(2);
+					}
 				}
 			}
 		}
@@ -182,6 +211,10 @@ label{
 		img,svg{
 			margin-left: 8px;
 			margin-bottom: -2px;
+			@include minmax(xl, dsk) {
+				margin-left: vw(8);
+				margin-bottom: vw(-2);
+			}
 		}
 	}
 
@@ -191,6 +224,9 @@ label{
 		justify-content: center;
 		border: none;
 		outline: none;
+		@include minmax(xl, dsk) {
+			padding: vw(23) vw(34);
+		}
 	}
 	&--w100{
 		width: 100%;
@@ -200,27 +236,40 @@ label{
 		justify-content: center;
 		border: none;
 		outline: none;
-
-
 		letter-spacing: 0.15px;
 		font-weight: 700;
 		font-size: 13px;
 		line-height: 90%;
+		@include minmax(xl, dsk) {
+			padding: vw(9) vw(11) vw(9) vw(18);
+			letter-spacing: vw(0.15);
+			font-size: vw(13);
+		}
 
 		svg,
 		img {
 			width: 11px;
 			margin-left: 5px;
+			@include minmax(xl, dsk) {
+				width: vw(11);
+				margin-left: vw(5);
+			}
 		}
 
 		&:hover {
 			&::before {
 				transform: translateY(5px);
+				@include minmax(xl, dsk) {
+					transform: translateY(vw(5));
+				}
 			}
 		}
 
 		&:active {
 			transform: translateY(5px);
+			@include minmax(xl, dsk) {
+				transform: translateY(vw(5));
+			}
 
 			&::before {
 				transform: translateY(0);
@@ -233,6 +282,11 @@ label{
 			margin-left: 6px;
 			margin-top: 3px;
 			width: 16px;
+			@include minmax(xl, dsk) {
+				margin-left: vw(6);
+				margin-top: vw(3);
+				width: vw(16);
+			}
 		}
 
 	}
@@ -249,6 +303,9 @@ label{
 	display: flex;
 	align-items: center;
 	color: $mainColor;
+	@include minmax(xl, dsk) {
+		font-size: vw(20);
+	}
 
 	span {
 		&:last-child:not(:first-child) {
@@ -261,6 +318,11 @@ label{
 			color: #ffffff;
 			background: $mainColor;
 			border-radius: 50%;
+			@include minmax(xl, dsk) {
+				width: vw(44);
+				height: vw(44);
+				margin-left: vw(12);
+			}
 		}
 	}
 
@@ -271,6 +333,10 @@ label{
 		object-fit: contain;
 		display: block;
 		flex-shrink: 0;
+		@include minmax(xl, dsk) {
+			width: vw(14);
+			height: vw(14);
+		}
 	}
 
 	&--light {
@@ -287,6 +353,9 @@ label{
 .section {
 	position: relative;
 	padding: 60px 0 113px;
+	@include minmax(xl, dsk) {
+		padding: vw(60) 0 vw(113);
+	}
 
 	&__top {
 		display: flex;
@@ -314,6 +383,11 @@ label{
 		align-items: center;
 		cursor: pointer;
 		transition-duration: .3s;
+		@include minmax(xl, dsk) {
+			width: vw(44);
+			height: vw(44);
+			margin-left: vw(12);
+		}
 
 		&--gray {
 			background: #E8EBEF;
@@ -327,6 +401,10 @@ label{
 			background-size: contain;
 			width: 13px;
 			height: 11px;
+			@include minmax(xl, dsk) {
+				width: vw(13);
+				height: vw(11);
+			}
 		}
 
 		&--prev {
@@ -357,9 +435,16 @@ label{
 		font-weight: 700;
 		line-height: 72%;
 		margin-bottom: 60px;
+		@include minmax(xl, dsk) {
+			font-size: vw(50);
+			margin-bottom: vw(60);
+		}
 
 		&--slider {
 			margin-bottom: 36px;
+			@include minmax(xl, dsk) {
+				margin-bottom: vw(36);
+			}
 		}
 	
 		@media only screen and (max-width: 767px) {
@@ -372,6 +457,9 @@ label{
 
 	&__btn {
 		margin-top: 26px;
+		@include minmax(xl, dsk) {
+			margin-top: vw(26);
+		}
 
 		.btn-arrow {
 			justify-content: center;
@@ -381,6 +469,9 @@ label{
 	&__slider {
 		&--mt100 {
 			margin-top: 100px;
+			@include minmax(xl, dsk) {
+				margin-top: vw(100);
+			}
 		}
 	}
 
@@ -405,7 +496,6 @@ label{
 	border-radius: 1000px;
 	transition: all 0.3s;
 	border: 0;
-
 	min-height: 45px;
 	display: flex;
 	justify-content: center;
@@ -418,6 +508,11 @@ label{
 	padding-left: 0;
 	padding-right: 0;
 	transition: all 0.3s;
+	@include minmax(xl, dsk) {
+		min-height: vw(45);
+		font-size: vw(20);
+		line-height: vw(18);
+	}
 
 	/*&::after {
 		position: relative;
@@ -461,6 +556,11 @@ label{
 		margin-left: 18px;
 		margin-top: 0px;
 		border-radius: 50%;
+		@include minmax(xl, dsk) {
+			width: vw(45);
+			height: vw(45);
+			margin-left: vw(18);
+		}
 
 		&::after {
 			content: '';
@@ -468,10 +568,14 @@ label{
 			width: 11px;
 			height: 8px;
 			background: url(../img/svg/small-circle-btn-arrow.svg) no-repeat center center;
-			background-size: contain
+			background-size: contain;
 			//position: absolute;
 			//top: 50%;
 			//transform: translateY(-50%);
+			@include minmax(xl, dsk) {
+				width: vw(11);
+				height: vw(8);
+			}
 		}
 
 		@media only screen and (max-width: 1300px) {
@@ -486,7 +590,6 @@ label{
 			@media only screen and (max-width: 1300px){
 			width: 35px;
 			height: 35px;
-
 			img,svg{
 				width: 60%;
 				height: 60%;
@@ -501,6 +604,10 @@ label{
 				height: 23px;
 				object-fit: contain;
 				object-position: center center;
+				@include minmax(xl, dsk) {
+					width: vw(22);
+					height: vw(23);
+				}
 			}
 		}
 	}
@@ -557,11 +664,15 @@ label{
 		}
 	}
 
-	&--small-h32{
+	&--small-h32 {
 		min-height: 32px;
 		font-size: 13px;
 		line-height: 90%;
 		font-weight: 700;
+		@include minmax(xl, dsk) {
+			min-height: vw(32);
+			font-size: vw(13);
+		}
 
 		@media only screen and (max-width: 1300px) {
 			min-height: 32px;
@@ -584,6 +695,11 @@ label{
 			height: 32px;
 			margin-left: 11px;
 			margin-top: 0;
+			@include minmax(xl, dsk) {
+				width: vw(32);
+				height: vw(32);
+				margin-left: vw(11);
+			}
 			&::after {
 			}
 		}
@@ -602,6 +718,9 @@ label{
 
 .simple-padding-before-footer{
 	margin-top: 94px;
+	@include minmax(xl, dsk) {
+		margin-top: vw(94);
+	}
 
 	@media only screen and (max-width: 1300px) {
 		margin-top: 70px;

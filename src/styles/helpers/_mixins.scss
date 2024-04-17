@@ -11,3 +11,11 @@
 		@content;
 	}
 }
+
+@mixin minmax($minwidth, $maxwidth) {
+	$minwidth: _get-media-width($minwidth,false);
+	$maxwidth: _get-media-width($maxwidth,false);
+	@media only screen and (min-width: $minwidth + 'px') and (max-width: $maxwidth + 'px') {
+		@content;
+	}
+}

@@ -1,11 +1,18 @@
 .lslider {
     margin-top: 91px;
 
+    @include minmax(xl, dsk) {
+        margin-top: vw(91);
+    }
+
     @media only screen and (max-width: 767px) {
         margin-top: 40px;
     }
     &--partners,&--portfolio-single {
         margin-top: 33px;
+        @include minmax(xl, dsk) {
+            margin-top: vw(33);
+        }
     }
 }
 
@@ -21,7 +28,10 @@
     display: flex;
     justify-content: flex-end;
     z-index: 2;
-
+    @include minmax(xl, dsk) {
+        right: vw(16);
+        top: vw(24);
+    }
     @media only screen and (max-width: 767px) {
         display: none;
     }
@@ -39,7 +49,11 @@
     align-items: center;
     cursor: pointer;
     transition-duration: .3s;
-
+    @include minmax(xl, dsk) {
+        width: vw(44);
+        height: vw(44);
+        margin-left: vw(12);
+    }
 
     &::before {
         content: '';
@@ -48,6 +62,10 @@
         background-size: contain;
         width: 13px;
         height: 11px;
+        @include minmax(xl, dsk) {
+            width: vw(13);
+            height: vw(11);
+        }
     }
 
     &--prev {
@@ -83,7 +101,9 @@
     position: relative;
     border-radius: 33px;
     overflow: hidden;
-
+    @include minmax(xl, dsk) {
+        border-radius: vw(33);
+    }
     @media only screen and (max-width: 767px) {
         border-radius: 21px;
     }
@@ -107,6 +127,9 @@
 
 .lslider-thumbs {
     margin-top: 24px;
+    @include minmax(xl, dsk) {
+        margin-top: vw(24);
+    }
 
     @media only screen and (max-width: 767px) {
         margin-top: 10px;
@@ -121,7 +144,9 @@
     border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
-
+    @include minmax(xl, dsk) {
+        border-radius: vw(20);
+    }
     &.swiper-slide-thumb-active,&:hover{
         img {
             opacity: 1;
@@ -152,6 +177,11 @@
     width: 942px;
     max-width: 100%;
 
+    @include minmax(xl, dsk) {
+        margin-top: vw(57);
+        width: vw(942);
+    }
+
     @media only screen and (max-width: 767px) {
         margin-top: 40px;
     }
@@ -162,7 +192,9 @@
     font-size: 20px;
     line-height: 152%;
     color: $mainColor;
-
+    @include minmax(xl, dsk) {
+        font-size: vw(20);
+    }
     @media only screen and (max-width: 767px) {
         font-size: 16px;
         line-height: 1.2;
@@ -171,7 +203,9 @@
     &>*+ {
         h2 {
             margin-top: 46px;
-
+            @include minmax(xl, dsk) {
+                margin-top: vw(46);
+            }
             @media only screen and (max-width: 767px) {
                 margin-top: 24px;
             }
@@ -179,7 +213,9 @@
 
         h3 {
             margin-top: 49px;
-
+            @include minmax(xl, dsk) {
+                margin-top: vw(49);
+            }
             @media only screen and (max-width: 767px) {
                 margin-top: 24px;
             }
@@ -187,7 +223,9 @@
 
         h4 {
             margin-top: 40px;
-
+            @include minmax(xl, dsk) {
+                margin-top: vw(40);
+            }
             @media only screen and (max-width: 767px) {
                 margin-top: 24px;
             }
@@ -195,18 +233,29 @@
 
         hr {
             margin-top: 15px;
-
+            @include minmax(xl, dsk) {
+                margin-top: vw(15);
+            }
             &+* {
                 margin-top: 35px;
+                @include minmax(xl, dsk) {
+                    margin-top: vw(35);
+                }
             }
         }
 
         p {
             margin-top: 26px;
+            @include minmax(xl, dsk) {
+                margin-top: vw(26);
+            }
         }
 
         ul {
             margin-top: 31px;
+            @include minmax(xl, dsk) {
+                margin-top: vw(31);
+            }
 
             @media only screen and (max-width: 767px) {
                 margin-top: 19px;
@@ -219,7 +268,9 @@
         font-size: 60px;
         line-height: 120%;
         color: #193762;
-
+        @include minmax(xl, dsk) {
+            font-size: vw(60);
+        }
         @media only screen and (max-width: 767px) {
             font-size: 40px;
             line-height: 120%;
@@ -238,7 +289,9 @@
         font-weight: 700;
         font-size: 40px;
         line-height: 120%;
-
+        @include minmax(xl, dsk) {
+            font-size: vw(40);
+        }
         @media only screen and (max-width: 767px) {
             font-size: 28px;
             line-height: 1.2;
@@ -255,7 +308,9 @@
         font-size: 24px;
         line-height: 120%;
         color: $orange;
-
+        @include minmax(xl, dsk) {
+            font-size: vw(24);
+        }
         @media only screen and (max-width: 767px) {
             font-size: 20px;
         }
@@ -282,7 +337,9 @@
             position: relative;
             text-transform: none;
             padding-left: 30px;
-
+            @include minmax(xl, dsk) {
+                padding-left: vw(30);
+            }
             @media only screen and (max-width: 767px) {
                 padding-left: 18px;
             }
@@ -297,7 +354,12 @@
                 position: absolute;
                 left: 12px;
                 top: 12px;
-
+                @include minmax(xl, dsk) {
+                    width: vw(5);
+                    height: vw(5);
+                    left: vw(12);
+                    top: vw(12);
+                }
                 @media only screen and (max-width: 767px) {
                     left: 0;
                     top: 8px;
@@ -306,6 +368,9 @@
 
             &+li {
                 margin-top: 6.5px;
+                @include minmax(xl, dsk) {
+                    margin-top: vw(6.5);
+                }
             }
         }
     }

@@ -6,6 +6,10 @@
 	padding: 40px 0;
 	width: 100%;
 	justify-self: flex-end;
+	@include minmax(xl, dsk) {
+		border-radius: vw(53) vw(53) 0 0;
+		padding: vw(40) 0;
+	}
 	@include max(1100){
 		padding: 25px 0 30px;
 	}
@@ -24,6 +28,9 @@
 		justify-content: space-between;
 		align-items: flex-end;
 		margin-top: 20px;
+		@include minmax(xl, dsk) {
+			margin-top: vw(20);
+		}
 		@include max(md){
 			flex-direction: column-reverse;
 			align-items: flex-start;
@@ -45,11 +52,18 @@
 				margin-top: 25px;
 				padding-top: 25px;
 				border-top: 1px solid rgba(#ffffff, 0.3);
+				@include minmax(xl, dsk) {
+					margin-top: vw(25);
+					padding-top: vw(25);
+				}
 			}
 		}
 		&--contacts,
 		&--social{
 			width: 336px;
+			@include minmax(xl, dsk) {
+				width: vw(336);
+			}
 			@include max(xl){
 				width: 270px;
 			}
@@ -77,12 +91,19 @@
 		&-title{
 			text-transform: uppercase;
 			margin-bottom: 30px;
+			@include minmax(xl, dsk) {
+				margin-bottom: vw(30);
+			}
 		}
 	}
 	&__logo{
 		width: 324px;
 		height: 60px;
 		max-width: 100%;
+		@include minmax(xl, dsk) {
+			width: vw(324);
+			height: vw(60);
+		}
 		@include max(sm){
 			width: 270px;
 			height: 50px;
@@ -98,6 +119,9 @@
 	&__info{
 		&:not(:first-child){
 			margin-top: 50px;
+			@include minmax(xl, dsk) {
+				margin-top: vw(50);
+			}
 			@include max(md){
 				margin-top: 30px;
 			}
@@ -107,11 +131,17 @@
 	&__menu{
 		list-style: none;
 		&--top{
+			@include minmax(xl, dsk) {
+				max-width: vw(240);
+			}
 			max-width: 240px;
 		}
 		li{
 			&:not(:first-child){
 				margin-top: 14px;
+				@include minmax(xl, dsk) {
+					margin-top: vw(14);
+				}
 			}
 			a{
 				@extend .link;
@@ -122,6 +152,9 @@
 
 	&__copyright{
 		margin-top: 8px;
+		@include minmax(xl, dsk) {
+			margin-top: vw(8);
+		}
 	}
 
 	&__social{
@@ -131,6 +164,10 @@
 		list-style: none;
 		margin-left: -4px;
 		margin-right: -4px;
+		@include minmax(xl, dsk) {
+			margin-left: vw(-4);
+			margin-right: vw(-4);
+		}
 		@include max(sm){
 			margin-left: -10px;
 			margin-right: -10px;
@@ -142,6 +179,9 @@
 		}
 		li{
 			margin: 0 4px;
+			@include minmax(xl, dsk) {
+				margin: 0 vw(4);
+			}
 			@include max(sm){
 				margin: 0 10px;
 			}
@@ -155,6 +195,10 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				@include minmax(xl, dsk) {
+					width: vw(70);
+					height: vw(70);
+				}
 				@include max(sm){
 					width: auto;
 					height: auto;
@@ -166,6 +210,10 @@
 					height: 24px;
 					object-fit: contain;
 					display: block;
+					@include minmax(xl, dsk) {
+						width: vw(24);
+						height: vw(24);
+					}
 				}
 				&:hover{
 					color: $orange;

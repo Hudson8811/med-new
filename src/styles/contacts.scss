@@ -6,6 +6,12 @@
         background: #FF6A3D;
         overflow: hidden;
 
+        @include minmax(xl, dsk) {
+            margin-top: vw(56);
+            height: vw(740);
+            border-radius: vw(48);
+        }
+
         &-wrapper {
         }
 
@@ -30,6 +36,15 @@
         position: relative;
         z-index: 100;
 
+        @include minmax(xl, dsk) {
+            max-width: vw(992);
+            margin-top: vw(-174);
+            gap: vw(18);
+            padding: vw(20);
+            border-radius: vw(42);
+            box-shadow: 0 vw(8) vw(16) 0 rgba(0, 0, 0, 0.08), 0 0 4px 0 rgba(0, 0, 0, 0.04);
+        }
+
         @media only screen and (max-width: 560px) {
             flex-wrap: nowrap;
             overflow: hidden;
@@ -49,6 +64,13 @@
             transition: all 0.2s;
             cursor: pointer;
             user-select: none;
+
+            @include minmax(xl, dsk) {
+                border-radius: vw(30);
+                min-height: vw(254);
+                flex: 1 1 calc(30% - vw(10));
+                padding: vw(16) vw(22) vw(24) vw(22);
+            }
     
             &--active,
             &:hover {
@@ -77,11 +99,19 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+            @include minmax(xl, dsk) {
+                width: vw(75);
+                height: vw(75);
+            }
 			img, svg{
 				max-width: 30px;
 				max-height: 30px;
 				display: block;
 				object-fit: contain;
+                @include minmax(xl, dsk) {
+                    max-width: vw(30);
+                    max-height: vw(30);
+                }
 			}
 
             @media only screen and (max-width: 560px) {
@@ -95,6 +125,12 @@
             line-height: 24px;
 			color: $mainColor;
 
+            @include minmax(xl, dsk) {
+                max-width: vw(230);
+                font-size: vw(20);
+                line-height: vw(24);
+            }
+
             @media only screen and (max-width: 600px) {
                 font-size: 16px;
             }
@@ -106,6 +142,12 @@
         background: #193762;
         border-radius: 55px;
         padding: 28px 32px 54px 32px;
+        @include minmax(xl, dsk) {
+            max-width: vw(992);
+            margin: vw(26) auto 0 auto;
+            border-radius: vw(55);
+            padding: vw(28) vw(32) vw(54) vw(32);
+        }
 
         &__title {
             color: white;
@@ -115,6 +157,13 @@
 
             max-width: 931px;
             margin-bottom: 46px;
+
+            @include minmax(xl, dsk) {
+                font-size: vw(50);
+                line-height: vw(47);
+                max-width: vw(931);
+                margin-bottom: vw(46);
+            }
         
             @media only screen and (max-width: 767px) {
                 font-size: 36px;
@@ -125,10 +174,16 @@
             display: flex;
             flex-direction: column;
             gap: 47px;
+            @include minmax(xl, dsk) {
+                gap: vw(47);
+            }
         }
         &__top {
             display: flex;
             gap: 14px;
+            @include minmax(xl, dsk) {
+                gap: vw(14)
+            }
 
             @media only screen and (max-width: 900px) {
                 flex-direction: column;
@@ -138,6 +193,9 @@
             display: flex;
             align-items: center;
             gap: 28px;
+            @include minmax(xl, dsk) {
+                gap: vw(28);
+            }
 
             @media only screen and (max-width: 600px) {
                 flex-direction: column;
@@ -156,6 +214,10 @@
         &__btn {
             width: 452px;
 
+            @include minmax(xl, dsk) {
+                width: vw(452);
+            }
+
             @media only screen and (max-width: 600px) {
                 width: 100%;
             }
@@ -167,6 +229,11 @@
             line-height: 18px;
             text-align: left;
             color: white;
+            @include minmax(xl, dsk) {
+                width: vw(234);
+                font-size: vw(15);
+                line-height: vw(18);
+            }
 
             @media only screen and (max-width: 600px) {
                 width: 100%;
