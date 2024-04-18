@@ -4,6 +4,11 @@
     margin-top: 4px;
     margin-bottom: 20px;
 
+    @include minmax(xl, dsk) {
+        margin-top: vw(4);
+        margin-bottom: vw(20);
+    }
+
     @media only screen and (max-width: 767px) {
         flex-wrap: wrap;
         width: 100%;
@@ -18,6 +23,10 @@
 
     &>*+* {
         margin-left: 15px;
+        
+    @include minmax(xl, dsk) {
+        margin-left: vw(15);
+    }
 
         @media only screen and (max-width: 767px) {}
     }
@@ -25,6 +34,10 @@
 
 .archive-description {
     margin-top: 41px;
+    
+    @include minmax(xl, dsk) {
+        margin-top: vw(41);
+    }
 }
 
 .archive-description-text-style {
@@ -32,6 +45,10 @@
     color: #1b316d;
     font-size: 20px;
     line-height: 164%;
+    
+    @include minmax(xl, dsk) {
+        font-size: vw(20);
+    }
 
     @media only screen and (max-width: 767px) {
         font-size: 16px;
@@ -48,6 +65,10 @@
 
 .vacancies-list {
     margin-top: 92px;
+    
+    @include minmax(xl, dsk) {
+        margin-top: vw(92);
+    }
 
     @media only screen and (max-width: 767px) {
         margin-top: 55px;
@@ -55,6 +76,9 @@
 
     &--portfolio {
         margin-top: 55px;
+        @include minmax(xl, dsk) {
+            margin-top: vw(55);
+        }
 
     }
 }
@@ -68,6 +92,10 @@
     align-items: stretch;
     position: relative;
 
+    @include minmax(xl, dsk) {
+        border-radius: vw(21);
+    }
+
     &__pic {
         border-radius: 0 18px 18px 0;
         overflow: hidden;
@@ -75,6 +103,11 @@
         flex-shrink: 0;
 
         position: relative;
+
+        @include minmax(xl, dsk) {
+            border-radius: 0 vw(18) vw(18) 0;
+            width: vw(239);
+        }
 
         @media only screen and (max-width: 767px) {
             display: none;
@@ -103,6 +136,14 @@
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
+
+        @include minmax(xl, dsk) {
+            top: vw(17);
+            left: vw(21);
+            border-radius: vw(16);
+            width: vw(70);
+            height: vw(70);
+        }
 
         img,
         svg {
@@ -135,13 +176,18 @@
         flex-grow: 1;
         padding: 17px 19px 18px 23px;
         width: calc(100% - 239px);
+
+        @include minmax(xl, dsk) {
+            padding: vw(17) vw(19) vw(18) vw(23);
+            width: calc(100% - vw(239));    
+        }
     }
 
     &__top {
         display: flex;
         justify-content: space-between;
 
-        @media only screen and (max-width: 1490px) {
+        @media only screen and (max-width: 1300px) {
             flex-wrap: wrap;
         }
     }
@@ -189,10 +235,19 @@
             margin-top: 11px;
             width: 569px;
 
+            @include minmax(xl, dsk) {
+                font-size: vw(20);
+                margin-top: vw(11);
+                width: vw(569);   
+            }
+
         }
 
         .vacancy-card__bottom {
             margin-top: 36px;
+            @include minmax(xl, dsk) {
+                margin-top: vw(36);   
+            }
         }
 
         .vacancy-card__logo {}
@@ -204,6 +259,10 @@
         line-height: 99%;
         color: #1b316d;
         flex-shrink: 9999999;
+
+        @include minmax(xl, dsk) {
+            font-size: vw(32); 
+        }
 
         @media only screen and (max-width: 767px) {
             font-size: 28px;
@@ -225,7 +284,12 @@
         flex-shrink: 1;
         margin-left: 15px;
 
-        @media only screen and (max-width: 1490px) {
+        @include minmax(xl, dsk) {
+            font-size: vw(20);
+            margin-left: vw(15); 
+        }
+
+        @media only screen and (max-width: 1300px) {
             width: 100%;
             margin-left: 0;
             margin-top: 15px;
@@ -245,6 +309,11 @@
         color: #193762;
         width: 631px;
         max-width: 100%;
+        @include minmax(xl, dsk) {
+            margin-top: vw(14);
+            font-size: vw(16);
+            width: vw(631);
+        }
     }
 
     &__bottom {
@@ -253,6 +322,12 @@
         margin-left: -30px;
         margin-bottom: -15px;
         margin-top: 22px;
+
+        @include minmax(xl, dsk) {
+            margin-left: vw(-30);
+            margin-bottom: vw(-15);
+            margin-top: vw(22);
+        }
 
         @media only screen and (max-width: 767px) {
             flex-direction: column;
@@ -263,11 +338,18 @@
     &__bottom-btn {
         margin-left: 30px;
         margin-bottom: 15px;
+        @include minmax(xl, dsk) {
+            margin-left: vw(30);
+            margin-bottom: vw(15);
+        }
 
     }
 
     &+.vacancy-card {
         margin-top: 26px;
+        @include minmax(xl, dsk) {
+            margin-top: vw(26);
+        }
     }
 }
 
@@ -277,6 +359,12 @@
     margin-left: -62px;
     margin-bottom: -15px;
     margin-top: 16px;
+
+    @include minmax(xl, dsk) {
+        margin-left: vw(-62);
+        margin-bottom: vw(-15);
+        margin-top: vw(16px);
+    }
 
     @media only screen and (min-width: 768px) {
         &--large {
@@ -288,6 +376,10 @@
 .vacancy-card-requirement {
     margin-left: 62px;
     margin-bottom: 15px;
+    @include minmax(xl, dsk) {
+        margin-left: vw(62);
+        margin-bottom: vw(15);
+    }
 
     @media only screen and (min-width: 768px) {
         &--large {
@@ -322,15 +414,24 @@
         line-height: 119%;
         color: #193762;
         opacity: 0.2;
+        @include minmax(xl, dsk) {
+            font-size: vw(16);
+        }
     }
 
     &__bottom {
         display: flex;
         margin-top: 6px;
+        @include minmax(xl, dsk) {
+            margin-top: vw(6px);
+        }
     }
 
     &__icon {
         margin-right: 10px;
+        @include minmax(xl, dsk) {
+            margin-right: vw(10);
+        }
 
         img,
         svg {
@@ -338,6 +439,10 @@
             height: 20px;
             object-fit: contain;
             object-position: center left;
+            @include minmax(xl, dsk) {
+                width: vw(20);
+                height: vw(20);
+            }
         }
     }
 
@@ -346,6 +451,9 @@
         font-size: 16px;
         line-height: 119%;
         color: #193762;
+        @include minmax(xl, dsk) {
+            font-size: vw(16);
+        }
     }
 }
 
@@ -354,6 +462,9 @@
     font-size: 40px;
     line-height: 180%;
     color: $orange;
+    @include minmax(xl, dsk) {
+        font-size: vw(40);
+    }
 
     @media only screen and (max-width: 767px) {
         font-size: 28px;
@@ -378,11 +489,23 @@
     margin-top: 13px;
     padding-bottom: 30px;
     padding-bottom: 8px;
+    @include minmax(xl, dsk) {
+        margin-left: vw(-15);
+        margin-bottom: vw(-20);
+        margin-top: vw(13);
+        padding-bottom: vw(30);
+        padding-bottom: vw(8);
+    }
 
     &__left,
     &__right {
         margin-left: 15px;
         margin-bottom: 20px;
+
+        @include minmax(xl, dsk) {
+            margin-left: vw(15);
+            margin-bottom: vw(20);
+        }
     }
 
     &__left {}
@@ -401,6 +524,10 @@
         position: absolute;
         left: -12px;
         width: calc(100% + 39px);
+        @include minmax(xl, dsk) {
+            left: vw(-12);
+            width: calc(100% + vw(39));
+        }
 
         @media only screen and (max-width: 1100px) {
             left: 0;
@@ -415,6 +542,10 @@
     margin-top: 68px;
     width: 908px;
     max-width: 100%;
+    @include minmax(xl, dsk) {
+        margin-top: vw(68);
+        width: vw(908);
+    }
 
     @media only screen and (max-width: 767px) {
         margin-top: 49px;
@@ -427,6 +558,10 @@
     line-height: 152%;
     color: $mainColor;
 
+    @include minmax(xl, dsk) {
+        font-size: vw(20);
+    }
+
     @media only screen and (max-width: 767px) {
         font-size: 16px;
         line-height: 1.2;
@@ -435,9 +570,15 @@
     &>*+ {
         *{
             margin-top: 15px;
+            @include minmax(xl, dsk) {
+                margin-top: vw(15);
+            }
         }
         h2 {
             margin-top: 46px;
+            @include minmax(xl, dsk) {
+                margin-top: vw(46);
+            }
 
             @media only screen and (max-width: 767px) {
                 margin-top: 24px;
@@ -446,6 +587,9 @@
 
         h3 {
             margin-top: 40px;
+            @include minmax(xl, dsk) {
+                margin-top: vw(40);
+            }
 
             @media only screen and (max-width: 767px) {
                 margin-top: 22px;
@@ -455,6 +599,9 @@
         h4 {
             margin-top: 30px;
 
+            @include minmax(xl, dsk) {
+                margin-top: vw(30);
+            }
             @media only screen and (max-width: 767px) {
                 margin-top: 20px;
             }
@@ -463,11 +610,17 @@
 
         p {
             margin-top: 15px;
+            @include minmax(xl, dsk) {
+                margin-top: vw(15);
+            }
 
         }
 
         ul {
             margin-top: 26px;
+            @include minmax(xl, dsk) {
+                margin-top: vw(26);
+            }
 
             @media only screen and (max-width: 767px) {
                 margin-top: 19px;
@@ -476,9 +629,15 @@
 
         img {
             margin-top: 20px;
+            @include minmax(xl, dsk) {
+                margin-top: vw(20);
+            }
 
             &+p {
                 margin-top: 20px;
+                @include minmax(xl, dsk) {
+                    margin-top: vw(20);
+                }
             }
         }
     }
@@ -488,6 +647,9 @@
         max-width: 100%;
         height: auto;
         border-radius: 66px;
+        @include minmax(xl, dsk) {
+            border-radius: vw(66);
+        }
 
         @media only screen and (max-width: 1250px) {
             border-radius: 35px;
@@ -502,6 +664,9 @@
         font-weight: 700;
         font-size: 24px;
         line-height: 120%;
+        @include minmax(xl, dsk) {
+            font-size: vw(24);
+        }
 
         @media only screen and (max-width: 767px) {
             font-size: 20px;
@@ -528,6 +693,10 @@
         line-height: 120%;
         color: $orange;
 
+        @include minmax(xl, dsk) {
+            font-size: vw(16);
+        }
+
         @media only screen and (max-width: 767px) {
             font-size: 14px;
         }
@@ -544,6 +713,10 @@
             text-transform: none;
             padding-left: 30px;
 
+            @include minmax(xl, dsk) {
+                padding-left: vw(30);
+            }
+
             @media only screen and (max-width: 767px) {
                 padding-left: 18px;
             }
@@ -558,6 +731,12 @@
                 position: absolute;
                 left: 12px;
                 top: 12px;
+                @include minmax(xl, dsk) {
+                    width: vw(5);
+                    height: vw(5);
+                    left: vw(12);
+                    top: vw(12);
+                }
 
                 @media only screen and (max-width: 767px) {
                     left: 0;
@@ -567,6 +746,9 @@
 
             &+li {
                 margin-top: 6.5px;
+                @include minmax(xl, dsk) {
+                    margin-top: vw(6.5);
+                }
             }
         }
     }
@@ -574,6 +756,10 @@
 
 .simple-shares {
     margin-top: 56px;
+
+    @include minmax(xl, dsk) {
+        margin-top: vw(56);
+    }
 
     @media only screen and (max-width: 767px) {
         margin-top: 24px;
@@ -584,7 +770,9 @@
         font-weight: 700;
         font-size: 24px;
         line-height: 120%;
-
+        @include minmax(xl, dsk) {
+            font-size: vw(24);
+        }
         @media only screen and (max-width: 767px) {
             font-size: 20px;
         }
@@ -596,6 +784,12 @@
         margin-top: 26px;
         margin-left: -24px;
         margin-bottom: -10px;
+
+        @include minmax(xl, dsk) {
+            margin-top: vw(26);
+            margin-left: vw(-24);
+            margin-bottom: vw(-10);
+        }
 
         @media only screen and (max-width: 767px) {
             margin-left: -12px;
@@ -616,6 +810,13 @@
     justify-content: center;
     transition-duration: .3s;
 
+    @include minmax(xl, dsk) {
+        width: vw(79);
+        height: vw(79);
+        margin-left: vw(24);
+        margin-bottom: vw(10);
+    }
+
     @media only screen and (max-width: 767px) {
         width: 45px;
         height: 45px;
@@ -628,6 +829,11 @@
         height: 28px;
         object-fit: contain;
         object-position: center center;
+
+        @include minmax(xl, dsk) {
+            width: vw(28);
+            height: vw(28);
+        }
 
         @media only screen and (max-width: 767px) {
             width: 22px;

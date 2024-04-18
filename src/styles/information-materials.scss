@@ -1,6 +1,10 @@
 .infomat-section {
     margin-top: 89px;
 
+    @include minmax(xl, dsk) {
+        margin-top: vw(89);
+    }
+
     @media only screen and (max-width: 767px) {
         margin-top: 40px;
     }
@@ -10,6 +14,11 @@
         border-radius: 42px;
         overflow: hidden;
         margin-top: 77px;
+
+        @include minmax(xl, dsk) {
+            border-radius: vw(42);
+            margin-top: vw(77);
+        }
 
 
         @media only screen and (max-width: 767px) {
@@ -21,7 +30,9 @@
     &__table-wrap {
         border-radius: 42px 42px 0 0;
         background: #fff;
-
+        @include minmax(xl, dsk) {
+            border-radius: vw(42) vw(42) 0 0;
+        }
     }
 
 }
@@ -32,6 +43,11 @@
     flex-wrap: wrap;
     margin-left: -18px;
     margin-bottom: -10px;
+    @include minmax(xl, dsk) {
+        padding: vw(38) vw(33) vw(28);
+        margin-left: vw(-18);
+        margin-bottom: vw(-10);
+    }
     @media only screen and (max-width: 900px) {
         padding: 20px 15px 20px;
         margin-left: -10px;
@@ -51,6 +67,14 @@
         margin-left: 18px;
         margin-bottom: 10px;
         transition-duration: .3s;
+
+        @include minmax(xl, dsk) {
+            border-radius: vw(21);
+            padding: vw(24) vw(33);
+            font-size: vw(20);
+            margin-left: vw(18);
+            margin-bottom: vw(10);
+        }
 
         &--active,
         &:hover {
@@ -95,12 +119,18 @@
     overflow: auto;
     width: 100%;
     padding-bottom: 10px;
+    @include minmax(xl, dsk) {
+        padding-bottom: vw(10);
+    }
 }
 
 .materials-table {
     text-decoration: none;
     min-width: 1288px;
     width: 100%;
+    @include minmax(xl, dsk) {
+        min-width: vw(1288);
+    }
     @media only screen and (max-width: 900px) {
         min-width: 720px;
 
@@ -122,6 +152,9 @@
     &__label-row {
         &+.materials-table__row {
             margin-top: 30px;
+            @include minmax(xl, dsk) {
+                margin-top: vw(30);
+            }
 
             @media only screen and (max-width: 767px) {
                 margin-top: 20px;
@@ -134,6 +167,11 @@
         background: #E8EBEF;
         padding: 26px 0;
         border-radius: 42px;
+        @include minmax(xl, dsk) {
+            min-height: vw(102);
+            padding: vw(26) 0;
+            border-radius: vw(42);
+        }
         @media only screen and (max-width: 900px) {
             padding: 10px 0;
             border-radius: 32px;
@@ -157,6 +195,10 @@
         &:nth-child(2) {
             min-width: 483px;
             max-width: 483px;
+            @include minmax(xl, dsk) {
+                min-width: vw(483);
+                max-width: vw(483);
+            }
             @media only screen and (max-width: 900px) {
                 min-width: 200px;
                 max-width: 200px;
@@ -167,6 +209,10 @@
         &:nth-child(3) {
             min-width: 218px;
             max-width: 218px;
+            @include minmax(xl, dsk) {
+                min-width: vw(218);
+                max-width: vw(218);
+            }
             @media only screen and (max-width: 900px) {
                 min-width: 134px;
                 max-width: 134px;
@@ -178,6 +224,10 @@
         &:nth-child(4) {
             min-width: 102px;
             max-width: 102px;
+            @include minmax(xl, dsk) {
+                min-width: vw(102);
+                max-width: vw(102);
+            }
             @media only screen and (max-width: 900px) {
 
             }
@@ -193,6 +243,9 @@
 
         &:nth-child(1) {
             padding-left: 15px;
+            @include minmax(xl, dsk) {
+                padding-left: vw(15);
+            }
         }
 
         a {
@@ -202,6 +255,9 @@
             font-size: 20px;
             line-height: 120%;
             color: #BAC3D0;
+            @include minmax(xl, dsk) {
+                font-size: vw(20);
+            }
             @media only screen and (max-width: 900px) {
                 font-size: 14px;
             }
@@ -215,7 +271,10 @@
         display: block;
         width: 20px;
         margin-top: 1px;
-
+        @include minmax(xl, dsk) {
+            width: vw(20);
+            margin-top: vw(1);
+        }
         &::after {
             content: '';
             position: absolute;
@@ -224,6 +283,10 @@
             border: 4px solid transparent;
             border-bottom-color: #193762;
             margin-top: -8px;
+            @include minmax(xl, dsk) {
+                border: vw(4) solid transparent;
+                margin-top: vw(-8);
+            }
         }
 
         &::before {
@@ -235,6 +298,10 @@
             border-bottom-color: #193762;
             margin-top: 1px;
             transform: rotate(180deg);
+            @include minmax(xl, dsk) {
+                border: vw(4) solid transparent;
+                margin-top: vw(1);
+            }
         }
 
         &--asc {
@@ -246,6 +313,11 @@
                 border-width: 6px;
                 margin-top: -3px;
                 right: -2px;
+                @include minmax(xl, dsk) {
+                    border-width: vw(6);
+                    margin-top: vw(-3);
+                    right: vw(-2);
+                }
             }
         }
 
@@ -258,6 +330,11 @@
                 border-width: 6px;
                 margin-top: -9px;
                 right: -2px;
+                @include minmax(xl, dsk) {
+                    border-width: vw(6);
+                    margin-top: vw(-9);
+                    right: vw(-2);
+                }
             }
 
         }
@@ -268,6 +345,9 @@
         font-size: 20px;
         line-height: 120%;
         color: $mainColor;
+        @include minmax(xl, dsk) {
+            font-size: vw(20);
+        }
         @media only screen and (max-width: 900px) {
             font-size: 14px;
         }
@@ -278,6 +358,9 @@
 
         &:nth-child(1) {
             padding-left: 39px;
+            @include minmax(xl, dsk) {
+                padding-left: vw(39);
+            }
             @media only screen and (max-width: 900px) {
                 padding-left: 14px;
             }
@@ -285,6 +368,9 @@
 
         &:nth-child(4) {
             padding-right: 36px;
+            @include minmax(xl, dsk) {
+                padding-right: vw(36);
+            }
             @media only screen and (max-width: 900px) {
                 padding-right: 14px;
             }
@@ -294,6 +380,9 @@
         &:nth-child(2),
         &:nth-child(3) {
             padding-right: 10px;
+            @include minmax(xl, dsk) {
+                padding-right: vw(10);
+            }
 
         }
     }
@@ -312,6 +401,10 @@
         height: auto;
         display: flex;
         justify-content: center;
+        @include minmax(xl, dsk) {
+            width: vw(45);
+            min-width: vw(45);
+        }
         @media only screen and (max-width: 900px) {
             width: 35px;
             min-width: 35px;
@@ -328,7 +421,9 @@
 
     &__name-txt {
         margin-left: 28px;
-
+        @include minmax(xl, dsk) {
+            margin-left: vw(28);
+        }
         @media only screen and (max-width: 900px) {
             margin-left: 14px;
         }

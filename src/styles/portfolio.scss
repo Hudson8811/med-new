@@ -8,8 +8,17 @@
     margin-bottom: -15px;
     padding: 24px 0 20px;
 
+    @include minmax(xl, dsk) {
+        margin-left: vw(-15);
+        margin-bottom: vw(-15);
+        padding: vw(24) 0 vw(20);
+    }
+
     &__btn {
         margin-left: 15px;
+        @include minmax(xl, dsk) {
+            margin-left: vw(15);
+        }
     }
 
     &__pagi-arrows {
@@ -17,6 +26,9 @@
     }
     &__btn, &__pagi-arrows {
         margin-bottom: 15px;
+        @include minmax(xl, dsk) {
+            margin-bottom: vw(15);
+        }
     }
 }
 
@@ -25,6 +37,9 @@
     display: flex;
     justify-content: space-between;
     margin-top: 44px;
+    @include minmax(xl, dsk) {
+        margin-top: vw(44);
+    }
     @media only screen and (max-width: 570px) {
        display: block;
 
@@ -42,6 +57,10 @@
         max-width: 100%;
         align-self: flex-start;
         display: block;
+        @include minmax(xl, dsk) {
+            margin-left: vw(16);
+            width: vw(296);
+        }
         @media only screen and (max-width: 1300px) {
             width: 200px;
         }

@@ -1,6 +1,9 @@
 .simple-select2-wrap--simple-select {
 	.select2.select2-container--custom-theme .select2-selection--single {
 		padding-left: 6px;
+		@include minmax(xl, dsk) {
+            padding-left: vw(6);
+        }
 	}
 
 }
@@ -11,12 +14,14 @@
 		border-radius: 16px;
 		background: #e8ebef;
 		padding: 16px 0;
-		//min-width: 170px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		transition-duration: .3s;
-
+		@include minmax(xl, dsk) {
+			border-radius: vw(16);
+			padding: vw(16) 0;
+        }
 
 		.select2-selection__rendered {
 			padding: 5px 14px;
@@ -27,6 +32,11 @@
 			text-align: right;
 			color: $mainColor;
 			display: block;
+			@include minmax(xl, dsk) {
+				padding: vw(5) vw(14);
+				margin-right: vw(18);
+				font-size: vw(13);
+			}
 
 		}
 	}
@@ -41,6 +51,13 @@
 		background-size: contain !important;
 		transition: transform .3s;
 		transform-origin: center center;
+
+		@include minmax(xl, dsk) {
+			width: vw(11) !important;
+			min-width: vw(11);
+			height: 8px !important;
+			margin-right: vw(12);
+        }
 
 		b {
 			display: none !important;
@@ -76,6 +93,11 @@
 	border: none !important;
 	padding: 5px 14px;
 	margin-top: 2px;
+	@include minmax(xl, dsk) {
+		border-radius: vw(16) !important;
+		padding: vw(5) vw(14);
+		margin-top: vw(2);
+	}
 }
 
 .select2-results__options {
@@ -83,7 +105,10 @@
 	font-size: 13px;
 	line-height: 26px;
 	padding: 0;
-
+	@include minmax(xl, dsk) {
+		font-size: vw(13);
+		line-height: vw(26);
+	}
 }
 
 .select2-results__option {
@@ -91,7 +116,6 @@
 	color: #000000;
 	opacity: .4;
 	padding: 0;
-
 	&:hover,
 	&[aria-selected="true"] {
 		opacity: 1;
@@ -131,9 +155,15 @@
 
 .simple-select2-wrap--city-select {
 	width: 174px;
+	@include minmax(xl, dsk) {
+		width: vw(174);
+	}
 
 	.select2.select2-container--custom-theme .select2-selection--single .select2-selection__rendered {
 		padding-left: 31px;
+		@include minmax(xl, dsk) {
+			padding-left: vw(31);
+		}
 
 	}
 
@@ -149,6 +179,12 @@
 			position: absolute;
 			left: 11px;
 			top: 10px;
+			@include minmax(xl, dsk) {
+				width: vw(10);
+				height: vw(12);
+				left: vw(11);
+				top: vw(10);
+			}
 
 		}
 	}
@@ -161,6 +197,11 @@
 		color: $mainColor;
 		background: #e8ebf0;
 
+		@include minmax(xl, dsk) {
+			border-radius: vw(69);
+			padding: vw(33) 0;
+		}
+
 		@media only screen and (max-width: 767px){
 			padding: 22px 0;
 		}
@@ -172,6 +213,11 @@
 		font-size: 20px;
 		line-height: 90%;
 		color: $mainColor;
+
+		@include minmax(xl, dsk) {
+			padding: vw(5) 0 vw(5) vw(35);
+			font-size: vw(20);
+		}
 		@media only screen and (max-width: 767px){
 
 			padding: 5px 0 5px 20px;
@@ -185,6 +231,13 @@
 		background: url(../img/svg/large-select-arrow.svg) no-repeat center center !important;
 		background-size: contain !important;
 
+		@include minmax(xl, dsk) {
+			width: vw(14) !important;
+			min-width: vw(14);
+			height: vw(9) !important;
+			margin-right: vw(26);
+		}
+
 	}
 	.select2-dropdown {
 		background: #e8ebf0;
@@ -192,6 +245,11 @@
 		line-height: 1.2;
 		margin-top: 3px;
 		padding: 15px 35px;
+		@include minmax(xl, dsk) {
+			border-radius: vw(33) !important;
+			margin-top: vw(3);
+			padding: vw(15) vw(35);
+		}
 
 		@media only screen and (max-width: 767px){
 			padding: 15px 20px;
@@ -201,6 +259,9 @@
 	.select2-results__options {
 		font-weight: 400;
 		font-size: 20px;
+		@include minmax(xl, dsk) {
+			font-size: vw(20);
+		}
 	}
 	/*display: block;
 	width: 100%;
@@ -219,6 +280,9 @@
 
 .md-pagination {
 	margin-top: 9px;
+	@include minmax(xl, dsk) {
+		margin-top: vw(9);
+	}
 }
 
 .md-pagination-flex{
@@ -234,7 +298,10 @@
 	margin-right: 24px;
 	position: relative;
 	text-decoration: none;
-
+	@include minmax(xl, dsk) {
+		font-size: vw(20);
+		margin-right: vw(24);
+	}
 	@media only screen and (max-width: 767px) {
 		font-size: 14px;
 	}
@@ -249,6 +316,12 @@
 		right: -15px;
 		top: 10px;
 		position: absolute;
+		@include minmax(xl, dsk) {
+			width: vw(6);
+			height: vw(9);
+			right: vw(-15);
+			top: vw(10);
+		}
 		@media only screen and (max-width: 767px) {
 			top: 4px;
 		}
@@ -280,6 +353,9 @@
 
 .layout-wsb-section {
 	margin-top: 70px;
+	@include minmax(xl, dsk) {
+		margin-top: vw(70);
+	}
 }
 
 .layout-wsb {
@@ -288,6 +364,9 @@
 
 	&__main {
 		width: calc(100% - 364px - 23px);
+		@include minmax(xl, dsk) {
+			width: calc(100% - vw(364) - vw(23));
+		}
 
 
 		@media only screen and (max-width: 1100px) {
@@ -303,7 +382,10 @@
 		border-radius: 55px;
 		background: #fff;
 		padding: 25px 27px 37px;
-
+		@include minmax(xl, dsk) {
+			border-radius: vw(55);
+			padding: vw(25) vw(27) vw(37);
+		}
 
 		@media only screen and (max-width: 1100px) {
 			border-radius: 25px;
@@ -315,7 +397,9 @@
 		&--news-single-pading {
 			//padding-bottom: 32px;
 			padding-bottom: 40px;
-
+			@include minmax(xl, dsk) {
+				padding-bottom: vw(40);
+			}
 			@media only screen and (max-width: 1100px) {
 				//padding-bottom: 25px;
 				padding-bottom: 30px;
@@ -325,7 +409,9 @@
 
 	&_sidebar {
 		width: 364px;
-
+		@include minmax(xl, dsk) {
+			width: vw(364);
+		}
 		@media only screen and (max-width: 1100px) {
 			width: 100%;
 		}
@@ -355,7 +441,9 @@
 .lwsb-sidebar {
 	border-radius: 21px;
 	background: #fff;
-
+	@include minmax(xl, dsk) {
+		border-radius: vw(21);
+	}
 	&__blue {
 		border-radius: 21px;
 		background: $mainColor;
@@ -367,7 +455,11 @@
 		color: #fff;
 		display: block;
 		box-sizing: border-box;
-
+		@include minmax(xl, dsk) {
+			border-radius: vw(21);
+			padding: vw(28);
+			font-size: vw(20);
+		}
 		@media only screen and (max-width: 1100px) {
 			display: none;
 		}
@@ -375,6 +467,9 @@
 
 	&__body {
 		padding: 0 10px 28px;
+		@include minmax(xl, dsk) {
+			padding: 0 vw(10) vw(28);
+		}
 
 		@media only screen and (max-width: 1100px) {
 			display: flex;
@@ -398,9 +493,17 @@
 		display: block;
 		box-sizing: border-box;
 		z-index: 1;
+		@include minmax(xl, dsk) {
+			padding: vw(20) vw(20);
+			margin-top: vw(7);
+			font-size: vw(20);
+		}
 
 		&:first-child {
 			margin-top: 13px;
+			@include minmax(xl, dsk) {
+				margin-top: vw(13);
+			}
 
 			@media only screen and (max-width: 1100px) {
 				margin-top: 0px;
@@ -420,6 +523,11 @@
 			background: #E8EBF0;
 			opacity: 0;
 			transition-duration: .3s;
+			@include minmax(xl, dsk) {
+				top: vw(-4);
+				bottom: vw(-4);
+				border-radius: vw(21);
+			}
 		}
 
 		span {
@@ -457,6 +565,9 @@
 	justify-content: space-between;
 	flex-wrap: wrap;
 	margin-bottom: -20px;
+	@include minmax(xl, dsk) {
+		margin-bottom: vw(-20);
+	}
 
 
 	@media only screen and (max-width: 1250px) {
@@ -467,9 +578,17 @@
 	&__left {
 		margin-right: 20px;
 		margin-bottom: 20px;
+		@include minmax(xl, dsk) {
+			margin-right: vw(20);
+			margin-bottom: vw(20);
+		}
 
 		.typical-h1 {
 			margin-left: -5px;
+			@include minmax(xl, dsk) {
+				margin-left: vw(-5);
+			}
+	
 
 			@media only screen and (max-width: 767px) {
 				margin-left: -2px;
@@ -482,6 +601,11 @@
 		width: 174px;
 		margin-bottom: 20px;
 
+		@include minmax(xl, dsk) {
+			width: vw(174);
+			margin-bottom: vw(20);
+		}
+
 	}
 }
 
@@ -490,6 +614,10 @@
 	font-size: 72px;
 	line-height: 72%;
 	color: $mainColor;
+	
+	@include minmax(xl, dsk) {
+		font-size: vw(72);
+	}
 
 
 	@media only screen and (max-width: 1250px) {
@@ -510,6 +638,10 @@
 		font-weight: 700;
 		font-size: 40px;
 		line-height: 97%;
+		
+		@include minmax(xl, dsk) {
+			font-size: vw(40);
+		}
 
 		@media only screen and (max-width: 1250px) {
 			font-size: 40px;
@@ -529,6 +661,11 @@
 		font-weight: 700;
 		font-size: 60px;
 		line-height: 120%;
+
+		
+		@include minmax(xl, dsk) {
+			font-size: vw(60);
+		}
 
 		@media only screen and (max-width: 1250px) {
 			font-size: 40px;
@@ -551,6 +688,10 @@
 	font-size: 60px;
 	line-height: 120%;
 	color: $mainColor;
+
+	@include minmax(xl, dsk) {
+		font-size: vw(60);
+	}
 
 	@media only screen and (max-width: 1250px) {
 		font-size: 40px;
@@ -577,6 +718,12 @@
 	margin-left: -18px;
 	margin-bottom: -18px;
 
+	@include minmax(xl, dsk) {
+		margin-top: vw(57);
+		margin-left: vw(-18);
+		margin-bottom: vw(-18);
+	}
+
 	@media only screen and (max-width: 767px) {
 		margin-top: 30px;
 	}
@@ -593,6 +740,13 @@
 	display: flex;
 	flex-direction: column;
 	transition-duration: .3s;
+
+	@include minmax(xl, dsk) {
+		margin-left: vw(18);
+		margin-bottom: vw(18);
+		width: calc(33.33% - vw(18));
+		border-radius: vw(21);
+	}
 
 	@media only screen and (max-width: 1300px) {
 		width: calc(50% - 18px);
@@ -616,7 +770,9 @@
 		border-radius: 21px;
 		overflow: hidden;
 		position: relative;
-
+		@include minmax(xl, dsk) {
+			border-radius: vw(21);
+		}
 		&::before{
 			content: '';
 			display: block;
@@ -639,6 +795,9 @@
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
+		@include minmax(xl, dsk) {
+			padding: vw(7) vw(15) vw(18);
+		}
 	}
 
 	&__text {
@@ -647,7 +806,9 @@
 		line-height: 152%;
 		color: #052a44;
 		flex-grow: 1;
-
+		@include minmax(xl, dsk) {
+			font-size: vw(20);
+		}
 		@media only screen and (max-width: 767px) {
 			font-size: 16px;
 			font-style: normal;
@@ -664,7 +825,10 @@
 		color: $mainColor;
 		margin-top: 49px;
 		opacity: 0.2;
-
+		@include minmax(xl, dsk) {
+			font-size: vw(14);
+			margin-top: vw(49);
+		}
 		@media only screen and (max-width: 767px) {
 			margin-top: 20px;
 		}
@@ -678,8 +842,15 @@
 .long-form-section {
 	margin-top: 39px;
 	margin-bottom: 94px;
+	@include minmax(xl, dsk) {
+		margin-top: vw(39);
+		margin-bottom: vw(94);
+	}
 	&--mt-60{
 		margin-top: 60px;
+		@include minmax(xl, dsk) {
+			margin-top: vw(60);
+		}
 	}
 }
 
@@ -688,6 +859,10 @@
 	background: #fff;
 	//width: calc(100% - 364px - 23px);
 	padding: 40px 27px 60px;
+	@include minmax(xl, dsk) {
+		border-radius: vw(55);
+		padding: vw(40) vw(27) vw(60);
+	}
 
 	@media only screen and (max-width: 1100px) {
 		width: 100%;
@@ -702,6 +877,10 @@
 	font-size: 40px;
 	line-height: 97%;
 	color: $mainColor;
+
+	@include minmax(xl, dsk) {
+		font-size: vw(40);
+	}
 
 
 	@media only screen and (max-width: 767px) {
@@ -722,12 +901,21 @@
 	margin-bottom: -15px;
 	margin-top: 84px;
 
+	@include minmax(xl, dsk) {
+		margin-left: vw(-18);
+		margin-bottom: vw(-15);
+		margin-top: vw(84);
+	}
+
 	@media only screen and (max-width: 767px) {
 		margin-top: 40px;
 	}
 
 	&--smaller-mt {
 		margin-top: 72px;
+		@include minmax(xl, dsk) {
+			margin-top: vw(72);
+		}
 
 		@media only screen and (max-width: 767px) {
 			margin-top: 40px;
@@ -740,12 +928,21 @@
 	margin-left: 18px;
 	margin-bottom: 15px;
 
+	@include minmax(xl, dsk) {
+		width: calc(33.33% - vw(18));
+		margin-left: vw(18);
+		margin-bottom: vw(15);
+	}
+
 	&--d-25 {
 		width: calc(25% - 18px);
+		@include minmax(xl, dsk) {
+			width: calc(25% - vw(18));
+		}
 	}
 
 	&--1350-w33 {
-		@media only screen and (max-width: 1350px) {
+		@media only screen and (max-width: 1300px) {
 			width: calc(33.33% - 18px);
 		}
 
@@ -784,6 +981,11 @@
 	padding: 21px 35px;
 	box-sizing: border-box;
 
+	@include minmax(xl, dsk) {
+		border-radius: vw(69);
+		font-size: vw(20);
+		padding: vw(21) vw(35);
+	}
 
 	@media only screen and (max-width: 767px) {
 		/*font-size: 16px;
@@ -804,6 +1006,10 @@
 	justify-content: space-between;
 	align-items: center;
 
+	@include minmax(xl, dsk) {
+		padding: vw(21) vw(27) vw(21) vw(35);
+	}
+
 	@media only screen and (max-width: 767px) {
 		padding: 10px 20px;
 	}
@@ -821,10 +1027,18 @@
 		margin-left: 10px;
 		flex-shrink: 0;
 
+		@include minmax(xl, dsk) {
+			margin-left: vw(10);
+		}
+
 		img,
 		svg {
 			width: 22px;
 			height: 23px;
+			@include minmax(xl, dsk) {
+				width: vw(22);
+				height: vw(23);
+			}
 		}
 	}
 
@@ -837,6 +1051,10 @@
 .long-form-bottom {
 	margin-top: 51px;
 
+	@include minmax(xl, dsk) {
+		margin-top: vw(51);
+	}
+
 	@media only screen and (max-width: 767px) {
 		margin-top: 30px;
 	}
@@ -847,6 +1065,9 @@
 	font-size: 20px;
 	line-height: 90%;
 	color: $mainColor;
+	@include minmax(xl, dsk) {
+		font-size: vw(20);
+	}
 
 	&__icon {}
 }
@@ -854,9 +1075,15 @@
 .long-form-acceptance {
 	width: 1152px;
 	max-width: 100%;
+	@include minmax(xl, dsk) {
+		width: vw(1152);
+	}
 
 	&+.long-form-acceptance {
 		margin-top: 24px;
+		@include minmax(xl, dsk) {
+			margin-top: vw(24);
+		}
 	}
 }
 
@@ -884,6 +1111,13 @@
 		border-radius: 4px;
 		background: $orange;
 		position: relative;
+		@include minmax(xl, dsk) {
+			margin-top: vw(6);
+			min-width: vw(22);
+			width: vw(22);
+			height: vw(22);
+			border-radius: vw(4);
+		}
 
 		&::before {
 			content: '';
@@ -897,6 +1131,13 @@
 			height: 10px;
 			opacity: 0;
 			transition-duration: .3s;
+			@include minmax(xl, dsk) {
+				left: vw(6);
+				top: vw(6);
+				border-radius: vw(4);
+				width: vw(10);
+				height: vw(10);
+			}
 		}
 	}
 
@@ -907,7 +1148,10 @@
 		line-height: 120%;
 		color: #052a44;
 		opacity: 0.3;
-
+		@include minmax(xl, dsk) {
+			margin-left: vw(24);
+			font-size: vw(20);
+		}
 		@media only screen and (max-width: 767px) {
 			font-size: 16px;
 			line-height: 1.2;
@@ -922,6 +1166,10 @@
 	color: #052a44;
 	opacity: 0.3;
 
+	@include minmax(xl, dsk) {
+		font-size: vw(20);
+	}
+
 	@media only screen and (max-width: 767px) {
 		font-size: 16px;
 		line-height: 1.2;
@@ -929,6 +1177,9 @@
 
 	&--ml7 {
 		margin-left: 7px;
+		@include minmax(xl, dsk) {
+			margin-left: vw(7);
+		}
 	}
 	&--tac{
 		text-align: center;
@@ -950,6 +1201,12 @@
 	margin-left: -36px;
 	margin-bottom: -20px;
 
+	@include minmax(xl, dsk) {
+		margin-top: vw(25);
+		margin-left: vw(-36);
+		margin-bottom: vw(-20);
+	}
+
 	&__date {
 		font-weight: 500;
 		font-size: 20px;
@@ -959,11 +1216,20 @@
 		flex-shrink: 0;
 		margin-left: 36px;
 		margin-bottom: 20px;
+		@include minmax(xl, dsk) {
+			font-size: vw(20);
+			margin-left: vw(36);
+			margin-bottom: vw(20);
+		}
 	}
 
 	&__tags {
 		margin-left: 36px;
 		margin-bottom: 20px;
+		@include minmax(xl, dsk) {
+			margin-left: vw(36);
+			margin-bottom: vw(20);
+		}
 	}
 }
 
@@ -975,6 +1241,10 @@
 	flex-wrap: wrap;
 	margin-left: -15px;
 	margin-bottom: -10px;
+	@include minmax(xl, dsk) {
+		margin-left: vw(-15);
+		margin-bottom: vw(-10);
+	}
 }
 
 .simple-tag {
@@ -989,6 +1259,13 @@
     padding: 7px 18px;
 	text-decoration: none;
 	transition-duration: .3s;
+	@include minmax(xl, dsk) {
+		margin-left: vw(15);
+		margin-bottom: vw(10);
+		border-radius: vw(90);
+		font-size: vw(20);
+		padding: vw(7) vw(18);
+	}
 	&:hover{
 		opacity: .7;
 	}
@@ -997,10 +1274,16 @@
 
 .news-single-text{
     margin-top: 38px;
+	@include minmax(xl, dsk) {
+		margin-top: vw(38);
+	}
 }
 
 .cards-slider {
     margin-top: 41px;
+	@include minmax(xl, dsk) {
+		margin-top: vw(41);
+	}
 }
 
 .cards-slider-top {
@@ -1014,6 +1297,10 @@
 		margin-top: 8px;
 		display: flex;
 		margin-left: 15px;
+		@include minmax(xl, dsk) {
+			margin-top: vw(8);
+			margin-left: vw(15);
+		}
 		@media only screen and (max-width: 767px) {
 			display: none;
 		}
@@ -1025,6 +1312,9 @@
 
 .cards-slider-wrapper {
     margin-top: 30px;
+	@include minmax(xl, dsk) {
+		margin-top: vw(30);
+	}
 }
 
 .cards-slider-slide {

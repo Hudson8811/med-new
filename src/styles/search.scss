@@ -2,10 +2,18 @@
 .search-page {
     margin-top: 50px;
     margin-bottom: 100px;
+	@include minmax(xl, dsk) {
+		margin-top: vw(50);
+		margin-bottom: vw(100);
+	}
 
     &__head {
         margin-top: 46px;
         margin-bottom: 30px;
+		@include minmax(xl, dsk) {
+			margin-top: vw(40);
+			margin-bottom: vw(30);
+		}
     }
     &__form {
         display: flex;
@@ -13,6 +21,11 @@
         background: $mainColor;
         border-radius: 32px;
         padding-left: 20px;
+		@include minmax(xl, dsk) {
+			height: vw(80);
+			border-radius: vw(32);
+			padding-left: vw(20);
+		}
     }
     &__input {
         @extend .fs20;
@@ -22,6 +35,10 @@
 		flex-grow: 1;
 		text-indent: 15px;
 		color: #ffffff;
+
+		@include minmax(xl, dsk) {
+			text-indent: vw(15);
+		}
 
 		&::placeholder{
 			color: rgba(255, 255, 255, 0.2);
@@ -47,6 +64,9 @@
 		color: #ffffff;
 		transition: color 0.2s;
 		padding: 10px 32px 15px;
+		@include minmax(xl, dsk) {
+			padding: vw(10) vw(32) vw(15);
+		}
 		@include max(md){
 			padding: 10px 23px 15px;
 		}
@@ -59,6 +79,10 @@
 			display: block;
 			object-fit: contain;
 			flex-shrink: 0;
+			@include minmax(xl, dsk) {
+				width: vw(22);
+				height: vw(22);
+			}
 		}
 		&:hover{
 			color: $orange;
@@ -70,15 +94,24 @@
         font-weight: 700;
         line-height: 0.95;
         margin-bottom: 60px;
+		@include minmax(xl, dsk) {
+			font-size: vw(24);
+			margin-bottom: vw(60);
+		}
 
         &-value {
             color: $propColor;
             font-size: 20px;
             line-height: 120%;
-    
+			@include minmax(xl, dsk) {
+				font-size: vw(20);
+			}
             span:first-child {
                 padding-right: 6px;
                 opacity: 20%;
+				@include minmax(xl, dsk) {
+					padding-right: vw(6);
+				}
             }
         }
     }
@@ -86,6 +119,9 @@
         display: flex;
         flex-direction: column;
         gap: 22px;
+		@include minmax(xl, dsk) {
+			gap: vw(22);
+		}
     }
 }
 
@@ -93,13 +129,17 @@
     &__inner {
         display: flex;
         justify-content: space-between;
-
 		border-radius: 21px;
 		background: #FFF;
 		box-sizing: border-box;
 		width: 100%;
 		padding: 20px 20px 20px 24px;
 		position: relative;
+
+		@include minmax(xl, dsk) {
+			border-radius: vw(21);
+			padding: vw(20) vw(20) vw(20) vw(24);
+		}
 
 		@media only screen and (max-width: 800px) {
 			flex-direction: column;
@@ -118,6 +158,13 @@
 		min-width: 145px;
 		margin-top: 18px;
         margin-right: 36px;
+
+		@include minmax(xl, dsk) {
+			width: vw(145);
+			min-width: vw(145);
+			margin-top: vw(18);
+			margin-right: vw(36);
+		}
 
 		@media only screen and (max-width: 500px) {
 			width: 160px;
@@ -138,12 +185,25 @@
 		top: 26px;
 		left: 24px;
         text-decoration: none;
+		@include minmax(xl, dsk) {
+			font-size: vw(17);
+			padding: vw(6) vw(14);
+			max-width: calc(80% - vw(50));
+			border-radius: vw(6);
+			top: vw(26);
+			left: vw(24);
+		}
     }
     &__img {
         display: block;
 		height: 118px;
 		width: 100%;
 		margin-bottom: 25px;
+
+		@include minmax(xl, dsk) {
+			height: vw(118);
+			margin-bottom: vw(25);
+		}
 
 		img{
 			display: block;
@@ -160,10 +220,16 @@
         max-width: 900px;
         display: flex;
         flex-direction: column;
+		@include minmax(xl, dsk) {
+			max-width: vw(900);
+		}
     }
 	&__breadcrumbs {
 		display: block;
 		margin-bottom: 6px;
+		@include minmax(xl, dsk) {
+			margin-bottom: vw(6);
+		}
 
 		&-item {
 			font-size: 11px;
@@ -173,6 +239,11 @@
 			color: $mainColor;
 			display: inline-block;
 			margin-right: 2px;
+
+			@include minmax(xl, dsk) {
+				font-size: vw(11);
+				margin-right: vw(2);
+			}
 			
 			& a {
 				color: $mainColor;
@@ -194,6 +265,11 @@
 		display: block;
 		word-wrap: break-word;
 		padding-right: 20px;
+		@include minmax(xl, dsk) {
+			font-size: vw(24);
+			margin-bottom: vw(12);
+			padding-right: vw(20);
+		}
 
 		@media only screen and (max-width: 767px) {
 			font-size: 20px;
@@ -203,10 +279,16 @@
         color: $propColor;
 		font-size: 14px;
 		margin-bottom: 2px;
-		
+		@include minmax(xl, dsk) {
+			font-size: vw(14);
+			margin-bottom: vw(2);
+		}
 		span:first-child {
 			padding-right: 6px;
 			opacity: 20%;
+			@include minmax(xl, dsk) {
+				padding-right: vw(6);
+			}
 		}
     }
     &__text {
@@ -215,6 +297,10 @@
         font-size: 16px;
         font-weight: 500;
         line-height: 1.2;
+		@include minmax(xl, dsk) {
+			margin-top: vw(22);
+			font-size: vw(16);
+		}
     }
     &__right {
         display: flex;
@@ -237,6 +323,12 @@
 		text-align: right;
 		min-width: 206px;
 
+		@include minmax(xl, dsk) {
+			font-size: vw(28);
+			margin-top: vw(6);
+			min-width: vw(206);
+		}
+
 		@media only screen and (max-width: 767px) {
 			font-size: 20px;
 		}
@@ -250,6 +342,9 @@
         flex-direction: row;
 		align-items: flex-end;
         gap: 20px;
+		@include minmax(xl, dsk) {
+			gap: vw(20);
+		}
 
 		@media only screen and (max-width: 800px) {
 			flex-direction: row;
