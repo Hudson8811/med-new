@@ -48,7 +48,7 @@
         flex-direction: row;
         position: relative;
 
-        @media only screen and (max-width: 1620px) {
+        @media only screen and (max-width: 1200px) {
             width: max-content;
         }
         @media only screen and (max-width: 460px) {
@@ -114,7 +114,7 @@
                 background: #d3d4dd;
             }
 
-            @media only screen and (max-width: 1620px) {
+            @media only screen and (max-width: 1200px) {
                 display: none;
             }
         }
@@ -213,7 +213,7 @@
             }
         }
 
-        @media only screen and (max-width: 1620px) {
+        @media only screen and (max-width: 1200px) {
             display: none;
         }
     }
@@ -260,7 +260,7 @@
             opacity : 1;
         }
 
-        @media only screen and (max-width: 1620px) {
+        @media only screen and (max-width: 1200px) {
             display: none;
         }
     }
@@ -343,7 +343,7 @@
             width: 100%;
         }
 
-        @media only screen and (min-width: 1620px) {
+        @media only screen and (min-width: 1200px) {
             display: none;
         }
 

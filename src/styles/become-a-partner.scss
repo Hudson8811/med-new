@@ -4,7 +4,7 @@
 	@include minmax(xl, dsk) {
 		margin-top: vw(46);
 	}
-	@media only screen and (max-width: 1300px) {
+	@media only screen and (max-width: 1200px) {
 		flex-direction: column-reverse;
 	}
 	@media only screen and (max-width: 767px) {}
@@ -21,7 +21,7 @@
 			margin-right: vw(40);
 			padding-top: vw(8);
         }
-		@media only screen and (max-width: 1300px) {
+		@media only screen and (max-width: 1200px) {
 			width: 550px;
 
 		}
@@ -48,7 +48,7 @@
 			margin-top: vw(51);
 			padding-bottom: vw(50);
         }
-		@media only screen and (max-width: 1300px) {
+		@media only screen and (max-width: 1200px) {
 			margin-top: 30px;
 		}
 	}

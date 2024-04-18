@@ -45,6 +45,9 @@
 			@include min(md){
 				width: 336px;
 			}
+			@include minmax(xl, dsk) {
+				width: vw(336);
+			}
 		}
 		&--copyright{
 			@include max(md){

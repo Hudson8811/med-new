@@ -281,6 +281,34 @@
 	}
 }
 
+@include minmax(xl, dsk) {
+	.filter-accordion {
+		border-radius: vw(21);
+		border-radius: vw(21);
+
+		&__head {
+			border-radius: 0 0 vw(21) vw(21);
+			padding: vw(25) vw(22) vw(31) vw(28);
+			font-size: vw(20);
+
+			&::after {
+				width: vw(14);
+				height: vw(10);
+				margin-top: vw(4);
+			}
+		}
+
+		&__body-inner {
+			padding: vw(20) vw(19) vw(21) vw(25);
+
+		}
+
+		&+.filter-accordion {
+			margin-top: vw(19);
+		}
+	}
+}
+
 @media screen and (max-width:1200px) {
 	.filter-accordion {
 		background: #fff;
@@ -510,7 +538,7 @@
 		margin-right: 0;
 	}
 
-	@media screen and (max-width:1433px) {
+	@media screen and (max-width:1200px) {
 		width: calc(50% - 14px);
 
 		&:nth-child(3n) {
@@ -611,17 +639,11 @@
 			@include minmax(xl, dsk) {
 				width: vw(223);
 			}
-			@media screen and (min-width: 1200px) and (max-width:1300px) {
-				display: none;
-			}
 			@media screen and (max-width:1100px) {
 				display: none;
 			}
 		}
 
-		@media screen and (min-width: 1200px) and (max-width:1300px) {
-			padding-right: 20px;
-		}
 		@media screen and (max-width:1100px) {
 			padding-right: 0px;
 		}
@@ -1299,7 +1321,7 @@
 		}
 	}
 
-	@media only screen and (max-width: 1300px) {
+	@media only screen and (max-width: 1200px) {
 		flex-direction: column-reverse;
 	}
 	
@@ -1336,7 +1358,7 @@
 		}
 
 
-		@media only screen and (max-width: 1300px) {
+		@media only screen and (max-width: 1200px) {
 			margin-left: 20px;
 		}
 
@@ -1527,7 +1549,7 @@
 		}
 	}
 
-	@media only screen and (max-width: 1400px) {
+	@media only screen and (max-width: 1200px) {
 		margin-right: 0;
 	}
 }
@@ -1590,7 +1612,7 @@
 			border-radius: vw(41);
 		}
 
-		@media only screen and (max-width: 1300px) {
+		@media only screen and (max-width: 1200px) {
 			height: auto;
 		}
 	}
@@ -1621,7 +1643,7 @@
 			padding-left: vw(12);
 			padding-right: vw(12);
 		}
-		@media only screen and (max-width: 1300px) {
+		@media only screen and (max-width: 1200px) {
 			margin-top: 10px;
 			padding: 0;
 		}
@@ -1655,7 +1677,7 @@
 			opacity: 1;
 		}
 
-		@media only screen and (max-width: 1300px) {
+		@media only screen and (max-width: 1200px) {
 			height: 200px;
 		}
 
@@ -1664,7 +1686,7 @@
 		}
 	}
 
-	@media only screen and (max-width: 1300px) {
+	@media only screen and (max-width: 1200px) {
 		margin-top: 20px;
 		width: 100%;
 	}
@@ -1700,7 +1722,7 @@
 			}
 		}
 
-		@media only screen and (max-width: 1250px) {
+		@media only screen and (max-width: 1200px) {
 			font-size: 50px;
 		}
 	

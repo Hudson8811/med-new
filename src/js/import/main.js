@@ -364,7 +364,7 @@ jQuery(function ($) {
 					1100: {
 						slidesPerView: 3,
 					},
-					1440: {
+					1200: {
 						slidesPerView: 4,
 					}
 				}
@@ -395,7 +395,7 @@ jQuery(function ($) {
 					1100: {
 						slidesPerView: 3,
 					},
-					1440: {
+					1200: {
 						slidesPerView: 4,
 					}
 				}
@@ -426,9 +426,6 @@ jQuery(function ($) {
 					1100: {
 						slidesPerView: 3,
 					},
-					1440: {
-						slidesPerView: 3,
-					}
 				}
 			});
 		}
@@ -448,9 +445,6 @@ jQuery(function ($) {
 					1100: {
 						slidesPerView: 5,
 					},
-					1440: {
-						slidesPerView: 5,
-					}
 				}
 			});
 		}
@@ -541,7 +535,7 @@ jQuery(function ($) {
 					1100: {
 						slidesPerView: 3,
 					},
-					1440: {
+					1200: {
 						slidesPerView: 4,
 					}
 				}
@@ -589,9 +583,6 @@ jQuery(function ($) {
 					},
 					1100: {
 						slidesPerView: 3,
-					},
-					1440: {
-						slidesPerView: 3,
 					}
 				}
 			});
@@ -619,9 +610,6 @@ jQuery(function ($) {
 						slidesPerView: 2,
 					},
 					1100: {
-						slidesPerView: 3,
-					},
-					1440: {
 						slidesPerView: 3,
 					}
 				}

@@ -23,11 +23,13 @@ body {
 
 .container {
 	width: 100%;
-	//max-width: 1480px;
-	max-width: 1920px;
+	max-width: 1480px;
 	padding: 0 20px;
 	margin: 0 auto;
 	box-sizing: border-box;
+	@include minmax(xl, dsk) {
+		max-width: vw(1480);
+	}
 }
 
 
@@ -522,7 +524,7 @@ label{
 		content: url(../img/svg/small-circle-btn-arrow.svg);
 	}*/
 
-	@media only screen and (max-width: 1300px) {
+	@media only screen and (max-width: 1200px) {
 		font-size: 20px;
 		font-style: normal;
 		line-height: 135%;
@@ -578,7 +580,7 @@ label{
 			}
 		}
 
-		@media only screen and (max-width: 1300px) {
+		@media only screen and (max-width: 1200px) {
 			width: 30px;
 			height: 30px;
 			margin-left: 8px;
@@ -587,7 +589,7 @@ label{
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			@media only screen and (max-width: 1300px){
+			@media only screen and (max-width: 1200px){
 			width: 35px;
 			height: 35px;
 			img,svg{
@@ -674,7 +676,7 @@ label{
 			font-size: vw(13);
 		}
 
-		@media only screen and (max-width: 1300px) {
+		@media only screen and (max-width: 1200px) {
 			min-height: 32px;
 			font-size: 13px;
 			line-height: 90%;
@@ -722,7 +724,7 @@ label{
 		margin-top: vw(94);
 	}
 
-	@media only screen and (max-width: 1300px) {
+	@media only screen and (max-width: 1200px) {
 		margin-top: 70px;
 	}
 
