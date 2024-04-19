@@ -90,7 +90,7 @@
         line-height: 24px;
         margin-left: 22px;
         @include minmax(xl, dsk) {
-            font-size: vw(90);
+            font-size: vw(20);
             line-height: vw(24);
             margin-left: vw(22);
         }
