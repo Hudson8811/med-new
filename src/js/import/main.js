@@ -150,6 +150,35 @@ jQuery(function ($) {
 	})
 
 
+	$('.main-slider .swiper').each(function(){
+		let slider = $(this);
+
+		if (slider.length > 0){
+			mainSlider = new Swiper(slider[0], {
+				// watchOverflow: true,
+				// watchSlidesVisibility: true,
+				// watchSlidesProgress: true,
+				// preventInteractionOnTransition: true,
+				// loop: true,
+				slidesPerView: 1,
+				navigation: {
+					nextEl: slider.find('.swiper-button-next')[0],
+					prevEl: slider.find('.swiper-button-prev')[0]
+				},
+				pagination: {
+					el: slider.find('.swiper-pagination')[0],
+					type: 'bullets',
+					clickable: true
+				},
+				autoplay: {
+					delay: 10000,
+					// reverseDirection: true,
+					disableOnInteraction: false,
+				},
+			});
+		}
+	});
+	
 
 	$('.js-cards-slider').each(function () {
 		var slider = $(this);

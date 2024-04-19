@@ -1,12 +1,48 @@
 
+.main-slider {
+	.swiper-pagination.swiper-pagination-bullets {
+		flex-flow: column nowrap;
+		width: 30px;
+		left: 0;
+		top: 0;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		/*
+		@include max(sm) {
+			top: auto;
+			bottom: 0  ;
+			height: auto;
+			width: 100%;
+			flex-flow: row nowrap;
+		}*/
+
+		.swiper-pagination-bullet {
+			width: 12px;
+			height: 12px;
+			min-width: 12px;
+			min-height: 12px;
+			margin: 2.5px;
+			margin-top: 2.5px;
+			margin-bottom: 2.5px;
+			background: #193762;
+			opacity: 0.25;
+			&-active {
+				opacity: 1;
+			}
+		}
+	}
+}
 
 .m-slide{
 	display: flex;
 	justify-content: space-between;
-	padding: 55px 75px 40px 0;
+	padding: 55px 75px 40px 49px;
 	box-sizing: border-box;
 	@include minmax(xl, dsk) {
-		padding: vw(55) vw(75) vw(40) 0;
+		padding: vw(55) vw(75) vw(40) 49px;
 	}
 	@media only screen and (max-width: 1180px) {
 		flex-direction: column-reverse;
@@ -402,8 +438,8 @@
 
 
 .main-partners {
-	pointer-events: none;
-    user-select: none;
+	//pointer-events: none;
+    //user-select: none;
 
 	.swiper-wrapper {
 		transition-timing-function: linear !important;
