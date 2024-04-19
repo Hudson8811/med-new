@@ -114,9 +114,9 @@
         border: 1px solid #E8EBEF;
         border-left: 0;
         @include minmax(xl, dsk) {
-            font-size: vw(90);
-            line-height: vw(24);
-            margin-left: vw(22);
+            max-width: vw(470);
+            padding: vw(18) vw(12) vw(20) vw(16);
+            border-radius: 0px vw(32) vw(32) 0px;
         }
 
         &-wrapper {

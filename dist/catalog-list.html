@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>New Page</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+    <noscript>
+      <style>
+      /**
+      * Reinstate scrolling for non-JS clients
+      */
+      .simplebar-content-wrapper {
+      	scrollbar-width: auto;
+      	-ms-overflow-style: auto;
+      }
+      
+      .simplebar-content-wrapper::-webkit-scrollbar,
+      .simplebar-hide-scrollbar::-webkit-scrollbar {
+      	display: initial;
+      	width: initial;
+      	height: initial;
+      }
+      </style>
+      
+    </noscript>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+          <div class="header__top">
+            <div class="header__profile"><a href="#"><span>Войти</span>
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#user"></use>
+                </svg></a></div>
+            <div class="header__burger">
+              <div class="header__burger-inner js-open-main-menu"><span></span></div>
+            </div>
+            <ul class="header__menu">
+              <li><a href="#">Промо</a></li>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Новости</a></li>
+              <li><a href="#">Информационные материалы</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Как стать партнером</a></li>
+            </ul>
+            <ul class="header__top-right">
+              <li><a href="#">Eng</a></li>
+              <li><a href="javascript:;">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#blind"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="header__content">
+            <div class="header__logo">
+              <svg>
+                <use xlink:href="img/logo.svg#index"></use>
+              </svg>
+            </div>
+            <ul class="header__emails">
+              <li><a href="mailto:info@medimcom.ru">info@medimcom.ru</a></li>
+            </ul>
+            <ul class="header__phones">
+              <li><a href="tel:+78123343764">+7 812 334-37-64</a></li>
+              <li><a href="tel:+74959001099">+7 495 900-10-99</a></li>
+            </ul>
+            <ul class="header__social">
+              <li><a href="#" target="_blank">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#soc-wa"></use>
+                  </svg></a></li>
+              <li><a href="#" target="_blank">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#soc-vk"></use>
+                  </svg></a></li>
+              <li><a href="#" target="_blank">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#soc-youtube"></use>
+                  </svg></a></li>
+            </ul><a class="header__callback-mob" href="javascript:;">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#call"></use>
+              </svg></a><a class="header__btn btn-arrow" href="javascript:;"><span>Обратный звонок</span>
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#btn-arrow"></use>
+              </svg></a><a class="header__cart" href="#">
+              <div class="header__cart-icon">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#cart"></use>
+                </svg>
+              </div>
+              <div class="header__cart-count">4</div></a>
+          </div>
+          <div class="header__bottom">
+            <ul class="header__bottom-menu">
+              <li><a class="js-catalog-modal--show" href="javascript:;">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#menu-catalog"></use>
+                  </svg><span>Каталог</span></a></li>
+              <li><a class="js-brands-modal--show" href="javascript:;">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#menu-brands"></use>
+                  </svg><span>Бренды</span></a></li>
+            </ul>
+            <form class="header__bottom-search search-form" action="/search/index.php">
+              <input class="search-form__input" type="text" name="q" placeholder="Поиск среди 4980 товаров">
+              <button class="search-form__button" type="submit" name="s">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#search"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="menu-overlay"></div>
+    <div class="header-mob-menu">
+      <div class="header-mob-menu__close js-close-main-menu">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#filters-cross"></use>
+        </svg>
+      </div>
+      <div class="header-mob-menu__inner js-init-simplebar">
+        <ul class="header-mob-menu__menu">
+          <li><a href="#">Промо</a></li>
+          <li><a href="#">О компании</a></li>
+          <li><a href="#">Новости</a></li>
+          <li><a href="#">Информационные материалы</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li><a href="#">Как стать партнером</a></li>
+        </ul>
+        <div class="header-mob-menu__contacts">
+          <div class="header-mob-menu__profile"><a href="#">
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#user"></use>
+              </svg><span>Войти</span></a></div>
+          <ul class="header-mob-menu__emails">
+            <li><a href="mailto:info@medimcom.ru">info@medimcom.ru</a></li>
+          </ul>
+          <ul class="header-mob-menu__phones">
+            <li><a href="tel:+78123343764">+7 812 334-37-64</a></li>
+            <li><a href="tel:+74959001099">+7 495 900-10-99</a></li>
+          </ul>
+          <ul class="header-mob-menu__social">
+            <li><a href="#" target="_blank">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#soc-wa"></use>
+                </svg></a></li>
+            <li><a href="#" target="_blank">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#soc-vk"></use>
+                </svg></a></li>
+            <li><a href="#" target="_blank">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#soc-youtube"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <main class="site-main">
+      <div class="md-pagination">
+        <div class="container">
+          <div class="md-pagination-flex">
+            <div class="md-pagination-item"><a href=""><span> Главная</span></a></div>
+            <div class="md-pagination-item"><a href=""><span> Каталог</span></a></div>
+            <div class="md-pagination-item"><a href=""><span> Анастезиология и реанимация</span></a></div>
+            <div class="md-pagination-item"><span>Анастезиология и реанимация</span></div>
+          </div>
+        </div>
+      </div>
+      <section class="layout-catalog-section">
+        <div class="container">
+          <div class="layout-catalog">
+            <div class="layout-catalog__sidebar js-filter-block">
+              <div class="filters-sb-top"><a class="filters-sb-top__btn btn-arrow btn-arrow--centred btn-arrow--dark-grey btn-arrow--icon-cross js-trigger-filters-screen" href="javascript:;">
+                  <!--span Сбросить все-->
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#filters-cross"></use>
+                  </svg></a></div><a class="catalog-link-on-top-of-sidebar header__btn btn-arrow btn-arrow--right btn-arrow--centred" href="javascript:;"><span>Аксессуары для аир</span>
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#btn-arrow-right"></use>
+                </svg></a>
+              <div class="filter-accordions">
+                <div class="filter-accordion js-filter-accordion filter-accordion--active">
+                  <div class="filter-accordion__head">
+                    <div class="filter-accordion__head-title">Тип товаров</div>
+                  </div>
+                  <div class="filter-accordion__body" style="display:block">
+                    <div class="filter-accordion__body-inner">
+                      <label class="simple-checkbox simple-checkbox--filter simple-checkbox--small-text">
+                        <input class="simple-checkbox__input" type="checkbox">
+                        <div class="simple-checkbox__text">Новинки</div>
+                        <div class="simple-checkbox__pseudo"></div>
+                      </label>
+                      <label class="simple-checkbox simple-checkbox--filter simple-checkbox--small-text">
+                        <input class="simple-checkbox__input" type="checkbox">
+                        <div class="simple-checkbox__text">Акционные</div>
+                        <div class="simple-checkbox__pseudo"></div>
+                      </label>
+                      <label class="simple-checkbox simple-checkbox--filter simple-checkbox--small-text">
+                        <input class="simple-checkbox__input" type="checkbox">
+                        <div class="simple-checkbox__text">Спецпредложения</div>
+                        <div class="simple-checkbox__pseudo"></div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-accordion js-filter-accordion filter-accordion--active">
+                  <div class="filter-accordion__head">
+                    <div class="filter-accordion__head-title">Наличие</div>
+                  </div>
+                  <div class="filter-accordion__body" style="display:block">
+                    <div class="filter-accordion__body-inner">
+                      <label class="simple-checkbox simple-checkbox--filter">
+                        <input class="simple-checkbox__input" type="checkbox">
+                        <div class="simple-checkbox__text">Есть в наличии</div>
+                        <div class="simple-checkbox__pseudo"></div>
+                      </label>
+                      <label class="simple-checkbox simple-checkbox--filter">
+                        <input class="simple-checkbox__input" type="checkbox">
+                        <div class="simple-checkbox__text">Под заказ</div>
+                        <div class="simple-checkbox__pseudo"></div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-accordion js-filter-accordion filter-accordion--active">
+                  <div class="filter-accordion__head">
+                    <div class="filter-accordion__head-title">Бренд</div>
+                  </div>
+                  <div class="filter-accordion__body" style="display:block">
+                    <div class="filter-accordion__body-inner">
+                      <label class="simple-checkbox simple-checkbox--filter">
+                        <input class="simple-checkbox__input" type="checkbox">
+                        <div class="simple-checkbox__text">Есть в наличии</div>
+                        <div class="simple-checkbox__pseudo"></div>
+                      </label>
+                      <label class="simple-checkbox simple-checkbox--filter">
+                        <input class="simple-checkbox__input" type="checkbox">
+                        <div class="simple-checkbox__text">Под заказ</div>
+                        <div class="simple-checkbox__pseudo"></div>
+                      </label>
+                      <label class="simple-checkbox simple-checkbox--filter">
+                        <input class="simple-checkbox__input" type="checkbox">
+                        <div class="simple-checkbox__text">Под заказ</div>
+                        <div class="simple-checkbox__pseudo"></div>
+                      </label>
+                      <label class="simple-checkbox simple-checkbox--filter">
+                        <input class="simple-checkbox__input" type="checkbox">
+                        <div class="simple-checkbox__text">Под заказ</div>
+                        <div class="simple-checkbox__pseudo"></div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-accordion js-filter-accordion filter-accordion--active">
+                  <div class="filter-accordion__head">
+                    <div class="filter-accordion__head-title">Материал изготовления</div>
+                  </div>
+                  <div class="filter-accordion__body" style="display:block">
+                    <div class="filter-accordion__body-inner">
+                      <label class="simple-checkbox simple-checkbox--filter">
+                        <input class="simple-checkbox__input" type="checkbox">
+                        <div class="simple-checkbox__text">ПВХ</div>
+                        <div class="simple-checkbox__pseudo"></div>
+                      </label>
+                      <label class="simple-checkbox simple-checkbox--filter">
+                        <input class="simple-checkbox__input" type="checkbox">
+                        <div class="simple-checkbox__text">ПВХ и полиэтилен</div>
+                        <div class="simple-checkbox__pseudo"></div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-accordion js-filter-accordion filter-accordion--active">
+                  <div class="filter-accordion__head">
+                    <div class="filter-accordion__head-title">Тип набора</div>
+                  </div>
+                  <div class="filter-accordion__body" style="display:block">
+                    <div class="filter-accordion__body-inner">
+                      <label class="simple-checkbox simple-checkbox--filter">
+                        <input class="simple-checkbox__input" type="checkbox">
+                        <div class="simple-checkbox__text">Гравитационный</div>
+                        <div class="simple-checkbox__pseudo"></div>
+                      </label>
+                      <label class="simple-checkbox simple-checkbox--filter">
+                        <input class="simple-checkbox__input" type="checkbox">
+                        <div class="simple-checkbox__text">Насосный</div>
+                        <div class="simple-checkbox__pseudo"></div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-accordion js-filter-accordion filter-accordion--active">
+                  <div class="filter-accordion__head">
+                    <div class="filter-accordion__head-title">Объем резервуара, мл</div>
+                  </div>
+                  <div class="filter-accordion__body" style="display:block">
+                    <div class="filter-accordion__body-inner">
+                      <div class="rs-block custom-style-rs js-range-slider" data-min="0" data-max="500" data-format="int" data-step="1">
+                        <div class="rs-block__top">
+                          <input class="rs-block__inp rs-block__inp-left js-range-slider__inp-left" type="text">
+                          <input class="rs-block__inp rs-block__inp-right js-range-slider__inp-right" type="text">
+                        </div>
+                        <div class="rs-block__bottom">
+                          <div class="rs-block__rs js-range-slider__range"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-accordion js-filter-accordion filter-accordion--active">
+                  <div class="filter-accordion__head">
+                    <div class="filter-accordion__head-title">Роликовый зажим</div>
+                  </div>
+                  <div class="filter-accordion__body" style="display:block">
+                    <div class="filter-accordion__body-inner">
+                      <label class="simple-checkbox simple-checkbox--filter">
+                        <input class="simple-checkbox__input" type="checkbox">
+                        <div class="simple-checkbox__text">Да</div>
+                        <div class="simple-checkbox__pseudo"></div>
+                      </label>
+                      <label class="simple-checkbox simple-checkbox--filter">
+                        <input class="simple-checkbox__input" type="checkbox">
+                        <div class="simple-checkbox__text">Нет</div>
+                        <div class="simple-checkbox__pseudo"></div>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="filters-reset-btn-wrap"><a class="header__btn btn-arrow btn-arrow--right btn-arrow--centred" href="javascript:;"><span>Применить</span></a></div>
+              <div class="filters-reset-btn-wrap"><a class="btn-arrow btn-arrow--centred btn-arrow--dark-grey btn-arrow--icon-cross" href="javascript:;"><span>Сбросить все</span>
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#filters-cross"></use>
+                  </svg></a></div>
+            </div>
+            <div class="layout-catalog__main">
+              <div class="catalog-top">
+                <div class="catalog-mob-filter-btn-wrap"><a class="btn-arrow catalog-mob-filter-btn js-trigger-filters-screen" href="#"><span>Фильтры</span>
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#catalog-filters-icon"></use>
+                    </svg></a></div>
+                <div class="catalog-type-switch-wrap">
+                  <div class="catalog-type-switch"><a class="catalog-type-switch__type" href="">
+                      <!--img(src="img/svg/catlog-switch-grid.svg", alt="")-->
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#catlog-switch-grid"></use>
+                      </svg></a><a class="catalog-type-switch__type catalog-type-switch__type--active" href="">
+                      <!--img(src="img/svg/catlog-switch-list.svg", alt="")-->
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#catlog-switch-list"></use>
+                      </svg></a></div>
+                </div>
+              </div>
+              <div class="catalog-cards catalog-cards__view-list">
+                <div class="catalog-list product-list">
+                  <div class="product-list__inner">
+                    <div class="product-list__left">
+                      <div class="product-list__label">Новинка</div><a class="product-list__img" href="#"><img src="img/product-img-1.jpg" alt=""></a>
+                    </div>
+                    <div class="product-list__middle">
+                      <div class="product-list__middle-info"><a class="product-list__title" href="#">Трубки эндотрахеальные</a>
+                        <div class="product-list__artnumber"><span>Артикул:</span><span>213123131</span></div>
+                      </div>
+                      <div class="product-list__middle-props">
+                        <div class="product-list__props-item"><span class="product-list__props-name">Материал:</span><span class="product-list__props-value">сталь</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Цвет:</span><span class="product-list__props-value">серый</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Диаметр проводника, мм:</span><span class="product-list__props-value">0.5</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                      </div>
+                    </div>
+                    <div class="product-list__right">
+                      <div class="product-list__price">138 000 руб</div>
+                      <div class="product-list__right-buy">
+                        <div class="product-list__counter">
+                          <button class="product-list__counter-minus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-minus"></use>
+                            </svg>
+                          </button>
+                          <input class="product-list__counter-input" type="string" value="01" readonly>
+                          <button class="product-list__counter-plus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-plus"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="product-list__btns"><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--blue">Запросить кп
+                            <div class="btn-circle__icon"></div></a><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--orange" href="">В корзину
+                            <div class="btn-circle__icon"></div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-list product-list">
+                  <div class="product-list__inner">
+                    <div class="product-list__left">
+                      <div class="product-list__label">Новинка</div><a class="product-list__img" href="#"><img src="img/product-img-1.jpg" alt=""></a>
+                    </div>
+                    <div class="product-list__middle">
+                      <div class="product-list__middle-info"><a class="product-list__title" href="#">Трубки эндотрахеальные</a>
+                        <div class="product-list__artnumber"><span>Артикул:</span><span>213123131</span></div>
+                      </div>
+                      <div class="product-list__middle-props">
+                        <div class="product-list__props-item"><span class="product-list__props-name">Материал:</span><span class="product-list__props-value">сталь</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Цвет:</span><span class="product-list__props-value">серый</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Диаметр проводника, мм:</span><span class="product-list__props-value">0.5</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                      </div>
+                    </div>
+                    <div class="product-list__right">
+                      <div class="product-list__price">138 000 руб</div>
+                      <div class="product-list__right-buy">
+                        <div class="product-list__counter">
+                          <button class="product-list__counter-minus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-minus"></use>
+                            </svg>
+                          </button>
+                          <input class="product-list__counter-input" type="string" value="01" readonly>
+                          <button class="product-list__counter-plus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-plus"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="product-list__btns"><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--blue">Запросить кп
+                            <div class="btn-circle__icon"></div></a><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--orange" href="">В корзину
+                            <div class="btn-circle__icon"></div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-list product-list">
+                  <div class="product-list__inner">
+                    <div class="product-list__left">
+                      <div class="product-list__label">Новинка</div><a class="product-list__img" href="#"><img src="img/product-img-1.jpg" alt=""></a>
+                    </div>
+                    <div class="product-list__middle">
+                      <div class="product-list__middle-info"><a class="product-list__title" href="#">Трубки эндотрахеальные</a>
+                        <div class="product-list__artnumber"><span>Артикул:</span><span>213123131</span></div>
+                      </div>
+                      <div class="product-list__middle-props">
+                        <div class="product-list__props-item"><span class="product-list__props-name">Материал:</span><span class="product-list__props-value">сталь</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Цвет:</span><span class="product-list__props-value">серый</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Диаметр проводника, мм:</span><span class="product-list__props-value">0.5</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                      </div>
+                    </div>
+                    <div class="product-list__right">
+                      <div class="product-list__price">138 000 руб</div>
+                      <div class="product-list__right-buy">
+                        <div class="product-list__counter">
+                          <button class="product-list__counter-minus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-minus"></use>
+                            </svg>
+                          </button>
+                          <input class="product-list__counter-input" type="string" value="01" readonly>
+                          <button class="product-list__counter-plus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-plus"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="product-list__btns"><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--blue">Запросить кп
+                            <div class="btn-circle__icon"></div></a><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--orange" href="">В корзину
+                            <div class="btn-circle__icon"></div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-list product-list">
+                  <div class="product-list__inner">
+                    <div class="product-list__left">
+                      <div class="product-list__label">Новинка</div><a class="product-list__img" href="#"><img src="img/product-img-1.jpg" alt=""></a>
+                    </div>
+                    <div class="product-list__middle">
+                      <div class="product-list__middle-info"><a class="product-list__title" href="#">Трубки эндотрахеальные</a>
+                        <div class="product-list__artnumber"><span>Артикул:</span><span>213123131</span></div>
+                      </div>
+                      <div class="product-list__middle-props">
+                        <div class="product-list__props-item"><span class="product-list__props-name">Материал:</span><span class="product-list__props-value">сталь</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Цвет:</span><span class="product-list__props-value">серый</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Диаметр проводника, мм:</span><span class="product-list__props-value">0.5</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                      </div>
+                    </div>
+                    <div class="product-list__right">
+                      <div class="product-list__price">138 000 руб</div>
+                      <div class="product-list__right-buy">
+                        <div class="product-list__counter">
+                          <button class="product-list__counter-minus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-minus"></use>
+                            </svg>
+                          </button>
+                          <input class="product-list__counter-input" type="string" value="01" readonly>
+                          <button class="product-list__counter-plus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-plus"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="product-list__btns"><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--blue">Запросить кп
+                            <div class="btn-circle__icon"></div></a><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--orange" href="">В корзину
+                            <div class="btn-circle__icon"></div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-list product-list">
+                  <div class="product-list__inner">
+                    <div class="product-list__left">
+                      <div class="product-list__label">Новинка</div><a class="product-list__img" href="#"><img src="img/product-img-1.jpg" alt=""></a>
+                    </div>
+                    <div class="product-list__middle">
+                      <div class="product-list__middle-info"><a class="product-list__title" href="#">Трубки эндотрахеальные</a>
+                        <div class="product-list__artnumber"><span>Артикул:</span><span>213123131</span></div>
+                      </div>
+                      <div class="product-list__middle-props">
+                        <div class="product-list__props-item"><span class="product-list__props-name">Материал:</span><span class="product-list__props-value">сталь</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Цвет:</span><span class="product-list__props-value">серый</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Диаметр проводника, мм:</span><span class="product-list__props-value">0.5</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                      </div>
+                    </div>
+                    <div class="product-list__right">
+                      <div class="product-list__price">138 000 руб</div>
+                      <div class="product-list__right-buy">
+                        <div class="product-list__counter">
+                          <button class="product-list__counter-minus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-minus"></use>
+                            </svg>
+                          </button>
+                          <input class="product-list__counter-input" type="string" value="01" readonly>
+                          <button class="product-list__counter-plus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-plus"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="product-list__btns"><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--blue">Запросить кп
+                            <div class="btn-circle__icon"></div></a><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--orange" href="">В корзину
+                            <div class="btn-circle__icon"></div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-list product-list">
+                  <div class="product-list__inner">
+                    <div class="product-list__left">
+                      <div class="product-list__label">Новинка</div><a class="product-list__img" href="#"><img src="img/product-img-1.jpg" alt=""></a>
+                    </div>
+                    <div class="product-list__middle">
+                      <div class="product-list__middle-info"><a class="product-list__title" href="#">Трубки эндотрахеальные</a>
+                        <div class="product-list__artnumber"><span>Артикул:</span><span>213123131</span></div>
+                      </div>
+                      <div class="product-list__middle-props">
+                        <div class="product-list__props-item"><span class="product-list__props-name">Материал:</span><span class="product-list__props-value">сталь</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Цвет:</span><span class="product-list__props-value">серый</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Диаметр проводника, мм:</span><span class="product-list__props-value">0.5</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                      </div>
+                    </div>
+                    <div class="product-list__right">
+                      <div class="product-list__price">138 000 руб</div>
+                      <div class="product-list__right-buy">
+                        <div class="product-list__counter">
+                          <button class="product-list__counter-minus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-minus"></use>
+                            </svg>
+                          </button>
+                          <input class="product-list__counter-input" type="string" value="01" readonly>
+                          <button class="product-list__counter-plus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-plus"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="product-list__btns"><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--blue">Запросить кп
+                            <div class="btn-circle__icon"></div></a><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--orange" href="">В корзину
+                            <div class="btn-circle__icon"></div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-list product-list">
+                  <div class="product-list__inner">
+                    <div class="product-list__left">
+                      <div class="product-list__label">Новинка</div><a class="product-list__img" href="#"><img src="img/product-img-1.jpg" alt=""></a>
+                    </div>
+                    <div class="product-list__middle">
+                      <div class="product-list__middle-info"><a class="product-list__title" href="#">Трубки эндотрахеальные</a>
+                        <div class="product-list__artnumber"><span>Артикул:</span><span>213123131</span></div>
+                      </div>
+                      <div class="product-list__middle-props">
+                        <div class="product-list__props-item"><span class="product-list__props-name">Материал:</span><span class="product-list__props-value">сталь</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Цвет:</span><span class="product-list__props-value">серый</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Диаметр проводника, мм:</span><span class="product-list__props-value">0.5</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                      </div>
+                    </div>
+                    <div class="product-list__right">
+                      <div class="product-list__price">138 000 руб</div>
+                      <div class="product-list__right-buy">
+                        <div class="product-list__counter">
+                          <button class="product-list__counter-minus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-minus"></use>
+                            </svg>
+                          </button>
+                          <input class="product-list__counter-input" type="string" value="01" readonly>
+                          <button class="product-list__counter-plus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-plus"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="product-list__btns"><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--blue">Запросить кп
+                            <div class="btn-circle__icon"></div></a><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--orange" href="">В корзину
+                            <div class="btn-circle__icon"></div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-list product-list">
+                  <div class="product-list__inner">
+                    <div class="product-list__left">
+                      <div class="product-list__label">Новинка</div><a class="product-list__img" href="#"><img src="img/product-img-1.jpg" alt=""></a>
+                    </div>
+                    <div class="product-list__middle">
+                      <div class="product-list__middle-info"><a class="product-list__title" href="#">Трубки эндотрахеальные</a>
+                        <div class="product-list__artnumber"><span>Артикул:</span><span>213123131</span></div>
+                      </div>
+                      <div class="product-list__middle-props">
+                        <div class="product-list__props-item"><span class="product-list__props-name">Материал:</span><span class="product-list__props-value">сталь</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Цвет:</span><span class="product-list__props-value">серый</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Диаметр проводника, мм:</span><span class="product-list__props-value">0.5</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                      </div>
+                    </div>
+                    <div class="product-list__right">
+                      <div class="product-list__price">138 000 руб</div>
+                      <div class="product-list__right-buy">
+                        <div class="product-list__counter">
+                          <button class="product-list__counter-minus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-minus"></use>
+                            </svg>
+                          </button>
+                          <input class="product-list__counter-input" type="string" value="01" readonly>
+                          <button class="product-list__counter-plus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-plus"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="product-list__btns"><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--blue">Запросить кп
+                            <div class="btn-circle__icon"></div></a><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--orange" href="">В корзину
+                            <div class="btn-circle__icon"></div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-list product-list">
+                  <div class="product-list__inner">
+                    <div class="product-list__left">
+                      <div class="product-list__label">Новинка</div><a class="product-list__img" href="#"><img src="img/product-img-1.jpg" alt=""></a>
+                    </div>
+                    <div class="product-list__middle">
+                      <div class="product-list__middle-info"><a class="product-list__title" href="#">Трубки эндотрахеальные</a>
+                        <div class="product-list__artnumber"><span>Артикул:</span><span>213123131</span></div>
+                      </div>
+                      <div class="product-list__middle-props">
+                        <div class="product-list__props-item"><span class="product-list__props-name">Материал:</span><span class="product-list__props-value">сталь</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Цвет:</span><span class="product-list__props-value">серый</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Диаметр проводника, мм:</span><span class="product-list__props-value">0.5</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                      </div>
+                    </div>
+                    <div class="product-list__right">
+                      <div class="product-list__price">138 000 руб</div>
+                      <div class="product-list__right-buy">
+                        <div class="product-list__counter">
+                          <button class="product-list__counter-minus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-minus"></use>
+                            </svg>
+                          </button>
+                          <input class="product-list__counter-input" type="string" value="01" readonly>
+                          <button class="product-list__counter-plus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-plus"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="product-list__btns"><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--blue">Запросить кп
+                            <div class="btn-circle__icon"></div></a><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--orange" href="">В корзину
+                            <div class="btn-circle__icon"></div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-list product-list">
+                  <div class="product-list__inner">
+                    <div class="product-list__left">
+                      <div class="product-list__label">Новинка</div><a class="product-list__img" href="#"><img src="img/product-img-1.jpg" alt=""></a>
+                    </div>
+                    <div class="product-list__middle">
+                      <div class="product-list__middle-info"><a class="product-list__title" href="#">Трубки эндотрахеальные</a>
+                        <div class="product-list__artnumber"><span>Артикул:</span><span>213123131</span></div>
+                      </div>
+                      <div class="product-list__middle-props">
+                        <div class="product-list__props-item"><span class="product-list__props-name">Материал:</span><span class="product-list__props-value">сталь</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Цвет:</span><span class="product-list__props-value">серый</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Диаметр проводника, мм:</span><span class="product-list__props-value">0.5</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                      </div>
+                    </div>
+                    <div class="product-list__right">
+                      <div class="product-list__price">138 000 руб</div>
+                      <div class="product-list__right-buy">
+                        <div class="product-list__counter">
+                          <button class="product-list__counter-minus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-minus"></use>
+                            </svg>
+                          </button>
+                          <input class="product-list__counter-input" type="string" value="01" readonly>
+                          <button class="product-list__counter-plus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-plus"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="product-list__btns"><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--blue">Запросить кп
+                            <div class="btn-circle__icon"></div></a><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--orange" href="">В корзину
+                            <div class="btn-circle__icon"></div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-list product-list">
+                  <div class="product-list__inner">
+                    <div class="product-list__left">
+                      <div class="product-list__label">Новинка</div><a class="product-list__img" href="#"><img src="img/product-img-1.jpg" alt=""></a>
+                    </div>
+                    <div class="product-list__middle">
+                      <div class="product-list__middle-info"><a class="product-list__title" href="#">Трубки эндотрахеальные</a>
+                        <div class="product-list__artnumber"><span>Артикул:</span><span>213123131</span></div>
+                      </div>
+                      <div class="product-list__middle-props">
+                        <div class="product-list__props-item"><span class="product-list__props-name">Материал:</span><span class="product-list__props-value">сталь</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Цвет:</span><span class="product-list__props-value">серый</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Диаметр проводника, мм:</span><span class="product-list__props-value">0.5</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                      </div>
+                    </div>
+                    <div class="product-list__right">
+                      <div class="product-list__price">138 000 руб</div>
+                      <div class="product-list__right-buy">
+                        <div class="product-list__counter">
+                          <button class="product-list__counter-minus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-minus"></use>
+                            </svg>
+                          </button>
+                          <input class="product-list__counter-input" type="string" value="01" readonly>
+                          <button class="product-list__counter-plus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-plus"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="product-list__btns"><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--blue">Запросить кп
+                            <div class="btn-circle__icon"></div></a><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--orange" href="">В корзину
+                            <div class="btn-circle__icon"></div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="catalog-list product-list">
+                  <div class="product-list__inner">
+                    <div class="product-list__left">
+                      <div class="product-list__label">Новинка</div><a class="product-list__img" href="#"><img src="img/product-img-1.jpg" alt=""></a>
+                    </div>
+                    <div class="product-list__middle">
+                      <div class="product-list__middle-info"><a class="product-list__title" href="#">Трубки эндотрахеальные</a>
+                        <div class="product-list__artnumber"><span>Артикул:</span><span>213123131</span></div>
+                      </div>
+                      <div class="product-list__middle-props">
+                        <div class="product-list__props-item"><span class="product-list__props-name">Материал:</span><span class="product-list__props-value">сталь</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Цвет:</span><span class="product-list__props-value">серый</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Диаметр проводника, мм:</span><span class="product-list__props-value">0.5</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                        <div class="product-list__props-item"><span class="product-list__props-name">Длина рабочей части, мм:</span><span class="product-list__props-value">12</span></div>
+                      </div>
+                    </div>
+                    <div class="product-list__right">
+                      <div class="product-list__price">138 000 руб</div>
+                      <div class="product-list__right-buy">
+                        <div class="product-list__counter">
+                          <button class="product-list__counter-minus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-minus"></use>
+                            </svg>
+                          </button>
+                          <input class="product-list__counter-input" type="string" value="01" readonly>
+                          <button class="product-list__counter-plus">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#catalog-cart-plus"></use>
+                            </svg>
+                          </button>
+                        </div>
+                        <div class="product-list__btns"><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--blue">Запросить кп
+                            <div class="btn-circle__icon"></div></a><a class="product-list__btn btn-circle btn-circle--small-h32 btn-circle--orange" href="">В корзину
+                            <div class="btn-circle__icon"></div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pagination-wrap pagination-wrap--catalog">
+                <div class="pagination"><a class="pagination-item pagination-item--prev" href="">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#pagination-next"></use>
+                    </svg></a><a class="pagination-item" href=""><span>1</span></a><a class="pagination-item pagination-item--active" href=""><span>2</span></a><a class="pagination-item" href=""><span>3</span></a><a class="pagination-item" href=""><span>4</span></a><a class="pagination-item pagination-item--next" href="">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#pagination-next"></use>
+                    </svg></a></div>
+              </div>
+              <div class="pagination-wrap pagination-wrap--catalog">
+                <div class="pagination"><a class="pagination-item pagination-item--prev" href="">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#pagination-next"></use>
+                    </svg></a><a class="pagination-item" href=""><span>1</span></a><a class="pagination-item pagination-item--dots" href=""><span>...</span></a><a class="pagination-item pagination-item--digit-prev" href=""><span>3</span></a><a class="pagination-item pagination-item--active" href=""><span>4</span></a><a class="pagination-item pagination-item--digit-next" href=""><span>5</span></a><a class="pagination-item pagination-item--dots" href=""><span>...</span></a><a class="pagination-item" href=""><span>99</span></a><a class="pagination-item pagination-item--next" href="">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#pagination-next"></use>
+                    </svg></a></div>
+              </div>
+            </div>
+          </div>
+          <div class="layout-catalog">
+            <div class="layout-catalog__sidebar"></div>
+            <div class="layout-catalog__main">
+              <div class="catalog-partners section">
+                <div class="section__title">Партнеры</div><a class="btn-more" href="#"><span>Все партнеры</span><span>
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#arrow-right"></use>
+                    </svg></span></a>
+                <!--.partners
+                .swiper
+                	.swiper-wrapper
+                		.swiper-slide.partners__slide
+                			img(src="img/catalog/catalog_partners_1.png" alt="")
+                		.swiper-slide.partners__slide
+                			img(src="img/catalog/catalog_partners_2.png" alt="")
+                		.swiper-slide.partners__slide
+                			img(src="img/catalog/catalog_partners_3.png" alt="")
+                		.swiper-slide.partners__slide
+                			img(src="img/catalog/catalog_partners_4.png" alt="")
+                		.swiper-slide.partners__slide
+                			img(src="img/catalog/catalog_partners_5.png" alt="")
+                		.swiper-slide.partners__slide
+                			img(src="img/catalog/catalog_partners_6.png" alt="")
+                
+                -->
+                <div class="catalog-partners-form">
+                  <div class="catalog-partners-form__title"><span>Приглашаем </span>к сотрудничеству партнеров - поставщиков</div>
+                  <div class="catalog-partners-form__btn"><a class="btn-arrow" href="#"><span><span>Как стать партнером</span></span>
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#btn-arrow"></use>
+                      </svg></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="simple-padding-before-footer"></div>
+    </main>
+    <div class="modal-menu js-catalog-modal">
+      <div class="modal-menu__overlay"></div>
+      <div class="modal-menu__wrapper">
+        <div class="modal-menu__sections">
+          <div class="modal-menu__sections-wrapper">
+            <div class="modal-menu__title">Каталог товаров</div>
+            <button class="modal-menu__section js-catalog-modal--section" data-section="1">Анестезиология и реанимация
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+              </svg>
+            </button>
+            <button class="modal-menu__section js-catalog-modal--section" data-section="1">Анестезиология и реанимация
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+              </svg>
+            </button>
+            <button class="modal-menu__section js-catalog-modal--section" data-section="1">Анестезиология и реанимация
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+              </svg>
+            </button>
+            <button class="modal-menu__section js-catalog-modal--section" data-section="1">Анестезиология и реанимация
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+              </svg>
+            </button>
+            <button class="modal-menu__section js-catalog-modal--section" data-section="1">Анестезиология и реанимация
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+              </svg>
+            </button>
+            <button class="modal-menu__section js-catalog-modal--section" data-section="1">Анестезиология и реанимация
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+              </svg>
+            </button>
+            <button class="modal-menu__section js-catalog-modal--section" data-section="1">Анестезиология и реанимация
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="modal-menu__mobile">
+            <div class="modal-menu__title">Каталог товаров</div>
+            <div class="modal-menu__mobile-sections js-catalog-mobile--sections">
+              <button class="modal-menu__mobile-item js-catalog-mobile--section" data-section="1">Анестезиология и реанимация
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>
+              </button>
+              <button class="modal-menu__mobile-item js-catalog-mobile--section" data-section="2">Анестезиология 123  и реанимация 2
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>
+              </button>
+              <button class="modal-menu__mobile-item js-catalog-mobile--section" data-section="3">Анестезиология и aslkdjaalskdja реанимация 3
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>
+              </button>
+              <button class="modal-menu__mobile-item js-catalog-mobile--section" data-section="4">Анестезиология и реанимация 4
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>
+              </button>
+              <button class="modal-menu__mobile-item js-catalog-mobile--section" data-section="5">Анестезиология и реанимация 5
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>
+              </button>
+              <button class="modal-menu__mobile-item js-catalog-mobile--section" data-section="6">Анестезиология и реанимация 6
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>
+              </button>
+              <button class="modal-menu__mobile-item js-catalog-mobile--section" data-section="7">Анестезиология и реанимация 7
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="modal-menu__mobile-products js-catalog-mobile--products" data-products="1">
+              <button class="modal-menu__mobile-item modal-menu__mobile-item--back js-catalog-mobile--back">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>Назад
+              </button><a class="modal-menu__mobile-item" href="#">Товар 1</a><a class="modal-menu__mobile-item" href="#">Товар 2</a><a class="modal-menu__mobile-item" href="#">Товар 3</a><a class="modal-menu__mobile-item" href="#">Товар 4</a><a class="modal-menu__mobile-item" href="#">Товар 5</a><a class="modal-menu__mobile-item" href="#">Товар 6</a><a class="modal-menu__mobile-item" href="#">Товар 7</a><a class="modal-menu__mobile-item" href="#">Товар 8</a><a class="modal-menu__mobile-item" href="#">Товар 9</a><a class="modal-menu__mobile-item" href="#">Товар 10</a><a class="modal-menu__mobile-item" href="#">Товар 11</a><a class="modal-menu__mobile-item" href="#">Товар 12</a><a class="modal-menu__mobile-item" href="#">Товар 13</a><a class="modal-menu__mobile-item" href="#">Товар 14</a>
+            </div>
+            <div class="modal-menu__mobile-products js-catalog-mobile--products" data-products="2">
+              <button class="modal-menu__mobile-item modal-menu__mobile-item--back js-catalog-mobile--back">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>Назад
+              </button><a class="modal-menu__mobile-item" href="#">Товар 1</a><a class="modal-menu__mobile-item" href="#">Товар 2</a><a class="modal-menu__mobile-item" href="#">Товар 3</a><a class="modal-menu__mobile-item" href="#">Товар 4</a><a class="modal-menu__mobile-item" href="#">Товар 5</a><a class="modal-menu__mobile-item" href="#">Товар 6</a><a class="modal-menu__mobile-item" href="#">Товар 7</a><a class="modal-menu__mobile-item" href="#">Товар 8</a><a class="modal-menu__mobile-item" href="#">Товар 9</a><a class="modal-menu__mobile-item" href="#">Товар 10</a><a class="modal-menu__mobile-item" href="#">Товар 11</a><a class="modal-menu__mobile-item" href="#">Товар 12</a><a class="modal-menu__mobile-item" href="#">Товар 13</a><a class="modal-menu__mobile-item" href="#">Товар 14</a>
+            </div>
+            <div class="modal-menu__mobile-products js-catalog-mobile--products" data-products="3">
+              <button class="modal-menu__mobile-item modal-menu__mobile-item--back js-catalog-mobile--back">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>Назад
+              </button><a class="modal-menu__mobile-item" href="#">Товар 1</a><a class="modal-menu__mobile-item" href="#">Товар 2</a><a class="modal-menu__mobile-item" href="#">Товар 3</a><a class="modal-menu__mobile-item" href="#">Товар 4</a><a class="modal-menu__mobile-item" href="#">Товар 5</a><a class="modal-menu__mobile-item" href="#">Товар 6</a><a class="modal-menu__mobile-item" href="#">Товар 7</a><a class="modal-menu__mobile-item" href="#">Товар 8</a><a class="modal-menu__mobile-item" href="#">Товар 9</a><a class="modal-menu__mobile-item" href="#">Товар 10</a><a class="modal-menu__mobile-item" href="#">Товар 11</a><a class="modal-menu__mobile-item" href="#">Товар 12</a><a class="modal-menu__mobile-item" href="#">Товар 13</a><a class="modal-menu__mobile-item" href="#">Товар 14</a>
+            </div>
+            <div class="modal-menu__mobile-products js-catalog-mobile--products" data-products="4">
+              <button class="modal-menu__mobile-item modal-menu__mobile-item--back js-catalog-mobile--back">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>Назад
+              </button><a class="modal-menu__mobile-item" href="#">Товар 1</a><a class="modal-menu__mobile-item" href="#">Товар 2</a><a class="modal-menu__mobile-item" href="#">Товар 3</a><a class="modal-menu__mobile-item" href="#">Товар 4</a><a class="modal-menu__mobile-item" href="#">Товар 5</a><a class="modal-menu__mobile-item" href="#">Товар 6</a><a class="modal-menu__mobile-item" href="#">Товар 7</a><a class="modal-menu__mobile-item" href="#">Товар 8</a><a class="modal-menu__mobile-item" href="#">Товар 9</a><a class="modal-menu__mobile-item" href="#">Товар 10</a><a class="modal-menu__mobile-item" href="#">Товар 11</a><a class="modal-menu__mobile-item" href="#">Товар 12</a><a class="modal-menu__mobile-item" href="#">Товар 13</a><a class="modal-menu__mobile-item" href="#">Товар 14</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-menu__items">
+          <div class="modal-menu__items-container js-catalog-modal--items" data-section-items="1">
+            <button class="modal-menu__item js-catalog-modal--item" data-product="1">Мониторы</button>
+            <button class="modal-menu__item js-catalog-modal--item" data-product="2">Расходные материалы</button>
+            <button class="modal-menu__item js-catalog-modal--item" data-product="3">Расходные материалы</button>
+            <button class="modal-menu__item js-catalog-modal--item" data-product="4">Расходные материалы</button>
+            <button class="modal-menu__item js-catalog-modal--item" data-product="5">Расходные материалы</button>
+            <button class="modal-menu__item js-catalog-modal--item" data-product="2">Расходные материалы</button>
+            <button class="modal-menu__item js-catalog-modal--item" data-product="3">Расходные материалы</button>
+            <button class="modal-menu__item js-catalog-modal--item" data-product="4">Расходные материалы</button>
+            <button class="modal-menu__item js-catalog-modal--item" data-product="5">Расходные материалы</button>
+            <button class="modal-menu__item js-catalog-modal--item" data-product="2">Расходные материалы</button>
+            <button class="modal-menu__item js-catalog-modal--item" data-product="3">Расходные материалы</button>
+            <button class="modal-menu__item js-catalog-modal--item" data-product="4">Расходные материалы</button>
+            <button class="modal-menu__item js-catalog-modal--item" data-product="5">Расходные материалы</button>
+            <button class="modal-menu__item js-catalog-modal--item" data-product="2">Расходные материалы</button>
+            <button class="modal-menu__item js-catalog-modal--item" data-product="3">Расходные материалы</button>
+            <button class="modal-menu__item js-catalog-modal--item" data-product="4">Расходные материалы</button>
+            <button class="modal-menu__item js-catalog-modal--item" data-product="5">Расходные материалы</button>
+          </div>
+        </div>
+        <div class="modal-menu__details">
+          <div class="modal-menu__detail js-catalog-modal--detail" data-product-detail="1">
+            <div class="modal-menu__detail-picture"><img src="img/catalog/modal-menu.png" alt=""></div><a class="modal-menu__detail-title" href="#">Монитор пациента Mindray BeneView T9 OR</a>
+            <div class="modal-menu__detail-text">Монитор пациента Mindray BeneView T9 OR (Operating Room) был разработан специально для операционной. Аппарат оснащен функцией графического представления анестезиологического статуса,1</div><a class="btn-arrow btn-arrow--blue modal-menu__detail-btn" href="#"><span><span>Подробнее</span></span>
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#btn-arrow"></use>
+              </svg></a>
+          </div>
+          <div class="modal-menu__detail js-catalog-modal--detail" data-product-detail="2">
+            <div class="modal-menu__detail-picture"><img src="img/catalog/modal-menu.png" alt=""></div><a class="modal-menu__detail-title" href="#">Монитор пациента Mindray BeneView T9 OR</a><a class="btn-arrow btn-arrow--blue modal-menu__detail-btn" href="#"><span><span>Подробнее</span></span>
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#btn-arrow"></use>
+              </svg></a>
+          </div>
+          <div class="modal-menu__detail js-catalog-modal--detail" data-product-detail="3">
+            <div class="modal-menu__detail-picture"><img src="img/catalog/modal-menu.png" alt=""></div><a class="modal-menu__detail-title" href="#">Монитор пациента Mindray BeneView T9 OR</a>
+            <div class="modal-menu__detail-text">Монитор пациента Mindray BeneView T9 OR (Operating Room) был разработан специально для операционной. Аппарат оснащен функцией графического представления анестезиологического статуса,1</div>
+          </div>
+          <div class="modal-menu__detail js-catalog-modal--detail" data-product-detail="4">
+            <div class="modal-menu__detail-picture"><img src="img/catalog/modal-menu.png" alt=""></div><a class="modal-menu__detail-title" href="#">Монитор пациента Mindray BeneView T9 OR</a>
+            <div class="modal-menu__detail-text">Монитор пациента Mindray BeneView T9 OR (Operating Room) был разработан специально для операционной. Аппарат оснащен функцией графического представления анестезиологического статуса,1</div><a class="btn-arrow btn-arrow--blue modal-menu__detail-btn" href="#"><span><span>Подробнее</span></span>
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#btn-arrow"></use>
+              </svg></a>
+          </div>
+        </div>
+        <button class="modal-menu__close js-catalog-modal--close">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#basket-remove"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="modal-menu js-brands-modal">
+      <div class="modal-menu__overlay"></div>
+      <div class="modal-menu__wrapper">
+        <div class="modal-menu__sections">
+          <div class="modal-menu__sections-wrapper">
+            <div class="modal-menu__title">Бренды</div>
+            <div class="modal-menu__letter">M</div>
+            <button class="modal-menu__section js-brands-modal--section" data-section="1">Mindray
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+              </svg>
+            </button>
+            <button class="modal-menu__section js-brands-modal--section" data-section="2">Mindray
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+              </svg>
+            </button>
+            <button class="modal-menu__section js-brands-modal--section" data-section="3">Mindray
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+              </svg>
+            </button>
+            <div class="modal-menu__letter modal-menu__letter--space">A</div>
+            <button class="modal-menu__section js-brands-modal--section" data-section="4">Andray
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+              </svg>
+            </button>
+            <button class="modal-menu__section js-brands-modal--section" data-section="1">Andray 2
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+              </svg>
+            </button>
+            <button class="modal-menu__section js-brands-modal--section" data-section="2">Andray 3
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+              </svg>
+            </button>
+            <button class="modal-menu__section js-brands-modal--section" data-section="3">Andray 4
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+              </svg>
+            </button>
+            <button class="modal-menu__section js-brands-modal--section" data-section="4">Andray 5
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="modal-menu__mobile">
+            <div class="modal-menu__title">Бренды</div>
+            <div class="modal-menu__mobile-sections js-brands-mobile--sections">
+              <div class="modal-menu__letter">M</div>
+              <button class="modal-menu__mobile-item js-brands-mobile--section" data-section="1">Анестезиология и реанимация
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>
+              </button>
+              <button class="modal-menu__mobile-item js-brands-mobile--section" data-section="2">Анестезиология 123  и реанимация 2
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>
+              </button>
+              <button class="modal-menu__mobile-item js-brands-mobile--section" data-section="3">Анестезиология и aslkdjaalskdja реанимация 3
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>
+              </button>
+              <button class="modal-menu__mobile-item js-brands-mobile--section" data-section="4">Анестезиология и реанимация 4
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>
+              </button>
+              <div class="modal-menu__letter modal-menu__letter--space">A</div>
+              <button class="modal-menu__mobile-item js-brands-mobile--section" data-section="5">Анестезиология и реанимация 5
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>
+              </button>
+              <button class="modal-menu__mobile-item js-brands-mobile--section" data-section="6">Анестезиология и реанимация 6
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>
+              </button>
+              <button class="modal-menu__mobile-item js-brands-mobile--section" data-section="7">Анестезиология и реанимация 7
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>
+              </button>
+            </div>
+            <div class="modal-menu__mobile-products js-brands-mobile--products" data-products="1">
+              <button class="modal-menu__mobile-item modal-menu__mobile-item--back js-brands-mobile--back">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>Назад
+              </button><a class="modal-menu__mobile-item" href="#">Товар 1</a><a class="modal-menu__mobile-item" href="#">Товар 2</a><a class="modal-menu__mobile-item" href="#">Товар 3</a><a class="modal-menu__mobile-item" href="#">Товар 4</a><a class="modal-menu__mobile-item" href="#">Товар 5</a><a class="modal-menu__mobile-item" href="#">Товар 6</a><a class="modal-menu__mobile-item" href="#">Товар 7</a><a class="modal-menu__mobile-item" href="#">Товар 8</a><a class="modal-menu__mobile-item" href="#">Товар 9</a><a class="modal-menu__mobile-item" href="#">Товар 10</a><a class="modal-menu__mobile-item" href="#">Товар 11</a><a class="modal-menu__mobile-item" href="#">Товар 12</a><a class="modal-menu__mobile-item" href="#">Товар 13</a><a class="modal-menu__mobile-item" href="#">Товар 14</a>
+            </div>
+            <div class="modal-menu__mobile-products js-brands-mobile--products" data-products="2">
+              <button class="modal-menu__mobile-item modal-menu__mobile-item--back js-brands-mobile--back">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>Назад
+              </button><a class="modal-menu__mobile-item" href="#">Товар 1</a><a class="modal-menu__mobile-item" href="#">Товар 2</a><a class="modal-menu__mobile-item" href="#">Товар 3</a><a class="modal-menu__mobile-item" href="#">Товар 4</a><a class="modal-menu__mobile-item" href="#">Товар 5</a><a class="modal-menu__mobile-item" href="#">Товар 6</a><a class="modal-menu__mobile-item" href="#">Товар 7</a><a class="modal-menu__mobile-item" href="#">Товар 8</a><a class="modal-menu__mobile-item" href="#">Товар 9</a><a class="modal-menu__mobile-item" href="#">Товар 10</a><a class="modal-menu__mobile-item" href="#">Товар 11</a><a class="modal-menu__mobile-item" href="#">Товар 12</a><a class="modal-menu__mobile-item" href="#">Товар 13</a><a class="modal-menu__mobile-item" href="#">Товар 14</a>
+            </div>
+            <div class="modal-menu__mobile-products js-brands-mobile--products" data-products="3">
+              <button class="modal-menu__mobile-item modal-menu__mobile-item--back js-brands-mobile--back">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>Назад
+              </button><a class="modal-menu__mobile-item" href="#">Товар 1</a><a class="modal-menu__mobile-item" href="#">Товар 2</a><a class="modal-menu__mobile-item" href="#">Товар 3</a><a class="modal-menu__mobile-item" href="#">Товар 4</a><a class="modal-menu__mobile-item" href="#">Товар 5</a><a class="modal-menu__mobile-item" href="#">Товар 6</a><a class="modal-menu__mobile-item" href="#">Товар 7</a><a class="modal-menu__mobile-item" href="#">Товар 8</a><a class="modal-menu__mobile-item" href="#">Товар 9</a><a class="modal-menu__mobile-item" href="#">Товар 10</a><a class="modal-menu__mobile-item" href="#">Товар 11</a><a class="modal-menu__mobile-item" href="#">Товар 12</a><a class="modal-menu__mobile-item" href="#">Товар 13</a><a class="modal-menu__mobile-item" href="#">Товар 14</a>
+            </div>
+            <div class="modal-menu__mobile-products js-brands-mobile--products" data-products="4">
+              <button class="modal-menu__mobile-item modal-menu__mobile-item--back js-brands-mobile--back">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#modal-right-arrow"></use>
+                </svg>Назад
+              </button><a class="modal-menu__mobile-item" href="#">Товар 1</a><a class="modal-menu__mobile-item" href="#">Товар 2</a><a class="modal-menu__mobile-item" href="#">Товар 3</a><a class="modal-menu__mobile-item" href="#">Товар 4</a><a class="modal-menu__mobile-item" href="#">Товар 5</a><a class="modal-menu__mobile-item" href="#">Товар 6</a><a class="modal-menu__mobile-item" href="#">Товар 7</a><a class="modal-menu__mobile-item" href="#">Товар 8</a><a class="modal-menu__mobile-item" href="#">Товар 9</a><a class="modal-menu__mobile-item" href="#">Товар 10</a><a class="modal-menu__mobile-item" href="#">Товар 11</a><a class="modal-menu__mobile-item" href="#">Товар 12</a><a class="modal-menu__mobile-item" href="#">Товар 13</a><a class="modal-menu__mobile-item" href="#">Товар 14</a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-menu__items">
+          <div class="modal-menu__items-container js-brands-modal--items" data-section-items="1"><a class="modal-menu__item" href="#">BeneView T9 OR</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a></div>
+          <div class="modal-menu__items-container js-brands-modal--items" data-section-items="2"><a class="modal-menu__item" href="#">BeneView T9 OR</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a></div>
+          <div class="modal-menu__items-container js-brands-modal--items" data-section-items="3"><a class="modal-menu__item" href="#">BeneView T9 OR</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a></div>
+          <div class="modal-menu__items-container js-brands-modal--items" data-section-items="4"><a class="modal-menu__item" href="#">BeneView T9 OR</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a><a class="modal-menu__item" href="#">Расходные материалы</a></div>
+        </div>
+        <div class="modal-menu__details">
+          <div class="modal-menu__detail js-brands-modal--detail" data-detail="1">
+            <div class="modal-menu__detail-picture"><img src="img/modal-brand.png" alt=""></div><a class="modal-menu__detail-title" href="#">Компания Mindray</a>
+            <div class="modal-menu__detail-text">Монитор пациента Mindray BeneView T9 OR (Operating Room) был разработан специально для операционной. Аппарат оснащен функцией графического представления анестезиологического статуса,1</div><a class="btn-arrow btn-arrow--blue modal-menu__detail-btn" href="#"><span><span>Подробнее</span></span>
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#btn-arrow"></use>
+              </svg></a>
+          </div>
+          <div class="modal-menu__detail js-brands-modal--detail" data-detail="2">
+            <div class="modal-menu__detail-picture"><img src="img/modal-brand.png" alt=""></div><a class="modal-menu__detail-title" href="#">Компания Mindray 2</a>
+            <div class="modal-menu__detail-text">Монитор пациента Mindray BeneView T9 OR (Operating Room) был разработан специально для операционной. Аппарат оснащен функцией графического представления анестезиологического статуса,1</div><a class="btn-arrow btn-arrow--blue modal-menu__detail-btn" href="#"><span><span>Подробнее</span></span>
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#btn-arrow"></use>
+              </svg></a>
+          </div>
+          <div class="modal-menu__detail js-brands-modal--detail" data-detail="3">
+            <div class="modal-menu__detail-picture"><img src="img/modal-brand.png" alt=""></div><a class="modal-menu__detail-title" href="#">Компания Mindray 3</a>
+            <div class="modal-menu__detail-text">Монитор пациента Mindray BeneView T9 OR (Operating Room) был разработан специально для операционной. Аппарат оснащен функцией графического представления анестезиологического статуса,1</div><a class="btn-arrow btn-arrow--blue modal-menu__detail-btn" href="#"><span><span>Подробнее</span></span>
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#btn-arrow"></use>
+              </svg></a>
+          </div>
+          <div class="modal-menu__detail js-brands-modal--detail" data-detail="4">
+            <div class="modal-menu__detail-picture"><img src="img/modal-brand.png" alt=""></div><a class="modal-menu__detail-title" href="#">Компания Mindray 4</a>
+            <div class="modal-menu__detail-text">Монитор пациента Mindray BeneView T9 OR (Operating Room) был разработан специально для операционной. Аппарат оснащен функцией графического представления анестезиологического статуса,1</div><a class="btn-arrow btn-arrow--blue modal-menu__detail-btn" href="#"><span><span>Подробнее</span></span>
+              <svg>
+                <use xlink:href="img/sprites/sprite.svg#btn-arrow"></use>
+              </svg></a>
+          </div>
+        </div>
+        <button class="modal-menu__close js-brands-modal--close">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#basket-remove"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__top">
+            <div class="footer__col footer__col--info">
+              <div class="footer__logo">
+                <svg>
+                  <use xlink:href="img/logo.svg#index"></use>
+                </svg>
+              </div>
+              <div class="footer__info">ООО «Медимком» – поставщик расходных материалов и оборудования для отделений анестезиологии и реанимации.</div>
+            </div>
+            <div class="footer__col footer__col--menu">
+              <div class="footer__col-title">Каталог</div>
+              <ul class="footer__menu footer__menu--top">
+                <li><a href="#">Анастезиология и реанимация</a></li>
+                <li><a href="#">Хирургия</a></li>
+                <li><a href="#">Урология</a></li>
+                <li><a href="#">Мониторинг пациента</a></li>
+                <li><a href="#">Шприцы и иглы</a></li>
+                <li><a href="#">Онкология</a></li>
+                <li><a href="#">Лабораторная диагностика</a></li>
+                <li><a href="#">Медицинское оборудование</a></li>
+              </ul>
+            </div>
+            <div class="footer__col footer__col--menu">
+              <div class="footer__col-title">Разделы</div>
+              <ul class="footer__menu footer__menu--top">
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="#">Частным лицам</a></li>
+                <li><a href="#">Инф. материалы</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Регистрация</a></li>
+              </ul>
+            </div>
+            <div class="footer__col footer__col--contacts">
+              <div class="footer__col-title">Контакты</div>
+              <div class="footer__contact footer-contact">
+                <div class="footer-contact__name">Генеральное представительство</div>
+                <div class="footer-contact__info">
+                  <p>Москва 119619, Солнцево, ул. 2-я Карпатская, вл. 4</p><br>
+                  <div class="footer-contact__link"><a href="#">Адреса филиалов</a></div>
+                </div>
+              </div>
+              <div class="footer__contact footer-contact">
+                <div class="footer-contact__name">Отдел продаж</div>
+                <div class="footer-contact__info"><a href="tel:+78123343764">+7 812 334-37-64</a><br><a href="tel:+74959001099">+7 495 900-10-99</a><br><br>
+                  <div class="footer-contact__link"><a href="#">Заказать звонок</a></div><br><a href="mailto:info@medimcom.ru">info@medimcom.ru</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__bottom">
+            <div class="footer__col footer__col--copyright">
+              <ul class="footer__menu">
+                <li><a href="#">Политика конфиденциальности</a></li>
+              </ul>
+              <div class="footer__copyright">© Медимком, 2021</div>
+            </div>
+            <div class="footer__col footer__col--social">
+              <div class="footer__text">Мы в соцсетях</div>
+              <ul class="footer__social">
+                <li><a href="#" target="_blank">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#soc-wa-f"></use>
+                    </svg></a></li>
+                <li><a href="#" target="_blank">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#soc-vk"></use>
+                    </svg></a></li>
+                <li><a href="#" target="_blank">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#soc-youtube-f"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

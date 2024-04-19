@@ -611,17 +611,17 @@
 
 .typical-h1 {
 	font-weight: 700;
-	font-size: 72px;
+	font-size: 50px;
 	line-height: 72%;
 	color: $mainColor;
 	
 	@include minmax(xl, dsk) {
-		font-size: vw(72);
+		font-size: vw(50);
 	}
 
 
 	@media only screen and (max-width: 1200px) {
-		font-size: 60px;
+		font-size: 50px;
 	}
 
 	@media only screen and (max-width: 767px) {
@@ -659,12 +659,12 @@
 	}
 	&--medium {
 		font-weight: 700;
-		font-size: 60px;
+		font-size: 50px;
 		line-height: 120%;
 
 		
 		@include minmax(xl, dsk) {
-			font-size: vw(60);
+			font-size: vw(50);
 		}
 
 		@media only screen and (max-width: 1200px) {
@@ -685,12 +685,12 @@
 
 .typical-h2 {
 	font-weight: 700;
-	font-size: 60px;
+	font-size: 50px;
 	line-height: 120%;
 	color: $mainColor;
 
 	@include minmax(xl, dsk) {
-		font-size: vw(60);
+		font-size: vw(50);
 	}
 
 	@media only screen and (max-width: 1200px) {

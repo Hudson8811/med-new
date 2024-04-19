@@ -265,11 +265,11 @@
 
     h2 {
         font-weight: 700;
-        font-size: 60px;
+        font-size: 50px;
         line-height: 120%;
         color: #193762;
         @include minmax(xl, dsk) {
-            font-size: vw(60);
+            font-size: vw(50);
         }
         @media only screen and (max-width: 767px) {
             font-size: 40px;

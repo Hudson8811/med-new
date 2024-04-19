@@ -1221,11 +1221,11 @@
 		}
 
 		&__title {
-			font-size: 60px;
+			font-size: 50px;
 			font-weight: 700;
 			color: #FFFFFF;
 			@include minmax(xl, dsk) {
-				font-size: vw(60);
+				font-size: vw(50);
 			}
 
 			span {
@@ -1254,7 +1254,7 @@
 	}
 
 	@media screen and (max-width:900px) {
-		font-size: 60px;
+		font-size: 50px;
 	}
 }
 .partners--catalog {
