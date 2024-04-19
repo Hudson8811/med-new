@@ -1706,11 +1706,11 @@
 	}
 	&__title {
 		color: #193762;
-		font-size: 60px;
+		font-size: 50px;
 		font-weight: 700;
 		line-height: 72%;
 		@include minmax(xl, dsk) {
-			font-size: vw(60);
+			font-size: vw(50);
 		}
 
 		&--partners {
@@ -1996,7 +1996,7 @@
 			padding: vw(24) vw(18) vw(40) vw(18);
 			margin-bottom: vw(-40);
 		}
-		@media only screen and (max-width: 1206px) {
+		@media only screen and (max-width: 1200px) {
 			flex-direction: column;
 			height: auto;
 			text-align: center;
@@ -2039,7 +2039,7 @@
 					height: vw(53);
 				}
 
-				@media only screen and (max-width: 1206px) {
+				@media only screen and (max-width: 1200px) {
 					display: none;
 				}
 			}
@@ -2076,7 +2076,7 @@
 						bottom: vw(-5);
 					}
 
-					@media only screen and (max-width: 1206px) {
+					@media only screen and (max-width: 1200px) {
 						display: none;
 					}
 				}
@@ -2101,7 +2101,7 @@
 			&:before {
 				bottom: -22px;
 				@include minmax(xl, dsk) {
-					left: vw(-30);
+					bottom: vw(-22);
 				}
 			}
 			& span {
@@ -2128,18 +2128,18 @@
 					right: -9px;
 					bottom: -30px;
 					@include minmax(xl, dsk) {
-						left: vw(-9);
+						right: vw(-9);
 						bottom: vw(-30);
 					}
 				}
 			}
 
-			@media only screen and (max-width: 1206px) {
+			@media only screen and (max-width: 1200px) {
 				margin-bottom: 20px;
 			}
 		}
 
-		@media only screen and (max-width: 1206px) {
+		@media only screen and (max-width: 1200px) {
 			border-radius: 42px;
 			padding: 24px 50px;
 		}
@@ -2186,7 +2186,7 @@
 	}
 
 	&__title {
-		font-size: 72px;
+		font-size: 50px;
 		font-weight: 700;
 		line-height: 60px;
 		color: $mainColor;
@@ -2194,13 +2194,13 @@
 		margin-bottom: 38px;
 
 		@include minmax(xl, dsk) {
-			font-size: vw(72);
+			font-size: vw(50);
 			line-height: vw(60);
 			max-width: vw(825);
 			margin-bottom: vw(38);
 		}
 
-		@media only screen and (max-width: 1206px) {
+		@media only screen and (max-width: 1200px) {
 			text-align: center;
 			font-size: 36px;
 			line-height: 36px;
@@ -2252,13 +2252,13 @@
 						background-size: vw(7) vw(1);
 						margin-top: vw(-4);
 					}
-					@media only screen and (max-width: 1206px) {
+					@media only screen and (max-width: 1200px) {
 						display: none;
 					}
 				}
 			}
 
-			@media only screen and (max-width: 1206px) {
+			@media only screen and (max-width: 1200px) {
 				width: auto;
 			}
 		}
@@ -2268,7 +2268,7 @@
 				padding-left: vw(6);
 			}
 
-			@media only screen and (max-width: 1206px) {
+			@media only screen and (max-width: 1200px) {
 				padding-left: 8px;
 			}
 			@media only screen and (max-width: 500px) {
@@ -2280,7 +2280,7 @@
 			margin-bottom: 0;
 		}
 
-		@media only screen and (max-width: 1206px) {
+		@media only screen and (max-width: 1200px) {
 			align-items: flex-start;
 			margin-bottom: 20px;
 		}
@@ -2290,7 +2290,7 @@
 		}
 	}
 
-	@media only screen and (max-width: 1206px) {
+	@media only screen and (max-width: 1200px) {
 		padding: 26px 38px 40px 38px;
 	}
 	@media only screen and (max-width: 500px) {
@@ -2304,7 +2304,7 @@
 		padding-top: vw(32);
 	}
 
-	@media only screen and (max-width: 1206px) {
+	@media only screen and (max-width: 1200px) {
 		width: 100%;
 		overflow: scroll;
 	}
@@ -2328,12 +2328,12 @@
 				font-size: vw(20);
 			}
 
-			@media only screen and (max-width: 1206px) {
+			@media only screen and (max-width: 1200px) {
 				font-size: 16px;
 			}
 		}
 
-		@media only screen and (max-width: 1206px) {
+		@media only screen and (max-width: 1200px) {
 			min-width: 1166px;
 			width: 100%;
 			padding: 30px 46px 60px 46px;
@@ -2355,7 +2355,7 @@
 			margin-top: vw(-32);
 			gap: vw(18);
 		}
-		@media only screen and (max-width: 1206px) {
+		@media only screen and (max-width: 1200px) {
 			min-width: 1166px;
 			width: 100%;
 			gap: 12px;
@@ -2376,7 +2376,7 @@
 			padding: vw(20) vw(22) vw(20) vw(26);
 		}
 
-		@media only screen and (max-width: 1206px) {
+		@media only screen and (max-width: 1200px) {
 			padding: 12px 22px 12px 26px;
 		}
 	}
@@ -2388,7 +2388,7 @@
 			font-size: vw(20);
 		}
 
-		@media only screen and (max-width: 1206px) {
+		@media only screen and (max-width: 1200px) {
 			font-size: 16px;
 		}
 	}
@@ -2417,7 +2417,7 @@
 				height: vw(58);
 			}
 
-			@media only screen and (max-width: 1206px) {
+			@media only screen and (max-width: 1200px) {
 				width: 40px;
 				height: 40px;
 			}
@@ -2432,7 +2432,7 @@
 					height: vw(2);
 				}
 
-				@media only screen and (max-width: 1206px) {
+				@media only screen and (max-width: 1200px) {
 					width: 10px;
 					height: 2px;
 				}
@@ -2455,7 +2455,7 @@
 				height: vw(58);
 			}
 
-			@media only screen and (max-width: 1206px) {
+			@media only screen and (max-width: 1200px) {
 				width: 40px;
 				height: 40px;
 				overflow: hidden;
@@ -2476,7 +2476,7 @@
 				font-size: vw(20);
 			}
 
-			@media only screen and (max-width: 1206px) {
+			@media only screen and (max-width: 1200px) {
 				font-size: 16px;
 			}
 		}
@@ -2490,7 +2490,7 @@
 					height: vw(13);
 				}
 
-				@media only screen and (max-width: 1206px) {
+				@media only screen and (max-width: 1200px) {
 					width: 10px;
 					height: 10px;
 				}
@@ -2563,7 +2563,7 @@
 			font-size: vw(20);
 		}
 
-		@media only screen and (max-width: 1206px) {
+		@media only screen and (max-width: 1200px) {
 			font-size: 16px;
 		}
 	}
@@ -2577,7 +2577,7 @@
 			gap: vw(18);
 			padding: 0 vw(23) vw(28) vw(23);
 		}
-		@media only screen and (max-width: 1206px) {
+		@media only screen and (max-width: 1200px) {
 			gap: 12px;	
 		}
 
@@ -2605,7 +2605,7 @@
 			font-size: vw(20);
 		}
 
-		@media only screen and (max-width: 1206px) {
+		@media only screen and (max-width: 1200px) {
 			font-size: 16px;
 			padding: 20px 26px;
 		}
@@ -2632,13 +2632,13 @@
 		}
 
 		& svg {
-			@media only screen and (max-width: 1206px) {
+			@media only screen and (max-width: 1200px) {
 				width: 40px;
     			height: 40px;
 			}
 		}
 
-		@media only screen and (max-width: 1206px) {
+		@media only screen and (max-width: 1200px) {
 			margin-right: 20px;
 		}
 	}
@@ -2667,7 +2667,7 @@
 			}
 		}
 
-		@media only screen and (max-width: 1206px) {
+		@media only screen and (max-width: 1200px) {
 			font-size: 16px;
 		}
 		@media only screen and (max-width: 560px) {
@@ -2686,7 +2686,7 @@
 				width: vw(622);
 			}
 
-			@media only screen and (max-width: 1206px) {
+			@media only screen and (max-width: 1200px) {
 				width: 410px;
 			}
 			@media only screen and (max-width: 750px) {
@@ -2700,7 +2700,7 @@
 				width: vw(100);
 			}
 
-			@media only screen and (max-width: 1206px) {
+			@media only screen and (max-width: 1200px) {
 				width: 60px;
 			}
 			@media only screen and (max-width: 750px) {
@@ -2714,7 +2714,7 @@
 				width: vw(100);
 			}
 
-			@media only screen and (max-width: 1206px) {
+			@media only screen and (max-width: 1200px) {
 				width: 80px;
 			}
 			@media only screen and (max-width: 750px) {
