@@ -206,7 +206,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		overflow: hidden;
+		//overflow: hidden;
 		@include minmax(xl, dsk) {
 			border-radius: 0 0 vw(32) vw(32);
 			padding: vw(23) vw(30) vw(41);
@@ -336,18 +336,19 @@
 			top: 100%;
 			width: 100%;
 			background: #fff;
-			padding: 10px 10px 15px;
+			padding: 10px 10px 10px;
 			box-sizing: content-box;
 			right: -10px;
 			text-align: right;
 			border-radius: 0 0 10px 10px;
 			@include minmax(xl, dsk) {
 				right: vw(-10);
-				padding: vw(10) vw(10) vw(15);
+				padding: vw(10) vw(10) vw(10);
 				border-radius: 0 0 vw(10) vw(10) ;
 			}
 			ul {
 				li {
+					padding-right: 25px;
 					@extend .fs20;
 					@include minmax(xl, dsk) {
 						padding-right: vw(25);
@@ -355,7 +356,7 @@
 					@include max(xl){
 						font-size: 16px;
 					}
-					&:not(:last-child){
+					&:not(:first-child){
 						margin-top: 10px;
 						@include minmax(xl, dsk) {
 							margin-top: vw(10);
