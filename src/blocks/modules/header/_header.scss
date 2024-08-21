@@ -279,6 +279,11 @@
 				height: vw(26);
 			}
 		}
+	}
+	&__emails{
+		&::before{
+			background-image: url("../img/sprites/sprite.svg#sms");
+		}
 		li {
 			@extend .fs20;
 			@include max(xl){
@@ -289,15 +294,78 @@
 			}
 		}
 	}
-	&__emails{
-		&::before{
-			background-image: url("../img/sprites/sprite.svg#sms");
-		}
-	}
 	&__phones{
 		white-space: nowrap;
+		padding-right: 25px;
+		@include minmax(xl, dsk) {
+			padding-right: vw(25);
+		}
 		&::before{
 			background-image: url("../img/sprites/sprite.svg#call");
+		}
+		&::after{
+			content: "";
+			display: block;
+			width: 15px;
+			height: 15px;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			background-position: center center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-image: url("../img/sprites/sprite.svg#filter-select-arrow");
+			@include minmax(xl, dsk) {
+				width: vw(15);
+				height: vw(15);
+			}
+		}
+		&-main {
+			@extend .fs20;
+			@include max(xl){
+				font-size: 16px;
+			}
+			a{
+				@extend .link;
+			}
+		}
+		&-dropdown{
+			display: none;
+			position: absolute;
+			top: 100%;
+			width: 100%;
+			background: #fff;
+			padding: 10px 10px 15px;
+			box-sizing: content-box;
+			right: -10px;
+			text-align: right;
+			border-radius: 0 0 10px 10px;
+			@include minmax(xl, dsk) {
+				right: vw(-10);
+				padding: vw(10) vw(10) vw(15);
+				border-radius: 0 0 vw(10) vw(10) ;
+			}
+			ul {
+				li {
+					@extend .fs20;
+					@include minmax(xl, dsk) {
+						padding-right: vw(25);
+					}
+					@include max(xl){
+						font-size: 16px;
+					}
+					&:not(:last-child){
+						margin-top: 10px;
+						@include minmax(xl, dsk) {
+							margin-top: vw(10);
+						}
+					}
+					a{
+						@extend .link;
+					}
+				}
+			}
 		}
 	}
 	&__social{

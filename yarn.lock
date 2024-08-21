@@ -2417,7 +2417,7 @@ bem-naming@1.0.1:
 bem-tools-core@bem-tools/bem-tools-core:
   version "0.0.3"
   resolved "git+ssh://git@github.com/bem-tools/bem-tools-core.git"
-  integrity sha512-K64LeJsRMmouZHXJ9j0leDWNIHafyazdAhSowNP/Jg3Je6KLJFZ3Nh78MmWC3/IhH0cltdDrek35MrkHDohiZA==
+  integrity sha512-MdmlsVWz1KbAvx1MvAZetwhQmNOEYcAmODi/UVrg2GXFgruNgPV8Z+6E17IlW8+uQetxnwot6ImGXom5nyRtFA==
   dependencies:
     coa "^1.0.1"
     global-modules "^0.2.0"
@@ -2425,7 +2425,7 @@ bem-tools-core@bem-tools/bem-tools-core:
 bem-tools-create@bem-tools/bem-tools-create:
   version "2.3.0"
   resolved "git+ssh://git@github.com/bem-tools/bem-tools-create.git"
-  integrity sha512-bW6SrmlUKH1spQKRdh/bqIg3SuscTKSsNE2Ubm8uOzZwrCjZRllyQ5ta3Af4N2OR/jd4D24NHjNOIalw+mSnBA==
+  integrity sha512-Q00xJAtgCGFtpmgbvOTLZ8mFZW2UzNwT17CAy2BnYrcROfqacX0zUfIjK/pCS0QQjHplFFlGMu0ZATimaZa0lw==
   dependencies:
     "@bem/cell" "^0.2.5"
     "@bem/entity-name" "^1.3.2"

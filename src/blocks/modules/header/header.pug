@@ -37,11 +37,13 @@ header.header
                 ul.header__emails
                     li
                         a(href="mailto:info@medimcom.ru") info@medimcom.ru
-                ul.header__phones
-                    li
+                div.header__phones
+                    .header__phones-main
                         a(href="tel:+78123343764") +7 812 334-37-64
-                    li
-                        a(href="tel:+74959001099") +7 495 900-10-99
+                    .header__phones-dropdown
+                        ul
+                            li
+                                a(href="tel:+74959001099") +7 495 900-10-99
 
                 ul.header__social
                     li
