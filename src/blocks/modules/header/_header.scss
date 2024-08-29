@@ -15,7 +15,7 @@
 		}
 	}
 	&__inner{
-		overflow: hidden;
+		/*overflow: hidden;*/
 	}
 	&__top{
 		background: #fff;
@@ -328,6 +328,10 @@
 			}
 			a{
 				@extend .link;
+				span {
+					display: block;
+					font-size: 0.8em;
+				}
 			}
 		}
 		&-dropdown{
@@ -336,14 +340,14 @@
 			top: 100%;
 			width: 100%;
 			background: #fff;
-			padding: 10px 10px 10px;
+			padding: 12px 10px 10px;
 			box-sizing: content-box;
 			right: -10px;
 			text-align: right;
 			border-radius: 0 0 10px 10px;
 			@include minmax(xl, dsk) {
 				right: vw(-10);
-				padding: vw(10) vw(10) vw(10);
+				padding: vw(12) vw(10) vw(10);
 				border-radius: 0 0 vw(10) vw(10) ;
 			}
 			ul {
@@ -357,13 +361,17 @@
 						font-size: 16px;
 					}
 					&:not(:first-child){
-						margin-top: 10px;
+						margin-top: 12px;
 						@include minmax(xl, dsk) {
-							margin-top: vw(10);
+							margin-top: vw(12);
 						}
 					}
 					a{
 						@extend .link;
+						span {
+							display: block;
+							font-size: 0.8em;
+						}
 					}
 				}
 			}
